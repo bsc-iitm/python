@@ -11,7 +11,7 @@ Accept two positive integers $a$ and $b$ as input. Print the sum of all integers
 
 ## Hint
 
-This is an extension of the [previous problem](/week-3/PPA-2.md). Here, you have to filter out all the numbers that are divisible by both $a$ **and** $b$.
+This is an extension of the [previous problem](/ppa/week-3/PPA-2.md). Here, you have to filter out all the numbers that are divisible by both $a$ **and** $b$.
 
 
 

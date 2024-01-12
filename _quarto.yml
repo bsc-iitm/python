@@ -25,7 +25,7 @@ website:
       foreground: "primary"
       contents:
         - ppa.md
-        - section: "week-1"
+        - section: "Week-1"
           contents:
           - ppa/week-1/PPA-1.md
           - ppa/week-1/PPA-2.md
@@ -34,7 +34,7 @@ website:
           - ppa/week-1/PPA-5.md
           - ppa/week-1/PPA-6.md
           - ppa/week-1/PPA-7.md
-        - section: "week-2"
+        - section: "Week-2"
           contents:
           - ppa/week-2/PPA-1.md
           - ppa/week-2/PPA-2.md
@@ -46,7 +46,7 @@ website:
           - ppa/week-2/PPA-8.md
           - ppa/week-2/PPA-9.md
           - ppa/week-2/PPA-10.md
-        - section: "week-3"
+        - section: "Week-3"
           contents:
           - ppa/week-3/PPA-1.md
           - ppa/week-3/PPA-2.md
@@ -60,7 +60,7 @@ website:
           - ppa/week-3/PPA-10.md
           - ppa/week-3/PPA-11.md
           - ppa/week-3/PPA-12.md
-        - section: "week-4"
+        - section: "Week-4"
           contents:
           - ppa/week-4/PPA-1.md
           - ppa/week-4/PPA-2.md

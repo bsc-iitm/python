@@ -1,5 +1,5 @@
 /.quarto/
 /_site/
-notes/
+notes/*
 notes.md
 quarto_master.yml

@@ -22,7 +22,7 @@ The input will be a single line containing an integer. The output should be one 
 
 ## Hint
 
-How is this problem related to the [previous problem](/week-2/PPA-2.md)? Do they have the same structure?
+How is this problem related to the [previous problem](/ppa/week-2/PPA-2.md)? Do they have the same structure?
 
 Think about the following code snippets:
 
