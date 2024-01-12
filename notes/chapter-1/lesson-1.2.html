@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lesson-1.2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../ppa.html" rel="" target="" aria-current="page">
+ <span class="menu-text">PPAs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../howto.html" rel="" target="">
+ <span class="menu-text">How to</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../feedback.html" rel="" target="">
+ <span class="menu-text">Feedback</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lesson-1.2</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPAs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">week-1</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">week-2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">week-3</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-12</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">week-4</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-11</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#operators" id="toc-operators" class="nav-link active" data-scroll-target="#operators">Operators</a>
+  <ul class="collapse">
+  <li><a href="#arithmetic-operators" id="toc-arithmetic-operators" class="nav-link" data-scroll-target="#arithmetic-operators">Arithmetic Operators</a></li>
+  <li><a href="#relational-operators" id="toc-relational-operators" class="nav-link" data-scroll-target="#relational-operators">Relational Operators</a></li>
+  <li><a href="#logical-operators" id="toc-logical-operators" class="nav-link" data-scroll-target="#logical-operators">Logical Operators</a></li>
+  <li><a href="#operator-chaining" id="toc-operator-chaining" class="nav-link" data-scroll-target="#operator-chaining">Operator Chaining</a></li>
+  </ul></li>
+  <li><a href="#expressions" id="toc-expressions" class="nav-link" data-scroll-target="#expressions">Expressions</a></li>
+  <li><a href="#types-of-expressions" id="toc-types-of-expressions" class="nav-link" data-scroll-target="#types-of-expressions">Types of Expressions</a>
+  <ul class="collapse">
+  <li><a href="#arithmetic-expressions" id="toc-arithmetic-expressions" class="nav-link" data-scroll-target="#arithmetic-expressions">Arithmetic Expressions</a></li>
+  <li><a href="#boolean-expressions" id="toc-boolean-expressions" class="nav-link" data-scroll-target="#boolean-expressions">Boolean Expressions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lesson-1.2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="operators" class="level2">
+<h2 class="anchored" data-anchor-id="operators">Operators</h2>
+<section id="arithmetic-operators" class="level3">
+<h3 class="anchored" data-anchor-id="arithmetic-operators">Arithmetic Operators</h3>
+<p>The anatomy of an operation is given below:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/images/img-011.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Anatomy of an expression</figcaption>
+</figure>
+</div>
+The following table gives the symbols for arithmetic operators and the operations that they correspond to:
+<div class="center" data-markdown="">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>Addition</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>Subtraction</td>
+</tr>
+<tr class="odd">
+<td>*</td>
+<td>Multiplication</td>
+</tr>
+<tr class="even">
+<td>/</td>
+<td>Division</td>
+</tr>
+<tr class="odd">
+<td>//</td>
+<td>Floor division</td>
+</tr>
+<tr class="even">
+<td>%</td>
+<td>Modulus</td>
+</tr>
+<tr class="odd">
+<td>**</td>
+<td>Exponentiation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>All the operators in the above table are binary, i.e., they operate on two operands. Let us now take a look at each operator:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">+</span> <span class="dv">5</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="dv">15</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">-</span> <span class="dv">5</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="dv">5</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="dv">50</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">/</span> <span class="dv">5</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="fl">2.0</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">//</span> <span class="dv">5</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="dv">2</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">%</span> <span class="dv">5</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="dv">0</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">**</span> <span class="dv">5</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="dv">100000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The last three operators might be new. In more familiar terms, these are the mathematical operations that they correspond to:</p>
+<ul>
+<li><code>//</code> is called the floor division operator. <code>x // y</code> gives the quotient when <code>x</code> is divided by <code>y</code>. For example, <code>8 // 3</code> is <code>2</code>.</li>
+<li><code>%</code> is called the modulus operator. <code>x % y</code> gives the remainder when <code>x</code> is divided by <code>y</code>. For example, <code>10 % 3</code> is <code>1</code>.</li>
+<li><code>**</code> is called the exponentiation operator. <code>x ** y</code> returns <span class="math inline">\(x^y\)</span>.</li>
+</ul>
+<p><code>/</code> and <code>//</code> are two different operators. <code>/</code> gives the complete result of division, while <code>//</code> returns the quotient. For example, <code>5 / 2</code> results in <code>2.5</code> while <code>5 // 2</code> gives <code>2</code>. There are two more arithmetic operators of interest to us, unary plus and unary minus. These are the <code>+</code> and <code>-</code> signs. Unlike the operators that we have seen so far, these two are unary operators, i.e., they operate on one operand. For example:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">-</span> <span class="dv">2</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="op">-</span><span class="dv">2</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>It is important to note that the symbols for plus and minus operators are the same as the ones for addition and subtraction. The context determines the nature of the operator:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">-</span> <span class="dv">1</span>    <span class="co"># unary minus</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="op">-</span><span class="dv">1</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="op">-</span> <span class="dv">1</span>  <span class="co"># subtraction operator</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sometimes both of them could come together in the same expression:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="op">-</span> <span class="op">-</span> <span class="dv">1</span> </span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="dv">2</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># The minus on the left is subtraction</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># The minus on the right is unary minus</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In all the operations that we have seen so far, the operands have been literals. In general, the operands can also be variables:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> x <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(x, y)</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="dv">1</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="relational-operators" class="level3">
+<h3 class="anchored" data-anchor-id="relational-operators">Relational Operators</h3>
+The following table gives the symbols for relational operators and the operations that they correspond to:
+<div style="display: flex; justify-content: center;" data-markdown="">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&gt;</td>
+<td>greater than</td>
+</tr>
+<tr class="even">
+<td>&lt;</td>
+<td>less than</td>
+</tr>
+<tr class="odd">
+<td>&gt;=</td>
+<td>greater than or equal to</td>
+</tr>
+<tr class="even">
+<td>&lt;=</td>
+<td>less than or equal to</td>
+</tr>
+<tr class="odd">
+<td>==</td>
+<td>double equal to</td>
+</tr>
+<tr class="even">
+<td>!=</td>
+<td>not equal to</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>All the operators in the above table are binary. Let us now take a look at each of them:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">&gt;</span> <span class="dv">5</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="va">True</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">&lt;</span> <span class="dv">5</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="va">False</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">&gt;=</span> <span class="dv">5</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="va">True</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">&lt;=</span> <span class="dv">5</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="va">False</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">==</span> <span class="dv">5</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="va">False</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">!=</span> <span class="dv">5</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Relational operators are also called comparison operators. The result of any comparison operation is a boolean value: <code>True</code> or <code>False</code>. The result of a comparison operation can be assigned to a variable:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="op">&gt;&gt;&gt;</span> z <span class="op">=</span> y <span class="op">&gt;</span> x</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(z)</span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The <code>==</code> symbol corresponds to the equality operator and should not be confused with <code>=</code>, the assignment operator.</p>
+</section>
+<section id="logical-operators" class="level3">
+<h3 class="anchored" data-anchor-id="logical-operators">Logical Operators</h3>
+<p>The following table gives the logical operators and the operations that they correspond to:</p>
+<div style="display: flex; justify-content: center;" data-markdown="">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>not</td>
+<td>negation</td>
+</tr>
+<tr class="even">
+<td>and</td>
+<td>logical conjunction</td>
+</tr>
+<tr class="odd">
+<td>or</td>
+<td>logical disjunction</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><code>and</code> and <code>or</code> are binary operators; <code>not</code> is a unary operator. Let us now take a look at each of them:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">and</span> <span class="va">False</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="va">False</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">or</span> <span class="va">False</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="va">True</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> <span class="kw">not</span> x</span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(y)</span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The use of parenthesis after <code>not</code> is optional. For example:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">not</span> x</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="va">False</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">not</span>(x)</span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider the following lines of code:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span>)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="dv">3</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>)</span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Both lines 1 and 3 give the same output. Line-1 has a space before and after the <code>+</code> operator, while line-3 doesn’t. Both ways are syntactically correct. In this course, we will be following the first convention: there is always a space separating the operator from the operands. This is also true for the <code>=</code> operator.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">2</span> <span class="co"># We will follow this</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="op">&gt;&gt;&gt;</span> x<span class="op">=</span><span class="dv">2</span>   <span class="co"># We will NOT follow this</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="co"># But both conventions are valid</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="operator-chaining" class="level3">
+<h3 class="anchored" data-anchor-id="operator-chaining">Operator Chaining</h3>
+<p>Python supports chaining relational operators. This enables you to evaluate chains of comparison without having to use logical operators.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">&lt;</span> <span class="dv">11</span> <span class="op">&lt;=</span> <span class="dv">12</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="va">True</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="co"># is the same as</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span> <span class="op">&lt;</span> <span class="dv">11</span> <span class="kw">and</span> <span class="dv">11</span> <span class="op">&lt;=</span> <span class="dv">12</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="expressions" class="level2">
+<h2 class="anchored" data-anchor-id="expressions">Expressions</h2>
+<p>An expression is some combination of literals, variables and operators. For example, the following are expressions:</p>
+<ul>
+<li><code>1 + 4 / 4 ** 0</code></li>
+<li><code>x / y + z * 2.0</code></li>
+<li><code>3 &gt; 4 and 1 &lt; 10</code></li>
+<li><code>not True and False</code></li>
+</ul>
+<p>Each expression evaluates to some value. This value has a type. In the above examples, the first two expressions result in a <code>float</code>, while the next two expressions result in a <code>bool</code>. In the next few sections, we shall study two types of expressions:</p>
+<ul>
+<li>Arithmetic: an expression whose type is either <code>int</code> or <code>float</code></li>
+<li>Boolean: an expression whose type is <code>bool</code></li>
+</ul>
+</section>
+<section id="types-of-expressions" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-expressions">Types of Expressions</h2>
+<section id="arithmetic-expressions" class="level3">
+<h3 class="anchored" data-anchor-id="arithmetic-expressions">Arithmetic Expressions</h3>
+<p>Let us now look at the <code>type</code> of simple arithmetic operations. In mathematics, the result of adding two integers is another integer. Is this true in the case of Python? First, let us execute the following statement in the interpreter and see what we get:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The way to check the type of this expression is to use the <code>type()</code> function. For example, we have:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="dv">3</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span>)</span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'int'</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>So far the interpreter’s behaviour conforms to our intuition. Let us now change this code slightly:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">1.0</span> <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fl">3.0</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="fl">1.0</span> <span class="op">+</span> <span class="dv">2</span>)</span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'float'</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We see that the result is <code>3.0</code> which is of type <code>float</code>. The conclusion is that <code>float</code> is more dominant than <code>int</code> as far as the addition operation is concerned. What about other operations? Let us check with the help of the following examples:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="fl">7.0</span> <span class="op">*</span> <span class="dv">5</span>)</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'float'</span><span class="op">&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="fl">7.0</span> <span class="op">/</span> <span class="dv">5</span>)</span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'float'</span><span class="op">&gt;</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="fl">7.0</span> <span class="op">//</span> <span class="dv">5</span>)</span>
+<span id="cb16-6"><a href="#cb16-6"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'float'</span><span class="op">&gt;</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="fl">7.0</span> <span class="op">**</span> <span class="dv">5</span>)</span>
+<span id="cb16-8"><a href="#cb16-8"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'float'</span><span class="op">&gt;</span></span>
+<span id="cb16-9"><a href="#cb16-9"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="fl">7.0</span> <span class="op">%</span> <span class="dv">5</span>)</span>
+<span id="cb16-10"><a href="#cb16-10"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'float'</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>All the operations result in a <code>float</code>. From this we see that <code>float</code> is more dominant than <code>int</code>, irrespective of the operator involved.</p>
+</section>
+<section id="boolean-expressions" class="level3">
+<h3 class="anchored" data-anchor-id="boolean-expressions">Boolean Expressions</h3>
+<p>Expressions that involve a relational operator will result in a <code>bool</code>. For example:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span> <span class="op">&gt;</span> <span class="dv">1</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="va">True</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="dv">2</span> <span class="op">&gt;</span> <span class="dv">1</span>)</span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'bool'</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Expressions that involve logical operators will naturally result in a <code>bool</code>. For example:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">and</span> <span class="va">False</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="va">False</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="va">True</span> <span class="kw">and</span> <span class="va">False</span>)</span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'bool'</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>One way to analyze the outcome of boolean expressions that involve variables is to exhaustively list down the different combinations of values that variables can take and evaluate the expression for each such combination. For example, assume that X and Y are two boolean variables. Now, consider the following expression:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">&gt;&gt;&gt;</span> X <span class="kw">or</span> Y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+We can take the help of a concept called <strong>truth table</strong> to analyze the outcomes:
+<div style="display: flex; justify-content: center;" data-markdown="">
+<table class="table">
+<thead>
+<tr class="header">
+<th>X</th>
+<th>Y</th>
+<th>X or Y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2024, Karthik Thiagarajan @ IIT Madras</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

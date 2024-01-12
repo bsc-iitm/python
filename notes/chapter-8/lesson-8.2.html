@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>lesson-8.2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../ppa.html" rel="" target="" aria-current="page">
+ <span class="menu-text">PPAs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../howto.html" rel="" target="">
+ <span class="menu-text">How to</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../feedback.html" rel="" target="">
+ <span class="menu-text">Feedback</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPAs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">week-1</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">week-2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">week-3</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-12</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">week-4</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-11</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lesson-8.2" id="toc-lesson-8.2" class="nav-link active" data-scroll-target="#lesson-8.2">Lesson 8.2</a>
+  <ul class="collapse">
+  <li><a href="#classes-and-objects" id="toc-classes-and-objects" class="nav-link" data-scroll-target="#classes-and-objects">Classes and Objects</a></li>
+  <li><a href="#py-self" id="toc-py-self" class="nav-link" data-scroll-target="#py-self"><code>#!py self</code></a></li>
+  <li><a href="#class-attributes-vs-object-attributes" id="toc-class-attributes-vs-object-attributes" class="nav-link" data-scroll-target="#class-attributes-vs-object-attributes">Class Attributes vs Object Attributes</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="lesson-8.2" class="level1">
+<h1>Lesson 8.2</h1>
+<section id="classes-and-objects" class="level2">
+<h2 class="anchored" data-anchor-id="classes-and-objects">Classes and Objects</h2>
+<p>Let us continue with the <code>Student</code> class. For now, don’t bother too much about the variable <code>self</code>. We will get to that soon.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> Student:</span>
+<span id="cb1-2"><a href="#cb1-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, marks):</span>
+<span id="cb1-3"><a href="#cb1-3"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb1-4"><a href="#cb1-4"></a>        <span class="va">self</span>.marks <span class="op">=</span> marks</span>
+<span id="cb1-5"><a href="#cb1-5"></a>           </span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="kw">def</span> update_marks(<span class="va">self</span>, marks):</span>
+<span id="cb1-7"><a href="#cb1-7"></a>        <span class="va">self</span>.marks <span class="op">=</span> marks</span>
+<span id="cb1-8"><a href="#cb1-8"></a>        </span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="kw">def</span> print_details(<span class="va">self</span>):</span>
+<span id="cb1-10"><a href="#cb1-10"></a>        <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss">:</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>marks<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As we saw at the end of the previous lesson, an object of the class <code>Student</code> can be created like this:</p>
+<p><code>python linenums="11" anish = Student('Anish', 80)</code></p>
+<p>Notice that we have used the name of the class in the RHS of the assignment statement. This invokes what is called the <strong>constructor</strong> — <code>#!py __init__()</code> method — of the class. Since the constructor has two parameters (ignore <code>#!py self</code> for now) <code>name</code> and <code>marks</code>, we have to pass them as arguments while creating the object.</p>
+<p>The two arguments are then assigned to <code>#!py self.name</code> and <code>#!py self.marks</code> respectively. These two variables are called the <strong>attributes</strong> of the object. Attributes can be accessed using the <code>.</code> operator:</p>
+<p><code>python linenums="12" print(anish.name) print(anish.marks)</code></p>
+<p><code>#!py __init__()</code>, <code>#!py update_marks()</code> and <code>#!py print_details()</code> are called <strong>methods</strong>. A method is effectively just a function that is defined in a class. Methods can be accessed using an object. If we wish to update Anish’s marks to <span class="math inline">\(95\)</span>, then we invoke the method using the object <code>anish</code>:</p>
+<p><code>python linenums="14" anish.update_marks(95)</code></p>
+<p>When <code>#!py anish.update_marks(95)</code> is called, the attribute <code>marks</code> that is tied to the object <code>anish</code> is updated to <span class="math inline">\(95\)</span>.</p>
+<p>To summarize, <code>anish</code> is an object of type <code>Student</code> having two attributes — <code>name</code> and <code>marks</code> — that can be accessed using the <code>#!py .</code> operator. This object is also equipped with two methods (ignoring the constructor), one to update the marks and the other to print the details of the object. Attributes define the state of an object. Different objects of the same class could have different attributes. Naively speaking, methods help to update the values of the attributes. Therefore, the methods capture the behaviour of the object.</p>
+</section>
+<section id="py-self" class="level2">
+<h2 class="anchored" data-anchor-id="py-self"><code>#!py self</code></h2>
+<p>Some of you might be wondering about the variable <code>#!py self</code> that crops in so many places in the definition of the class. The variable <code>#!py self</code> is used to point to the current object. To get a better understanding, let us create two different <code>Student</code> objects:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>anish <span class="op">=</span> Student(<span class="st">'Anish'</span>, <span class="dv">90</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>lakshmi <span class="op">=</span> Student(<span class="st">'Lakshmi'</span>, <span class="dv">95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>How do we print the details of the student Lakshmi?</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>lakshmi.print_details()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When this method is called, Python actually ends up invoking the following function:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>Student.print_details(lakshmi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>That is, it passes the current object as an argument. So, the variable <code>#!py self</code> points to the current object. Another example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>anish.update_marks(<span class="dv">95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This is equivalent to the function call:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>Student.update_marks(anish, <span class="dv">95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This is a mechanism that Python uses to know the object that it is dealing with. And for this reason, the first parameter in every method defined in a class will be <code>#!py self</code>, and it will point to the object calling the method i.e., the current object.</p>
+<p>This should also clear up any confusion that lines 3 and 4 could have caused:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">class</span> Student:</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, marks):</span>
+<span id="cb7-3"><a href="#cb7-3"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb7-4"><a href="#cb7-4"></a>        <span class="va">self</span>.marks <span class="op">=</span> marks</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>#!py self.name = name</code> is the following operation: assign the value of the argument <code>name</code> to the current object’s attribute <code>#!py self.name</code>. A similar operation follows for <code>#!py self.marks</code>.</p>
+</section>
+<section id="class-attributes-vs-object-attributes" class="level2">
+<h2 class="anchored" data-anchor-id="class-attributes-vs-object-attributes">Class Attributes vs Object Attributes</h2>
+<p>So far all attributes that we have seen are object attributes. Given an attribute, say <code>name</code> or <code>marks</code>, it is different for different objects. The <code>name</code> attribute of <code>anish</code> is different from the corresponding attribute fo the object <code>lakshmi</code>. Now, we shall see another kind of attribute.</p>
+<p>Let us say that we wish to keep track of the number students in our program. That is, when a new student joins our program, we need to update a counter. How do we do that? We need an attribute that is common to all objects and is not tied to any individual object. At the same time, we should be able to update this attribute whenever a new object is created. This is where the concept of class attributes comes in:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">class</span> Student:</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, marks):</span>
+<span id="cb8-4"><a href="#cb8-4"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb8-5"><a href="#cb8-5"></a>        <span class="va">self</span>.marks <span class="op">=</span> marks</span>
+<span id="cb8-6"><a href="#cb8-6"></a>        Student.counter <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a>           </span>
+<span id="cb8-8"><a href="#cb8-8"></a>    <span class="kw">def</span> update_marks(<span class="va">self</span>, marks):</span>
+<span id="cb8-9"><a href="#cb8-9"></a>        <span class="va">self</span>.marks <span class="op">=</span> marks</span>
+<span id="cb8-10"><a href="#cb8-10"></a>        </span>
+<span id="cb8-11"><a href="#cb8-11"></a>    <span class="kw">def</span> print_details(<span class="va">self</span>):</span>
+<span id="cb8-12"><a href="#cb8-12"></a>        <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss">:</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>marks<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now, let us say that three students join the program:</p>
+<p><code>python linenums="13" madhavan = Student('Madhavan', 90) print('Number of students in the program =', Student.counter) andrew = Student('Andrew', 85) print('Number of students in the program =', Student.counter) usha = Student('Usha', 95) print('Number of students in the program =', Student.counter)</code></p>
+<p>This gives the following output:</p>
+<pre><code>Number of students in the program = 1
+Number of students in the program = 2
+Number of students in the program = 3</code></pre>
+<p>Notice that we have used <code>#!py Student.counter</code> to access the attribute <code>counter</code>. Such attributes are called <strong>class attributes</strong>. All objects of the class share this attribute. At this stage, we can try the following exercise. What do you think the output will be?</p>
+<p><code>python linenums="19" print(madhavan.counter)</code></p>
+<p>??? abstract “OUTPUT” <code>linenums="4"     3</code></p>
+<p>A class attribute can be accessed by any of the objects. But, now, try to run this code:</p>
+<p><code>python linenums="20" madhavan.counter = -1 print("Student counter:", Student.counter) print("Madhavan counter:", madhavan.counter)</code></p>
+<p>??? abstract “OUTPUT” <code>linenums="5"     Student counter: 3     Madhavan counter: -1</code></p>
+<p>This seems confusing! But a moment’s thought will convince you that it is not so hard. In line 20, we are creating an object attribute with the same name as the class attribute! If the same attribute name occurs in both an object and a class, then Python prioritizes the object attribute. In other words, when we change <code>#!py madhavan.counter</code>, <code>#!py Student.counter</code> remains unchanged because <code>#!py madhavan.counter</code> gets delinked from <code>#!py Student.counter</code> and becomes a new object attribute specific to <code>madhavan</code>. To change <code>Student.counter</code>:</p>
+<p><code>python linenums="23" Student.counter = 0 print(Student.counter)</code></p>
+<p>??? abstract “OUTPUT” <code>linenums="7"     Student counter: 0</code></p>
+<p>Now try this as an exercise and try to figure out why the output is the way it is:</p>
+<p><code>python linenums="25" print("Usha counter:", usha.counter) print("Madhavan counter:", madhavan.counter) Rohan = Student('Rohan', 40) print("Student counter:", Student.counter) print("Usha counter:", usha.counter) print("Madhavan counter:", madhavan.counter)</code></p>
+<p>??? abstract “OUTPUT” <code>linenums="8"     Usha counter: 0     Madhavan counter: -1     Student counter: 1     Usha counter: 1     Madhavan counter: -1</code></p>
+<p>This demonstrates an important fact: class attributes cannot be updated by an object! At best, they can be referenced or accessed using an object</p>
+<p>This also introduces another important point: object attributes can be created dynamically during runtime. So far, we have seen object attributes being created within the constructor. This is not binding. For example, consider the following snippet:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">class</span> Student:</span>
+<span id="cb10-2"><a href="#cb10-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
+<span id="cb10-3"><a href="#cb10-3"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb10-4"><a href="#cb10-4"></a>        </span>
+<span id="cb10-5"><a href="#cb10-5"></a>anish <span class="op">=</span> Student(<span class="st">'Anish'</span>)</span>
+<span id="cb10-6"><a href="#cb10-6"></a>anish.maths <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a>anish.physics <span class="op">=</span> <span class="dv">90</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a>anish.chem <span class="op">=</span> <span class="dv">70</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We have created three more object attributes on the fly. It is interesting to note the subtle difference between the attribute <code>name</code> and the three new attributes <code>maths</code>, <code>physics</code> and <code>chem</code>. Any object of <code>Student</code> will have the attribute <code>name</code> when it is initially created, of course with a different value for <code>name</code> depending on the object. But the attributes <code>maths</code>, <code>physics</code> and <code>chem</code> are unique to the object <code>anish</code>.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2024, Karthik Thiagarajan @ IIT Madras</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Notes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./assets/images/logo.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./ppa.html" rel="" target="" aria-current="page">
+ <span class="menu-text">PPAs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./howto.html" rel="" target="">
+ <span class="menu-text">How to</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./feedback.html" rel="" target="">
+ <span class="menu-text">Feedback</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPAs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">week-1</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-1/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-1/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-1/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-1/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-1/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-1/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-1/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">week-2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-2/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-2/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-2/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-2/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-2/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-2/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-2/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-2/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-2/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-2/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">week-3</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-3/PPA-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-12</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">week-4</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ppa/week-4/PPA-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-11</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#programming-in-python" id="toc-programming-in-python" class="nav-link active" data-scroll-target="#programming-in-python">Programming in Python</a>
+  <ul class="collapse">
+  <li><a href="#chapter-0-warm-up" id="toc-chapter-0-warm-up" class="nav-link" data-scroll-target="#chapter-0-warm-up">Chapter-0: Warm-up</a></li>
+  <li><a href="#chapter-1-introduction-to-python" id="toc-chapter-1-introduction-to-python" class="nav-link" data-scroll-target="#chapter-1-introduction-to-python">Chapter-1: Introduction to Python</a></li>
+  <li><a href="#chapter-2-conditionals" id="toc-chapter-2-conditionals" class="nav-link" data-scroll-target="#chapter-2-conditionals">Chapter-2: Conditionals</a></li>
+  <li><a href="#chapter-3-loops" id="toc-chapter-3-loops" class="nav-link" data-scroll-target="#chapter-3-loops">Chapter-3: Loops</a></li>
+  <li><a href="#chapter-4-functions" id="toc-chapter-4-functions" class="nav-link" data-scroll-target="#chapter-4-functions">Chapter-4: Functions</a></li>
+  <li><a href="#chapter-5-lists-and-tuples" id="toc-chapter-5-lists-and-tuples" class="nav-link" data-scroll-target="#chapter-5-lists-and-tuples">Chapter-5: Lists and Tuples</a></li>
+  <li><a href="#chapter-6-dictionaries-and-sets" id="toc-chapter-6-dictionaries-and-sets" class="nav-link" data-scroll-target="#chapter-6-dictionaries-and-sets">Chapter-6: Dictionaries and Sets</a></li>
+  <li><a href="#chapter-7-file-handling" id="toc-chapter-7-file-handling" class="nav-link" data-scroll-target="#chapter-7-file-handling">Chapter-7: File Handling</a></li>
+  <li><a href="#chapter-8-object-oriented-programming" id="toc-chapter-8-object-oriented-programming" class="nav-link" data-scroll-target="#chapter-8-object-oriented-programming">Chapter-8: Object Oriented Programming</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Notes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<h1>
+NOTES ARE STILL UNDER REVIEW
+</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/logo.png" class="img-fluid figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<section id="programming-in-python" class="level1">
+<h1>Programming in Python</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This set of notes is to be used as a reference. You may find content that has not been covered in the video lectures. Likewise, there may be some content that is present in the lectures which is not covered here. Additional content appearing in these notes will not be considered for grading. In summary, please refer to chapters that you feel are relevant for the course. But you are under no obligation to read all chapters. Interested students are always welcome to read the entire thing!</p>
+</div>
+</div>
+<video controls="" loop="" autoplay="" muted="">
+<source src="assets/videos/intro.mp4" type="video/mp4">
+</video>
+<section id="chapter-0-warm-up" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-0-warm-up">Chapter-0: Warm-up</h2>
+<p><a href="./notes/chapter-0/lesson-0.html">Lesson-0</a></p>
+</section>
+<section id="chapter-1-introduction-to-python" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-1-introduction-to-python">Chapter-1: Introduction to Python</h2>
+<p><a href="./notes/chapter-1/lesson-1.1.html">Lesson-1.1</a></p>
+<ul>
+<li>Python shell | Replit Console</li>
+<li>Prompts | Output</li>
+<li>Emojis</li>
+<li>Literals and Variables</li>
+<li>Basic Data types | type()</li>
+<li>Comments</li>
+</ul>
+<p><a href="./notes/chapter-1/lesson-1.2.html">Lesson-1.2</a></p>
+<ul>
+<li>Operators</li>
+<li>Convention</li>
+<li>Expressions</li>
+<li>Type of Expressions</li>
+</ul>
+<p><a href="./notes/chapter-1/lesson-1.3.html">Lesson-1.3</a></p>
+<ul>
+<li>Arithmetic Expressions</li>
+<li>Boolean Expressions</li>
+</ul>
+<p><a href="./notes/chapter-1/lesson-1.4.html">Lesson-1.4</a></p>
+<ul>
+<li>Replit Editor</li>
+<li>Errors | Debugging</li>
+<li>Exceptions</li>
+<li>Wrong Code Snippets</li>
+</ul>
+<p><a href="./notes/chapter-1/lesson-1.5.html">Lesson-1.5</a></p>
+<ul>
+<li>Strings
+<ul>
+<li>Quotes</li>
+<li>Length</li>
+<li>Operations</li>
+<li>Escape Characters</li>
+<li>Substrings</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-1/lesson-1.6.html">Lesson-1.6</a></p>
+<ul>
+<li>Strings
+<ul>
+<li>Indexing</li>
+<li>Slicing</li>
+<li>Immutability</li>
+<li>Methods</li>
+</ul></li>
+</ul>
+</section>
+<section id="chapter-2-conditionals" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-2-conditionals">Chapter-2: Conditionals</h2>
+<p><a href="./notes/chapter-2/lesson-2.1.html">Lesson-2.1</a></p>
+<ul>
+<li>Variables | Assignment operator | Dynamic Typing</li>
+<li>Referencing versus Defining | Keywords and Naming Rules</li>
+<li>Reusing Variables | Multiple Assignment | Deleting Variables</li>
+</ul>
+<p><a href="./notes/chapter-2/lesson-2.2.html">Lesson-2.2</a></p>
+<ul>
+<li>Input</li>
+<li>Type Conversion | Built-in Functions</li>
+</ul>
+<p><a href="./notes/chapter-2/lesson-2.3.html">Lesson-2.3</a></p>
+<ul>
+<li>Conditional Statements
+<ul>
+<li><code>if</code></li>
+<li><code>if-else</code></li>
+<li><code>if-elif-else</code></li>
+</ul></li>
+<li>Nested Conditional Statements</li>
+<li>Defining Variables inside <code>if</code></li>
+</ul>
+<p><a href="./notes/chapter-2/lesson-2.4.html">Lesson-2.4</a></p>
+<ul>
+<li>System libraries
+<ul>
+<li><code>calendar</code></li>
+<li><code>time</code></li>
+<li><code>this</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="chapter-3-loops" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-3-loops">Chapter-3: Loops</h2>
+<p><a href="./notes/chapter-3/lesson-3.1.html">Lesson-3.1</a></p>
+<ul>
+<li><code>while</code> loop</li>
+<li><code>break</code>, <code>continue</code></li>
+</ul>
+<p><a href="./notes/chapter-3/lesson-3.2.html">Lesson-3.2</a></p>
+<ul>
+<li><code>for</code> loop</li>
+<li><code>range()</code></li>
+<li>Iterating through Strings</li>
+</ul>
+<p><a href="./notes/chapter-3/lesson-3.3.html">Lesson-3.3</a></p>
+<ul>
+<li>Nested loops</li>
+<li><code>while</code> versus <code>for</code></li>
+<li><code>print</code>
+<ul>
+<li><code>end</code></li>
+<li><code>sep</code></li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-3/lesson-3.4.html">Lesson-3.4</a></p>
+<ul>
+<li>Formatted printing
+<ul>
+<li>f-strings</li>
+<li><code>format()</code></li>
+</ul></li>
+<li>Format Specifiers</li>
+</ul>
+<p><a href="./notes/chapter-3/lesson-3.5.html">Lesson-3.5</a></p>
+<p>System libraries</p>
+<ul>
+<li><code>math</code></li>
+<li><code>random</code></li>
+</ul>
+<p><a href="./notes/chapter-3/lesson-3.6.html">Lesson-3.6</a></p>
+<p>Mathematics and Programming</p>
+<ul>
+<li>Limits</li>
+<li>Recurrence relations</li>
+<li>Rational approximation</li>
+</ul>
+</section>
+<section id="chapter-4-functions" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-4-functions">Chapter-4: Functions</h2>
+<p><a href="./notes/chapter-4/lesson-4.1.html">Lesson-4.1</a></p>
+<ul>
+<li>Introduction</li>
+<li>Examples</li>
+</ul>
+<p><a href="./notes/chapter-4/lesson-4.2.html">Lesson-4.2</a></p>
+<ul>
+<li>Arguments
+<ul>
+<li>Positional Arguments</li>
+<li>Keyword Arguments</li>
+<li>Default Arguments</li>
+</ul></li>
+<li>Call by Value</li>
+</ul>
+<p><a href="./notes/chapter-4/lesson-4.3.html">Lesson-4.3</a></p>
+<ul>
+<li>Scope
+<ul>
+<li>Local</li>
+<li>Global</li>
+</ul></li>
+<li>Namespaces
+<ul>
+<li>locals</li>
+<li>globals</li>
+</ul></li>
+<li>Scope and Namespaces</li>
+</ul>
+<p><a href="./notes/chapter-4/lesson-4.4.html">Lesson-4.4</a></p>
+<ul>
+<li>Recursion</li>
+<li>Caution in Recursion</li>
+</ul>
+</section>
+<section id="chapter-5-lists-and-tuples" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-5-lists-and-tuples">Chapter-5: Lists and Tuples</h2>
+<p><a href="./notes/chapter-5/lesson-5.1.html">Lesson-5.1</a></p>
+<ul>
+<li>Lists
+<ul>
+<li>Introduction</li>
+<li>Iterating through Lists</li>
+<li>Growing a List</li>
+<li>Operations on Lists</li>
+<li>Useful Functions</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-5/lesson-5.2.html">Lesson-5.2</a></p>
+<ul>
+<li>Lists
+<ul>
+<li>Mutability</li>
+<li>Call by Reference</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-5/lesson-5.3.html">Lesson-5.3</a></p>
+<ul>
+<li>Lists
+<ul>
+<li>Simulating an IPL Innings</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-5/lesson-5.4.html">Lesson-5.4</a></p>
+<ul>
+<li>Lists
+<ul>
+<li>List Methods</li>
+<li>Stack and Queue</li>
+<li>Strings and Lists
+<ul>
+<li><code>split</code></li>
+<li><code>join</code></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-5/lesson-5.5.html">Lesson-5.5</a></p>
+<ul>
+<li>Lists
+<ul>
+<li>Nested Lists</li>
+<li>Matrices</li>
+<li>Shallow and Deep Copy</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-5/lesson-5.6.html">Lesson-5.6</a></p>
+<ul>
+<li>Tuples
+<ul>
+<li>Introduction</li>
+<li>More on Tuples</li>
+<li>Lists and Tuples</li>
+<li>Packing and Unpacking</li>
+</ul></li>
+</ul>
+</section>
+<section id="chapter-6-dictionaries-and-sets" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-6-dictionaries-and-sets">Chapter-6: Dictionaries and Sets</h2>
+<p><a href="./notes/chapter-6/lesson-6.1.html">Lesson-6.1</a></p>
+<ul>
+<li>Dictionaries
+<ul>
+<li>Introduction</li>
+<li>Examples</li>
+<li>Iterating over Dictionaries</li>
+<li>Growing a Dictionary</li>
+<li>Mutability</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-6/lesson-6.2.html">Lesson-6.2</a></p>
+<ul>
+<li>Text Processing
+<ul>
+<li>Number of Sentences</li>
+<li>Number of Words</li>
+<li>Number of Unique Words</li>
+<li>Frequent Words</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-6/lesson-6.3.html">Lesson-6.3</a></p>
+<ul>
+<li>Dictionaries
+<ul>
+<li>Pangrams and Dictionaries</li>
+<li>Dictionary Methods</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-6/lesson-6.4.html">Lesson-6.4</a></p>
+<ul>
+<li>Dictionaries in Action: LMS
+<ul>
+<li>Assignment Model</li>
+<li>Submission Model</li>
+<li>Grader</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-6/lesson-6.5.html">Lesson-6.5</a></p>
+<ul>
+<li>Sets
+<ul>
+<li>Introduction</li>
+<li>Iterating over Sets</li>
+<li>Growing Sets</li>
+<li>Set Operations</li>
+</ul></li>
+</ul>
+</section>
+<section id="chapter-7-file-handling" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-7-file-handling">Chapter-7: File Handling</h2>
+<p><a href="./notes/chapter-7/lesson-7.1.html">Lesson-7.1</a></p>
+<ul>
+<li>File Handling
+<ul>
+<li>Why Files</li>
+<li>File Handling</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-7/lesson-7.2.html">Lesson-7.2</a></p>
+<ul>
+<li>File Handling
+<ul>
+<li>Creating a file in Replit</li>
+<li>Opening and Reading from a file</li>
+<li>Writing to a file</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-7/lesson-7.3.html">Lesson-7.3</a></p>
+<ul>
+<li>File Handling
+<ul>
+<li>File object analogy</li>
+<li>Mode</li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-7/lesson-7.4.html">Lesson-7.4</a></p>
+<ul>
+<li>File Handling
+<ul>
+<li>File methods
+<ul>
+<li><code>read</code></li>
+<li><code>readline</code></li>
+<li><code>readlines</code></li>
+<li><code>write</code></li>
+<li><code>writelines</code></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a href="./notes/chapter-7/lesson-7.5.html">Lesson-7.5</a></p>
+<ul>
+<li>File Handling
+<ul>
+<li>CSV files
+<ul>
+<li>Reading a CSV file</li>
+<li>Files to Collections</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="chapter-8-object-oriented-programming" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-8-object-oriented-programming">Chapter-8: Object Oriented Programming</h2>
+<p><a href="./notes/chapter-8/lesson-8.1.html">Lesson-8.1</a></p>
+<ul>
+<li>Objects and Classes</li>
+<li>OOP in Python: an example</li>
+</ul>
+<p><a href="./notes/chapter-8/lesson-8.2.html">Lesson-8.2</a></p>
+<ul>
+<li>Classes and Objects</li>
+<li><code>self</code></li>
+<li>Class Attributes vs Object Attributes</li>
+</ul>
+<p><a href="./notes/chapter-8/lesson-8.3.html">Lesson-8.3</a></p>
+<ul>
+<li>Inheritance</li>
+<li>Concrete Example</li>
+<li>Parent-child relationship</li>
+<li>Method Overriding</li>
+</ul>
+<p><a href="./notes/chapter-8/lesson-8.4.html">Lesson-8.4</a></p>
+<ul>
+<li>Vector: Mathematical Preliminaries</li>
+<li>Vector: Specification</li>
+<li>Vector: Definition</li>
+<li>Collection of Vectors</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2024, Karthik Thiagarajan @ IIT Madras</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

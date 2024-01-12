@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>lesson-6.1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../ppa.html" rel="" target="" aria-current="page">
+ <span class="menu-text">PPAs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../howto.html" rel="" target="">
+ <span class="menu-text">How to</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../feedback.html" rel="" target="">
+ <span class="menu-text">Feedback</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPAs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">week-1</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">week-2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">week-3</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-12</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">week-4</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-11</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lesson-6.1" id="toc-lesson-6.1" class="nav-link active" data-scroll-target="#lesson-6.1">Lesson-6.1</a>
+  <ul class="collapse">
+  <li><a href="#dictionaries" id="toc-dictionaries" class="nav-link" data-scroll-target="#dictionaries">Dictionaries</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#more-examples" id="toc-more-examples" class="nav-link" data-scroll-target="#more-examples">More Examples</a></li>
+  <li><a href="#more-on-keys" id="toc-more-on-keys" class="nav-link" data-scroll-target="#more-on-keys">More on Keys</a></li>
+  <li><a href="#iterating-over-dictionaries" id="toc-iterating-over-dictionaries" class="nav-link" data-scroll-target="#iterating-over-dictionaries">Iterating over Dictionaries</a></li>
+  <li><a href="#growing-a-dictionary" id="toc-growing-a-dictionary" class="nav-link" data-scroll-target="#growing-a-dictionary">Growing a Dictionary</a></li>
+  <li><a href="#mutability" id="toc-mutability" class="nav-link" data-scroll-target="#mutability">Mutability</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="lesson-6.1" class="level1">
+<h1>Lesson-6.1</h1>
+<section id="dictionaries" class="level2">
+<h2 class="anchored" data-anchor-id="dictionaries">Dictionaries</h2>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Let us assume that we want to store the following information in Python:</p>
+<div class="center" data-markdown="">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Capital</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Brazil</td>
+<td>Brasilia</td>
+</tr>
+<tr class="even">
+<td>Russia</td>
+<td>Moscow</td>
+</tr>
+<tr class="odd">
+<td>India</td>
+<td>New Delhi</td>
+</tr>
+<tr class="even">
+<td>China</td>
+<td>Beijing</td>
+</tr>
+<tr class="odd">
+<td>South Africa</td>
+<td>Cape Town</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A minor geographical observation: South Africa has three capitals; we have only mentioned the legislative capital for convenience. A geopolitical point: these five countries form a part of a block called BRICS [<a href="https://en.wikipedia.org/wiki/BRICS">refer</a>].</p>
+<p>Coming back to Python, a dictionary is possibly the most interesting data structure offered by Python. It is basically a look-up table. This is how we would store the details of the BRICS nations and their capitals:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>brics <span class="op">=</span> {</span>
+<span id="cb1-2"><a href="#cb1-2"></a>            <span class="st">'Brazil'</span>: <span class="st">'Brasilia'</span>, </span>
+<span id="cb1-3"><a href="#cb1-3"></a>            <span class="st">'Russia'</span>: <span class="st">'Moscow'</span>, </span>
+<span id="cb1-4"><a href="#cb1-4"></a>            <span class="st">'India'</span>: <span class="st">'New Delhi'</span>, </span>
+<span id="cb1-5"><a href="#cb1-5"></a>            <span class="st">'China'</span>: <span class="st">'Beijing'</span>, </span>
+<span id="cb1-6"><a href="#cb1-6"></a>            <span class="st">'South Africa'</span>: <span class="st">'Cape Town'</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A dictionary is a collection of key-value pairs. In the code given above, <code>brics</code> is a dictionary. It has countries mapped to their respective capitals. For instance, <code>#!py 'India'</code> is mapped to <code>#!py 'New Delhi'</code>. Here, <code>#!py 'India'</code> is the key and <code>#!py 'New Delhi'</code> is the value. That is, the country is the key and its capital is the value. A dictionary object is of type <code>#!py dict</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">print</span>(<span class="bu">type</span>(brics))</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(<span class="bu">isinstance</span>(brics, <span class="bu">dict</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To access the value corresponding to a given key, we do the following:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>(brics[<span class="st">'India'</span>], <span class="st">'is the capital of'</span>, <span class="st">'India'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="bu">print</span>(brics[<span class="st">'China'</span>], <span class="st">'is the capital of'</span>, <span class="st">'China'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The value corresponding to a given key can be updated:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Moving to a different capital for South Africa</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>brics[<span class="st">'South Africa'</span>] <span class="op">=</span> <span class="st">'Pretoria'</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co"># Or we could also store all three capitals</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>brics[<span class="st">'South Africa'</span>] <span class="op">=</span> (<span class="st">'Pretoria'</span>, <span class="st">'Cape Town'</span>, <span class="st">'Bloemfontein'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>New key-value pairs can be added to a dictionary. Let us expand the horizons of our dictionary to include countries outside the BRICS nations. It no longer makes sense to call this <code>brics</code>, so let us create a new dictionary called <code>globe</code> which starts off as a copy of <code>brics</code>. Recall the <code>#!py copy()</code> method that we used to copy lists. A similar method is defined for dictionaries:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>brics <span class="op">=</span> {</span>
+<span id="cb5-2"><a href="#cb5-2"></a>            <span class="st">'Brazil'</span>: <span class="st">'Brasilia'</span>, </span>
+<span id="cb5-3"><a href="#cb5-3"></a>            <span class="st">'Russia'</span>: <span class="st">'Moscow'</span>, </span>
+<span id="cb5-4"><a href="#cb5-4"></a>            <span class="st">'India'</span>: <span class="st">'New Delhi'</span>, </span>
+<span id="cb5-5"><a href="#cb5-5"></a>            <span class="st">'China'</span>: <span class="st">'Beijing'</span>, </span>
+<span id="cb5-6"><a href="#cb5-6"></a>            <span class="st">'South Africa'</span>: <span class="st">'Cape Town'</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>        }</span>
+<span id="cb5-8"><a href="#cb5-8"></a>globe <span class="op">=</span> brics.copy()</span>
+<span id="cb5-9"><a href="#cb5-9"></a>globe[<span class="st">'Spain'</span>] <span class="op">=</span> <span class="st">'Madrid'</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Adding a new key-value pair is as simple as the statement given in line 9 of the code given above. Keys of a dictionary are unique. This means that a dictionary cannot have two or more identical keys mapped to different values. On the other hand, two different keys could have the same value. For example:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>some_dict <span class="op">=</span> {<span class="st">'key_1'</span>: <span class="dv">0</span>, <span class="st">'key_2'</span>: <span class="dv">0</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Trying to access a key that is not present in the dictionary will result in a <code>#!py KeyError</code>:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">##### Alarm! Wrong code snippet! ######</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>some_dict <span class="op">=</span> {<span class="st">'0'</span>: <span class="st">'zero'</span>, <span class="st">'1'</span>: <span class="st">'one'</span>}</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="bu">print</span>(some_dict[<span class="dv">0</span>])</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co">##### Alarm! Wrong code snippet! ######</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="more-examples" class="level3">
+<h3 class="anchored" data-anchor-id="more-examples">More Examples</h3>
+<p>The key of a dictionary can be any immutable object. There is a small catch here. We will return to this constraint in the next section. Let us look at different combinations key-value pairs that are possible beginning with the basic types: <code>#!py int</code>, <code>#!py str</code>, <code>#!py float</code>, <code>#!py bool</code>:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># int &lt;&gt; int</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>squares <span class="op">=</span> {<span class="dv">0</span>: <span class="dv">0</span>, <span class="dv">1</span>: <span class="dv">1</span>, <span class="dv">2</span>: <span class="dv">4</span>, <span class="dv">3</span>: <span class="dv">9</span>, <span class="dv">4</span>: <span class="dv">16</span>, <span class="dv">5</span>: <span class="dv">25</span>}</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="co"># str &lt;&gt; int</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>months <span class="op">=</span> {<span class="st">'Jan'</span>: <span class="dv">31</span>, <span class="st">'March'</span>: <span class="dv">31</span>, <span class="st">'May'</span>: <span class="dv">31</span>, <span class="st">'Nov'</span>: <span class="dv">30</span>}</span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="co"># int &lt;&gt; str</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>roll_numbers <span class="op">=</span> {<span class="dv">1</span>: <span class="st">'CS001'</span>, <span class="dv">2</span>: <span class="st">'CS002'</span>, <span class="dv">3</span>: <span class="st">'CS003'</span>}</span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co"># str &lt;&gt; str</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>names <span class="op">=</span> {<span class="st">'Rohit'</span>: <span class="st">'Sharma'</span>, <span class="st">'Saina'</span>: <span class="st">'Nehwal'</span>}</span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="co"># str &lt;&gt; float</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a>constants <span class="op">=</span> {<span class="st">'pi'</span>: <span class="fl">3.14</span>, <span class="st">'e'</span>: <span class="fl">2.71</span>}</span>
+<span id="cb8-11"><a href="#cb8-11"></a><span class="co"># float &lt;&gt; str</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a>fractions <span class="op">=</span> {<span class="fl">0.5</span>: <span class="st">'half'</span>, <span class="fl">0.25</span>: <span class="st">'quarter'</span>, <span class="fl">0.3</span>: <span class="st">'one-third'</span>}</span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="co"># int &lt;&gt; bool</span></span>
+<span id="cb8-14"><a href="#cb8-14"></a>binary <span class="op">=</span> {<span class="dv">0</span>: <span class="va">True</span>, <span class="dv">1</span>: <span class="va">False</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Next, we have dictionaries that have <code>#!py list</code> and <code>#!py tuple</code> as the type of their values:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># str &lt;&gt; list</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>outcomes <span class="op">=</span> {<span class="st">'IND VS AUS'</span>: [<span class="st">'IND'</span>, <span class="st">'AUS'</span>, <span class="st">'IND'</span>, <span class="st">'IND'</span>], <span class="st">'IND VS ENG'</span>: [<span class="st">'IND'</span>, <span class="st">'ENG'</span>]}</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co"># float &lt;&gt; tuple</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>bounds <span class="op">=</span> {<span class="fl">1.7</span>: (<span class="dv">1</span>, <span class="dv">2</span>), <span class="fl">4.3</span>: (<span class="dv">4</span>, <span class="dv">5</span>), <span class="op">-</span><span class="fl">1.2</span>: (<span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>)}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Tuples can be keys, provided they don’t contain any mutable objects within them:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># tuple &lt;&gt; list</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>T1, T2 <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb10-3"><a href="#cb10-3"></a>random_numbers <span class="op">=</span> {T1: [<span class="fl">0.1</span>, <span class="fl">0.4</span>, <span class="fl">0.9</span>], T2: [<span class="fl">1.1</span>, <span class="fl">1.9</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Towards the end, we will look at an example where a tuple cannot be a key. Finally, the richness of dictionaries comes out in the following example:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># mixed</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>report_card <span class="op">=</span> {</span>
+<span id="cb11-3"><a href="#cb11-3"></a>                <span class="st">'name'</span>: <span class="st">'Ramanujan'</span>,</span>
+<span id="cb11-4"><a href="#cb11-4"></a>                <span class="st">'age'</span>: <span class="dv">18</span>,</span>
+<span id="cb11-5"><a href="#cb11-5"></a>                <span class="st">'school'</span>: <span class="st">'KV'</span>,</span>
+<span id="cb11-6"><a href="#cb11-6"></a>                <span class="st">'marks'</span>: (<span class="dv">75</span>, <span class="dv">80</span>, <span class="dv">60</span>, <span class="dv">95</span>, <span class="dv">100</span>)</span>
+<span id="cb11-7"><a href="#cb11-7"></a>              }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="more-on-keys" class="level3">
+<h3 class="anchored" data-anchor-id="more-on-keys">More on Keys</h3>
+<p>Earlier, we have mentioned that the keys of dictionaries have to be immutable, but this statement is not entirely accurate. In this section, we will explore why. What happens if we use a list as a key?</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">##### Alarm! Wrong code snippet #####</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>some_list <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb12-3"><a href="#cb12-3"></a>bad_dict <span class="op">=</span> {some_list: <span class="dv">0</span>}</span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co">##### Alarm! Wrong code snippet #####</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>It throws a <code>#!py TypeError</code> with the following message: <code>unhashable type: 'list'</code>. A list cannot be a key in a dictionary; but the error message doesn’t talk about immutability, instead it says that the <code>#!py list</code> type is unhashable. A more accurate statement about keys in a dictionary is given below:</p>
+<blockquote class="blockquote">
+<p>The keys of a dictionary must be hashable.</p>
+</blockquote>
+<p>To understand what we mean by the term hashable, we shall briefly look at the way Python implements dictionaries. The following section on hash tables is a bit involved and can be skipped.</p>
+<section id="hash-tables" class="level4">
+<h4 class="anchored" data-anchor-id="hash-tables">Hash Tables</h4>
+<p>Python dictionaries are implemented using a data structure called a hash table. It is best to think about a hash table as a book-rack that has a number of rows. Picture the key-value pairs as books that are going to be stored in these racks. To access a book, we need to know the row number in which it is present. This is where the idea of a hash function comes in. The hash function is denoted by <span class="math inline">\(h\)</span> and converts the key to the row number.</p>
+<p>The hash function accepts a key <span class="math inline">\(k\)</span> as input and returns a value, <span class="math inline">\(h(k)\)</span>, as output. This is called the hash value. In our analogy, the hash value is synonymous with the rack number. Once we know the rack number, the book (key-value) stored in it can be easily retrieved. The description is somewhat naive, but you get the point.</p>
+<p>Now, an object in Python is <a href="https://docs.python.org/3/glossary.html#term-hashable">hashable</a> if it has a hash value which never changes during its lifetime and can be compared to other objects. Most of the immutable objects that we have seen so far are hashable: <code>#!py int</code>, <code>#!py float</code>, <code>#!py str</code>, <code>#!py bool</code>. Mutable containers such as lists are not hashable. So, can we just go back to the original definition and claim that all immutable objects can be used as keys in dictionaries? No! Consider the following example:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">##### Alarm! Wrong code snippet #####</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>some_tuple <span class="op">=</span> ([<span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb13-3"><a href="#cb13-3"></a>bad_dict <span class="op">=</span> {some_tuple: <span class="dv">0</span>}</span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="co">##### Alarm! Wrong code snippet #####</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Though <code>some_tuple</code> is immutable, it contains a sequence of lists which are mutable. According to the Python documentation, immutable containers are hashable only if their elements are hashable. So, <code>some_tuple</code> is not hashable, and hence it cannot be used as a key! For a better explanation, check out the <a href="https://wiki.python.org/moin/DictionaryKeys">docs</a>.</p>
+</section>
+</section>
+<section id="iterating-over-dictionaries" class="level3">
+<h3 class="anchored" data-anchor-id="iterating-over-dictionaries">Iterating over Dictionaries</h3>
+<p>We can iterate over the keys of a dictionary:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>squares <span class="op">=</span> {<span class="dv">0</span>: <span class="dv">0</span>, <span class="dv">1</span>: <span class="dv">1</span>, <span class="dv">2</span>: <span class="dv">4</span>, <span class="dv">3</span>: <span class="dv">9</span>, <span class="dv">4</span>: <span class="dv">16</span>, <span class="dv">5</span>: <span class="dv">25</span>}    <span class="co"># key is a number, value is its square</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="cf">for</span> key <span class="kw">in</span> squares.keys():</span>
+<span id="cb14-3"><a href="#cb14-3"></a>    <span class="bu">print</span>(<span class="ss">f'The square of </span><span class="sc">{</span>key<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>squares[key]<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>#!py squares.keys()</code> returns a sequence of keys over which we can iterate. Python makes things even more simple and lets us drop the <code>keys</code> method.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>squares <span class="op">=</span> {<span class="dv">0</span>: <span class="dv">0</span>, <span class="dv">1</span>: <span class="dv">1</span>, <span class="dv">2</span>: <span class="dv">4</span>, <span class="dv">3</span>: <span class="dv">9</span>, <span class="dv">4</span>: <span class="dv">16</span>, <span class="dv">5</span>: <span class="dv">25</span>}    <span class="co"># key is a number, value is its square</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="cf">for</span> key <span class="kw">in</span> squares:</span>
+<span id="cb15-3"><a href="#cb15-3"></a>    <span class="bu">print</span>(<span class="ss">f'The square of </span><span class="sc">{</span>key<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>squares[key]<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can also iterate over the key-value pairs in a dictionary:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>squares <span class="op">=</span> {<span class="dv">0</span>: <span class="dv">0</span>, <span class="dv">1</span>: <span class="dv">1</span>, <span class="dv">2</span>: <span class="dv">4</span>, <span class="dv">3</span>: <span class="dv">9</span>, <span class="dv">4</span>: <span class="dv">16</span>, <span class="dv">5</span>: <span class="dv">25</span>}    <span class="co"># key is a number, value is its square</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="cf">for</span> key, value <span class="kw">in</span> squares.items():</span>
+<span id="cb16-3"><a href="#cb16-3"></a>    <span class="bu">print</span>(<span class="ss">f'The square of </span><span class="sc">{</span>key<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="growing-a-dictionary" class="level3">
+<h3 class="anchored" data-anchor-id="growing-a-dictionary">Growing a Dictionary</h3>
+<p>An empty dictionary can be defined in one of the following ways:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>D1 <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb17-2"><a href="#cb17-2"></a>D1[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>D2 <span class="op">=</span> { }</span>
+<span id="cb17-4"><a href="#cb17-4"></a>D2[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let us now solve the following problem:</p>
+<p>!!! question ” ” Ceate a dictionary from a list of words that maps words to their lengths.</p>
+<pre><code>??? success "Solution"
+
+    ```python
+    words = ['interstellar', 'dunkirk', 'inception', 'tenet']
+    lengths = dict()
+    for word in words:
+        lengths[word] = len(word)
+    print(lengths)
+    ```
+
+    A piece of trivia: what is common among the words in the list `words`? </code></pre>
+<!-- Change the trivia to a code annotation -->
+</section>
+<section id="mutability" class="level3">
+<h3 class="anchored" data-anchor-id="mutability">Mutability</h3>
+<p>Like lists dictionaries are mutable objects. To see the mutability of <code>#!py dict</code> objects in action, consider the following code:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>dict_1 <span class="op">=</span> {<span class="st">'one'</span>: <span class="dv">1</span>, <span class="st">'two'</span>: <span class="dv">2</span>, <span class="st">'three'</span>: <span class="dv">3</span>}</span>
+<span id="cb19-2"><a href="#cb19-2"></a>dict_2 <span class="op">=</span> dict_1</span>
+<span id="cb19-3"><a href="#cb19-3"></a>dict_2[<span class="st">'four'</span>] <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="bu">print</span>(dict_1, dict_2)</span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="bu">print</span>(dict_1 <span class="kw">is</span> dict_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We see that <code>dict_2</code> is alias of <code>dict_1</code> and both point to the same object. If we want a new <code>#!py dict</code> object with the same contents as <code>dict_1</code>, we could either use the <code>#!py copy()</code> method or the <code>#!py dict</code> built-in function:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>dict_1 <span class="op">=</span> {<span class="st">'one'</span>: <span class="dv">1</span>, <span class="st">'two'</span>: <span class="dv">2</span>, <span class="st">'three'</span>: <span class="dv">3</span>}</span>
+<span id="cb20-2"><a href="#cb20-2"></a>dict_2 <span class="op">=</span> dict_1.copy()      <span class="co"># dict(dict_1) also works</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a>dict_2[<span class="st">'four'</span>] <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a><span class="bu">print</span>(dict_1, dict_2)</span>
+<span id="cb20-5"><a href="#cb20-5"></a><span class="bu">print</span>(dict_1 <span class="kw">is</span> <span class="kw">not</span> dict_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The last line prints <code>True</code> which confirms that we have two different objects. So modifying one doesn’t affect the other. But note that <code>#!py copy()</code> only produces a shallow copy. As long as the values are immutable, this doesn’t matter. But if we have mutable values, then we have a problem:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>dict_1 <span class="op">=</span> {<span class="st">'one'</span>: [<span class="dv">1</span>], <span class="st">'two'</span>: [<span class="dv">1</span>, <span class="dv">1</span>], <span class="st">'three'</span>: [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]}</span>
+<span id="cb21-2"><a href="#cb21-2"></a>dict_2 <span class="op">=</span> dict_1.copy()</span>
+<span id="cb21-3"><a href="#cb21-3"></a>dict_2[<span class="st">'one'</span>].append(<span class="dv">100</span>)</span>
+<span id="cb21-4"><a href="#cb21-4"></a><span class="bu">print</span>(dict_1, dict_2)</span>
+<span id="cb21-5"><a href="#cb21-5"></a><span class="bu">print</span>(dict_1 <span class="kw">is</span> <span class="kw">not</span> dict_2)</span>
+<span id="cb21-6"><a href="#cb21-6"></a><span class="bu">print</span>(dict_1[<span class="st">'one'</span>] <span class="kw">is</span> dict_2[<span class="st">'one'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here, we see that the value corresponding to the key <code>#!py 'one'</code> in both dictionaries gets affected. This is because <code>#!py dict_1['one']</code> and <code>#!py dict_2['one']</code> are still the same object. This can be seen from the last statement of the code given above. To set this right, we need to do a deepcopy:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="im">from</span> copy <span class="im">import</span> deepcopy</span>
+<span id="cb22-2"><a href="#cb22-2"></a>dict_1 <span class="op">=</span> {<span class="st">'one'</span>: [<span class="dv">1</span>], <span class="st">'two'</span>: [<span class="dv">1</span>, <span class="dv">1</span>], <span class="st">'three'</span>: [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]}</span>
+<span id="cb22-3"><a href="#cb22-3"></a>dict_2 <span class="op">=</span> deepcopy(dict_1)</span>
+<span id="cb22-4"><a href="#cb22-4"></a>dict_2[<span class="st">'one'</span>].append(<span class="dv">100</span>)</span>
+<span id="cb22-5"><a href="#cb22-5"></a><span class="bu">print</span>(dict_1, dict_2)</span>
+<span id="cb22-6"><a href="#cb22-6"></a><span class="bu">print</span>(dict_1 <span class="kw">is</span> <span class="kw">not</span> dict_2)</span>
+<span id="cb22-7"><a href="#cb22-7"></a><span class="bu">print</span>(dict_1[<span class="st">'one'</span>] <span class="kw">is</span> <span class="kw">not</span> dict_2[<span class="st">'one'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2024, Karthik Thiagarajan @ IIT Madras</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

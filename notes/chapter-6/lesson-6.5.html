@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>lesson-6.5</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/logo.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../ppa.html" rel="" target="" aria-current="page">
+ <span class="menu-text">PPAs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../howto.html" rel="" target="">
+ <span class="menu-text">How to</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../feedback.html" rel="" target="">
+ <span class="menu-text">Feedback</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPAs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">week-1</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-1/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">week-2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-2/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">week-3</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-3/PPA-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-12</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">week-4</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../ppa/week-4/PPA-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PPA-11</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lesson-6.5" id="toc-lesson-6.5" class="nav-link active" data-scroll-target="#lesson-6.5">Lesson-6.5</a>
+  <ul class="collapse">
+  <li><a href="#sets" id="toc-sets" class="nav-link" data-scroll-target="#sets">Sets</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#iterating-through-sets" id="toc-iterating-through-sets" class="nav-link" data-scroll-target="#iterating-through-sets">Iterating through Sets</a></li>
+  <li><a href="#growing-sets" id="toc-growing-sets" class="nav-link" data-scroll-target="#growing-sets">Growing Sets</a></li>
+  <li><a href="#set-operations" id="toc-set-operations" class="nav-link" data-scroll-target="#set-operations">Set Operations</a></li>
+  <li><a href="#other-set-methods" id="toc-other-set-methods" class="nav-link" data-scroll-target="#other-set-methods">Other Set Methods</a></li>
+  <li><a href="#mutability" id="toc-mutability" class="nav-link" data-scroll-target="#mutability">Mutability</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="lesson-6.5" class="level1">
+<h1>Lesson-6.5</h1>
+<section id="sets" class="level2">
+<h2 class="anchored" data-anchor-id="sets">Sets</h2>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>A set is an unordered collection with no duplicate elements [<a href="https://docs.python.org/3/tutorial/datastructures.html#sets">refer</a>]. Unlike lists and tuples, there is no notion of order in a set. This is why it is called an unordered collection as opposed to a sequence. A set can be defined as follows:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>even_nums <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>}</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">print</span>(<span class="bu">type</span>(even_nums))</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="bu">print</span>(<span class="bu">isinstance</span>(even_nums, <span class="bu">set</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><u>Output</u></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1"></a>&lt;class 'set'&gt;</span>
+<span id="cb2-2"><a href="#cb2-2"></a>True</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notice the similarity in syntax between sets and dictionaries. Both are enclosed within curly braces. While a dictionary has key-value pairs in it, a set just has a collection of values. A set in Python is a remarkably accurate representation of a mathematical set. Therefore, most of the properties that you are used to seeing in mathematical sets nicely carry over to Python sets. This connection is so strong that you can often forget that you are dealing with Python sets.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>nums_1 <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>}</span>
+<span id="cb3-2"><a href="#cb3-2"></a>nums_2 <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">10</span>}</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="bu">print</span>(nums_1, nums_2)</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="bu">print</span>(nums_1 <span class="op">==</span> nums_2)</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="bu">print</span>(nums_1 <span class="kw">is</span> <span class="kw">not</span> nums_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><u>Output</u></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1"></a>{2, 4, 6, 8, 10} {2, 4, 6, 8, 10}</span>
+<span id="cb4-2"><a href="#cb4-2"></a>True</span>
+<span id="cb4-3"><a href="#cb4-3"></a>True</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As stated before, sets do not support duplicate elements. We see that <code>nums_1</code> and <code>nums_2</code> are equal sets. However, they don’t point to the same object. Sets support membership just like lists, tuples and dictionaries.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>nums <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>}</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">print</span>(<span class="dv">1</span> <span class="kw">in</span> nums)</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="bu">print</span>(<span class="dv">6</span> <span class="kw">not</span> <span class="kw">in</span> nums)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The number of elements in a set, which is the same as its cardinality, is given by the <code>len()</code> function:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>nums <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>}</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="bu">print</span>(<span class="ss">f'Cardinality of nums is </span><span class="sc">{</span><span class="bu">len</span>(nums)<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sets cannot be indexed. This is quite reasonable as they are not ordered collections. The following code will throw an error:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">##### Alarm! Wrong code snippet! #####</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>some_set <span class="op">=</span> {<span class="st">'this'</span>, <span class="st">'is'</span>, <span class="st">'a'</span>, <span class="st">'set'</span>}</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="bu">print</span>(some_set[<span class="dv">0</span>])</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co">##### Alarm! Wrong code snippet! #####</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Any hashable object can be added to sets. This means most of the immutable types such as <code>int</code>, <code>float</code>, <code>str</code> and <code>tuple</code> can be added to sets. A small caveat as far as tuples are concerned: a tuple of lists is unhashable and therefore cannot be added to sets.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>a_set <span class="op">=</span> {<span class="fl">1.0</span>, <span class="st">'one'</span>, <span class="dv">1</span>, <span class="va">True</span>, (<span class="dv">1</span>, )}    <span class="co"># valid set</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>not_a_set <span class="op">=</span> {([<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>])}          <span class="co"># not a valid set</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>not_a_set</code> returns a <code>TypeError</code> as expected.</p>
+</section>
+<section id="iterating-through-sets" class="level3">
+<h3 class="anchored" data-anchor-id="iterating-through-sets">Iterating through Sets</h3>
+<p>Though a set is not a sequence, iterating through the elements of a set is supported.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>nums <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>}</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="cf">for</span> num <span class="kw">in</span> nums:</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="bu">print</span>(num)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="growing-sets" class="level3">
+<h3 class="anchored" data-anchor-id="growing-sets">Growing Sets</h3>
+<p>How do we define an empty set?</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="co">##### Alarm! Be careful about the variable name! #####</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>empty_set <span class="op">=</span> { }</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="bu">print</span>(<span class="bu">isinstance</span>(empty_set, <span class="bu">set</span>))</span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="bu">print</span>(<span class="bu">isinstance</span>(empty_set, <span class="bu">dict</span>))</span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="co">##### Alarm! Be careful about the variable name! #####</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We see that <code>empty_set</code> is in fact an empty dictionary. Computers are precise machines, which makes them very faithful. Few lessons back we used <code>{ }</code> to initialize an empty dictionary. It hasn’t changed. <code>{ }</code> is still an empty dictionary. So, how do we define an empty set then?</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>empty_set <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="bu">print</span>(<span class="bu">isinstance</span>(empty_set, <span class="bu">set</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Simple enough! With the empty set and set-iteration defined, we can now grow sets from scratch.</p>
+<blockquote class="blockquote">
+<p>Consider the first 100 powers of 7: <span class="math display">\[
+7^1, 7^2, \cdots, 7^{100}
+\]</span> Note down the last digit of each of these powers. How many of them are unique? What are these numbers?</p>
+</blockquote>
+<p>This problem has a simple mathematical solution. But humor me and assume that you don’t know how to solve this problem. Let us go for a computational solution.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>num <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>digits <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    num <span class="op">*=</span> <span class="dv">7</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>    last <span class="op">=</span> num <span class="op">%</span> <span class="dv">10</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a>    digits.add(last)</span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="bu">print</span>(digits)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>add</code> is a method used to add elements to a set. The solution to this problem is a typical use case of sets. When you expect duplicate elements to come up often and if you are not concerned with duplicates, then sets are ideal objects for storage. The same problem can be solved using lists:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>num <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>digits <span class="op">=</span> [ ]</span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
+<span id="cb13-4"><a href="#cb13-4"></a>    num <span class="op">*=</span> <span class="dv">7</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a>    last <span class="op">=</span> num <span class="op">%</span> <span class="dv">10</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a>    <span class="cf">if</span> last <span class="kw">not</span> <span class="kw">in</span> digits:</span>
+<span id="cb13-7"><a href="#cb13-7"></a>        digits.append(last)</span>
+<span id="cb13-8"><a href="#cb13-8"></a><span class="bu">print</span>(digits)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="set-operations" class="level3">
+<h3 class="anchored" data-anchor-id="set-operations">Set Operations</h3>
+<p>Mathematical sets are friendly objects. They routinely interact with each other through one of the following operations:</p>
+<ul>
+<li>Subset</li>
+<li>Superset</li>
+<li>Union</li>
+<li>Intersection</li>
+<li>Difference</li>
+</ul>
+<p>Python sets strive to be as friendly as their mathematical counterparts. We will see how each of these operations are represented:</p>
+<ul>
+<li>Subset: <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(B\)</span> if every element of <span class="math inline">\(A\)</span> is present in <span class="math inline">\(B\)</span>. It is denoted by <span class="math inline">\(A \subseteq B\)</span>. This is a binary relationship and its outcome can be determined in one of the two ways:</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>A <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>}</span>
+<span id="cb14-2"><a href="#cb14-2"></a>B <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>}</span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="bu">print</span>(A.issubset(B))    <span class="co"># method-1</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="bu">print</span>(A <span class="op">&lt;=</span> B)           <span class="co"># method-2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Both lines return the value <code>True</code>. A set <span class="math inline">\(A\)</span> is a proper subset of <span class="math inline">\(B\)</span> if every element in <span class="math inline">\(A\)</span> is present in <span class="math inline">\(B\)</span> and <span class="math inline">\(A \neq B\)</span>. It is denoted by <span class="math inline">\(A \subset B\)</span>. That is, there is at least one element in <span class="math inline">\(B\)</span> which is not in <span class="math inline">\(A\)</span>:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>A <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</span>
+<span id="cb15-2"><a href="#cb15-2"></a>B <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="bu">print</span>(A <span class="op">&lt;=</span> B)   <span class="co"># method-1</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="bu">print</span>(A <span class="op">&lt;</span> B)    <span class="co"># method-2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The <code>A &lt; B</code> operator checks if <code>A</code> is a proper subset of <code>B</code>. In this case <code>A</code> is not a proper subset of <code>B</code>, so the second print statement returns <code>False</code>.</p>
+<ul>
+<li>Superset: <span class="math inline">\(A\)</span> is a superset of <span class="math inline">\(B\)</span> if every element of <span class="math inline">\(B\)</span> is present in <span class="math inline">\(A\)</span>. It is denoted by <span class="math inline">\(A \supset B\)</span>:</li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>A <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>}</span>
+<span id="cb16-2"><a href="#cb16-2"></a>B <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>}</span>
+<span id="cb16-3"><a href="#cb16-3"></a>B.issuperset(A)     <span class="co"># method-1</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="bu">print</span>(B <span class="op">&gt;=</span> A)       <span class="co"># method-2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Union: The union of two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is the set of elements that are present in either <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> or both. It is denoted by <span class="math inline">\(A \cup B\)</span>.</li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>A <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>}</span>
+<span id="cb17-2"><a href="#cb17-2"></a>B <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>}</span>
+<span id="cb17-3"><a href="#cb17-3"></a>C1 <span class="op">=</span> A.union(B)     <span class="co"># method-1</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>C2 <span class="op">=</span> A <span class="op">|</span> B          <span class="co"># method-2</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="bu">print</span>(C1, C2)</span>
+<span id="cb17-6"><a href="#cb17-6"></a><span class="bu">print</span>(C1 <span class="op">==</span> C2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When there are multiple sets, we could do the following:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>A1, A2, A3, A4 <span class="op">=</span> {<span class="dv">1</span>}, {<span class="dv">2</span>, <span class="dv">3</span>}, {<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>}, {<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>}</span>
+<span id="cb18-2"><a href="#cb18-2"></a>B1 <span class="op">=</span> A1.union(A2, A3, A4)   <span class="co"># method-1</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a>B2 <span class="op">=</span> A1 <span class="op">|</span> A2 <span class="op">|</span> A3 <span class="op">|</span> A4      <span class="co"># method-2</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="bu">print</span>(B1, B2)</span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="bu">print</span>(B1 <span class="op">==</span> B2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Intersection: The intersection of two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is the set of elements common to both. It is denoted by <span class="math inline">\(A \cap B\)</span>.</li>
+</ul>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>A <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>}</span>
+<span id="cb19-2"><a href="#cb19-2"></a>B <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">4</span>}</span>
+<span id="cb19-3"><a href="#cb19-3"></a>C1 <span class="op">=</span> A.intersection(B)  <span class="co"># method-1</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a>C2 <span class="op">=</span> A <span class="op">&amp;</span> B              <span class="co"># method-2</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="bu">print</span>(C1, C2)</span>
+<span id="cb19-6"><a href="#cb19-6"></a><span class="bu">print</span>(C1 <span class="op">==</span> C2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>What happens if there are no elements in common? We should get the empty set:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>even, odd <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>}, {<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>}</span>
+<span id="cb20-2"><a href="#cb20-2"></a>common <span class="op">=</span> even <span class="op">&amp;</span> odd</span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="cf">assert</span> common <span class="op">==</span> <span class="bu">set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We have used an assert statement just to introduce some variation. As it doesn’t raise an <code>AssertionError</code>, we are right on target.</p>
+<ul>
+<li>Difference: The difference between two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is the set of elements present in one set but not in the other. It is denoted by <span class="math inline">\(A - B\)</span> or <span class="math inline">\(B - A\)</span>, and the two are not the same!
+<ul>
+<li><span class="math inline">\(A - B\)</span> is the set of elements in <span class="math inline">\(A\)</span> which are not in <span class="math inline">\(B\)</span>.</li>
+<li><span class="math inline">\(B - A\)</span> is the set of elements in <span class="math inline">\(B\)</span> which are not in <span class="math inline">\(A\)</span>.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>A <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>}</span>
+<span id="cb21-2"><a href="#cb21-2"></a>B <span class="op">=</span> {<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>}</span>
+<span id="cb21-3"><a href="#cb21-3"></a>C1 <span class="op">=</span> A.difference(B)    <span class="co"># method-1</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>C2 <span class="op">=</span> A <span class="op">-</span> B              <span class="co"># method-2</span></span>
+<span id="cb21-5"><a href="#cb21-5"></a><span class="bu">print</span>(C1, C2)</span>
+<span id="cb21-6"><a href="#cb21-6"></a><span class="bu">print</span>(C1 <span class="op">==</span> C2)</span>
+<span id="cb21-7"><a href="#cb21-7"></a>D1 <span class="op">=</span> B.difference(A)    <span class="co"># method-1</span></span>
+<span id="cb21-8"><a href="#cb21-8"></a>D2 <span class="op">=</span> B <span class="op">-</span> A              <span class="co"># method-2</span></span>
+<span id="cb21-9"><a href="#cb21-9"></a><span class="bu">print</span>(D1, D2)</span>
+<span id="cb21-10"><a href="#cb21-10"></a><span class="bu">print</span>(D1 <span class="op">==</span> D2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="other-set-methods" class="level3">
+<h3 class="anchored" data-anchor-id="other-set-methods">Other Set Methods</h3>
+<p>The methods that we saw in the previous section had a mathematical flavor. Now, we shall look at those methods that have a computational flavor!</p>
+<p>To remove an element from the set, we can use the <code>remove</code> method:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>A <span class="op">=</span> {<span class="st">'this'</span>, <span class="st">'is'</span>, <span class="st">'a'</span>, <span class="st">'set'</span>}</span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="bu">print</span>(<span class="st">'Before'</span>, A)</span>
+<span id="cb22-3"><a href="#cb22-3"></a>A.remove(<span class="st">'this'</span>)</span>
+<span id="cb22-4"><a href="#cb22-4"></a><span class="bu">print</span>(<span class="st">'After'</span>, A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If we try to remove an element that is not present in the set, the interpreter will throw a <code>KeyError</code>:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>A <span class="op">=</span> {<span class="st">'this'</span>, <span class="st">'is'</span>, <span class="st">'a'</span>, <span class="st">'set'</span>}</span>
+<span id="cb23-2"><a href="#cb23-2"></a>A.remove(<span class="st">'cool'</span>)    <span class="co"># error!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Consider the following problem:</p>
+<blockquote class="blockquote">
+<p>Given a list <code>L</code>, extract all unique elements from it and store the result in another list, <code>L_uniq</code>. The order of elements does not matter.</p>
+</blockquote>
+<p>Let us first look at a solution that doesn’t use sets:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a>L <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>]</span>
+<span id="cb24-2"><a href="#cb24-2"></a>L_uniq <span class="op">=</span> [ ]</span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="cf">for</span> elem <span class="kw">in</span> L:</span>
+<span id="cb24-4"><a href="#cb24-4"></a>    <span class="cf">if</span> elem <span class="kw">not</span> <span class="kw">in</span> L_uniq:</span>
+<span id="cb24-5"><a href="#cb24-5"></a>        L_uniq.append(elem)</span>
+<span id="cb24-6"><a href="#cb24-6"></a><span class="bu">print</span>(L_uniq)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now, for some set magic:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>L <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>]</span>
+<span id="cb25-2"><a href="#cb25-2"></a>S <span class="op">=</span> <span class="bu">set</span>(L)</span>
+<span id="cb25-3"><a href="#cb25-3"></a>L_uniq <span class="op">=</span> <span class="bu">list</span>(S)</span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="bu">print</span>(L_uniq)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Passing a list to the <code>set</code> function removes all duplicates and returns the unique elements.</p>
+</section>
+<section id="mutability" class="level3">
+<h3 class="anchored" data-anchor-id="mutability">Mutability</h3>
+<p>Sets are mutable entities.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a>A <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</span>
+<span id="cb26-2"><a href="#cb26-2"></a>B <span class="op">=</span> A</span>
+<span id="cb26-3"><a href="#cb26-3"></a>B.add(<span class="dv">4</span>)</span>
+<span id="cb26-4"><a href="#cb26-4"></a><span class="bu">print</span>(A, B)</span>
+<span id="cb26-5"><a href="#cb26-5"></a><span class="bu">print</span>(A <span class="kw">is</span> B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>A</code> and <code>B</code> are the same objects. As before, there are two ways to do a shallow copy:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a>A <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</span>
+<span id="cb27-2"><a href="#cb27-2"></a>B1 <span class="op">=</span> A.copy()</span>
+<span id="cb27-3"><a href="#cb27-3"></a>B2 <span class="op">=</span> <span class="bu">set</span>(A)</span>
+<span id="cb27-4"><a href="#cb27-4"></a>B1.add(<span class="dv">4</span>)</span>
+<span id="cb27-5"><a href="#cb27-5"></a>B2.add(<span class="dv">0</span>)</span>
+<span id="cb27-6"><a href="#cb27-6"></a><span class="bu">print</span>(A, B1, B2)</span>
+<span id="cb27-7"><a href="#cb27-7"></a><span class="bu">print</span>(A <span class="kw">is</span> <span class="kw">not</span> B1)</span>
+<span id="cb27-8"><a href="#cb27-8"></a><span class="bu">print</span>(A <span class="kw">is</span> <span class="kw">not</span> B2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2024, Karthik Thiagarajan @ IIT Madras</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
