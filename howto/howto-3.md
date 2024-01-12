@@ -1,0 +1,14 @@
+---
+title: Print the values of two variables on the same line
+pagetitle: How-to-3
+sidebar: false
+---
+
+```python
+name = 'Krishna'
+age = 35
+print(name, age)
+```
+
+For more details refer to this [video](https://youtu.be/5eBMnR5ALfQ?feature=shared){target=_blank}.
+

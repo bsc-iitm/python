@@ -1,0 +1,92 @@
+project:
+  type: website
+
+website:
+  page-footer: "Copyright 2024, Karthik Thiagarajan @ IIT Madras"
+  page-navigation: true
+  navbar: 
+    logo: "/assets/images/logo.png"
+    left:
+      - text: "Home"
+        file: index.md
+      - text: "PPAs"
+        file: ppa.md
+      - text: "How to"
+        file: howto.md
+      - text: "About"
+        file: about.md
+      - text: "Feedback"
+        file: feedback.md
+
+  sidebar:
+    - title: "PPAs"
+      collapse-level: 1
+      border: true
+      foreground: "primary"
+      contents:
+        - ppa.md
+        - section: "week-1"
+          contents:
+          - ppa/week-1/PPA-1.md
+          - ppa/week-1/PPA-2.md
+          - ppa/week-1/PPA-3.md
+          - ppa/week-1/PPA-4.md
+          - ppa/week-1/PPA-5.md
+          - ppa/week-1/PPA-6.md
+          - ppa/week-1/PPA-7.md
+        - section: "week-2"
+          contents:
+          - ppa/week-2/PPA-1.md
+          - ppa/week-2/PPA-2.md
+          - ppa/week-2/PPA-3.md
+          - ppa/week-2/PPA-4.md
+          - ppa/week-2/PPA-5.md
+          - ppa/week-2/PPA-6.md
+          - ppa/week-2/PPA-7.md
+          - ppa/week-2/PPA-8.md
+          - ppa/week-2/PPA-9.md
+          - ppa/week-2/PPA-10.md
+        - section: "week-3"
+          contents:
+          - ppa/week-3/PPA-1.md
+          - ppa/week-3/PPA-2.md
+          - ppa/week-3/PPA-3.md
+          - ppa/week-3/PPA-4.md
+          - ppa/week-3/PPA-5.md
+          - ppa/week-3/PPA-6.md
+          - ppa/week-3/PPA-7.md
+          - ppa/week-3/PPA-8.md
+          - ppa/week-3/PPA-9.md
+          - ppa/week-3/PPA-10.md
+          - ppa/week-3/PPA-11.md
+          - ppa/week-3/PPA-12.md
+        - section: "week-4"
+          contents:
+          - ppa/week-4/PPA-1.md
+          - ppa/week-4/PPA-2.md
+          - ppa/week-4/PPA-3.md
+          - ppa/week-4/PPA-4.md
+          - ppa/week-4/PPA-5.md
+          - ppa/week-4/PPA-6.md
+          - ppa/week-4/PPA-7.md
+          - ppa/week-4/PPA-8.md
+          - ppa/week-4/PPA-9.md
+          - ppa/week-4/PPA-10.md
+          - ppa/week-4/PPA-11.md
+
+format:
+  html:
+    theme: 
+      light: [cosmo, theme.scss]
+    fontsize: 20px
+    toc: true
+    grid:
+      sidebar-width: 200px
+      margin-width: 300px
+      body-width: 800px  
+    code-line-numbers: true
+    highlight-style: github
+    code-block-border-left: "#D3D3D3"
+    code-overflow: scroll
+    code-fold: true
+    css: styles.css
