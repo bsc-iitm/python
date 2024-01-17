@@ -38,7 +38,7 @@ print(matrix)
 
 Your matrix currently has only one row in it and would look like this:
 
-```
+```python
 [[1, 2, 3, 4, 5]]
 ```
 
@@ -66,7 +66,7 @@ Now, loopify!
 n = int(input())
 
 matrix = [ ]
-for i in range(n):
+for _ in range(n):
     row = [ ]
     for num in input().split(' '):
         row.append(int(num))

@@ -41,8 +41,8 @@ If you decide to go for a while loop, what would be the termination condition? T
 ```python
 n = int(input())
 total = 0
-while(n > 0):
-    total = total + n % 10
+while n > 0:
+    total = total + (n % 10)
     n = n // 10
 print(total)
 ```
@@ -54,8 +54,8 @@ Here we retain `n` as a string and then iterate through it.
 ```python
 n = input()
 total = 0
-for i in n:
-    total = total + int(i)
+for x in n:
+    total = total + int(x)
 print(total)
 ```
 

@@ -34,7 +34,7 @@ if 0 < x < 10:
     print(x + 2)
 ```
 
-Notice the usage `0 < x < 10`. This is called operator chaining. This actually corresponds to `0 < x and x < 10`. We have *chained* two operations into a single one. This chaining enables us to smoothly translate from the mathematical expression $0 < x < 10$ to the Python expression `0 < x < 10`.
+Notice the usage `0 < x < 10`. This is called operator chaining. This actually corresponds to `0 < x and x < 10`. We have *chained* two operations into a single one. Chaining enables us to smoothly translate the mathematical expression $0 < x < 10$ to the Python expression `0 < x < 10`.
 
 Few more things to consider:
 
@@ -100,6 +100,20 @@ elif 10 <= x:
 print(y)
 ```
 
+## Solution-5
 
+This is the last variation. Instead of having `elif`, we have an `if` in both places. This is also a valid solution for this problem. This is because the conditions in the two if-blocks are mutually exclusive. That is, if $0 < x < 10$, then the body of the first if-block gets executed. There is no way for the second if-block also to get triggered since $10 \leq x$ will evaluate to false.
+
+```python
+x = float(input())
+y = 0.0
+if 0 < x < 10:
+    y = x + 2
+if 10 <= x:
+    y = x ** 2 + 2
+print(y)
+```
+
+It is better to stick to `if-elif-else` ladders wherever possible and avoid a sequence of `if` conditions. The `if-elif-else` ladder is more efficient. As soon as one of the conditions is satisfied, the control will exit from the ladder. An `if-if-if` ladder on the other hand will end up checking every one of the `if` conditions for every possible input.
 
 :::

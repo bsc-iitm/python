@@ -7,7 +7,7 @@ pagetitle: Week-2, PPA-8
 
 Consider the following image of a chess-board (image borrowed from [chess.com](https://www.chess.com/terms/chess-bishop)). The piece on the board is a bishop.
 
-![](../assets/images/img_001.png){width=50%; fig-align=center}
+![](/assets/images/img_001.png){width="50%" fig-align=center}
 
 Accept two positions as input: `start` and `end`. Print **YES** if a bishop at `start` can move to `end` in exactly one move. Print **NO** otherwise. Note that a bishop can only move along diagonals.
 
@@ -43,8 +43,8 @@ end = input()
 cols = 'ABCDEFGH'
 rows = '12345678'
 
-start_col, start_row = start
-end_col, end_row = end
+start_col, start_row = start[0], start[1]
+end_col, end_row = end[0], end[1]
 
 col_diff = cols.index(start_col) - cols.index(end_col)
 row_diff = rows.index(start_row) - rows.index(end_row)

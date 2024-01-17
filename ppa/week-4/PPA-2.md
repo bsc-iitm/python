@@ -27,6 +27,12 @@ Do you think the above code works?
 
 ## Solution
 
+::: {.panel-tabset}
+
+## Solution-1
+
+Notice that the loop variable `i` is not being used anywhere within the body of the loop. It just acts as a syntactic placeholder. Head to solution-2 to see what could be done in such cases. 
+
 ```python
 n = int(input())
 L = [ ]
@@ -36,3 +42,17 @@ for i in range(n):
 print(L)
 ```
 
+## Solution-2
+
+When the loop variable is just a dummy placeholder, coders often use an `_` instead of a variable name such as `i` or `j`. Check out this [Stackoverflow](https://stackoverflow.com/questions/5893163/what-is-the-purpose-of-the-single-underscore-variable-in-python){target=_blank} answer for more details.
+
+```python
+n = int(input())
+L = [ ]
+for _ in range(n):
+    word = input()
+    L.append(word)
+print(L)
+```
+
+:::

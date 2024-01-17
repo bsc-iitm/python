@@ -36,7 +36,7 @@ n = int(input())
 k = 1
 while k <= n:
     print(k)
-    i += 1
+    k += 1
 ```
 
 ## Solution-2

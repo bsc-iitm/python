@@ -15,9 +15,9 @@ The first line will contain the integer $n$. This is followed by $2n$ lines. Eac
 
 ## Hint
 
-This may be one of the longest snippets that you would have to write. While writing this code, note the redundancy involved. You have to accept two matrices as input, so you would have two sets of nested loops, both of which are almost identical in appearance. How can we avoid this redundancy? We will learn functions in week-5 which will solve this problem.
+This may be one of the longest snippets that you would have to write. While writing this code, note the redundancy involved. You have to accept two matrices as input, so you would have two sets of nested loops, both of which are almost identical in appearance. How can you avoid this redundancy? We will learn functions in week-5 which will solve this problem.
 
-That said, once you have two matrices $A$ and $B$ in place, we need a new matrix $C$ such that:
+That said, once you have two matrices $A$ and $B$ in place, you need a new matrix $C$ such that:
 $$
 C[i][j] = A[i][j] + B[i][j]
 $$

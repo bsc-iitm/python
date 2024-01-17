@@ -21,6 +21,13 @@ This contains a collection of short snippets of code that explain how to do some
 | [Accept an integer as input](/howto/howto-7.md)              |
 | [Accept a float value as input](/howto/howto-10.md)          |
 
+## Operators
+
+| How to                                                       |
+| ------------------------------------------------------------ |
+| [Determine if a number is a factor of another number](/howto/howto-25.md) |
+| [Get the integer part of a decimal number](/howto/howto-26.md) |
+
 ## Lists
 
 | How to                                                       |

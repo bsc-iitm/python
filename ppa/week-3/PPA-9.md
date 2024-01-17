@@ -11,9 +11,9 @@ Accept a positive integer $n$ as input and print a triangle of zeros for $n$ lin
 
 ## Hint
 
-Nested loops are one way to solve the problem. What should be the ranges for the outer and inner for loops? How many rows are we printing? In each row, how many zeros are we printing? To move to the next row, just use `print()`.
+A nested loop is one way to solve the problem. What should be the ranges for the outer and inner `for` loops? How many rows are we printing? In each row, how many zeros are we printing? To move to the next row, just use `print()`.
 
-But there is also a way to solve the problem using a single loop. A hint is given below:
+There is a way to solve the problem using a single loop. A hint is given below:
 
 - string
 - integer
@@ -23,7 +23,11 @@ How can you use a combination of the three terms mentioned here to construct a s
 
 
 
-## Solution
+## Solutions
+
+::: {.panel-tabset}
+
+## Solution-1
 
 ```python
 n = int(input())
@@ -33,3 +37,12 @@ for i in range(1, n + 1):
     print()
 ```
 
+## Solution-2
+
+```python
+n = int(input())
+for i in range(1, n + 1):
+    print('0' * i)
+```
+
+:::

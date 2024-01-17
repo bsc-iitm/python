@@ -12,14 +12,14 @@ A list `L` of words is already given to you. Print the longest word in the list.
 Consider the following snippet of code.
 
 ```python
-long_word, long_len = '', 0
+max_word, max_len = '', 0
 for word in L:
-    if len(word) > long_len:
-        long_len = len(word)
-        long_word = word
+    if len(word) > max_len:
+        max_len = len(word)
+        max_word = word
 ```
 
-At the end of execution of this code, do you think `long_word` is the longest word in the list `L`?
+At the end of execution of this code, do you think `max_word` is the longest word in the list `L` as per the conditions given in the question.
 
 **<u>Key-point</u>**
 

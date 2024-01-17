@@ -16,7 +16,7 @@ For a point `(x, y)`, you have to construct a table such as this:
 | Both `x` and `y` are positive       | first  |
 | `x` is positive and `y` is negative | fourth |
 
-Your task is twofold. First, complete this table. How many rows does it have? Secondly, convert the conditions into Python expressions. Now, you just have to write a sequence of conditional statements and print the appropriate string. Here is a follow-up question to help you with the second task:
+Your task is twofold. First, complete this table. How many rows does it have? Secondly, convert the conditions into Python expressions. Now, you just have to write a sequence of conditional statements and print the appropriate string. Study the following snippets:
 
 :::{.panel-tabset}
 
@@ -44,10 +44,16 @@ if x > 0 or y > 0:
 
 :::
 
+Here is a follow-up question to help you with the second task:
+
 - Among the three snippets, which one would you choose to include in your solution to the problem?
 - What are the differences and similarities between snippet-1 and snippet-2?
 
 ## Solutions
+
+An image of the coordinate plane with the regions marked on it:
+
+![](/assets/images/img_003.png)
 
 :::{.panel-tabset}
 

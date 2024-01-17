@@ -17,13 +17,9 @@ $$
 $$
 
 <hr>
-
-
 The first line of input is a positive integer, $n$, that denotes the dimension of the matrix $A$. Each of the next $n$ lines contains a sequence of space-separated integers. The last line of the input contains the integer $s$.
 
-Print the matrix $s \cdot A$ as output. Each row of the matrix must be printed as a sequence of space separated integers, one row on each line. There should not be any space after the last number on each line. If the expected output looks exactly like the actual output and still you are getting a wrong answer, it is because of the space at the end.
-
-
+Print the matrix $s \cdot A$ as output. Each row of the matrix must be printed as a sequence of space separated integers, one row on each line. There should not be any space after the last number on each line.
 
 ## Hint
 
@@ -58,15 +54,15 @@ for i in range(n):
     matrix.append(row)
 s = int(input())
 
-for row in range(n):
-    for col in range(n):
-        matrix[row][col] *= s
+for i in range(n):
+    for j in range(n):
+        matrix[i][j] *= s
 
-for row in range(n):
-    for col in range(n):
-        if col != n - 1:
-            print(matrix[row][col], end = ' ')
+for i in range(n):
+    for j in range(n):
+        if j != n - 1:
+            print(matrix[i][j], end = ' ')
         else:
-            print(matrix[row][col])
+            print(matrix[i][j])
 ```
 

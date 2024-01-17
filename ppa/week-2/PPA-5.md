@@ -29,9 +29,15 @@ Once you have answered these questions, you have all the ingredients necessary t
 - Calculate the slope.
 - Find the y-coordinate of the point.
 
-There are important details that have been deliberately missed out. These are for you to fill in.
+There are important details that have been deliberately left out of this hint. These are for you to fill in.
 
 ## Solution
+
+For the mathematical part, refer to the image given below:
+
+![](/assets/images/img_004.png)
+
+The slope of a vertical line is undefined. A line is vertical if the x-coordinates of the two points are the same, that is, when $x_1 = x_2$. This gives us the first `if`-condition.
 
 ```python
 x1, y1 = float(input()), float(input())

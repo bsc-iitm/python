@@ -5,6 +5,7 @@ website:
   page-footer: "Copyright 2024, Karthik Thiagarajan @ IIT Madras"
   page-navigation: true
   navbar: 
+    pinned: true
     logo: "/assets/images/logo.png"
     left:
       - text: "Home"

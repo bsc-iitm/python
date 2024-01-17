@@ -71,7 +71,11 @@ Clearly, the whole thing has to be within a loop. How many times should this out
 
 
 
-## Solution
+## Solutions
+
+::: {.panel-tabset}
+
+## Solution-1
 
 ```python
 sorted_L = [ ]
@@ -84,3 +88,14 @@ while L != [ ]:
     sorted_L.append(max_elem)
 ```
 
+## Solution-2
+
+```python
+sorted_L = [ ]
+while L != [ ]:
+    max_elem = max(L)
+    L.remove(max_elem)
+    sorted_L.append(max_elem)
+```
+
+:::

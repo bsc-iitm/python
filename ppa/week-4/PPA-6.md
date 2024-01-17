@@ -13,7 +13,7 @@ Accept a sequence of comma-separated words as input. Reverse the sequence and pr
 
 <u>Approach-1</u>
 
-Consider the following sequence of operations on a list `L = [1, 2, 3, 4, 5]`. Think about this list as a train having five compartments. Reversing is the process of rearranging the compartments by moving the last compartment of the current train to the end of a new train. To begin with, this new train will have no compartments.
+Consider the following sequence of operations on a list `L = [1, 2, 3, 4, 5]`. To reverse this list, you can pick up its last element and make it the first element of a new list.
 
 <u>Step-0</u>
 
@@ -49,7 +49,7 @@ Consider the following sequence of operations on a list `L = [1, 2, 3, 4, 5]`. T
 
 <u>Step-4</u>
 
-```
+```python
 [1]
 
 [5, 4, 3, 2]
@@ -63,7 +63,7 @@ Consider the following sequence of operations on a list `L = [1, 2, 3, 4, 5]`. T
 [5, 4, 3, 2, 1]
 ```
 
-You don't necessarily have to remove the elements from the first list. But let us continue with the approach of removing an element from the first list and adding it to the second list. How will you remove an element from a list? This is a challenge for you to think about.
+You don't necessarily have to remove the elements from the first list. But let us continue with the approach of removing an element from the first list and adding it to the second list. How will you remove an element from a list?
 
 <u>Approach-2</u>
 
@@ -126,7 +126,7 @@ print(out[-1])
 
 ## Solution-3
 
-Take a look at line-5. We are swapping the first and last element, then the second and the penultimate element, and so on. Also take a look at the end-point of the `range` function.
+Take a look at line-5. As the loop proceeds, we are swapping the first and last element, then the second and the penultimate element, and so on. Also take a look at the end-point of the `range` function.
 
 ```python
 L = input().split(',')
@@ -142,7 +142,7 @@ print(L[-1])
 
 ## Solution-4
 
-Here we are reversing the range. We start from $n - 1$ and go all the way till $0$.
+Here we are reversing the range. We start from $n - 1$ and go all the way till $0$. The step-size is $-1$. Hence the range function looks like this: `range(n - 1, -1, -1)`. The end-point is one less than where we want to stop, hence it is $-1$ and not $0$.
 
 ```python
 L = input().split(',')

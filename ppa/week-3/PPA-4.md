@@ -36,7 +36,7 @@ Why does breaking help? What are the advantages of doing so?
 
 <u>Approach-2</u>
 
-A number $n$ is a composite number (not-prime) if it has a factor $f$ which is neither $1$ nor $p$. For example, $6$ is a composite number as it has a factor $2$, which is neither $1$ nor $6$. We will now use this slightly different perspective to solve the problem.
+A number $n$ is a composite number (not-prime) if it has a factor $f$ which is different from $1$ and $n$. For example, $6$ is a composite number as it has a factor $2$, which is neither $1$ nor $6$. We will now use this slightly different perspective to solve the problem.
 
 This approach is based on the idea of the **state** of a system. In our case, the system is the code. In most problems in our course, the `state` will be binary. For this problem, we will associate prime numbers with `state = True`. Therefore, while looping through the factors of $n$, we could be in one of these two states:
 
@@ -54,7 +54,7 @@ for f in range(1, n + 1):
 
 We start with an "optimistic" mindset that the number $n$ is a prime and set `state = True` in line-1. During the looping process, if we find that $n$ is composite, we update the `state` to `False`. If $n$ is indeed prime, then the `state` remains `True` even after the loop ends. Either way, at the end of the loop, the `state` variable will tell us whether the number $n$ is prime or not. Notice that the `state` is a dynamic entity during the looping process. For a composite number, `state = True` to begin with, but it eventually becomes `False`. 
 
-This approach is an extremely powerful template and can be applied to a wide range of problems. We will refer to this as the **state-approach** in future problems where this is used. There are some variants to this solution as well. Does breaking out of the loop make sense here? If the `state` become `False`, can it ever become `True` again? Finally, is there a simpler way of writing the if-condition so that we don't have to check for three conditions? The hint lies in rethinking about the range of numbers that you have to check for. Should it be `range(1, n + 1)`, or can it be something else?
+This approach is an extremely powerful template and can be applied to a wide range of problems. We will refer to this as the **state-approach**. There are some variants to this solution as well. Does breaking out of the loop make sense here? If the `state` become `False`, can it ever become `True` again? Finally, is there a simpler way of writing the if-condition so that we don't have to check for three conditions? The hint lies in rethinking about the range of numbers that you have to check for. Should it be `range(1, n + 1)`, or can it be something else?
 
 
 

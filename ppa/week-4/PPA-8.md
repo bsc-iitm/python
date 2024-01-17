@@ -40,7 +40,7 @@ This gives the following output:
 7,8,9,
 ```
 
-How does one get rid of the comma at the end? Check out an earlier PPA to get the logic for this.
+How does one get rid of the comma at the end? Check out [PPA-5](/ppa/week-4/PPA-5.md) to get the logic for this.
 
 
 

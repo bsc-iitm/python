@@ -38,7 +38,7 @@ else:
     print(False)
 ```
 
-With all this information, you have enough to construct a solution.
+You have enough information to construct a solution.
 
 
 

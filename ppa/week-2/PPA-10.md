@@ -23,14 +23,14 @@ f = int(3.3)
 print(f)
 ```
 
-`int(3.3)` retains the integer part while truncating whatever comes after the decimal, and also the decimal. Try out the following:
+`int(3.3)` retains the integer part while truncating whatever comes after the decimal, including the decimal point. Try out the following:
 
 ```python
 f = int(-3.3)
 print(f)
 ```
 
-Can you now go ahead and construct a solution for this problem? These are the [floor and ceiling functions](https://en.wikipedia.org/wiki/Floor_and_ceiling_functions) that we study in mathematics. Why do you think these functions have been named in this manner?
+Can you now go ahead and construct a solution for this problem? These are the [floor and ceiling functions](https://en.wikipedia.org/wiki/Floor_and_ceiling_functions){target=_blank} that we study in mathematics. Why do you think these functions have been named in this manner?
 
 
 

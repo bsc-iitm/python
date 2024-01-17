@@ -25,6 +25,8 @@ If you want a list of the first $n$ positive integers, then you need to use a lo
 
 ## Solutions
 
+Be careful to initialize `L` as the empty list before you begin populating it.
+
 :::{.panel-tabset}
 
 ## Solution-1
@@ -32,8 +34,8 @@ If you want a list of the first $n$ positive integers, then you need to use a lo
 ```python
 n = int(input())
 L = [ ]
-for i in range(1, n + 1):
-    L.append(i)
+for x in range(1, n + 1):
+    L.append(x)
 print(L)
 ```
 
@@ -42,8 +44,8 @@ print(L)
 ```python
 n = int(input())
 L = [ ]
-for i in range(1, n + 1):
-    L = L + [i]
+for x in range(1, n + 1):
+    L = L + [x]
 print(L)
 ```
 

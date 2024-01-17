@@ -75,6 +75,8 @@ else:
 
 ## Solution-2
 
+It is better to stick to `if-elif-else` ladders wherever possible and avoid a sequence of `if` conditions. The `if-elif-else` ladder is more efficient. As soon as one of the conditions is satisfied, the control will exit from the ladder. An `if-if-if` ladder on the other hand will end up checking every one of the `if` conditions for every possible input.
+
 
 ```python
 t = int(input())

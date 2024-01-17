@@ -20,12 +20,12 @@ for x in range(1, n + 1):
     print(x, end = ',')
 ```
 
-For an input of $5$, this ends up printing `1,2,3,4,5,` and the last comma is undesirable. How do we get rid of it. You can use an `if-else` block:
+For an input of $5$, this ends up printing `1,2,3,4,5,` and the last comma is undesirable. How do we get rid of it? You can use an `if-else` block:
 
 - If `x == n`, which is the last number you are printing, then just `print(x)`.
 - If `x != n`, which is any other number in the sequence, then `print(x, end = ',')`
 
-Now, you have enough information to complete the code.
+You have enough information to complete the code.
 
 
 

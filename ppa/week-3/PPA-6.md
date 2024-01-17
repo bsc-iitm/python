@@ -13,7 +13,7 @@ The last line of the input will always be the string `abcdefghijklmnopqrstuvwxyz
 
 ## Hint
 
-This problem is similar to the [previous one](/week-3/PPA-5). Instead of dealing with integers, we are dealing with strings here. Rather than finding the maximum number in the sequence, we need to find the word that has the shortest length. From the CT days, you also know how to find the minimum of a sequence of numbers.
+This problem is similar to the [previous one](/ppa/week-3/PPA-5.md). Instead of dealing with integers, we are dealing with strings here. Rather than finding the maximum number in the sequence, we need to find the word that has the shortest length. From the CT days, you also know how to find the minimum of a sequence of numbers.
 
 
 
