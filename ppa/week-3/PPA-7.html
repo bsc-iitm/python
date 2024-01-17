@@ -58,7 +58,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -519,8 +518,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb2-2"><a href="#cb2-2"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="cf">while</span>(n <span class="op">&gt;</span> <span class="dv">0</span>):</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    total <span class="op">=</span> total <span class="op">+</span> n <span class="op">%</span> <span class="dv">10</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="cf">while</span> n <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    total <span class="op">=</span> total <span class="op">+</span> (n <span class="op">%</span> <span class="dv">10</span>)</span>
 <span id="cb2-5"><a href="#cb2-5"></a>    n <span class="op">=</span> n <span class="op">//</span> <span class="dv">10</span></span>
 <span id="cb2-6"><a href="#cb2-6"></a><span class="bu">print</span>(total)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -528,8 +527,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Here we retain <code>n</code> as a string and then iterate through it.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>n <span class="op">=</span> <span class="bu">input</span>()</span>
 <span id="cb3-2"><a href="#cb3-2"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="cf">for</span> i <span class="kw">in</span> n:</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    total <span class="op">=</span> total <span class="op">+</span> <span class="bu">int</span>(i)</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="cf">for</span> x <span class="kw">in</span> n:</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    total <span class="op">=</span> total <span class="op">+</span> <span class="bu">int</span>(x)</span>
 <span id="cb3-5"><a href="#cb3-5"></a><span class="bu">print</span>(total)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>

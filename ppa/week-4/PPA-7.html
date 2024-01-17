@@ -58,7 +58,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -511,7 +510,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2"></a>matrix.append(row)</span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="bu">print</span>(matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Your matrix currently has only one row in it and would look like this:</p>
-<pre><code>[[1, 2, 3, 4, 5]]</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>[[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now it is just a question of using a loop to append all rows of a matrix to the outer list <code>matrix</code> one by one. For the first test case, this is what happens:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>matrix <span class="op">=</span> [ ]</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="co"># Row-1: 1 2</span></span>
@@ -529,7 +528,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
 <span id="cb6-3"><a href="#cb6-3"></a>matrix <span class="op">=</span> [ ]</span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n):</span>
 <span id="cb6-5"><a href="#cb6-5"></a>    row <span class="op">=</span> [ ]</span>
 <span id="cb6-6"><a href="#cb6-6"></a>    <span class="cf">for</span> num <span class="kw">in</span> <span class="bu">input</span>().split(<span class="st">' '</span>):</span>
 <span id="cb6-7"><a href="#cb6-7"></a>        row.append(<span class="bu">int</span>(num))</span>

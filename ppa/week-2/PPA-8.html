@@ -58,7 +58,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -495,7 +494,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Consider the following image of a chess-board (image borrowed from <a href="https://www.chess.com/terms/chess-bishop">chess.com</a>). The piece on the board is a bishop.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../assets/images/img_001.png" class="img-fluid figure-img"></p>
+<p><img src="../../assets/images/img_001.png" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 <p>Accept two positions as input: <code>start</code> and <code>end</code>. Print <strong>YES</strong> if a bishop at <code>start</code> can move to <code>end</code> in exactly one move. Print <strong>NO</strong> otherwise. Note that a bishop can only move along diagonals.</p>
@@ -519,8 +518,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-4"><a href="#cb3-4"></a>cols <span class="op">=</span> <span class="st">'ABCDEFGH'</span></span>
 <span id="cb3-5"><a href="#cb3-5"></a>rows <span class="op">=</span> <span class="st">'12345678'</span></span>
 <span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a>start_col, start_row <span class="op">=</span> start</span>
-<span id="cb3-8"><a href="#cb3-8"></a>end_col, end_row <span class="op">=</span> end</span>
+<span id="cb3-7"><a href="#cb3-7"></a>start_col, start_row <span class="op">=</span> start[<span class="dv">0</span>], start[<span class="dv">1</span>]</span>
+<span id="cb3-8"><a href="#cb3-8"></a>end_col, end_row <span class="op">=</span> end[<span class="dv">0</span>], end[<span class="dv">1</span>]</span>
 <span id="cb3-9"><a href="#cb3-9"></a></span>
 <span id="cb3-10"><a href="#cb3-10"></a>col_diff <span class="op">=</span> cols.index(start_col) <span class="op">-</span> cols.index(end_col)</span>
 <span id="cb3-11"><a href="#cb3-11"></a>row_diff <span class="op">=</span> rows.index(start_row) <span class="op">-</span> rows.index(end_row)</span>

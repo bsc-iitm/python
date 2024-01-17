@@ -58,7 +58,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -505,7 +504,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 \]</span></p>
 <hr>
 <p>The first line of input is a positive integer, <span class="math inline">\(n\)</span>, that denotes the dimension of the matrix <span class="math inline">\(A\)</span>. Each of the next <span class="math inline">\(n\)</span> lines contains a sequence of space-separated integers. The last line of the input contains the integer <span class="math inline">\(s\)</span>.</p>
-<p>Print the matrix <span class="math inline">\(s \cdot A\)</span> as output. Each row of the matrix must be printed as a sequence of space separated integers, one row on each line. There should not be any space after the last number on each line. If the expected output looks exactly like the actual output and still you are getting a wrong answer, it is because of the space at the end.</p>
+<p>Print the matrix <span class="math inline">\(s \cdot A\)</span> as output. Each row of the matrix must be printed as a sequence of space separated integers, one row on each line. There should not be any space after the last number on each line.</p>
 </section>
 <section id="hint" class="level2">
 <h2 class="anchored" data-anchor-id="hint">Hint</h2>
@@ -532,16 +531,16 @@ B[i][j] = s \cdot A[i][j]
 <span id="cb2-7"><a href="#cb2-7"></a>    matrix.append(row)</span>
 <span id="cb2-8"><a href="#cb2-8"></a>s <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="cf">for</span> row <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb2-11"><a href="#cb2-11"></a>    <span class="cf">for</span> col <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb2-12"><a href="#cb2-12"></a>        matrix[row][col] <span class="op">*=</span> s</span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb2-11"><a href="#cb2-11"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb2-12"><a href="#cb2-12"></a>        matrix[i][j] <span class="op">*=</span> s</span>
 <span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="cf">for</span> row <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb2-15"><a href="#cb2-15"></a>    <span class="cf">for</span> col <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb2-16"><a href="#cb2-16"></a>        <span class="cf">if</span> col <span class="op">!=</span> n <span class="op">-</span> <span class="dv">1</span>:</span>
-<span id="cb2-17"><a href="#cb2-17"></a>            <span class="bu">print</span>(matrix[row][col], end <span class="op">=</span> <span class="st">' '</span>)</span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb2-16"><a href="#cb2-16"></a>        <span class="cf">if</span> j <span class="op">!=</span> n <span class="op">-</span> <span class="dv">1</span>:</span>
+<span id="cb2-17"><a href="#cb2-17"></a>            <span class="bu">print</span>(matrix[i][j], end <span class="op">=</span> <span class="st">' '</span>)</span>
 <span id="cb2-18"><a href="#cb2-18"></a>        <span class="cf">else</span>:</span>
-<span id="cb2-19"><a href="#cb2-19"></a>            <span class="bu">print</span>(matrix[row][col])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-19"><a href="#cb2-19"></a>            <span class="bu">print</span>(matrix[i][j])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

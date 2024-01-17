@@ -58,7 +58,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -513,7 +512,7 @@ f(x) = \left\{
 <p>The output in this case is the value of <span class="math inline">\(f(x)\)</span>, which is again to be treated as a float value according to the question. Here is an incomplete code snippet that you can use to complete the solution:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="cf">if</span> <span class="dv">0</span> <span class="op">&lt;</span> x <span class="op">&lt;</span> <span class="dv">10</span>:</span>
 <span id="cb2-2"><a href="#cb2-2"></a>    <span class="bu">print</span>(x <span class="op">+</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Notice the usage <code>0 &lt; x &lt; 10</code>. This is called operator chaining. This actually corresponds to <code>0 &lt; x and x &lt; 10</code>. We have <em>chained</em> two operations into a single one. This chaining enables us to smoothly translate from the mathematical expression <span class="math inline">\(0 &lt; x &lt; 10\)</span> to the Python expression <code>0 &lt; x &lt; 10</code>.</p>
+<p>Notice the usage <code>0 &lt; x &lt; 10</code>. This is called operator chaining. This actually corresponds to <code>0 &lt; x and x &lt; 10</code>. We have <em>chained</em> two operations into a single one. Chaining enables us to smoothly translate the mathematical expression <span class="math inline">\(0 &lt; x &lt; 10\)</span> to the Python expression <code>0 &lt; x &lt; 10</code>.</p>
 <p>Few more things to consider:</p>
 <ul>
 <li>If you use <code>print</code> statements within the conditional blocks, like the way it is shown here, how many of them would you require to solve this problem?</li>
@@ -524,7 +523,7 @@ f(x) = \left\{
 <h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
 <p>You have to be careful about printing the value <span class="math inline">\(0\)</span>. The expected value is <span class="math inline">\(0.0\)</span>, the float value, and not <span class="math inline">\(0\)</span>, the integer value.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Solution-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Solution-2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Solution-3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Solution-4</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Solution-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Solution-2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Solution-3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Solution-4</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Solution-5</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
@@ -564,6 +563,17 @@ f(x) = \left\{
 <span id="cb6-5"><a href="#cb6-5"></a><span class="cf">elif</span> <span class="dv">10</span> <span class="op">&lt;=</span> x:</span>
 <span id="cb6-6"><a href="#cb6-6"></a>    y <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb6-7"><a href="#cb6-7"></a><span class="bu">print</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>This is the last variation. Instead of having <code>elif</code>, we have an <code>if</code> in both places. This is also a valid solution for this problem. This is because the conditions in the two if-blocks are mutually exclusive. That is, if <span class="math inline">\(0 &lt; x &lt; 10\)</span>, then the body of the first if-block gets executed. There is no way for the second if-block also to get triggered since <span class="math inline">\(10 \leq x\)</span> will evaluate to false.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb7-2"><a href="#cb7-2"></a>y <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="cf">if</span> <span class="dv">0</span> <span class="op">&lt;</span> x <span class="op">&lt;</span> <span class="dv">10</span>:</span>
+<span id="cb7-4"><a href="#cb7-4"></a>    y <span class="op">=</span> x <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="cf">if</span> <span class="dv">10</span> <span class="op">&lt;=</span> x:</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    y <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="bu">print</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>It is better to stick to <code>if-elif-else</code> ladders wherever possible and avoid a sequence of <code>if</code> conditions. The <code>if-elif-else</code> ladder is more efficient. As soon as one of the conditions is satisfied, the control will exit from the ladder. An <code>if-if-if</code> ladder on the other hand will end up checking every one of the <code>if</code> conditions for every possible input.</p>
 </div>
 </div>
 </div>

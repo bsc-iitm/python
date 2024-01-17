@@ -58,7 +58,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -96,6 +95,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -492,7 +493,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="question" class="level2">
 <h2 class="anchored" data-anchor-id="question">Question</h2>
-<p>Accept a non-zero integer as input. Print <code>positive</code> if it is greater than zero and <code>negative</code> if it is less than zero.</p>
+<p>Accept an integer as input. Print <code>positive</code> if it is greater than zero and <code>negative</code> if it is less than zero. You can assume that the input will be non-zero.</p>
 </section>
 <section id="hint" class="level2">
 <h2 class="anchored" data-anchor-id="hint">Hint</h2>
@@ -503,11 +504,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="solution" class="level2">
 <h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<p>Since the problem statement assures us that the input will be non-zero, the following solution will work.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>x <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
 <span id="cb2-3"><a href="#cb2-3"></a>    <span class="bu">print</span>(<span class="st">'positive'</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="cf">elif</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="cf">else</span>:</span>
 <span id="cb2-5"><a href="#cb2-5"></a>    <span class="bu">print</span>(<span class="st">'negative'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If the input could be zero, then we need to modify the code as follows:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>x <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="bu">print</span>(<span class="st">'positive'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="cf">elif</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="bu">print</span>(<span class="st">'negative'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This snippet will not print anything when <span class="math inline">\(0\)</span> is passed as input.</p>
 
 
 </section>
