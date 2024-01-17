@@ -413,25 +413,60 @@
     "text": "This is a companion resource for the course “Programming in Python” offered at the foundational level of the BS program in data science and applications. Check out the navigation bar at the top to get an idea of the different resources that can be found here."
   },
   {
+    "objectID": "howto/howto-7.html",
+    "href": "howto/howto-7.html",
+    "title": "Accept an integer as input",
+    "section": "",
+    "text": "x = int(input())\nFor more details refer to this video."
+  },
+  {
     "objectID": "howto/howto-13.html",
     "href": "howto/howto-13.html",
     "title": "Iterate through the elements in a list",
     "section": "",
-    "text": "There are two methods, both of which are correct:\n\nMethod-1Method-2\n\n\nThis is more Pythonic.\nL = ['this', 'is', 'a', 'list']\nfor word in L:\n    print(word)\n\n\nThis is less Pythonic.\nL = ['this', 'is', 'a', 'list']\nn = len(L)\nfor i in range(n):\n    print(L[i])"
+    "text": "Method-1Method-2\n\n\nThis is more Pythonic.\nL = ['this', 'is', 'a', 'list']\nfor word in L:\n    print(word)\n\n\nThis is less Pythonic.\nL = ['this', 'is', 'a', 'list']\nn = len(L)\nfor i in range(n):\n    print(L[i])"
   },
   {
-    "objectID": "howto/howto-11.html",
-    "href": "howto/howto-11.html",
-    "title": "Append an element to a list",
+    "objectID": "howto/howto-16.html",
+    "href": "howto/howto-16.html",
+    "title": "Print all elements in a list on the same line separated by a comma",
     "section": "",
-    "text": "L = [1, 2, 3]\nL.append(4)\nOR\nL = [1, 2, 3]\nL = L + [4]"
+    "text": "L = ['this', 'is', 'a', 'sentence']\nfor word in L:\n    print(word, end = ',')\nThis will add a comma after every word. As a result, there will be a comma after the last word. To get rid of it we can use this snippet:\nL = ['this', 'is', 'a', 'sentence']\nfor word in L[:-1]:\n    print(word, end = ',')\nprint(L[-1])\nThis iterates through the first \\(n - 1\\) entries in the list of length \\(n\\). The last element is printed outside the loop. The code is agnostic to the type of the values inside the list. That is, this snippet would work for a list of integers or a list of float values as well.\nIf we are dealing with a list of strings, there is a smarter way of doing this:\nL = ['this', 'is', 'a', 'sentence']\nsentence = ','.join(L)\nprint(sentence)\njoin is a string method that accepts a list of strings as argument and joins the elements in the list by using comma (the string on which the method is called) as the separator. If join is called using a different string, say a space, then the separator would be different."
   },
   {
-    "objectID": "howto/howto-1.html",
-    "href": "howto/howto-1.html",
-    "title": "Print “Hello World!”",
+    "objectID": "howto/howto-23.html",
+    "href": "howto/howto-23.html",
+    "title": "Find the maximum element in a list",
     "section": "",
-    "text": "print('Hello World!')\nFor more details refer to this video."
+    "text": "Method-1Method-2\n\n\nL = [10, -4, 40, 30, 14]\nmax_elem = max(L)\nprint(max_elem)\n\n\nThis approaches the problem from first principles.\nL = [10, -4, 40, 30, 14]\nmax_elem = L[0]\nfor x in L:\n    if x &gt; max_elem:\n        max_elem = x\nprint(max_elem)"
+  },
+  {
+    "objectID": "howto/howto-22.html",
+    "href": "howto/howto-22.html",
+    "title": "Extract the sublist that does not contain the first and last elements",
+    "section": "",
+    "text": "Method-1Method-2\n\n\nL = [1, 2, 3, 4, 5, 6, 7, 8]\nsub_L = L[1:-1]\nprint(sub_L)\n\n\nL = [1, 2, 3, 4, 5, 6, 7, 8]\nn = len(L)\nsub_L = L[1:n - 1]\nprint(sub_L)"
+  },
+  {
+    "objectID": "howto/howto-14.html",
+    "href": "howto/howto-14.html",
+    "title": "Print all elements in a list, one on each line",
+    "section": "",
+    "text": "L = [1, 2, 3, 4]\nfor x in L:\n    print(x)"
+  },
+  {
+    "objectID": "howto/howto-12.html",
+    "href": "howto/howto-12.html",
+    "title": "Find number of elements in a list",
+    "section": "",
+    "text": "L = [1, 2, 3, 4]\nn = len(L)\nprint(n)"
+  },
+  {
+    "objectID": "howto/howto-18.html",
+    "href": "howto/howto-18.html",
+    "title": "Find the last element in a list",
+    "section": "",
+    "text": "Method-1Method-2\n\n\nL = [10, 20, 30, 40]\nlast = L[-1]\n\n\nL = [10, 20, 30, 40]\nn = len(L)\nlast = L[n - 1]"
   },
   {
     "objectID": "howto/howto-3.html",
@@ -448,578 +483,585 @@
     "text": "x = float(input())"
   },
   {
-    "objectID": "howto/howto-9.html",
-    "href": "howto/howto-9.html",
-    "title": "Create a list of numbers",
+    "objectID": "howto/howto-8.html",
+    "href": "howto/howto-8.html",
+    "title": "Create an empty list",
     "section": "",
-    "text": "L = [1, 2, 3]"
+    "text": "Method-1Method-2\n\n\nL = [ ]\n\n\nL = list()"
   },
   {
-    "objectID": "ppa/week-4/PPA-5.html",
-    "href": "ppa/week-4/PPA-5.html",
-    "title": "PPA-5",
+    "objectID": "howto/howto-6.html",
+    "href": "howto/howto-6.html",
+    "title": "Accept a string as input",
     "section": "",
-    "text": "Accept a space-separated sequence of positive real numbers as input. Convert each element of the sequence into the greatest integer less than or equal to it. Print this sequence of integers as output, with a comma between consecutive integers."
+    "text": "string = input()\nFor more details refer to this video."
   },
   {
-    "objectID": "ppa/week-4/PPA-5.html#question",
-    "href": "ppa/week-4/PPA-5.html#question",
-    "title": "PPA-5",
-    "section": "",
-    "text": "Accept a space-separated sequence of positive real numbers as input. Convert each element of the sequence into the greatest integer less than or equal to it. Print this sequence of integers as output, with a comma between consecutive integers."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-5.html#hint",
-    "href": "ppa/week-4/PPA-5.html#hint",
-    "title": "PPA-5",
-    "section": "Hint",
-    "text": "Hint\nA very important task that will keep repeating throughout the course is to print a sequence of items separated by a specific delimiter, say a comma or a space. For example, given a list L = [1, 2, 3, 4, 5], how does one print the sequence 1,2,3,4,5?\nThe first idea is to just add a comma after every element:\nL = [1, 2, 3, 4, 5]\nfor x in L:\n    print(str(x) + ',')\nIs str(x) needed here? Can’t it be just x?\nWhen this code is executed, it displays the output on five separate lines. By default, print adds a new line at the end after whatever item it is supposed to print. This default behaviour can be suppressed using the end argument:\nL = [1, 2, 3, 4, 5]\nfor x in L:\n    print(str(x) + ',', end = '')   # there is no space between the quotes\nThis prints 1,2,3,4,5,. While this is an improvement from the previous case, there is a problem with the comma right at the end. Before addressing that issue, this code can be simplified in the following manner:\nL = [1, 2, 3, 4, 5]\nfor x in L:\n    print(x, end = ',')\nThis also gives the same output as before: 1,2,3,4,5,. Now, it is time to get rid of the last comma. There are two ways to do it:\n\nMethod-1Method-2\n\n\nL = [1, 2, 3, 4, 5]\nfor num in L[: -1]:\n    print(num, end = ',')\nprint(L[-1])\n\n\nL = [1, 2, 3, 4, 5]\nfor index, num in enumerate(L):\n    if index == len(L) - 1:\n        print(num)\n    else:\n        print(num, end = ',')\n\n\n\n\nMethod-1 iterates over the first len(L) - 1 elements of the list and adds a comma after every element. It then gets out of the loop and just prints the last element without a comma.\nMethod-2 iterates over all the elements. If index corresponds to len(L) - 1, it just prints that element. If not, it prints the element and adds a comma at the end.\n\nBoth are valid methods."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-5.html#solution",
-    "href": "ppa/week-4/PPA-5.html#solution",
-    "title": "PPA-5",
-    "section": "Solution",
-    "text": "Solution\nWhy can’t we directly do L[i] = int(L[i])? Why do we need line-4 to happen before line-5? Try deleting line-4 and see what happens.\nL = input().split(' ')\n\nfor i in range(len(L)):\n    L[i] = float(L[i])\n    L[i] = int(L[i])\n\nfor i in range(len(L)):\n    if i != len(L) - 1:\n        print(L[i], end = ',')\n    else:\n        print(L[i])"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-9.html",
-    "href": "ppa/week-4/PPA-9.html",
-    "title": "PPA-9",
-    "section": "",
-    "text": "Accept a square matrix \\(A\\) and an integer \\(s\\) as input and print the matrix \\(s \\cdot A\\) as output. Multiplying a matrix by an integer \\(s\\) is equivalent to multiplying each element of the matrix by \\(s\\). For example: \\[\n2 \\cdot \\begin{bmatrix}\n1 & 2\\\\\n3 & 4\n\\end{bmatrix} = \\begin{bmatrix}\n2 & 4\\\\\n6 & 8\n\\end{bmatrix}\n\\]\n\nThe first line of input is a positive integer, \\(n\\), that denotes the dimension of the matrix \\(A\\). Each of the next \\(n\\) lines contains a sequence of space-separated integers. The last line of the input contains the integer \\(s\\).\nPrint the matrix \\(s \\cdot A\\) as output. Each row of the matrix must be printed as a sequence of space separated integers, one row on each line. There should not be any space after the last number on each line. If the expected output looks exactly like the actual output and still you are getting a wrong answer, it is because of the space at the end."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-9.html#question",
-    "href": "ppa/week-4/PPA-9.html#question",
-    "title": "PPA-9",
-    "section": "",
-    "text": "Accept a square matrix \\(A\\) and an integer \\(s\\) as input and print the matrix \\(s \\cdot A\\) as output. Multiplying a matrix by an integer \\(s\\) is equivalent to multiplying each element of the matrix by \\(s\\). For example: \\[\n2 \\cdot \\begin{bmatrix}\n1 & 2\\\\\n3 & 4\n\\end{bmatrix} = \\begin{bmatrix}\n2 & 4\\\\\n6 & 8\n\\end{bmatrix}\n\\]\n\nThe first line of input is a positive integer, \\(n\\), that denotes the dimension of the matrix \\(A\\). Each of the next \\(n\\) lines contains a sequence of space-separated integers. The last line of the input contains the integer \\(s\\).\nPrint the matrix \\(s \\cdot A\\) as output. Each row of the matrix must be printed as a sequence of space separated integers, one row on each line. There should not be any space after the last number on each line. If the expected output looks exactly like the actual output and still you are getting a wrong answer, it is because of the space at the end."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-9.html#hint",
-    "href": "ppa/week-4/PPA-9.html#hint",
-    "title": "PPA-9",
-    "section": "Hint",
-    "text": "Hint\nOne way to do it is to accept the matrix \\(A\\) as input and then create a new matrix \\(B\\), such that: \\[\nB[i][j] = s \\cdot A[i][j]\n\\]\nB = [ ]\nn = len(A)\nfor i in range(n):\n    row = [ ]\n    for j in range(n):\n        row.append(s * A[i][j])\n    B.append(row)\nThough this forms a part of a valid solution, is there another way of solving this problem?"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-9.html#solution",
-    "href": "ppa/week-4/PPA-9.html#solution",
-    "title": "PPA-9",
-    "section": "Solution",
-    "text": "Solution\nn = int(input())\nmatrix = [ ]\nfor i in range(n):\n    row = [ ]\n    for x in input().split(' '):\n        row.append(int(x))\n    matrix.append(row)\ns = int(input())\n\nfor row in range(n):\n    for col in range(n):\n        matrix[row][col] *= s\n\nfor row in range(n):\n    for col in range(n):\n        if col != n - 1:\n            print(matrix[row][col], end = ' ')\n        else:\n            print(matrix[row][col])"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-1.html",
-    "href": "ppa/week-4/PPA-1.html",
-    "title": "PPA-1",
-    "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print the list of first \\(n\\) positive integers as output."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-1.html#question",
-    "href": "ppa/week-4/PPA-1.html#question",
-    "title": "PPA-1",
-    "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print the list of first \\(n\\) positive integers as output."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-1.html#hint",
-    "href": "ppa/week-4/PPA-1.html#hint",
-    "title": "PPA-1",
-    "section": "Hint",
-    "text": "Hint\nThere are two ways of growing a list:\n\nappend method\nlist concatenation\n\nL = [ ]\nL.append(1)\nL = L + [2]\nprint(L)\nIf you want a list of the first \\(n\\) positive integers, then you need to use a loop."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-1.html#solutions",
-    "href": "ppa/week-4/PPA-1.html#solutions",
-    "title": "PPA-1",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nn = int(input())\nL = [ ]\nfor i in range(1, n + 1):\n    L.append(i)\nprint(L)\n\n\nn = int(input())\nL = [ ]\nfor i in range(1, n + 1):\n    L = L + [i]\nprint(L)"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-4.html",
-    "href": "ppa/week-4/PPA-4.html",
-    "title": "PPA-4",
-    "section": "",
-    "text": "A list L of words is already given to you. Print the longest word in the list. If there are multiple words with the same maximum length, print the one which appears at the rightmost end of the list."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-4.html#question",
-    "href": "ppa/week-4/PPA-4.html#question",
-    "title": "PPA-4",
-    "section": "",
-    "text": "A list L of words is already given to you. Print the longest word in the list. If there are multiple words with the same maximum length, print the one which appears at the rightmost end of the list."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-4.html#hint",
-    "href": "ppa/week-4/PPA-4.html#hint",
-    "title": "PPA-4",
-    "section": "Hint",
-    "text": "Hint\nConsider the following snippet of code.\nlong_word, long_len = '', 0\nfor word in L:\n    if len(word) &gt; long_len:\n        long_len = len(word)\n        long_word = word\nAt the end of execution of this code, do you think long_word is the longest word in the list L?\nKey-point\nWhile iterating through a list of strings, make it a point to avoid the use of indices as much as possible. That is, try to avoid the following:\nfor i in range(len(L)):\n    ## do something with L[i] ##\nRather, use the following template:\nfor word in L:\n    ## do something with word ##\nThough both of them end up doing the same thing, the second template is more readable and Pythonic. That said, there would be problems (check next one) where you would require both the string and its index in the list. What can be done in such situations? Python provides a facility called enumerate for this.\nenumerate\nL = ['zero', 'one', 'two', 'three']\nfor index, word in enumerate(L):\n    print(index, word)\nThis gives the following output:\n0 zero\n1 one\n2 two\n3 three\nInstead of a single loop variable, note that we have two loop variables — index and word in line-2 of the code. Don’t worry about why this works. The rationale behind this will become clear when we discuss tuples in week-6. The point to keep in mind is that Python provides a way to iterate through a list in a clean way without having to use the unwieldy range(len(L)) construct."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-4.html#solution",
-    "href": "ppa/week-4/PPA-4.html#solution",
-    "title": "PPA-4",
-    "section": "Solution",
-    "text": "Solution\nmax_word, max_len = '', 0\nfor word in L:\n    if len(word) &gt;= max_len:\n        max_len = len(word)\n        max_word = word\nprint(max_word)"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-6.html",
-    "href": "ppa/week-4/PPA-6.html",
-    "title": "PPA-6",
-    "section": "",
-    "text": "Accept a sequence of comma-separated words as input. Reverse the sequence and print it as output."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-6.html#question",
-    "href": "ppa/week-4/PPA-6.html#question",
-    "title": "PPA-6",
-    "section": "",
-    "text": "Accept a sequence of comma-separated words as input. Reverse the sequence and print it as output."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-6.html#hint",
-    "href": "ppa/week-4/PPA-6.html#hint",
-    "title": "PPA-6",
-    "section": "Hint",
-    "text": "Hint\nApproach-1\nConsider the following sequence of operations on a list L = [1, 2, 3, 4, 5]. Think about this list as a train having five compartments. Reversing is the process of rearranging the compartments by moving the last compartment of the current train to the end of a new train. To begin with, this new train will have no compartments.\nStep-0\n[1, 2, 3, 4, 5]\n\n[ ]\nStep-1\n[1, 2, 3, 4]\n\n[5]\nStep-2\n[1, 2, 3]\n\n[5, 4]\nStep-3\n[1, 2]\n\n[5, 4, 3]\nStep-4\n[1]\n\n[5, 4, 3, 2]\nStep-5\n[ ]\n\n[5, 4, 3, 2, 1]\nYou don’t necessarily have to remove the elements from the first list. But let us continue with the approach of removing an element from the first list and adding it to the second list. How will you remove an element from a list? This is a challenge for you to think about.\nApproach-2\nConsider the two lists:\nP = [1, 2, 3, 4, 5]\nQ = [5, 4, 3, 2, 1]\nWe note the following:\n\n\n\nx\nIndex of x in P\nIndex of x in Q\n\n\n\n\n1\n0\n4\n\n\n2\n1\n3\n\n\n3\n2\n2\n\n\n4\n3\n1\n\n\n5\n4\n0\n\n\n\nDo you see any pattern in the index of the element x in P and Q? Is there a way you can use this pattern to reverse the list?"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-6.html#solutions",
-    "href": "ppa/week-4/PPA-6.html#solutions",
-    "title": "PPA-6",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2Solution-3Solution-4\n\n\nL = input().split(',')\n\nout = [ ]\nfor x in L:\n    out = [x] + out\n\nn = len(out)\nfor i in range(n - 1):\n    print(out[i], end = ',')\nprint(out[-1])\n\n\nWhy do we have line-4 where we initialize out to L.copy()? What happens if we just set out = L? Try this and see what happens.\nL = input().split(',')\n\nn = len(L)\nout = L.copy()\nfor i in range(n):\n    out[i] = L[n - 1 - i]\n    \nfor i in range(n - 1):\n    print(out[i], end = ',')\nprint(out[-1])\n\n\nTake a look at line-5. We are swapping the first and last element, then the second and the penultimate element, and so on. Also take a look at the end-point of the range function.\nL = input().split(',')\n\nn = len(L)\nfor i in range(n // 2):\n    L[i], L[-i - 1] = L[-i - 1], L[i]\n\nfor i in range(n - 1):\n    print(L[i], end = ',')\nprint(L[-1])\n\n\nHere we are reversing the range. We start from \\(n - 1\\) and go all the way till \\(0\\).\nL = input().split(',')\nn = len(L)\nout = [ ]\nfor i in range(n - 1, -1, -1):\n    out.append(L[i])\n\nfor i in range(n - 1):\n    print(out[i], end = ',')\nprint(out[-1])"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-8.html",
-    "href": "ppa/week-4/PPA-8.html",
-    "title": "PPA-8",
-    "section": "",
-    "text": "An identity matrix is a square matrix which has ones on the main diagonal and zeros everywhere else. For example, the identity matrix of size \\(3 \\times 3\\) is: \\[\n\\begin{bmatrix}\n1 & 0 & 0\\\\\n0 & 1 & 0\\\\\n0 & 0 & 1\n\\end{bmatrix}\n\\]\n\nAccept a positive integer \\(n\\) as input and print the identity matrix of size \\(n \\times n\\). Your output should have \\(n\\) lines, where each line is a sequence of \\(n\\) comma-separated integers that corresponds to one row of the matrix."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-8.html#question",
-    "href": "ppa/week-4/PPA-8.html#question",
-    "title": "PPA-8",
-    "section": "",
-    "text": "An identity matrix is a square matrix which has ones on the main diagonal and zeros everywhere else. For example, the identity matrix of size \\(3 \\times 3\\) is: \\[\n\\begin{bmatrix}\n1 & 0 & 0\\\\\n0 & 1 & 0\\\\\n0 & 0 & 1\n\\end{bmatrix}\n\\]\n\nAccept a positive integer \\(n\\) as input and print the identity matrix of size \\(n \\times n\\). Your output should have \\(n\\) lines, where each line is a sequence of \\(n\\) comma-separated integers that corresponds to one row of the matrix."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-8.html#hint",
-    "href": "ppa/week-4/PPA-8.html#hint",
-    "title": "PPA-8",
-    "section": "Hint",
-    "text": "Hint\nIn order to print the elements of a matrix with one row on each line, a nested loop is needed. After the inner loop goes through a row, a new line should be added. This can be done with a simple print statement.\nmatrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nfor i in range(3):\n    for j in range(3):\n        print(matrix[i][j], end = ',')\n    print()\nThis gives the following output:\n1,2,3,\n4,5,6,\n7,8,9,\nHow does one get rid of the comma at the end? Check out an earlier PPA to get the logic for this."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-8.html#solution",
-    "href": "ppa/week-4/PPA-8.html#solution",
-    "title": "PPA-8",
-    "section": "Solution",
-    "text": "Solution\nn = int(input())\nI = [ ]\nfor i in range(n):\n    row = [ ]\n    for j in range(n):\n        if i == j:\n            row.append(1)\n        else:\n            row.append(0)\n    I.append(row)\n    \nfor i in range(n):\n    for j in range(n):\n        if j != n - 1:\n            print(I[i][j], end = ',')\n        else:\n            print(I[i][j])"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-9.html",
-    "href": "ppa/week-2/PPA-9.html",
-    "title": "PPA-9",
-    "section": "",
-    "text": "You have \\(n\\) gold coins with you. You wish to divide this among three of your friends under the following conditions:\n\nAll three of them should get a non-zero share.\nNo two of them should get the same number of coins.\nYou should not have any coins with you at the end of this sharing process.\n\nThe input has four lines. The first line contains the number of coins with you. The next three lines will have the share given to your three friends. All inputs shall be non-negative integers. If the division satisfies these conditions, then print the string FAIR. If not, print UNFAIR."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-9.html#question",
-    "href": "ppa/week-2/PPA-9.html#question",
-    "title": "PPA-9",
-    "section": "",
-    "text": "You have \\(n\\) gold coins with you. You wish to divide this among three of your friends under the following conditions:\n\nAll three of them should get a non-zero share.\nNo two of them should get the same number of coins.\nYou should not have any coins with you at the end of this sharing process.\n\nThe input has four lines. The first line contains the number of coins with you. The next three lines will have the share given to your three friends. All inputs shall be non-negative integers. If the division satisfies these conditions, then print the string FAIR. If not, print UNFAIR."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-9.html#hint",
-    "href": "ppa/week-2/PPA-9.html#hint",
-    "title": "PPA-9",
-    "section": "Hint",
-    "text": "Hint\nThere are three expressions given to you here:\n(a &gt; 0) and (b &gt; 0) and (c &gt; 0)\n(a != b) and (b != c) and (c != a)\na + b + c - n == 0\nNow, make use of these three expressions to construct a solution. Consider another set of three expressions:\n(a == 0) or (b == 0) or (c == 0)\n(a == b) or (b == c) or (c == a)\na + b + c - n != 0\nNow, make use of these three expressions to construct another solution. How are these two solutions different from each other?"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-9.html#solutions",
-    "href": "ppa/week-2/PPA-9.html#solutions",
-    "title": "PPA-9",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nn = int(input())\na = int(input())\nb = int(input())\nc = int(input())\n\nif (a &gt; 0) and (b &gt; 0) and (c &gt; 0):\n    if (a != b) and (b != c) and (c != a):\n        if a + b + c - n == 0:\n            print('FAIR')\n        else:\n            print('UNFAIR')\n    else:\n        print('UNFAIR')\nelse:\n    print('UNFAIR')\n\n\nn = int(input())\na = int(input())\nb = int(input())\nc = int(input())\n\nflag = True\nif (a == 0) or (b == 0) or (c == 0):\n    flag = False\nif (a == b) or (b == c) or (c == a):\n    flag = False\nif a + b + c - n != 0:\n    flag = False\n\nif flag:\n    print('FAIR')\nelse:\n    print('UNFAIR')"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-1.html",
-    "href": "ppa/week-2/PPA-1.html",
-    "title": "PPA-1",
-    "section": "",
-    "text": "Accept a non-zero integer as input. Print positive if it is greater than zero and negative if it is less than zero."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-1.html#question",
-    "href": "ppa/week-2/PPA-1.html#question",
-    "title": "PPA-1",
-    "section": "",
-    "text": "Accept a non-zero integer as input. Print positive if it is greater than zero and negative if it is less than zero."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-1.html#hint",
-    "href": "ppa/week-2/PPA-1.html#hint",
-    "title": "PPA-1",
-    "section": "Hint",
-    "text": "Hint\nAn incomplete outline of the solution is given below:\nif x &gt; 0:\n    print('positive')\nCan you complete it?"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-1.html#solution",
-    "href": "ppa/week-2/PPA-1.html#solution",
-    "title": "PPA-1",
-    "section": "Solution",
-    "text": "Solution\nx = int(input())\nif x &gt; 0:\n    print('positive')\nelif x &lt; 0:\n    print('negative')"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-4.html",
-    "href": "ppa/week-2/PPA-4.html",
-    "title": "PPA-4",
-    "section": "",
-    "text": "Accept a point in 2D space as input and find the region in space that this point belongs to. A point could belong to one of the four quadrants, or it could be on one of the two axes, or it could be the origin. The input is given in 2 lines: the first line is the x-coordinate of the point while the second line is its y-coordinate. The possible outputs are first, second, third, fourth, x-axis, y-axis, and origin. Any other output will not be accepted. Note that all outputs should be in lower case."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-4.html#question",
-    "href": "ppa/week-2/PPA-4.html#question",
-    "title": "PPA-4",
-    "section": "",
-    "text": "Accept a point in 2D space as input and find the region in space that this point belongs to. A point could belong to one of the four quadrants, or it could be on one of the two axes, or it could be the origin. The input is given in 2 lines: the first line is the x-coordinate of the point while the second line is its y-coordinate. The possible outputs are first, second, third, fourth, x-axis, y-axis, and origin. Any other output will not be accepted. Note that all outputs should be in lower case."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-4.html#hint",
-    "href": "ppa/week-2/PPA-4.html#hint",
-    "title": "PPA-4",
-    "section": "Hint",
-    "text": "Hint\nFor a point (x, y), you have to construct a table such as this:\n\n\n\nCondition\nResult\n\n\n\n\nBoth x and y are positive\nfirst\n\n\nx is positive and y is negative\nfourth\n\n\n\nYour task is twofold. First, complete this table. How many rows does it have? Secondly, convert the conditions into Python expressions. Now, you just have to write a sequence of conditional statements and print the appropriate string. Here is a follow-up question to help you with the second task:\n\nSnippet-1Snippet-2Snippet-3\n\n\nif x &gt; 0:\n    if y &gt; 0:\n        print('first')\n\n\nif x &gt; 0 and y &gt; 0:\n    print('first')\n\n\nif x &gt; 0 or y &gt; 0:\n    print('first')\n\n\n\n\nAmong the three snippets, which one would you choose to include in your solution to the problem?\nWhat are the differences and similarities between snippet-1 and snippet-2?"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-4.html#solutions",
-    "href": "ppa/week-2/PPA-4.html#solutions",
-    "title": "PPA-4",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nx = float(input())\ny = float(input())\n\nif x &gt; 0:\n    if y &gt; 0:\n        print('first')\n    elif y &lt; 0:\n        print('fourth')\n    else:\n        print('x-axis')\nelif x &lt; 0:\n    if y &gt; 0:\n        print('second')\n    elif y &lt; 0:\n        print('third')\n    else:\n        print('x-axis')\nelse:\n    if y != 0:\n        print('y-axis')\n    else:\n        print('origin')\n\n\nx = float(input())\ny = float(input())\n\nif x &gt; 0 and y &gt; 0:\n    print('first')\nelif x &lt; 0 and y &gt; 0:\n    print('second')\nelif x &lt; 0 and y &lt; 0:\n    print('third')\nelif x &gt; 0 and y &lt; 0:\n    print('fourth')\nelif x != 0 and y = 0:\n    print('x-axis')\nelif x == 0 and y != 0:\n    print('y-axis')\nelif x == 0 and y == 0:\n    print('origin')"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-6.html",
-    "href": "ppa/week-2/PPA-6.html",
-    "title": "PPA-6",
-    "section": "",
-    "text": "Accept a string as input. If the input string is of odd length, then continue with it. If the input string is of even length, make the string of odd length as below:\n\nIf the last character is a period (.), then remove it\nIf the last character is not a period, then add a period (.) to the end of the string\n\nCall this string of odd length word. Select a substring made up of three consecutive characters from word such that there are an equal number of characters to the left and right of this substring. Print this substring as output. You can assume that all input strings will be in lower case and will have a length of at least four."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-6.html#question",
-    "href": "ppa/week-2/PPA-6.html#question",
-    "title": "PPA-6",
-    "section": "",
-    "text": "Accept a string as input. If the input string is of odd length, then continue with it. If the input string is of even length, make the string of odd length as below:\n\nIf the last character is a period (.), then remove it\nIf the last character is not a period, then add a period (.) to the end of the string\n\nCall this string of odd length word. Select a substring made up of three consecutive characters from word such that there are an equal number of characters to the left and right of this substring. Print this substring as output. You can assume that all input strings will be in lower case and will have a length of at least four."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-6.html#hint",
-    "href": "ppa/week-2/PPA-6.html#hint",
-    "title": "PPA-6",
-    "section": "Hint",
-    "text": "Hint\nIn case you are confused with the terminology, a period is another term for the full-stop.\nThis problem can be split into two parts:\n\nGet a string of odd length.\nExtract the required substring.\n\nIf the string is already of odd length, you don’t have to do much. If not, then you have to follow the procedure given in the question. A small snippet is given to help you; where do you think you would find this useful?\nif word[-1] == '.':\n    new_word = word[: -1]\nIf word = 'abcde', then word[: -1] is abcd. Do you see what is happening here?\nNow, how do you extract the substring? The hint is to focus on the character that is at the center of the string. Do you see why this is important? If you do, then how do you obtain the index of the middle chatacter in a string? What does all this have to do with the length of the string being odd? If the string had an even number of characters, what problems would you face?"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-6.html#solution",
-    "href": "ppa/week-2/PPA-6.html#solution",
-    "title": "PPA-6",
-    "section": "Solution",
-    "text": "Solution\nword = input()\nif len(word) % 2 == 0:\n    if word[-1] == '.':\n        word = word[: -1]\n    else:\n        word = word + '.'\nmid = len(word) // 2\nout = word[mid - 1:mid + 2]\nprint(out)"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-8.html",
-    "href": "ppa/week-2/PPA-8.html",
-    "title": "PPA-8",
-    "section": "",
-    "text": "Consider the following image of a chess-board (image borrowed from chess.com). The piece on the board is a bishop.\n\n\n\n\n\nAccept two positions as input: start and end. Print YES if a bishop at start can move to end in exactly one move. Print NO otherwise. Note that a bishop can only move along diagonals."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-8.html#question",
-    "href": "ppa/week-2/PPA-8.html#question",
-    "title": "PPA-8",
-    "section": "",
-    "text": "Consider the following image of a chess-board (image borrowed from chess.com). The piece on the board is a bishop.\n\n\n\n\n\nAccept two positions as input: start and end. Print YES if a bishop at start can move to end in exactly one move. Print NO otherwise. Note that a bishop can only move along diagonals."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-8.html#hint",
-    "href": "ppa/week-2/PPA-8.html#hint",
-    "title": "PPA-8",
-    "section": "Hint",
-    "text": "Hint\nThe bishop is capable of only diagonal moves. In the problem statement, you have to figure out if the bishop can move from start to end in exactly one move. So you have to see if this movement is along a diagonal or not. What are the characteristics of a diagonal? In terms of coordinate geometry, what is the slope of a diagonal?\nAs far as the inputs are concerned, each position on the chessboard is given by two symbols: a letter and a number. The letter denotes the column and the number denotes the row. For example, the bishop in the image given above is at C4. In the test cases, we use capital letters for the columns.\nNow consider the following strings:\ncols = 'ABCDEFGH'\nrows = '12345678'\nAnd the following snippet of code:\ncols.index('D')\nCan you come up with the solution using these hints?"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-8.html#solution",
-    "href": "ppa/week-2/PPA-8.html#solution",
-    "title": "PPA-8",
-    "section": "Solution",
-    "text": "Solution\nstart = input()\nend = input()\n\ncols = 'ABCDEFGH'\nrows = '12345678'\n\nstart_col, start_row = start\nend_col, end_row = end\n\ncol_diff = cols.index(start_col) - cols.index(end_col)\nrow_diff = rows.index(start_row) - rows.index(end_row)\n\n# abs(x) returns the absolute value of x\nif abs(col_diff) == abs(row_diff):\n    print('YES')\nelse:\n    print('NO')"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-11.html",
-    "href": "ppa/week-3/PPA-11.html",
+    "objectID": "ppa/week-4/PPA-11.html",
+    "href": "ppa/week-4/PPA-11.html",
     "title": "PPA-11",
     "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and find all solutions to the equation: \\[\nx^2 + y^2 = z^2\n\\] subject to the following constraints:\n\n\\(x\\), \\(y\\) and \\(z\\) are positive integers\n\\(x &lt; y &lt; z &lt; n\\)\n\nPrint each solution triplet on one line — x,y,z — with a comma between consecutive integers. The triplets should be printed in ascending order. If you do not find any solutions satisfying the given constraints, print the string NO SOLUTION as output.\nOrder relation among triplets\nGiven two triplets \\(T_1 = (x_1, y_1, z_1)\\) and \\(T_2 = (x_2, y_2, z_2)\\), use the following process to compare them:\n\nIf \\(x_1 &lt; x_2\\), then \\(T_1 &lt; T_2\\)\nIf \\(x_1 = x_2\\) and \\(y_1 &lt; y_2\\), then \\(T_1 &lt; T_2\\)\nIf \\(x_1 = x_2\\), \\(y_1 = y_2\\), and \\(z_1 &lt; z_2\\), then \\(T_1 &lt; T_2\\)"
+    "text": "L is a list of real numbers that is already given to you. You have to sort this list in descending order and store the sorted list in a variable called sorted_L."
   },
   {
-    "objectID": "ppa/week-3/PPA-11.html#question",
-    "href": "ppa/week-3/PPA-11.html#question",
+    "objectID": "ppa/week-4/PPA-11.html#question",
+    "href": "ppa/week-4/PPA-11.html#question",
     "title": "PPA-11",
     "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and find all solutions to the equation: \\[\nx^2 + y^2 = z^2\n\\] subject to the following constraints:\n\n\\(x\\), \\(y\\) and \\(z\\) are positive integers\n\\(x &lt; y &lt; z &lt; n\\)\n\nPrint each solution triplet on one line — x,y,z — with a comma between consecutive integers. The triplets should be printed in ascending order. If you do not find any solutions satisfying the given constraints, print the string NO SOLUTION as output.\nOrder relation among triplets\nGiven two triplets \\(T_1 = (x_1, y_1, z_1)\\) and \\(T_2 = (x_2, y_2, z_2)\\), use the following process to compare them:\n\nIf \\(x_1 &lt; x_2\\), then \\(T_1 &lt; T_2\\)\nIf \\(x_1 = x_2\\) and \\(y_1 &lt; y_2\\), then \\(T_1 &lt; T_2\\)\nIf \\(x_1 = x_2\\), \\(y_1 = y_2\\), and \\(z_1 &lt; z_2\\), then \\(T_1 &lt; T_2\\)"
+    "text": "L is a list of real numbers that is already given to you. You have to sort this list in descending order and store the sorted list in a variable called sorted_L."
   },
   {
-    "objectID": "ppa/week-3/PPA-11.html#hint",
-    "href": "ppa/week-3/PPA-11.html#hint",
+    "objectID": "ppa/week-4/PPA-11.html#hint",
+    "href": "ppa/week-4/PPA-11.html#hint",
     "title": "PPA-11",
     "section": "Hint",
-    "text": "Hint\nFirst, study the following snippet of code:\nfor x in range(1, 3):\n    for y in range(1, 3):\n        for z in range(1, 3):\n            print(x, y, z)\nThis is the output:\n1 1 1\n1 1 2\n1 2 1\n1 2 2\n2 1 1\n2 1 2\n2 2 1\n2 2 2\nWhat can you say about the order in which the triplets are printed? How will you use this idea to construct a solution to this problem?"
+    "text": "Hint\nLet us go with the “obvious sort” approach that was covered in the lecture. We have to keep removing the largest element from the list:\nStep-0\n[1, 4, 3, 2, 5]\n\n[ ]\nStep-1\n[1, 4, 3, 2]\n\n[5]\nStep-2\n[1, 3, 2]\n\n[5, 4]\nStep-3\n[1, 2]\n\n[5, 4, 3]\nStep-4\n[1]\n\n[5, 4, 3, 2]\nStep-5\n[ ]\n\n[5, 4, 3, 2, 1]\nThe logic is quite clear. How can we implement this? First, note that we can use L.remove(x) to remove the element x from the list L. What is this element x that we are interested in during each step? It is the maximum element in the list. So, each step has three sub-steps:\n\nFind the maximum element (loop)\nRemove this from the original list (single line statement)\nAppend this to a new list (single line statement)\n\nClearly, the whole thing has to be within a loop. How many times should this outer loop run? Should this outer loop be a for or a while loop? Which do you think is better?"
   },
   {
-    "objectID": "ppa/week-3/PPA-11.html#solution",
-    "href": "ppa/week-3/PPA-11.html#solution",
+    "objectID": "ppa/week-4/PPA-11.html#solution",
+    "href": "ppa/week-4/PPA-11.html#solution",
     "title": "PPA-11",
     "section": "Solution",
-    "text": "Solution\nn = int(input())\n\nnum = 0\nfor x in range(1, n):\n    for y in range(x + 1, n):\n        for z in range(y + 1, n):\n            if x ** 2 + y ** 2 == z ** 2:\n                print(f'{x},{y},{z}')\n                num += 1\nif num == 0:\n    print('NO SOLUTION')"
+    "text": "Solution\nsorted_L = [ ]\nwhile L != [ ]:\n    max_elem = L[0]\n    for elem in L:\n        if elem &gt; max_elem:\n            max_elem = elem\n    L.remove(max_elem)\n    sorted_L.append(max_elem)"
   },
   {
-    "objectID": "ppa/week-3/PPA-3.html",
-    "href": "ppa/week-3/PPA-3.html",
+    "objectID": "ppa/week-4/PPA-3.html",
+    "href": "ppa/week-4/PPA-3.html",
     "title": "PPA-3",
     "section": "",
-    "text": "Accept two positive integers \\(a\\) and \\(b\\) as input. Print the sum of all integers in the range \\([1000, 2000]\\), endpoints inclusive, that are divisible by both \\(a\\) and \\(b\\). If you find no number satisfying this condition in the given range, then print 0."
+    "text": "Accept a sequence of comma-separated integers as input and print the maximum value in the sequence as output."
   },
   {
-    "objectID": "ppa/week-3/PPA-3.html#question",
-    "href": "ppa/week-3/PPA-3.html#question",
+    "objectID": "ppa/week-4/PPA-3.html#question",
+    "href": "ppa/week-4/PPA-3.html#question",
     "title": "PPA-3",
     "section": "",
-    "text": "Accept two positive integers \\(a\\) and \\(b\\) as input. Print the sum of all integers in the range \\([1000, 2000]\\), endpoints inclusive, that are divisible by both \\(a\\) and \\(b\\). If you find no number satisfying this condition in the given range, then print 0."
+    "text": "Accept a sequence of comma-separated integers as input and print the maximum value in the sequence as output."
   },
   {
-    "objectID": "ppa/week-3/PPA-3.html#hint",
-    "href": "ppa/week-3/PPA-3.html#hint",
-    "title": "PPA-3",
-    "section": "Hint",
-    "text": "Hint\nThis is an extension of the previous problem. Here, you have to filter out all the numbers that are divisible by both \\(a\\) and \\(b\\)."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-3.html#solution",
-    "href": "ppa/week-3/PPA-3.html#solution",
-    "title": "PPA-3",
-    "section": "Solution",
-    "text": "Solution\na = int(input())\nb = int(input())\n\ntotal = 0\nfor f in range(1000, 2001):\n    if (f % a == 0) and (f % b == 0):\n        total += f\n\nprint(total)"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-7.html",
-    "href": "ppa/week-3/PPA-7.html",
-    "title": "PPA-7",
-    "section": "",
-    "text": "Accept a positive integer as input and print the sum of the digits in the number."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-7.html#question",
-    "href": "ppa/week-3/PPA-7.html#question",
-    "title": "PPA-7",
-    "section": "",
-    "text": "Accept a positive integer as input and print the sum of the digits in the number."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-7.html#hint",
-    "href": "ppa/week-3/PPA-7.html#hint",
-    "title": "PPA-7",
-    "section": "Hint",
-    "text": "Hint\nLet us take a number, say 1234 and see how to computationally approach the problem. We could start adding the digits from the left, \\(1 + 2 + 3 + 4\\), or we could do it from the right, \\(4 + 3 + 2 + 1\\). If we do it from the left, then we need to get hold of the leftmost digit of the number. It is not immediately clear how to do this. If we do it from the right, then we need to get hold of the last digit. Fortunately, this is something that we can easily do:\nThis can be done by taking the remainder when the number is divided by 10, that is, 1234 % 10 == 4. Once we have the last digit, we no longer need it in the original number. To get rid of the last digit, we go for floor division by 10: 1234 // 10 == 123. Now, it is just a matter of doing these two operations repeatedly:\nx = 1234\ndigit_4 = x % 10\nx = x // 10\ndigit_3 = x % 10\nx = x // 10\ndigit_2 = x % 10\nx = x // 10\ndigit_1 = x % 10\nIt is now up to you to generalize this logic so that it will work for any number. Naturally, if the number of digits is arbitrary, then we have to go for a loop. Which type of loop do you think is a better option here, for or while? Are the number of iterations known a priori or not?\nIf you decide to go for a while loop, what would be the termination condition? To answer the last question, think about the number \\(1234\\) and perform the pair of operations (modulo \\(10\\) followed by floor division by \\(10\\)) four times. What is the final value of x that you end up with?"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-7.html#solutions",
-    "href": "ppa/week-3/PPA-7.html#solutions",
-    "title": "PPA-7",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nn = int(input())\ntotal = 0\nwhile(n &gt; 0):\n    total = total + n % 10\n    n = n // 10\nprint(total)\n\n\nHere we retain n as a string and then iterate through it.\nn = input()\ntotal = 0\nfor i in n:\n    total = total + int(i)\nprint(total)"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-4.html",
-    "href": "ppa/week-3/PPA-4.html",
-    "title": "PPA-4",
-    "section": "",
-    "text": "Accept a positive integer \\(n\\) as input, where \\(n &gt; 1\\). Print PRIME if \\(n\\) is a prime number and NOTPRIME otherwise."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-4.html#question",
-    "href": "ppa/week-3/PPA-4.html#question",
-    "title": "PPA-4",
-    "section": "",
-    "text": "Accept a positive integer \\(n\\) as input, where \\(n &gt; 1\\). Print PRIME if \\(n\\) is a prime number and NOTPRIME otherwise."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-4.html#hint",
-    "href": "ppa/week-3/PPA-4.html#hint",
-    "title": "PPA-4",
-    "section": "Hint",
-    "text": "Hint\nThere are at least two different approaches to this problem:\nApproach-1\nA prime number \\(p\\) has exactly two factors, one and the number itself:\n\n\\(1\\)\n\\(p\\)\n\nGiven the number \\(n\\) in this problem, we can count the number of factors it has. If this number is equal to \\(2\\), then we have a prime number. This approach suggests a natural separation of the code into two parts:\n\nuse a for-loop to count the number of factors of \\(n\\) and store it in a variable, say num\nuse an if-else block to check if the number of factors is equal to \\(2\\) or not, and display the appropriate message\n\nA variation to this approach is the following. While looping through the possible factors of \\(n\\), if you find that the number of factors has exceeded \\(2\\) at some stage, does it make sense to persist with the iterations? Or does it give us an opportunity to break out of the loop? See if you can make use of the following snippet of code:\n### inside some loop ###\n    if num &gt; 3:\n        break\n### inside some loop ###\nWhy does breaking help? What are the advantages of doing so?\nApproach-2\nA number \\(n\\) is a composite number (not-prime) if it has a factor \\(f\\) which is neither \\(1\\) nor \\(p\\). For example, \\(6\\) is a composite number as it has a factor \\(2\\), which is neither \\(1\\) nor \\(6\\). We will now use this slightly different perspective to solve the problem.\nThis approach is based on the idea of the state of a system. In our case, the system is the code. In most problems in our course, the state will be binary. For this problem, we will associate prime numbers with state = True. Therefore, while looping through the factors of \\(n\\), we could be in one of these two states:\n\nstate = True\nstate = False\n\nIf the state is True, it means that so far we have not come across any factor of \\(n\\) other than \\(1\\) and \\(n\\). The moment we find a factor of \\(n\\) other than \\(1\\) and \\(n\\), we should update the state to False. For example:\nstate = True\nfor f in range(1, n + 1):\n    if (n % f == 0) and (f != 1) and (f != n):\n        state = False\nWe start with an “optimistic” mindset that the number \\(n\\) is a prime and set state = True in line-1. During the looping process, if we find that \\(n\\) is composite, we update the state to False. If \\(n\\) is indeed prime, then the state remains True even after the loop ends. Either way, at the end of the loop, the state variable will tell us whether the number \\(n\\) is prime or not. Notice that the state is a dynamic entity during the looping process. For a composite number, state = True to begin with, but it eventually becomes False.\nThis approach is an extremely powerful template and can be applied to a wide range of problems. We will refer to this as the state-approach in future problems where this is used. There are some variants to this solution as well. Does breaking out of the loop make sense here? If the state become False, can it ever become True again? Finally, is there a simpler way of writing the if-condition so that we don’t have to check for three conditions? The hint lies in rethinking about the range of numbers that you have to check for. Should it be range(1, n + 1), or can it be something else?"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-4.html#solutions",
-    "href": "ppa/week-3/PPA-4.html#solutions",
-    "title": "PPA-4",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2Solution-3\n\n\nn = int(input())\n\nfor f in range(1, n + 1):\n    if n % f == 0:\n        count += 1\nif count == 2:\n    print('PRIME')\nelse:\n    print('NOTPRIME')\n\n\nn = int(input())\n# optimistic start\nis_prime = True\n\nfor f in range(1, n + 1):\n    if (n % f == 0) and (f != 1) and (f != n):\n        is_prime = False\n        break\n\nif is_prime:\n    print('PRIME')\nelse:\n    print('NOTPRIME')\n\n\nThough the following code will not work for \\(n = 1\\), the question states that \\(n &gt; 1\\). We have made use of this fact. This code is a slight improvement over solution-2.\nn = int(input())\n# optimistic start\nis_prime = True\n\nfor f in range(2, n):\n    if n % f == 0:\n        is_prime = False\n        break\n\nif is_prime:\n    print('PRIME')\nelse:\n    print('NOTPRIME')"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-6.html",
-    "href": "ppa/week-3/PPA-6.html",
-    "title": "PPA-6",
-    "section": "",
-    "text": "Accept a sequence of words as input and print the the shortest word in the sequence. The input will have \\(n + 1\\) lines, where \\(n\\) denotes the number of terms in the sequence. The \\(i^{th}\\) line in the input will contain the \\(i^{th}\\) word in the sequence for \\(1 \\leq i \\leq n\\).\nThe last line of the input will always be the string abcdefghijklmnopqrstuvwxyz. This string is not a part of the sequence. You can assume that each test case corresponds to a non-empty sequence of words. If there are multiple words that have the same minimum length, print the first such occurrence."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-6.html#question",
-    "href": "ppa/week-3/PPA-6.html#question",
-    "title": "PPA-6",
-    "section": "",
-    "text": "Accept a sequence of words as input and print the the shortest word in the sequence. The input will have \\(n + 1\\) lines, where \\(n\\) denotes the number of terms in the sequence. The \\(i^{th}\\) line in the input will contain the \\(i^{th}\\) word in the sequence for \\(1 \\leq i \\leq n\\).\nThe last line of the input will always be the string abcdefghijklmnopqrstuvwxyz. This string is not a part of the sequence. You can assume that each test case corresponds to a non-empty sequence of words. If there are multiple words that have the same minimum length, print the first such occurrence."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-6.html#hint",
-    "href": "ppa/week-3/PPA-6.html#hint",
-    "title": "PPA-6",
-    "section": "Hint",
-    "text": "Hint\nThis problem is similar to the previous one. Instead of dealing with integers, we are dealing with strings here. Rather than finding the maximum number in the sequence, we need to find the word that has the shortest length. From the CT days, you also know how to find the minimum of a sequence of numbers."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-6.html#solution",
-    "href": "ppa/week-3/PPA-6.html#solution",
-    "title": "PPA-6",
-    "section": "Solution",
-    "text": "Solution\nword = input()\nmin_len = len(word)\nmin_word = word\n\nend_string = 'abcdefghijklmnopqrstuvwxyz'\nwhile word != end_string:\n    if len(word) &lt; min_len:\n        min_len = len(word)\n        min_word = word\n    word = input()\nprint(min_word)"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-8.html",
-    "href": "ppa/week-3/PPA-8.html",
-    "title": "PPA-8",
-    "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print the first \\(n\\) integers on a line separated by a comma."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-8.html#question",
-    "href": "ppa/week-3/PPA-8.html#question",
-    "title": "PPA-8",
-    "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print the first \\(n\\) integers on a line separated by a comma."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-8.html#hint",
-    "href": "ppa/week-3/PPA-8.html#hint",
-    "title": "PPA-8",
-    "section": "Hint",
-    "text": "Hint\nConsider the following piece of code:\nn = int(input())\n\nfor x in range(1, n + 1):\n    print(x, end = ',')\nFor an input of \\(5\\), this ends up printing 1,2,3,4,5, and the last comma is undesirable. How do we get rid of it. You can use an if-else block:\n\nIf x == n, which is the last number you are printing, then just print(x).\nIf x != n, which is any other number in the sequence, then print(x, end = ',')\n\nNow, you have enough information to complete the code."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-8.html#solution",
-    "href": "ppa/week-3/PPA-8.html#solution",
-    "title": "PPA-8",
-    "section": "Solution",
-    "text": "Solution\n\nSolution-1Solution-2\n\n\nn = int(input())\n\nfor x in range(1, n + 1):\n    if x != n:\n        print(x, end = ',')\n    else:\n        print(x)\n\n\nHere we stop short of the last number and print it outside the loop.\nn = int(input())\n\nfor x in range(1, n):\n    print(x, end = ',')\nprint(n)"
-  },
-  {
-    "objectID": "ppa/week-1/PPA-3.html",
-    "href": "ppa/week-1/PPA-3.html",
-    "title": "PPA-3",
-    "section": "",
-    "text": "Accept an integer as input and print its square as output."
-  },
-  {
-    "objectID": "ppa/week-1/PPA-3.html#question",
-    "href": "ppa/week-1/PPA-3.html#question",
-    "title": "PPA-3",
-    "section": "",
-    "text": "Accept an integer as input and print its square as output."
-  },
-  {
-    "objectID": "ppa/week-1/PPA-3.html#hint",
-    "href": "ppa/week-1/PPA-3.html#hint",
+    "objectID": "ppa/week-4/PPA-3.html#hint",
+    "href": "ppa/week-4/PPA-3.html#hint",
     "title": "PPA-3",
     "section": "Hint",
-    "text": "Hint\nThe input function always returns a string. If you want to accept an integer from the console, you have to first accept a string and then convert it into an integer:\nword = input()\nx = int(word)   # x is now an integer\nYou could of course do it in a single line as:\nx = int(input())\nDo not get confused between the exponentiation and the multiplication operator:\n\n*: multiplication\n**: exponentiation"
+    "text": "Hint\nConsider the following piece of code.\nnum = '1,2,3,4,5'\nL = num.split(',')\nprint(L)\nWhen this code is executed, it gives the following output:\n['1', '2', '3', '4', '5']\nThe method split is a string method. It can be used with any string variable. The string that is passed as an argument to the split method, in this case it is a comma, is called a delimiter. Sometimes you may have to split using a space. For example:\nnum = '1 2 3 4 5'\nL = num.split(' ') # there is a single space between the quotes\nprint(['1', '2', '3', '4', '5'])\nThe value returned by num.split(' ') is a list of strings. The next step is to convert each element of the string into an integer. This could be done in two ways.\n\nMethod-1Method-2\n\n\nL = ['1', '2', '3', '4', '5']\nfor i in range(len(L)):\n    L[i] = int(L[i])\n\n\nL = ['1', '2', '3', '4', '5']\nL_ints = [ ]\nfor x in L:\n    x_int = int(x)\n    L_ints.append(x_int)\n\n\n\nMethod-1 modifies the list in-place. Method-2 creates a new list. Both methods are valid. From here, it is all about finding the maximum element, something that you should be quite familiar with by now."
   },
   {
-    "objectID": "ppa/week-1/PPA-3.html#solution",
-    "href": "ppa/week-1/PPA-3.html#solution",
+    "objectID": "ppa/week-4/PPA-3.html#solution",
+    "href": "ppa/week-4/PPA-3.html#solution",
     "title": "PPA-3",
     "section": "Solution",
-    "text": "Solution\nThere is a trivial difference between the two solutions. Solution-1 introduces an intermediate variable, y, which represents the square of x and then prints it. Solution-2 does away with this intermediate variable and directly prints the square of x.\n\nSolution-1Solution-2\n\n\nx = int(input())\ny = x ** 2\nprint(y)\n\n\nx = int(input())\nprint(x ** 2)"
+    "text": "Solution\nnums = input()\nnums = nums.split(',')\n\nmax_num = int(nums[0])\nfor num in nums:\n    num = int(num)\n    if num &gt; max_num:\n        max_num = num\n        \nprint(max_num)"
   },
   {
-    "objectID": "ppa/week-1/PPA-7.html",
-    "href": "ppa/week-1/PPA-7.html",
+    "objectID": "ppa/week-4/PPA-7.html",
+    "href": "ppa/week-4/PPA-7.html",
     "title": "PPA-7",
     "section": "",
-    "text": "Accept a five digit number as input and print the sum of its digits as output."
+    "text": "Accept a square matrix as input and store it in a variable named matrix. The first line of input will be, \\(n\\), the number of rows in the matrix. Each of the next \\(n\\) lines will have a sequence of \\(n\\) space-separated integers."
   },
   {
-    "objectID": "ppa/week-1/PPA-7.html#question",
-    "href": "ppa/week-1/PPA-7.html#question",
+    "objectID": "ppa/week-4/PPA-7.html#question",
+    "href": "ppa/week-4/PPA-7.html#question",
     "title": "PPA-7",
     "section": "",
-    "text": "Accept a five digit number as input and print the sum of its digits as output."
+    "text": "Accept a square matrix as input and store it in a variable named matrix. The first line of input will be, \\(n\\), the number of rows in the matrix. Each of the next \\(n\\) lines will have a sequence of \\(n\\) space-separated integers."
   },
   {
-    "objectID": "ppa/week-1/PPA-7.html#hint",
-    "href": "ppa/week-1/PPA-7.html#hint",
+    "objectID": "ppa/week-4/PPA-7.html#hint",
+    "href": "ppa/week-4/PPA-7.html#hint",
     "title": "PPA-7",
     "section": "Hint",
-    "text": "Hint\nSometimes, it may be more beneficial to accept a string as input and not convert it into an integer right away.\nx = input()\nfirst = int(x[0])\nWhat do you think the variable first contains in the above snippet of code? Do you see how you can extend this idea to solve the problem?\nAs a second approach, we can start with \\(x\\) as an integer. Instead of processing the number from left to right, let us try to process it from right to left. How do we get the last digit of a number? The last digit is the remainder when the number is divided by \\(10\\):\nlast = x % 10\nOnce we have the last digit, we no longer need it. So, we need to remove it from \\(x\\). How do we do it? We can do floor division by \\(10\\):\nx = x // 10\nCan you complete the solution?"
+    "text": "Hint\nHow does one accept a row of a matrix?\nA row of input is usually provided as a sequence of numbers:\n1 2 3 4 5\nPPAs 1 to 6 should give you the idea here.\nnums = input().split(' ')   # split by space\nrow = [ ]                   # represents one row of a matrix\nfor num in nums:\n    row.append(int(num))    # convert str to int\nNow, you just need to append this row to another list matrix:\nmatrix = [ ]\nmatrix.append(row)\nprint(matrix)\nYour matrix currently has only one row in it and would look like this:\n[[1, 2, 3, 4, 5]]\nNow it is just a question of using a loop to append all rows of a matrix to the outer list matrix one by one. For the first test case, this is what happens:\nmatrix = [ ]\n# Row-1: 1 2\nrow = [1, 2]\nmatrix.append(row)\n# Matrix becomes [[1, 2]]\n# Row-2: 3 4\nrow = [3, 4]\nmatrix.append(row)\n# Matrix becomes [[1, 2], [3, 4]]\nNow, loopify!"
   },
   {
-    "objectID": "ppa/week-1/PPA-7.html#solutions",
-    "href": "ppa/week-1/PPA-7.html#solutions",
+    "objectID": "ppa/week-4/PPA-7.html#solution",
+    "href": "ppa/week-4/PPA-7.html#solution",
     "title": "PPA-7",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nx = input()\nfirst = int(x[0])\nsecond = int(x[1])\nthird = int(x[2])\nfourth = int(x[3])\nfifth = int(x[4])\nprint(first + second + third + fourth + fifth)\n\n\nx = int(input())\nfifth = x % 10\nx = x // 10\nfourth = x % 10\nx = x // 10\nthird = x % 10\nx = x // 10\nsecond = x % 10\nx = x // 10\nfirst = x % 10\nprint(first + second + third + fourth + fifth)"
+    "section": "Solution",
+    "text": "Solution\nn = int(input())\n\nmatrix = [ ]\nfor i in range(n):\n    row = [ ]\n    for num in input().split(' '):\n        row.append(int(num))\n    matrix.append(row)"
   },
   {
-    "objectID": "ppa/week-1/PPA-2.html",
-    "href": "ppa/week-1/PPA-2.html",
+    "objectID": "ppa/week-4/PPA-2.html",
+    "href": "ppa/week-4/PPA-2.html",
     "title": "PPA-2",
     "section": "",
-    "text": "Print the following pattern.\n*\n**\n***\n****\n*****\nThere are no spaces between consecutive stars. There are no spaces at the end of each line."
+    "text": "Accept a sequence of words as input, append all these words to a list in the order in which they are entered, and print this list as output. The first line in the input is a positive integer \\(n\\) that denotes the number of words in the sequence. The next \\(n\\) lines will have one word on each line."
   },
   {
-    "objectID": "ppa/week-1/PPA-2.html#question",
-    "href": "ppa/week-1/PPA-2.html#question",
+    "objectID": "ppa/week-4/PPA-2.html#question",
+    "href": "ppa/week-4/PPA-2.html#question",
     "title": "PPA-2",
     "section": "",
-    "text": "Print the following pattern.\n*\n**\n***\n****\n*****\nThere are no spaces between consecutive stars. There are no spaces at the end of each line."
+    "text": "Accept a sequence of words as input, append all these words to a list in the order in which they are entered, and print this list as output. The first line in the input is a positive integer \\(n\\) that denotes the number of words in the sequence. The next \\(n\\) lines will have one word on each line."
   },
   {
-    "objectID": "ppa/week-1/PPA-2.html#hint",
-    "href": "ppa/week-1/PPA-2.html#hint",
+    "objectID": "ppa/week-4/PPA-2.html#hint",
+    "href": "ppa/week-4/PPA-2.html#hint",
     "title": "PPA-2",
     "section": "Hint",
-    "text": "Hint\nThere are two ways of solving this problem. Consider the third line of the output. We could either do it this way:\nprint('***')\nOr this way:\nprint('*' * 3)\nMultiplying a string by a number results in replication of the string. For example:\nprint('ab' * 3)\nThis gives the output:\nababab\nAs a follow up question, what do you think will happen if we multiply a string by \\(0\\)?\nprint('ab' * 0)\nAnd what about multiplying a string by a number that is not an integer?\nprint('abc' * 1.5)"
+    "text": "Hint\nThere are two steps here:\n\naccept a string during each iteration of the loop\nappend this string to a list\n\nThe easiest thing would be a for loop as the number of iterations is known to us (first line of the input). But what if we go for a while loop?\nwhile n &gt; 0:\n    ### accept string as input ###\n    ### append string to list ###\n    n -= 1\nDo you think the above code works?"
   },
   {
-    "objectID": "ppa/week-1/PPA-2.html#solutions",
-    "href": "ppa/week-1/PPA-2.html#solutions",
+    "objectID": "ppa/week-4/PPA-2.html#solution",
+    "href": "ppa/week-4/PPA-2.html#solution",
+    "title": "PPA-2",
+    "section": "Solution",
+    "text": "Solution\nn = int(input())\nL = [ ]\nfor i in range(n):\n    word = input()\n    L.append(word)\nprint(L)"
+  },
+  {
+    "objectID": "ppa/week-4/PPA-10.html",
+    "href": "ppa/week-4/PPA-10.html",
+    "title": "PPA-10",
+    "section": "",
+    "text": "Accept two square matrices \\(A\\) and \\(B\\) of dimensions \\(n \\times n\\) as input and compute their sum \\(A + B\\).\n\nThe first line will contain the integer \\(n\\). This is followed by \\(2n\\) lines. Each of the first \\(n\\) lines is a sequence of comma-separated integers that denotes one row of the matrix \\(A\\). Each of the last \\(n\\) lines is a sequence of comma-separated integers that denotes one row of the matrix \\(B\\). Your output should again be a sequence of \\(n\\) lines, where each line is a sequence of comma-separated integer that denotes a row of the matrix \\(A + B\\)."
+  },
+  {
+    "objectID": "ppa/week-4/PPA-10.html#question",
+    "href": "ppa/week-4/PPA-10.html#question",
+    "title": "PPA-10",
+    "section": "",
+    "text": "Accept two square matrices \\(A\\) and \\(B\\) of dimensions \\(n \\times n\\) as input and compute their sum \\(A + B\\).\n\nThe first line will contain the integer \\(n\\). This is followed by \\(2n\\) lines. Each of the first \\(n\\) lines is a sequence of comma-separated integers that denotes one row of the matrix \\(A\\). Each of the last \\(n\\) lines is a sequence of comma-separated integers that denotes one row of the matrix \\(B\\). Your output should again be a sequence of \\(n\\) lines, where each line is a sequence of comma-separated integer that denotes a row of the matrix \\(A + B\\)."
+  },
+  {
+    "objectID": "ppa/week-4/PPA-10.html#hint",
+    "href": "ppa/week-4/PPA-10.html#hint",
+    "title": "PPA-10",
+    "section": "Hint",
+    "text": "Hint\nThis may be one of the longest snippets that you would have to write. While writing this code, note the redundancy involved. You have to accept two matrices as input, so you would have two sets of nested loops, both of which are almost identical in appearance. How can we avoid this redundancy? We will learn functions in week-5 which will solve this problem.\nThat said, once you have two matrices \\(A\\) and \\(B\\) in place, we need a new matrix \\(C\\) such that: \\[\nC[i][j] = A[i][j] + B[i][j]\n\\]"
+  },
+  {
+    "objectID": "ppa/week-4/PPA-10.html#solution",
+    "href": "ppa/week-4/PPA-10.html#solution",
+    "title": "PPA-10",
+    "section": "Solution",
+    "text": "Solution\nn = int(input())\n\nA = [ ]\nfor i in range(n):\n    row = [ ]\n    for x in input().split(','):\n        row.append(int(x))\n    A.append(row)\n    \nB = [ ]\nfor i in range(n):\n    row = [ ]\n    for x in input().split(','):\n        row.append(int(x))\n    B.append(row)\n    \nC = [ ]\nfor i in range(n):\n    row = [ ]\n    for j in range(n):\n        row.append(0)\n    C.append(row)\n    \nfor i in range(n):\n    for j in range(n):\n        C[i][j] = A[i][j] + B[i][j]\n        if j != n - 1:\n            print(C[i][j], end = ',')\n        else:\n            print(C[i][j])"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-5.html",
+    "href": "ppa/week-2/PPA-5.html",
+    "title": "PPA-5",
+    "section": "",
+    "text": "Write a program to realize the equation of a line given 2 points \\((x_1,y_1)\\) and \\((x_2,y_2)\\) in 2D space. The input is in 5 lines where, the first, second, third, and fourth lines represent \\(x_1\\), \\(y_1\\), \\(x_2\\), and \\(y_2\\) respectively. The fifth line corresponds to \\(x_3\\). Determine \\(y_3\\) using the equation of a straight line as given below:\n\\[\n\\frac{x-x_1}{x_2-x_1} = \\frac{y-y_1}{y_2-y_1}\n\\]\nThe output should be “Vertical Line” if the line is vertical. In other cases, the output should be 2 lined, where the first line is the value of \\(y_3\\) and the second line indicates whether the slope of the line is positive, negative or zero. Print “Positive Slope”, “Negative Slope” or “Horizontal Line” accordingly.\nNote that all inputs are to be processed as real numbers."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-5.html#question",
+    "href": "ppa/week-2/PPA-5.html#question",
+    "title": "PPA-5",
+    "section": "",
+    "text": "Write a program to realize the equation of a line given 2 points \\((x_1,y_1)\\) and \\((x_2,y_2)\\) in 2D space. The input is in 5 lines where, the first, second, third, and fourth lines represent \\(x_1\\), \\(y_1\\), \\(x_2\\), and \\(y_2\\) respectively. The fifth line corresponds to \\(x_3\\). Determine \\(y_3\\) using the equation of a straight line as given below:\n\\[\n\\frac{x-x_1}{x_2-x_1} = \\frac{y-y_1}{y_2-y_1}\n\\]\nThe output should be “Vertical Line” if the line is vertical. In other cases, the output should be 2 lined, where the first line is the value of \\(y_3\\) and the second line indicates whether the slope of the line is positive, negative or zero. Print “Positive Slope”, “Negative Slope” or “Horizontal Line” accordingly.\nNote that all inputs are to be processed as real numbers."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-5.html#hint",
+    "href": "ppa/week-2/PPA-5.html#hint",
+    "title": "PPA-5",
+    "section": "Hint",
+    "text": "Hint\nThere are two aspects to this problem. One is mathematical, the other is computational. First, try to figure out the mathematical part. The questions you have to ask yourself are the following:\n\nFor what collection of points does the line joining them become a vertical line?\nIf a line is not vertical, then how does one compute the slope?\nWhat is the slope of a horizontal line?\n\nOnce you have answered these questions, you have all the ingredients necessary to solve the problem computationally. Some of the steps in the computational process:\n\nAccept inputs as real numbers. You know how to do this from PPA-2.\nCalculate the slope.\nFind the y-coordinate of the point.\n\nThere are important details that have been deliberately missed out. These are for you to fill in."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-5.html#solution",
+    "href": "ppa/week-2/PPA-5.html#solution",
+    "title": "PPA-5",
+    "section": "Solution",
+    "text": "Solution\nx1, y1 = float(input()), float(input())\nx2, y2 = float(input()), float(input())\nx3 = float(input())\n\nif x1 != x2:\n    m = (y2 - y1) / (x2 - x1)   # m is the slope\n    y3 = y1 + m * (x3 - x1)\n    print(y3)\n\n    if m == 0:\n        print('Horizontal Line')\n    elif m &gt; 0:\n        print('Positive Slope')\n    else:\n        print('Negative Slope')\nelse:\n    print('Vertical Line')"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-3.html",
+    "href": "ppa/week-2/PPA-3.html",
+    "title": "PPA-3",
+    "section": "",
+    "text": "Accept an integer as input and print the time of the day. Use the following table for reference.\n\n\n\nInput\nOutput\n\n\n\n\n\\(T &lt; 0\\)\nINVALID\n\n\n\\(0 \\leq T \\leq 5\\)\nNIGHT\n\n\n\\(6 \\leq T \\leq 11\\)\nMORNING\n\n\n\\(12 \\leq T \\leq 17\\)\nAFTERNOON\n\n\n\\(18 \\leq T \\leq 23\\)\nEVENING\n\n\n\\(T \\geq 24\\)\nINVALID\n\n\n\nThe input will be a single line containing an integer. The output should be one of these strings: NIGHT, MORNING, AFTERNOON, EVENING, INVALID."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-3.html#question",
+    "href": "ppa/week-2/PPA-3.html#question",
+    "title": "PPA-3",
+    "section": "",
+    "text": "Accept an integer as input and print the time of the day. Use the following table for reference.\n\n\n\nInput\nOutput\n\n\n\n\n\\(T &lt; 0\\)\nINVALID\n\n\n\\(0 \\leq T \\leq 5\\)\nNIGHT\n\n\n\\(6 \\leq T \\leq 11\\)\nMORNING\n\n\n\\(12 \\leq T \\leq 17\\)\nAFTERNOON\n\n\n\\(18 \\leq T \\leq 23\\)\nEVENING\n\n\n\\(T \\geq 24\\)\nINVALID\n\n\n\nThe input will be a single line containing an integer. The output should be one of these strings: NIGHT, MORNING, AFTERNOON, EVENING, INVALID."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-3.html#hint",
+    "href": "ppa/week-2/PPA-3.html#hint",
+    "title": "PPA-3",
+    "section": "Hint",
+    "text": "Hint\nHow is this problem related to the previous problem? Do they have the same structure?\nThink about the following code snippets:\n\nSnippet-1Snippet-2\n\n\nif T &lt; 0:\n    print('INVALID')\nelif 0 &lt;= T &lt;= 5:\n    print('NIGHT')\n\n\nif T &lt; 0:\n    print('INVALID')\nif 0 &lt;= T &lt;= 5:\n    print('NIGHT')\n\n\n\nCome up with two different solutions to the problem, one that develops snippet-1 and the other which develops snippet-2. What is the difference between these two solutions that you arrive at? Which one is better?"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-3.html#solutions",
+    "href": "ppa/week-2/PPA-3.html#solutions",
+    "title": "PPA-3",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nt = int(input())\nif 0 &lt;= t &lt;= 5:\n    print('NIGHT')\nelif 6 &lt;= t &lt;= 11:\n    print('MORNING')\nelif 12 &lt;= t &lt;= 17:\n    print('AFTERNOON')\nelif 18 &lt;= t &lt;= 23:\n    print('EVENING')\nelse:\n    print('INVALID')\n\n\nt = int(input())\nif t &lt; 0:\n    print('INVALID')\nif 0 &lt;= t &lt;= 5:\n    print('NIGHT')\nif 6 &lt;= t &lt;= 11:\n    print('MORNING')\nif 12 &lt;= t &lt;= 17:\n    print('AFTERNOON')\nif 18 &lt;= t &lt;= 23:\n    print('EVENING')\nif t &gt;= 24:\n    print('INVALID')"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-7.html",
+    "href": "ppa/week-2/PPA-7.html",
+    "title": "PPA-7",
+    "section": "",
+    "text": "A sequence of five words is called magical if the \\(i^{th}\\) word is a substring of the \\((i + 1)^{th}\\) word for every \\(i\\) in the range \\(1 \\leq i &lt; 5\\). Accept a sequence of five words as input, one word on each line. Print magical if the sequence is magical and non-magical otherwise.\nNote that str_1 is a substring of str_2 if and only if str_1 is present as a sequence of consecutive characters in str_2."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-7.html#question",
+    "href": "ppa/week-2/PPA-7.html#question",
+    "title": "PPA-7",
+    "section": "",
+    "text": "A sequence of five words is called magical if the \\(i^{th}\\) word is a substring of the \\((i + 1)^{th}\\) word for every \\(i\\) in the range \\(1 \\leq i &lt; 5\\). Accept a sequence of five words as input, one word on each line. Print magical if the sequence is magical and non-magical otherwise.\nNote that str_1 is a substring of str_2 if and only if str_1 is present as a sequence of consecutive characters in str_2."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-7.html#hint",
+    "href": "ppa/week-2/PPA-7.html#hint",
+    "title": "PPA-7",
+    "section": "Hint",
+    "text": "Hint\nThe in keyword is a powerful tool. For example, to see if a string word1 is a substring of another string word2, you just need to type:\nword1 in word2\nIf word1 is a substring of word2 then this expression evaluates to True. If not, it evaluates to False. Now, it is just a question of repeatedly applying this condition across the sequence."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-7.html#solutions",
+    "href": "ppa/week-2/PPA-7.html#solutions",
+    "title": "PPA-7",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nword_1 = input()\nword_2 = input()\nword_3 = input()\nword_4 = input()\nword_5 = input()\n\nif ((word_1 in word_2) and\n    (word_2 in word_3) and\n    (word_3 in word_4) and\n    (word_4 in word_5)):\n    print('magical')\nelse:\n    print('non-magical')\n\n\nword_1 = input()\nword_2 = input()\nword_3 = input()\nword_4 = input()\nword_5 = input()\n\npresent = False\nif word_1 in word_2:\n    if word_2 in word_3:\n        if word_3 in word_4:\n            if word_4 in word_5:\n                present = True\nif present:\n    print('magical')\nelse:\n    print('non-magical')"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-2.html",
+    "href": "ppa/week-2/PPA-2.html",
+    "title": "PPA-2",
+    "section": "",
+    "text": "Consider the piece-wise function given below.\n\\[\nf(x) = \\left\\{\n        \\begin{array}{ll}\n            x + 2 & \\quad 0 &lt; x &lt; 10 \\\\\n            x^2 + 2 & \\quad 10 \\leq x \\\\\n            0 & \\quad \\text{otherwise}\n        \\end{array}\n    \\right.\n\\]\nAccept the value of \\(x\\) as input and print the value of \\(f(x)\\) as output. Note that both the input and output are real numbers. Your code should reflect this aspect. That is, both \\(x\\) and \\(f(x)\\) should be float values."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-2.html#question",
+    "href": "ppa/week-2/PPA-2.html#question",
+    "title": "PPA-2",
+    "section": "",
+    "text": "Consider the piece-wise function given below.\n\\[\nf(x) = \\left\\{\n        \\begin{array}{ll}\n            x + 2 & \\quad 0 &lt; x &lt; 10 \\\\\n            x^2 + 2 & \\quad 10 \\leq x \\\\\n            0 & \\quad \\text{otherwise}\n        \\end{array}\n    \\right.\n\\]\nAccept the value of \\(x\\) as input and print the value of \\(f(x)\\) as output. Note that both the input and output are real numbers. Your code should reflect this aspect. That is, both \\(x\\) and \\(f(x)\\) should be float values."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-2.html#hint",
+    "href": "ppa/week-2/PPA-2.html#hint",
+    "title": "PPA-2",
+    "section": "Hint",
+    "text": "Hint\nReal numbers are represented as float values. So, you would have to accept the input as follows:\nx = float(input())\nThe output in this case is the value of \\(f(x)\\), which is again to be treated as a float value according to the question. Here is an incomplete code snippet that you can use to complete the solution:\nif 0 &lt; x &lt; 10:\n    print(x + 2)\nNotice the usage 0 &lt; x &lt; 10. This is called operator chaining. This actually corresponds to 0 &lt; x and x &lt; 10. We have chained two operations into a single one. This chaining enables us to smoothly translate from the mathematical expression \\(0 &lt; x &lt; 10\\) to the Python expression 0 &lt; x &lt; 10.\nFew more things to consider:\n\nIf you use print statements within the conditional blocks, like the way it is shown here, how many of them would you require to solve this problem?\nIs there a way to solve this problem that requires just one print statement? Can you come up with that solution if it exists?"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-2.html#solutions",
+    "href": "ppa/week-2/PPA-2.html#solutions",
     "title": "PPA-2",
     "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nprint('*')\nprint('**')\nprint('***')\nprint('****')\nprint('*****')\n\n\nprint('*')\nprint('*' * 2)\nprint('*' * 3)\nprint('*' * 4)\nprint('*' * 5)"
+    "text": "Solutions\nYou have to be careful about printing the value \\(0\\). The expected value is \\(0.0\\), the float value, and not \\(0\\), the integer value.\n\nSolution-1Solution-2Solution-3Solution-4\n\n\nx = float(input())\nif 0 &lt; x &lt; 10:\n    print(x + 2)\nelif 10 &lt;= x:\n    print(x ** 2 + 2)\nelse:\n    print(0.0)\n\n\nx = float(input())\nif 0 &lt; x &lt; 10:\n    y = x + 2\nelif 10 &lt;= x:\n    y = x ** 2 + 2\nelse:\n    y = 0.0\nprint(y)\n\n\nHere is a slight variation of solution-2. Can you see what has changed?\nx = float(input())\ny = 0.0\nif 0 &lt; x &lt; 10:\n    y = x + 2\nelif 10 &lt;= x:\n    y = x ** 2 + 2\nprint(y)\n\n\nThis is different from all three solutions before. Instead of using operator chaining, this uses the and operator:\nx = float(input())\ny = 0.0\nif 0 &lt; x and x &lt; 10:\n    y = x + 2\nelif 10 &lt;= x:\n    y = x ** 2 + 2\nprint(y)"
   },
   {
-    "objectID": "ppa.html",
-    "href": "ppa.html",
-    "title": "PPAs",
+    "objectID": "ppa/week-2/PPA-10.html",
+    "href": "ppa/week-2/PPA-10.html",
+    "title": "PPA-10",
     "section": "",
-    "text": "This section contains the practice programming problems (PPAs) used in the course organized week-wise. Each PPA has a separate page dedicated to it. There are three components to each PPA:\n\nQuestion\nHint\nSolution\n\n\n\n\n\n\n\nWarning\n\n\n\nWe earnestly request you to first attempt a question for about \\(15\\) minutes without looking at any external resource. If you are not able to make any headway, look at the hint. Spend another \\(15\\) minutes and see if you can solve the problem with the hint. If you are still not able to figure out the solution, you can refer to the one provided by us.\nIf you directly head to the solution, you are cheating yourself and you will learn NOTHING in the process. Take this as a friendly suggestion from our side, and we hope you will make the best use of this resource. Test cases will not be provided. You have to head to the portal to verify the correctness of your solution. Finally, if you are able to solve the problem yourself, congratulations. You can compare your solution with the one provided by us and learn different ways of approaching the same problem."
+    "text": "Accept a real number \\(x\\) as input and print the greatest integer less than or equal to \\(x\\) on the first line, followed by the smallest integer greater than or equal to \\(x\\) on the second line."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-10.html#question",
+    "href": "ppa/week-2/PPA-10.html#question",
+    "title": "PPA-10",
+    "section": "",
+    "text": "Accept a real number \\(x\\) as input and print the greatest integer less than or equal to \\(x\\) on the first line, followed by the smallest integer greater than or equal to \\(x\\) on the second line."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-10.html#hint",
+    "href": "ppa/week-2/PPA-10.html#hint",
+    "title": "PPA-10",
+    "section": "Hint",
+    "text": "Hint\nThe crux of this problem is to look at three cases, two of which are given below:\n\nWhat happens when \\(x\\) is positive?\nWhat happens when \\(x\\) is negative?\n\nHere is another hint:\nf = int(3.3)\nprint(f)\nint(3.3) retains the integer part while truncating whatever comes after the decimal, and also the decimal. Try out the following:\nf = int(-3.3)\nprint(f)\nCan you now go ahead and construct a solution for this problem? These are the floor and ceiling functions that we study in mathematics. Why do you think these functions have been named in this manner?"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-10.html#solution",
+    "href": "ppa/week-2/PPA-10.html#solution",
+    "title": "PPA-10",
+    "section": "Solution",
+    "text": "Solution\nx = float(input())\n\nif x == int(x):\n    floor = ceil = int(x)\nelif x &gt; 0:\n    floor = int(x)\n    ceil = floor + 1\nelif x &lt; 0:\n    ceil = int(x)\n    floor = ceil - 1\n\nprint(floor)\nprint(ceil)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-5.html",
+    "href": "ppa/week-3/PPA-5.html",
+    "title": "PPA-5",
+    "section": "",
+    "text": "Accept a sequence of positive integers as input and print the the maximum number in the sequence. The input will have \\(n + 1\\) lines, where \\(n\\) denotes the number of terms in the sequence. The \\(i^{th}\\) line in the input will contain the \\(i^{th}\\) term in the sequence for \\(1 \\leq i \\leq n\\). The last line of the input will always be the number 0. Each test case will have at least one term in the sequence."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-5.html#question",
+    "href": "ppa/week-3/PPA-5.html#question",
+    "title": "PPA-5",
+    "section": "",
+    "text": "Accept a sequence of positive integers as input and print the the maximum number in the sequence. The input will have \\(n + 1\\) lines, where \\(n\\) denotes the number of terms in the sequence. The \\(i^{th}\\) line in the input will contain the \\(i^{th}\\) term in the sequence for \\(1 \\leq i \\leq n\\). The last line of the input will always be the number 0. Each test case will have at least one term in the sequence."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-5.html#hint",
+    "href": "ppa/week-3/PPA-5.html#hint",
+    "title": "PPA-5",
+    "section": "Hint",
+    "text": "Hint\nYou have to keep accepting input from the console until it is zero. Since the number of iterations is not known a priori, a while loop is the better choice. The next step is to accept the first input outside the while loop and store it in a variable named t. Now, keep accepting inputs inside the while loop. The termination condition for the loop is t == 0. So, keep running the loop as long as t != 0.\nt = int(input())\nwhile t != 0:\n    t = int(input())\nWith this information, can you now insert the piece of code for finding the maximum number in the sequence? You have seen it so many times in the CT course."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-5.html#solution",
+    "href": "ppa/week-3/PPA-5.html#solution",
+    "title": "PPA-5",
+    "section": "Solution",
+    "text": "Solution\nt = int(input())\nmax_t = t\nwhile t != 0:\n    if t &gt; max_t:\n        max_t = t\n    t = int(input())\nprint(max_t)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-9.html",
+    "href": "ppa/week-3/PPA-9.html",
+    "title": "PPA-9",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and print a triangle of zeros for \\(n\\) lines. The \\(i^{th}\\) line should have \\(i\\) zeros. There shouldn’t be any spaces between consecutive zeros. Do not print a space at the end of a line."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-9.html#question",
+    "href": "ppa/week-3/PPA-9.html#question",
+    "title": "PPA-9",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and print a triangle of zeros for \\(n\\) lines. The \\(i^{th}\\) line should have \\(i\\) zeros. There shouldn’t be any spaces between consecutive zeros. Do not print a space at the end of a line."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-9.html#hint",
+    "href": "ppa/week-3/PPA-9.html#hint",
+    "title": "PPA-9",
+    "section": "Hint",
+    "text": "Hint\nNested loops are one way to solve the problem. What should be the ranges for the outer and inner for loops? How many rows are we printing? In each row, how many zeros are we printing? To move to the next row, just use print().\nBut there is also a way to solve the problem using a single loop. A hint is given below:\n\nstring\ninteger\nmultiplication\n\nHow can you use a combination of the three terms mentioned here to construct a solution?"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-9.html#solution",
+    "href": "ppa/week-3/PPA-9.html#solution",
+    "title": "PPA-9",
+    "section": "Solution",
+    "text": "Solution\nn = int(input())\nfor i in range(1, n + 1):\n    for j in range(1, i + 1):\n        print('0', end = '')\n    print()"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-1.html",
+    "href": "ppa/week-3/PPA-1.html",
+    "title": "PPA-1",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and print the first \\(n\\) positive integers, one number on each line."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-1.html#question",
+    "href": "ppa/week-3/PPA-1.html#question",
+    "title": "PPA-1",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and print the first \\(n\\) positive integers, one number on each line."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-1.html#hint",
+    "href": "ppa/week-3/PPA-1.html#hint",
+    "title": "PPA-1",
+    "section": "Hint",
+    "text": "Hint\nWhich loop should we use here, while or for?\nIf we go with a for loop, is the following solution correct?\nn = int(input())\nfor x in range(n):\n    print(x)\nIf it is not correct, then what is the mistake?"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-1.html#solutions",
+    "href": "ppa/week-3/PPA-1.html#solutions",
+    "title": "PPA-1",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nn = int(input())\nk = 1\nwhile k &lt;= n:\n    print(k)\n    i += 1\n\n\nn = int(input())\nfor x in range(1, n + 1):\n    print(x)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-12.html",
+    "href": "ppa/week-3/PPA-12.html",
+    "title": "PPA-12",
+    "section": "",
+    "text": "Accept two strings as input and form a new string by removing all characters from the second string which are present in the first string. Print this new string as output. You can assume that all input strings will be in lower case."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-12.html#question",
+    "href": "ppa/week-3/PPA-12.html#question",
+    "title": "PPA-12",
+    "section": "",
+    "text": "Accept two strings as input and form a new string by removing all characters from the second string which are present in the first string. Print this new string as output. You can assume that all input strings will be in lower case."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-12.html#hint",
+    "href": "ppa/week-3/PPA-12.html#hint",
+    "title": "PPA-12",
+    "section": "Hint",
+    "text": "Hint\nIterating over strings can be done in two ways:\nword = 'abcdef'\nfor char in word:\n    print(char)\nThis is the recommended way of iterating over a string. Here, we directly get hold of each character in the string without resorting to the use of string-indices. The other way uses string-indices:\nword = 'abcdef'\nfor i in range(len(word)):\n    print(word[i])\nThough this is not a wrong approach, this is not appropriate for this problem. The index-based approach should be used only if we need to know the character along with its index. In this problem, we are not interested in the index at all, we only need to know the characters present in the string.\nTo check if a character is present in a string or not, we can simply use the in operator. For example:\nif 'a' in 'abcde':\n    print(True)\nelse:\n    print(False)\nWith all this information, you have enough to construct a solution."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-12.html#solution",
+    "href": "ppa/week-3/PPA-12.html#solution",
+    "title": "PPA-12",
+    "section": "Solution",
+    "text": "Solution\nThis solution iterates over string_2 once. It adds characters to out if they are not present in string_1.\nstring_1 = input()\nstring_2 = input()\n\nout = '' # empty string\nfor char in string_2:\n    if char not in string_1:\n        out = out + char\n\nprint(out)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-2.html",
+    "href": "ppa/week-3/PPA-2.html",
+    "title": "PPA-2",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and print all the factors of \\(n\\), one number on each line."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-2.html#question",
+    "href": "ppa/week-3/PPA-2.html#question",
+    "title": "PPA-2",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and print all the factors of \\(n\\), one number on each line."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-2.html#hint",
+    "href": "ppa/week-3/PPA-2.html#hint",
+    "title": "PPA-2",
+    "section": "Hint",
+    "text": "Hint\nGiven a number \\(n\\), a number \\(f\\) is its factor if \\(n\\) is divisible by \\(f\\). We know that \\(n\\) is divisible by \\(f\\) if the remainder when \\(n\\) is divided by \\(f\\) is \\(0\\). In Python, we have the \\(\\%\\) operator for getting the remainder:\nif n % f == 0:\n    print('a factor')\nelse:\n    print('not a factor')\nThe above snippet is of course just checking if a number \\(f\\) is a factor of \\(n\\) or not. Use the key idea in this snippet to come up with a complete solution to this problem. What is the range of values that you will have to check for \\(f\\), the loop-variable in this case?\nAn important point concerning the choice of variable names. i or j as the name for a loop variable is too generic for most problems. Reserve i and j for indices of strings and lists (we will study this next week). For this problem, f is a good choice because we need to find the factors of a number. The loop variable could also have more descriptive names, two of which are given below:\n\nfact\nfactor\n\nAt the same time, avoid excessively long names. For example, factor_of_n is unnecessarily elaborate. Note that any valid variable name would do and would give the same output, but in the interest of writing readable code, we strongly urge you to be a little more mindful in picking “good” names."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-2.html#solution",
+    "href": "ppa/week-3/PPA-2.html#solution",
+    "title": "PPA-2",
+    "section": "Solution",
+    "text": "Solution\nn = int(input())\nfor f in range(1, n + 1):\n    if n % f == 0:\n        print(f)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-10.html",
+    "href": "ppa/week-3/PPA-10.html",
+    "title": "PPA-10",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and print the sum of all prime numbers in the range \\([1, n]\\), endpoints inclusive. If there are no prime numbers in the given range, then print 0."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-10.html#question",
+    "href": "ppa/week-3/PPA-10.html#question",
+    "title": "PPA-10",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and print the sum of all prime numbers in the range \\([1, n]\\), endpoints inclusive. If there are no prime numbers in the given range, then print 0."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-10.html#hint",
+    "href": "ppa/week-3/PPA-10.html#hint",
+    "title": "PPA-10",
+    "section": "Hint",
+    "text": "Hint\nYou already know how to find if a number is prime or not. This was discussed in the tutorials and you must have solved an earlier PPA related to this same subject. Now, all that you need is a nested loop, where you go over all numbers in the given range, check if each one is a prime or not, and just add those numbers that are primes."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-10.html#solution",
+    "href": "ppa/week-3/PPA-10.html#solution",
+    "title": "PPA-10",
+    "section": "Solution",
+    "text": "Solution\nn = int(input())\ntotal = 0\n\nfor i in range(2, n + 1):\n    is_prime = True\n    for j in range(2, i):\n        if (i % j == 0):\n            is_prime = False\n            break\n    if is_prime:\n        total = total + i\n    \nprint(total)"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-5.html",
+    "href": "ppa/week-1/PPA-5.html",
+    "title": "PPA-5",
+    "section": "",
+    "text": "Accept two words as input and print the two words after adding a space between them."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-5.html#question",
+    "href": "ppa/week-1/PPA-5.html#question",
+    "title": "PPA-5",
+    "section": "",
+    "text": "Accept two words as input and print the two words after adding a space between them."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-5.html#hint",
+    "href": "ppa/week-1/PPA-5.html#hint",
+    "title": "PPA-5",
+    "section": "Hint",
+    "text": "Hint\nString concatenation is a good place to start:\nfirst = 'one'\nsecond = 'two'\nprint(first + second)\nThe output is:\nonetwo\nHow do you modify the code so that there is a space between one and two? This is something for you to think about."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-5.html#solutions",
+    "href": "ppa/week-1/PPA-5.html#solutions",
+    "title": "PPA-5",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2Solution-3\n\n\nfirst = input()\nsecond = input()\nspace = ' ' # there is one space between the quotes\nout = first + space + second\nprint(out)\n\n\nThe print function adds space as a default separator when multiple arguments are passed to it.\nfirst = input()\nsecond = input()\nprint(first, second)\n\n\nHere, we are explicitly specifying the separator to be space.\nfirst = input()\nsecond = input()\nprint(first, second, sep = ' ') # one space between the quotes"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-1.html",
+    "href": "ppa/week-1/PPA-1.html",
+    "title": "PPA-1",
+    "section": "",
+    "text": "Print the first \\(5\\) positive integers in ascending order with one number in each line."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-1.html#question",
+    "href": "ppa/week-1/PPA-1.html#question",
+    "title": "PPA-1",
+    "section": "",
+    "text": "Print the first \\(5\\) positive integers in ascending order with one number in each line."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-1.html#hint",
+    "href": "ppa/week-1/PPA-1.html#hint",
+    "title": "PPA-1",
+    "section": "Hint",
+    "text": "Hint\nExecute the following lines and study the output.\nprint(1)\nprint(2)"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-1.html#solution",
+    "href": "ppa/week-1/PPA-1.html#solution",
+    "title": "PPA-1",
+    "section": "Solution",
+    "text": "Solution\nprint(1)\nprint(2)\nprint(3)\nprint(4)\nprint(5)"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-4.html",
+    "href": "ppa/week-1/PPA-4.html",
+    "title": "PPA-4",
+    "section": "",
+    "text": "Accept two integers as input and print their sum as output."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-4.html#question",
+    "href": "ppa/week-1/PPA-4.html#question",
+    "title": "PPA-4",
+    "section": "",
+    "text": "Accept two integers as input and print their sum as output."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-4.html#hint",
+    "href": "ppa/week-1/PPA-4.html#hint",
+    "title": "PPA-4",
+    "section": "Hint",
+    "text": "Hint\nWe can accept multiple inputs on the same line:\nx, y = int(input()), int(input())"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-4.html#solutions",
+    "href": "ppa/week-1/PPA-4.html#solutions",
+    "title": "PPA-4",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nx = int(input())\ny = int(input())\nprint(x + y)\n\n\nx, y = int(input()), int(input())\nprint(x + y)"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-6.html",
+    "href": "ppa/week-1/PPA-6.html",
+    "title": "PPA-6",
+    "section": "",
+    "text": "Accept the registration number of a vehicle as input and print its state-code as output. Sample registration numbers:\n\nTN-10-AB-2010\nHR-15-XZ-1999\n\nThe template for registration numbers will be the same."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-6.html#question",
+    "href": "ppa/week-1/PPA-6.html#question",
+    "title": "PPA-6",
+    "section": "",
+    "text": "Accept the registration number of a vehicle as input and print its state-code as output. Sample registration numbers:\n\nTN-10-AB-2010\nHR-15-XZ-1999\n\nThe template for registration numbers will be the same."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-6.html#hint",
+    "href": "ppa/week-1/PPA-6.html#hint",
+    "title": "PPA-6",
+    "section": "Hint",
+    "text": "Hint\nSlice the string. Where to start the slice and where to end it? This is something you have to figure out after looking at the test-cases."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-6.html#solutions",
+    "href": "ppa/week-1/PPA-6.html#solutions",
+    "title": "PPA-6",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nregno = input()\ncode = regno[0:2]\nprint(code)\n\n\nregno = input()\ncode = regno[:2]\nprint(code)"
+  },
+  {
+    "objectID": "students.html",
+    "href": "students.html",
+    "title": "Student Corner",
+    "section": "",
+    "text": "This page contains contributions from students of the BS program.\n\n\n\nVideo\nConcept\nAuthor\n\n\n\n\nProblem-1\nFile handling\nJanani\n\n\nProblem-2\nStrings\nJanani"
   },
   {
     "objectID": "about.html",
@@ -1099,578 +1141,585 @@
     "text": "Chapter-8: Object Oriented Programming\nLesson-8.1\n\nObjects and Classes\nOOP in Python: an example\n\nLesson-8.2\n\nClasses and Objects\nself\nClass Attributes vs Object Attributes\n\nLesson-8.3\n\nInheritance\nConcrete Example\nParent-child relationship\nMethod Overriding\n\nLesson-8.4\n\nVector: Mathematical Preliminaries\nVector: Specification\nVector: Definition\nCollection of Vectors"
   },
   {
-    "objectID": "ppa/week-1/PPA-6.html",
-    "href": "ppa/week-1/PPA-6.html",
+    "objectID": "ppa.html",
+    "href": "ppa.html",
+    "title": "PPAs",
+    "section": "",
+    "text": "This section contains the practice programming problems (PPAs) used in the course organized week-wise. Each PPA has a separate page dedicated to it. There are three components to each PPA:\n\nQuestion\nHint\nSolution\n\n\n\n\n\n\n\nWarning\n\n\n\nWe earnestly request you to first attempt a question for about \\(15\\) minutes without looking at any external resource. If you are not able to make any headway, look at the hint. Spend another \\(15\\) minutes and see if you can solve the problem with the hint. If you are still not able to figure out the solution, you can refer to the one provided by us.\nIf you directly head to the solution, you are cheating yourself and you will learn NOTHING in the process. Take this as a friendly suggestion from our side, and we hope you will make the best use of this resource. Test cases will not be provided. You have to head to the portal to verify the correctness of your solution. Finally, if you are able to solve the problem yourself, congratulations. You can compare your solution with the one provided by us and learn different ways of approaching the same problem."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-2.html",
+    "href": "ppa/week-1/PPA-2.html",
+    "title": "PPA-2",
+    "section": "",
+    "text": "Print the following pattern.\n*\n**\n***\n****\n*****\nThere are no spaces between consecutive stars. There are no spaces at the end of each line."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-2.html#question",
+    "href": "ppa/week-1/PPA-2.html#question",
+    "title": "PPA-2",
+    "section": "",
+    "text": "Print the following pattern.\n*\n**\n***\n****\n*****\nThere are no spaces between consecutive stars. There are no spaces at the end of each line."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-2.html#hint",
+    "href": "ppa/week-1/PPA-2.html#hint",
+    "title": "PPA-2",
+    "section": "Hint",
+    "text": "Hint\nThere are two ways of solving this problem. Consider the third line of the output. We could either do it this way:\nprint('***')\nOr this way:\nprint('*' * 3)\nMultiplying a string by a number results in replication of the string. For example:\nprint('ab' * 3)\nThis gives the output:\nababab\nAs a follow up question, what do you think will happen if we multiply a string by \\(0\\)?\nprint('ab' * 0)\nAnd what about multiplying a string by a number that is not an integer?\nprint('abc' * 1.5)"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-2.html#solutions",
+    "href": "ppa/week-1/PPA-2.html#solutions",
+    "title": "PPA-2",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nprint('*')\nprint('**')\nprint('***')\nprint('****')\nprint('*****')\n\n\nprint('*')\nprint('*' * 2)\nprint('*' * 3)\nprint('*' * 4)\nprint('*' * 5)"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-7.html",
+    "href": "ppa/week-1/PPA-7.html",
+    "title": "PPA-7",
+    "section": "",
+    "text": "Accept a five digit number as input and print the sum of its digits as output."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-7.html#question",
+    "href": "ppa/week-1/PPA-7.html#question",
+    "title": "PPA-7",
+    "section": "",
+    "text": "Accept a five digit number as input and print the sum of its digits as output."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-7.html#hint",
+    "href": "ppa/week-1/PPA-7.html#hint",
+    "title": "PPA-7",
+    "section": "Hint",
+    "text": "Hint\nSometimes, it may be more beneficial to accept a string as input and not convert it into an integer right away.\nx = input()\nfirst = int(x[0])\nWhat do you think the variable first contains in the above snippet of code? Do you see how you can extend this idea to solve the problem?\nAs a second approach, we can start with \\(x\\) as an integer. Instead of processing the number from left to right, let us try to process it from right to left. How do we get the last digit of a number? The last digit is the remainder when the number is divided by \\(10\\):\nlast = x % 10\nOnce we have the last digit, we no longer need it. So, we need to remove it from \\(x\\). How do we do it? We can do floor division by \\(10\\):\nx = x // 10\nCan you complete the solution?"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-7.html#solutions",
+    "href": "ppa/week-1/PPA-7.html#solutions",
+    "title": "PPA-7",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nx = input()\nfirst = int(x[0])\nsecond = int(x[1])\nthird = int(x[2])\nfourth = int(x[3])\nfifth = int(x[4])\nprint(first + second + third + fourth + fifth)\n\n\nx = int(input())\nfifth = x % 10\nx = x // 10\nfourth = x % 10\nx = x // 10\nthird = x % 10\nx = x // 10\nsecond = x % 10\nx = x // 10\nfirst = x % 10\nprint(first + second + third + fourth + fifth)"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-3.html",
+    "href": "ppa/week-1/PPA-3.html",
+    "title": "PPA-3",
+    "section": "",
+    "text": "Accept an integer as input and print its square as output."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-3.html#question",
+    "href": "ppa/week-1/PPA-3.html#question",
+    "title": "PPA-3",
+    "section": "",
+    "text": "Accept an integer as input and print its square as output."
+  },
+  {
+    "objectID": "ppa/week-1/PPA-3.html#hint",
+    "href": "ppa/week-1/PPA-3.html#hint",
+    "title": "PPA-3",
+    "section": "Hint",
+    "text": "Hint\nThe input function always returns a string. If you want to accept an integer from the console, you have to first accept a string and then convert it into an integer:\nword = input()\nx = int(word)   # x is now an integer\nYou could of course do it in a single line as:\nx = int(input())\nDo not get confused between the exponentiation and the multiplication operator:\n\n*: multiplication\n**: exponentiation"
+  },
+  {
+    "objectID": "ppa/week-1/PPA-3.html#solution",
+    "href": "ppa/week-1/PPA-3.html#solution",
+    "title": "PPA-3",
+    "section": "Solution",
+    "text": "Solution\nThere is a trivial difference between the two solutions. Solution-1 introduces an intermediate variable, y, which represents the square of x and then prints it. Solution-2 does away with this intermediate variable and directly prints the square of x.\n\nSolution-1Solution-2\n\n\nx = int(input())\ny = x ** 2\nprint(y)\n\n\nx = int(input())\nprint(x ** 2)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-8.html",
+    "href": "ppa/week-3/PPA-8.html",
+    "title": "PPA-8",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and print the first \\(n\\) integers on a line separated by a comma."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-8.html#question",
+    "href": "ppa/week-3/PPA-8.html#question",
+    "title": "PPA-8",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and print the first \\(n\\) integers on a line separated by a comma."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-8.html#hint",
+    "href": "ppa/week-3/PPA-8.html#hint",
+    "title": "PPA-8",
+    "section": "Hint",
+    "text": "Hint\nConsider the following piece of code:\nn = int(input())\n\nfor x in range(1, n + 1):\n    print(x, end = ',')\nFor an input of \\(5\\), this ends up printing 1,2,3,4,5, and the last comma is undesirable. How do we get rid of it. You can use an if-else block:\n\nIf x == n, which is the last number you are printing, then just print(x).\nIf x != n, which is any other number in the sequence, then print(x, end = ',')\n\nNow, you have enough information to complete the code."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-8.html#solution",
+    "href": "ppa/week-3/PPA-8.html#solution",
+    "title": "PPA-8",
+    "section": "Solution",
+    "text": "Solution\n\nSolution-1Solution-2\n\n\nn = int(input())\n\nfor x in range(1, n + 1):\n    if x != n:\n        print(x, end = ',')\n    else:\n        print(x)\n\n\nHere we stop short of the last number and print it outside the loop.\nn = int(input())\n\nfor x in range(1, n):\n    print(x, end = ',')\nprint(n)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-6.html",
+    "href": "ppa/week-3/PPA-6.html",
     "title": "PPA-6",
     "section": "",
-    "text": "Accept the registration number of a vehicle as input and print its state-code as output. Sample registration numbers:\n\nTN-10-AB-2010\nHR-15-XZ-1999\n\nThe template for registration numbers will be the same."
+    "text": "Accept a sequence of words as input and print the the shortest word in the sequence. The input will have \\(n + 1\\) lines, where \\(n\\) denotes the number of terms in the sequence. The \\(i^{th}\\) line in the input will contain the \\(i^{th}\\) word in the sequence for \\(1 \\leq i \\leq n\\).\nThe last line of the input will always be the string abcdefghijklmnopqrstuvwxyz. This string is not a part of the sequence. You can assume that each test case corresponds to a non-empty sequence of words. If there are multiple words that have the same minimum length, print the first such occurrence."
   },
   {
-    "objectID": "ppa/week-1/PPA-6.html#question",
-    "href": "ppa/week-1/PPA-6.html#question",
+    "objectID": "ppa/week-3/PPA-6.html#question",
+    "href": "ppa/week-3/PPA-6.html#question",
     "title": "PPA-6",
     "section": "",
-    "text": "Accept the registration number of a vehicle as input and print its state-code as output. Sample registration numbers:\n\nTN-10-AB-2010\nHR-15-XZ-1999\n\nThe template for registration numbers will be the same."
+    "text": "Accept a sequence of words as input and print the the shortest word in the sequence. The input will have \\(n + 1\\) lines, where \\(n\\) denotes the number of terms in the sequence. The \\(i^{th}\\) line in the input will contain the \\(i^{th}\\) word in the sequence for \\(1 \\leq i \\leq n\\).\nThe last line of the input will always be the string abcdefghijklmnopqrstuvwxyz. This string is not a part of the sequence. You can assume that each test case corresponds to a non-empty sequence of words. If there are multiple words that have the same minimum length, print the first such occurrence."
   },
   {
-    "objectID": "ppa/week-1/PPA-6.html#hint",
-    "href": "ppa/week-1/PPA-6.html#hint",
+    "objectID": "ppa/week-3/PPA-6.html#hint",
+    "href": "ppa/week-3/PPA-6.html#hint",
     "title": "PPA-6",
     "section": "Hint",
-    "text": "Hint\nSlice the string. Where to start the slice and where to end it? This is something you have to figure out after looking at the test-cases."
+    "text": "Hint\nThis problem is similar to the previous one. Instead of dealing with integers, we are dealing with strings here. Rather than finding the maximum number in the sequence, we need to find the word that has the shortest length. From the CT days, you also know how to find the minimum of a sequence of numbers."
   },
   {
-    "objectID": "ppa/week-1/PPA-6.html#solutions",
-    "href": "ppa/week-1/PPA-6.html#solutions",
+    "objectID": "ppa/week-3/PPA-6.html#solution",
+    "href": "ppa/week-3/PPA-6.html#solution",
+    "title": "PPA-6",
+    "section": "Solution",
+    "text": "Solution\nword = input()\nmin_len = len(word)\nmin_word = word\n\nend_string = 'abcdefghijklmnopqrstuvwxyz'\nwhile word != end_string:\n    if len(word) &lt; min_len:\n        min_len = len(word)\n        min_word = word\n    word = input()\nprint(min_word)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-4.html",
+    "href": "ppa/week-3/PPA-4.html",
+    "title": "PPA-4",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input, where \\(n &gt; 1\\). Print PRIME if \\(n\\) is a prime number and NOTPRIME otherwise."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-4.html#question",
+    "href": "ppa/week-3/PPA-4.html#question",
+    "title": "PPA-4",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input, where \\(n &gt; 1\\). Print PRIME if \\(n\\) is a prime number and NOTPRIME otherwise."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-4.html#hint",
+    "href": "ppa/week-3/PPA-4.html#hint",
+    "title": "PPA-4",
+    "section": "Hint",
+    "text": "Hint\nThere are at least two different approaches to this problem:\nApproach-1\nA prime number \\(p\\) has exactly two factors, one and the number itself:\n\n\\(1\\)\n\\(p\\)\n\nGiven the number \\(n\\) in this problem, we can count the number of factors it has. If this number is equal to \\(2\\), then we have a prime number. This approach suggests a natural separation of the code into two parts:\n\nuse a for-loop to count the number of factors of \\(n\\) and store it in a variable, say num\nuse an if-else block to check if the number of factors is equal to \\(2\\) or not, and display the appropriate message\n\nA variation to this approach is the following. While looping through the possible factors of \\(n\\), if you find that the number of factors has exceeded \\(2\\) at some stage, does it make sense to persist with the iterations? Or does it give us an opportunity to break out of the loop? See if you can make use of the following snippet of code:\n### inside some loop ###\n    if num &gt; 3:\n        break\n### inside some loop ###\nWhy does breaking help? What are the advantages of doing so?\nApproach-2\nA number \\(n\\) is a composite number (not-prime) if it has a factor \\(f\\) which is neither \\(1\\) nor \\(p\\). For example, \\(6\\) is a composite number as it has a factor \\(2\\), which is neither \\(1\\) nor \\(6\\). We will now use this slightly different perspective to solve the problem.\nThis approach is based on the idea of the state of a system. In our case, the system is the code. In most problems in our course, the state will be binary. For this problem, we will associate prime numbers with state = True. Therefore, while looping through the factors of \\(n\\), we could be in one of these two states:\n\nstate = True\nstate = False\n\nIf the state is True, it means that so far we have not come across any factor of \\(n\\) other than \\(1\\) and \\(n\\). The moment we find a factor of \\(n\\) other than \\(1\\) and \\(n\\), we should update the state to False. For example:\nstate = True\nfor f in range(1, n + 1):\n    if (n % f == 0) and (f != 1) and (f != n):\n        state = False\nWe start with an “optimistic” mindset that the number \\(n\\) is a prime and set state = True in line-1. During the looping process, if we find that \\(n\\) is composite, we update the state to False. If \\(n\\) is indeed prime, then the state remains True even after the loop ends. Either way, at the end of the loop, the state variable will tell us whether the number \\(n\\) is prime or not. Notice that the state is a dynamic entity during the looping process. For a composite number, state = True to begin with, but it eventually becomes False.\nThis approach is an extremely powerful template and can be applied to a wide range of problems. We will refer to this as the state-approach in future problems where this is used. There are some variants to this solution as well. Does breaking out of the loop make sense here? If the state become False, can it ever become True again? Finally, is there a simpler way of writing the if-condition so that we don’t have to check for three conditions? The hint lies in rethinking about the range of numbers that you have to check for. Should it be range(1, n + 1), or can it be something else?"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-4.html#solutions",
+    "href": "ppa/week-3/PPA-4.html#solutions",
+    "title": "PPA-4",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2Solution-3\n\n\nn = int(input())\n\nfor f in range(1, n + 1):\n    if n % f == 0:\n        count += 1\nif count == 2:\n    print('PRIME')\nelse:\n    print('NOTPRIME')\n\n\nn = int(input())\n# optimistic start\nis_prime = True\n\nfor f in range(1, n + 1):\n    if (n % f == 0) and (f != 1) and (f != n):\n        is_prime = False\n        break\n\nif is_prime:\n    print('PRIME')\nelse:\n    print('NOTPRIME')\n\n\nThough the following code will not work for \\(n = 1\\), the question states that \\(n &gt; 1\\). We have made use of this fact. This code is a slight improvement over solution-2.\nn = int(input())\n# optimistic start\nis_prime = True\n\nfor f in range(2, n):\n    if n % f == 0:\n        is_prime = False\n        break\n\nif is_prime:\n    print('PRIME')\nelse:\n    print('NOTPRIME')"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-7.html",
+    "href": "ppa/week-3/PPA-7.html",
+    "title": "PPA-7",
+    "section": "",
+    "text": "Accept a positive integer as input and print the sum of the digits in the number."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-7.html#question",
+    "href": "ppa/week-3/PPA-7.html#question",
+    "title": "PPA-7",
+    "section": "",
+    "text": "Accept a positive integer as input and print the sum of the digits in the number."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-7.html#hint",
+    "href": "ppa/week-3/PPA-7.html#hint",
+    "title": "PPA-7",
+    "section": "Hint",
+    "text": "Hint\nLet us take a number, say 1234 and see how to computationally approach the problem. We could start adding the digits from the left, \\(1 + 2 + 3 + 4\\), or we could do it from the right, \\(4 + 3 + 2 + 1\\). If we do it from the left, then we need to get hold of the leftmost digit of the number. It is not immediately clear how to do this. If we do it from the right, then we need to get hold of the last digit. Fortunately, this is something that we can easily do:\nThis can be done by taking the remainder when the number is divided by 10, that is, 1234 % 10 == 4. Once we have the last digit, we no longer need it in the original number. To get rid of the last digit, we go for floor division by 10: 1234 // 10 == 123. Now, it is just a matter of doing these two operations repeatedly:\nx = 1234\ndigit_4 = x % 10\nx = x // 10\ndigit_3 = x % 10\nx = x // 10\ndigit_2 = x % 10\nx = x // 10\ndigit_1 = x % 10\nIt is now up to you to generalize this logic so that it will work for any number. Naturally, if the number of digits is arbitrary, then we have to go for a loop. Which type of loop do you think is a better option here, for or while? Are the number of iterations known a priori or not?\nIf you decide to go for a while loop, what would be the termination condition? To answer the last question, think about the number \\(1234\\) and perform the pair of operations (modulo \\(10\\) followed by floor division by \\(10\\)) four times. What is the final value of x that you end up with?"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-7.html#solutions",
+    "href": "ppa/week-3/PPA-7.html#solutions",
+    "title": "PPA-7",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nn = int(input())\ntotal = 0\nwhile(n &gt; 0):\n    total = total + n % 10\n    n = n // 10\nprint(total)\n\n\nHere we retain n as a string and then iterate through it.\nn = input()\ntotal = 0\nfor i in n:\n    total = total + int(i)\nprint(total)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-3.html",
+    "href": "ppa/week-3/PPA-3.html",
+    "title": "PPA-3",
+    "section": "",
+    "text": "Accept two positive integers \\(a\\) and \\(b\\) as input. Print the sum of all integers in the range \\([1000, 2000]\\), endpoints inclusive, that are divisible by both \\(a\\) and \\(b\\). If you find no number satisfying this condition in the given range, then print 0."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-3.html#question",
+    "href": "ppa/week-3/PPA-3.html#question",
+    "title": "PPA-3",
+    "section": "",
+    "text": "Accept two positive integers \\(a\\) and \\(b\\) as input. Print the sum of all integers in the range \\([1000, 2000]\\), endpoints inclusive, that are divisible by both \\(a\\) and \\(b\\). If you find no number satisfying this condition in the given range, then print 0."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-3.html#hint",
+    "href": "ppa/week-3/PPA-3.html#hint",
+    "title": "PPA-3",
+    "section": "Hint",
+    "text": "Hint\nThis is an extension of the previous problem. Here, you have to filter out all the numbers that are divisible by both \\(a\\) and \\(b\\)."
+  },
+  {
+    "objectID": "ppa/week-3/PPA-3.html#solution",
+    "href": "ppa/week-3/PPA-3.html#solution",
+    "title": "PPA-3",
+    "section": "Solution",
+    "text": "Solution\na = int(input())\nb = int(input())\n\ntotal = 0\nfor f in range(1000, 2001):\n    if (f % a == 0) and (f % b == 0):\n        total += f\n\nprint(total)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-11.html",
+    "href": "ppa/week-3/PPA-11.html",
+    "title": "PPA-11",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and find all solutions to the equation: \\[\nx^2 + y^2 = z^2\n\\] subject to the following constraints:\n\n\\(x\\), \\(y\\) and \\(z\\) are positive integers\n\\(x &lt; y &lt; z &lt; n\\)\n\nPrint each solution triplet on one line — x,y,z — with a comma between consecutive integers. The triplets should be printed in ascending order. If you do not find any solutions satisfying the given constraints, print the string NO SOLUTION as output.\nOrder relation among triplets\nGiven two triplets \\(T_1 = (x_1, y_1, z_1)\\) and \\(T_2 = (x_2, y_2, z_2)\\), use the following process to compare them:\n\nIf \\(x_1 &lt; x_2\\), then \\(T_1 &lt; T_2\\)\nIf \\(x_1 = x_2\\) and \\(y_1 &lt; y_2\\), then \\(T_1 &lt; T_2\\)\nIf \\(x_1 = x_2\\), \\(y_1 = y_2\\), and \\(z_1 &lt; z_2\\), then \\(T_1 &lt; T_2\\)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-11.html#question",
+    "href": "ppa/week-3/PPA-11.html#question",
+    "title": "PPA-11",
+    "section": "",
+    "text": "Accept a positive integer \\(n\\) as input and find all solutions to the equation: \\[\nx^2 + y^2 = z^2\n\\] subject to the following constraints:\n\n\\(x\\), \\(y\\) and \\(z\\) are positive integers\n\\(x &lt; y &lt; z &lt; n\\)\n\nPrint each solution triplet on one line — x,y,z — with a comma between consecutive integers. The triplets should be printed in ascending order. If you do not find any solutions satisfying the given constraints, print the string NO SOLUTION as output.\nOrder relation among triplets\nGiven two triplets \\(T_1 = (x_1, y_1, z_1)\\) and \\(T_2 = (x_2, y_2, z_2)\\), use the following process to compare them:\n\nIf \\(x_1 &lt; x_2\\), then \\(T_1 &lt; T_2\\)\nIf \\(x_1 = x_2\\) and \\(y_1 &lt; y_2\\), then \\(T_1 &lt; T_2\\)\nIf \\(x_1 = x_2\\), \\(y_1 = y_2\\), and \\(z_1 &lt; z_2\\), then \\(T_1 &lt; T_2\\)"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-11.html#hint",
+    "href": "ppa/week-3/PPA-11.html#hint",
+    "title": "PPA-11",
+    "section": "Hint",
+    "text": "Hint\nFirst, study the following snippet of code:\nfor x in range(1, 3):\n    for y in range(1, 3):\n        for z in range(1, 3):\n            print(x, y, z)\nThis is the output:\n1 1 1\n1 1 2\n1 2 1\n1 2 2\n2 1 1\n2 1 2\n2 2 1\n2 2 2\nWhat can you say about the order in which the triplets are printed? How will you use this idea to construct a solution to this problem?"
+  },
+  {
+    "objectID": "ppa/week-3/PPA-11.html#solution",
+    "href": "ppa/week-3/PPA-11.html#solution",
+    "title": "PPA-11",
+    "section": "Solution",
+    "text": "Solution\nn = int(input())\n\nnum = 0\nfor x in range(1, n):\n    for y in range(x + 1, n):\n        for z in range(y + 1, n):\n            if x ** 2 + y ** 2 == z ** 2:\n                print(f'{x},{y},{z}')\n                num += 1\nif num == 0:\n    print('NO SOLUTION')"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-8.html",
+    "href": "ppa/week-2/PPA-8.html",
+    "title": "PPA-8",
+    "section": "",
+    "text": "Consider the following image of a chess-board (image borrowed from chess.com). The piece on the board is a bishop.\n\n\n\n\n\nAccept two positions as input: start and end. Print YES if a bishop at start can move to end in exactly one move. Print NO otherwise. Note that a bishop can only move along diagonals."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-8.html#question",
+    "href": "ppa/week-2/PPA-8.html#question",
+    "title": "PPA-8",
+    "section": "",
+    "text": "Consider the following image of a chess-board (image borrowed from chess.com). The piece on the board is a bishop.\n\n\n\n\n\nAccept two positions as input: start and end. Print YES if a bishop at start can move to end in exactly one move. Print NO otherwise. Note that a bishop can only move along diagonals."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-8.html#hint",
+    "href": "ppa/week-2/PPA-8.html#hint",
+    "title": "PPA-8",
+    "section": "Hint",
+    "text": "Hint\nThe bishop is capable of only diagonal moves. In the problem statement, you have to figure out if the bishop can move from start to end in exactly one move. So you have to see if this movement is along a diagonal or not. What are the characteristics of a diagonal? In terms of coordinate geometry, what is the slope of a diagonal?\nAs far as the inputs are concerned, each position on the chessboard is given by two symbols: a letter and a number. The letter denotes the column and the number denotes the row. For example, the bishop in the image given above is at C4. In the test cases, we use capital letters for the columns.\nNow consider the following strings:\ncols = 'ABCDEFGH'\nrows = '12345678'\nAnd the following snippet of code:\ncols.index('D')\nCan you come up with the solution using these hints?"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-8.html#solution",
+    "href": "ppa/week-2/PPA-8.html#solution",
+    "title": "PPA-8",
+    "section": "Solution",
+    "text": "Solution\nstart = input()\nend = input()\n\ncols = 'ABCDEFGH'\nrows = '12345678'\n\nstart_col, start_row = start\nend_col, end_row = end\n\ncol_diff = cols.index(start_col) - cols.index(end_col)\nrow_diff = rows.index(start_row) - rows.index(end_row)\n\n# abs(x) returns the absolute value of x\nif abs(col_diff) == abs(row_diff):\n    print('YES')\nelse:\n    print('NO')"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-6.html",
+    "href": "ppa/week-2/PPA-6.html",
+    "title": "PPA-6",
+    "section": "",
+    "text": "Accept a string as input. If the input string is of odd length, then continue with it. If the input string is of even length, make the string of odd length as below:\n\nIf the last character is a period (.), then remove it\nIf the last character is not a period, then add a period (.) to the end of the string\n\nCall this string of odd length word. Select a substring made up of three consecutive characters from word such that there are an equal number of characters to the left and right of this substring. Print this substring as output. You can assume that all input strings will be in lower case and will have a length of at least four."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-6.html#question",
+    "href": "ppa/week-2/PPA-6.html#question",
+    "title": "PPA-6",
+    "section": "",
+    "text": "Accept a string as input. If the input string is of odd length, then continue with it. If the input string is of even length, make the string of odd length as below:\n\nIf the last character is a period (.), then remove it\nIf the last character is not a period, then add a period (.) to the end of the string\n\nCall this string of odd length word. Select a substring made up of three consecutive characters from word such that there are an equal number of characters to the left and right of this substring. Print this substring as output. You can assume that all input strings will be in lower case and will have a length of at least four."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-6.html#hint",
+    "href": "ppa/week-2/PPA-6.html#hint",
+    "title": "PPA-6",
+    "section": "Hint",
+    "text": "Hint\nIn case you are confused with the terminology, a period is another term for the full-stop.\nThis problem can be split into two parts:\n\nGet a string of odd length.\nExtract the required substring.\n\nIf the string is already of odd length, you don’t have to do much. If not, then you have to follow the procedure given in the question. A small snippet is given to help you; where do you think you would find this useful?\nif word[-1] == '.':\n    new_word = word[: -1]\nIf word = 'abcde', then word[: -1] is abcd. Do you see what is happening here?\nNow, how do you extract the substring? The hint is to focus on the character that is at the center of the string. Do you see why this is important? If you do, then how do you obtain the index of the middle chatacter in a string? What does all this have to do with the length of the string being odd? If the string had an even number of characters, what problems would you face?"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-6.html#solution",
+    "href": "ppa/week-2/PPA-6.html#solution",
+    "title": "PPA-6",
+    "section": "Solution",
+    "text": "Solution\nword = input()\nif len(word) % 2 == 0:\n    if word[-1] == '.':\n        word = word[: -1]\n    else:\n        word = word + '.'\nmid = len(word) // 2\nout = word[mid - 1:mid + 2]\nprint(out)"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-4.html",
+    "href": "ppa/week-2/PPA-4.html",
+    "title": "PPA-4",
+    "section": "",
+    "text": "Accept a point in 2D space as input and find the region in space that this point belongs to. A point could belong to one of the four quadrants, or it could be on one of the two axes, or it could be the origin. The input is given in 2 lines: the first line is the x-coordinate of the point while the second line is its y-coordinate. The possible outputs are first, second, third, fourth, x-axis, y-axis, and origin. Any other output will not be accepted. Note that all outputs should be in lower case."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-4.html#question",
+    "href": "ppa/week-2/PPA-4.html#question",
+    "title": "PPA-4",
+    "section": "",
+    "text": "Accept a point in 2D space as input and find the region in space that this point belongs to. A point could belong to one of the four quadrants, or it could be on one of the two axes, or it could be the origin. The input is given in 2 lines: the first line is the x-coordinate of the point while the second line is its y-coordinate. The possible outputs are first, second, third, fourth, x-axis, y-axis, and origin. Any other output will not be accepted. Note that all outputs should be in lower case."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-4.html#hint",
+    "href": "ppa/week-2/PPA-4.html#hint",
+    "title": "PPA-4",
+    "section": "Hint",
+    "text": "Hint\nFor a point (x, y), you have to construct a table such as this:\n\n\n\nCondition\nResult\n\n\n\n\nBoth x and y are positive\nfirst\n\n\nx is positive and y is negative\nfourth\n\n\n\nYour task is twofold. First, complete this table. How many rows does it have? Secondly, convert the conditions into Python expressions. Now, you just have to write a sequence of conditional statements and print the appropriate string. Here is a follow-up question to help you with the second task:\n\nSnippet-1Snippet-2Snippet-3\n\n\nif x &gt; 0:\n    if y &gt; 0:\n        print('first')\n\n\nif x &gt; 0 and y &gt; 0:\n    print('first')\n\n\nif x &gt; 0 or y &gt; 0:\n    print('first')\n\n\n\n\nAmong the three snippets, which one would you choose to include in your solution to the problem?\nWhat are the differences and similarities between snippet-1 and snippet-2?"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-4.html#solutions",
+    "href": "ppa/week-2/PPA-4.html#solutions",
+    "title": "PPA-4",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nx = float(input())\ny = float(input())\n\nif x &gt; 0:\n    if y &gt; 0:\n        print('first')\n    elif y &lt; 0:\n        print('fourth')\n    else:\n        print('x-axis')\nelif x &lt; 0:\n    if y &gt; 0:\n        print('second')\n    elif y &lt; 0:\n        print('third')\n    else:\n        print('x-axis')\nelse:\n    if y != 0:\n        print('y-axis')\n    else:\n        print('origin')\n\n\nx = float(input())\ny = float(input())\n\nif x &gt; 0 and y &gt; 0:\n    print('first')\nelif x &lt; 0 and y &gt; 0:\n    print('second')\nelif x &lt; 0 and y &lt; 0:\n    print('third')\nelif x &gt; 0 and y &lt; 0:\n    print('fourth')\nelif x != 0 and y = 0:\n    print('x-axis')\nelif x == 0 and y != 0:\n    print('y-axis')\nelif x == 0 and y == 0:\n    print('origin')"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-1.html",
+    "href": "ppa/week-2/PPA-1.html",
+    "title": "PPA-1",
+    "section": "",
+    "text": "Accept a non-zero integer as input. Print positive if it is greater than zero and negative if it is less than zero."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-1.html#question",
+    "href": "ppa/week-2/PPA-1.html#question",
+    "title": "PPA-1",
+    "section": "",
+    "text": "Accept a non-zero integer as input. Print positive if it is greater than zero and negative if it is less than zero."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-1.html#hint",
+    "href": "ppa/week-2/PPA-1.html#hint",
+    "title": "PPA-1",
+    "section": "Hint",
+    "text": "Hint\nAn incomplete outline of the solution is given below:\nif x &gt; 0:\n    print('positive')\nCan you complete it?"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-1.html#solution",
+    "href": "ppa/week-2/PPA-1.html#solution",
+    "title": "PPA-1",
+    "section": "Solution",
+    "text": "Solution\nx = int(input())\nif x &gt; 0:\n    print('positive')\nelif x &lt; 0:\n    print('negative')"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-9.html",
+    "href": "ppa/week-2/PPA-9.html",
+    "title": "PPA-9",
+    "section": "",
+    "text": "You have \\(n\\) gold coins with you. You wish to divide this among three of your friends under the following conditions:\n\nAll three of them should get a non-zero share.\nNo two of them should get the same number of coins.\nYou should not have any coins with you at the end of this sharing process.\n\nThe input has four lines. The first line contains the number of coins with you. The next three lines will have the share given to your three friends. All inputs shall be non-negative integers. If the division satisfies these conditions, then print the string FAIR. If not, print UNFAIR."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-9.html#question",
+    "href": "ppa/week-2/PPA-9.html#question",
+    "title": "PPA-9",
+    "section": "",
+    "text": "You have \\(n\\) gold coins with you. You wish to divide this among three of your friends under the following conditions:\n\nAll three of them should get a non-zero share.\nNo two of them should get the same number of coins.\nYou should not have any coins with you at the end of this sharing process.\n\nThe input has four lines. The first line contains the number of coins with you. The next three lines will have the share given to your three friends. All inputs shall be non-negative integers. If the division satisfies these conditions, then print the string FAIR. If not, print UNFAIR."
+  },
+  {
+    "objectID": "ppa/week-2/PPA-9.html#hint",
+    "href": "ppa/week-2/PPA-9.html#hint",
+    "title": "PPA-9",
+    "section": "Hint",
+    "text": "Hint\nThere are three expressions given to you here:\n(a &gt; 0) and (b &gt; 0) and (c &gt; 0)\n(a != b) and (b != c) and (c != a)\na + b + c - n == 0\nNow, make use of these three expressions to construct a solution. Consider another set of three expressions:\n(a == 0) or (b == 0) or (c == 0)\n(a == b) or (b == c) or (c == a)\na + b + c - n != 0\nNow, make use of these three expressions to construct another solution. How are these two solutions different from each other?"
+  },
+  {
+    "objectID": "ppa/week-2/PPA-9.html#solutions",
+    "href": "ppa/week-2/PPA-9.html#solutions",
+    "title": "PPA-9",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nn = int(input())\na = int(input())\nb = int(input())\nc = int(input())\n\nif (a &gt; 0) and (b &gt; 0) and (c &gt; 0):\n    if (a != b) and (b != c) and (c != a):\n        if a + b + c - n == 0:\n            print('FAIR')\n        else:\n            print('UNFAIR')\n    else:\n        print('UNFAIR')\nelse:\n    print('UNFAIR')\n\n\nn = int(input())\na = int(input())\nb = int(input())\nc = int(input())\n\nflag = True\nif (a == 0) or (b == 0) or (c == 0):\n    flag = False\nif (a == b) or (b == c) or (c == a):\n    flag = False\nif a + b + c - n != 0:\n    flag = False\n\nif flag:\n    print('FAIR')\nelse:\n    print('UNFAIR')"
+  },
+  {
+    "objectID": "ppa/week-4/PPA-8.html",
+    "href": "ppa/week-4/PPA-8.html",
+    "title": "PPA-8",
+    "section": "",
+    "text": "An identity matrix is a square matrix which has ones on the main diagonal and zeros everywhere else. For example, the identity matrix of size \\(3 \\times 3\\) is: \\[\n\\begin{bmatrix}\n1 & 0 & 0\\\\\n0 & 1 & 0\\\\\n0 & 0 & 1\n\\end{bmatrix}\n\\]\n\nAccept a positive integer \\(n\\) as input and print the identity matrix of size \\(n \\times n\\). Your output should have \\(n\\) lines, where each line is a sequence of \\(n\\) comma-separated integers that corresponds to one row of the matrix."
+  },
+  {
+    "objectID": "ppa/week-4/PPA-8.html#question",
+    "href": "ppa/week-4/PPA-8.html#question",
+    "title": "PPA-8",
+    "section": "",
+    "text": "An identity matrix is a square matrix which has ones on the main diagonal and zeros everywhere else. For example, the identity matrix of size \\(3 \\times 3\\) is: \\[\n\\begin{bmatrix}\n1 & 0 & 0\\\\\n0 & 1 & 0\\\\\n0 & 0 & 1\n\\end{bmatrix}\n\\]\n\nAccept a positive integer \\(n\\) as input and print the identity matrix of size \\(n \\times n\\). Your output should have \\(n\\) lines, where each line is a sequence of \\(n\\) comma-separated integers that corresponds to one row of the matrix."
+  },
+  {
+    "objectID": "ppa/week-4/PPA-8.html#hint",
+    "href": "ppa/week-4/PPA-8.html#hint",
+    "title": "PPA-8",
+    "section": "Hint",
+    "text": "Hint\nIn order to print the elements of a matrix with one row on each line, a nested loop is needed. After the inner loop goes through a row, a new line should be added. This can be done with a simple print statement.\nmatrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nfor i in range(3):\n    for j in range(3):\n        print(matrix[i][j], end = ',')\n    print()\nThis gives the following output:\n1,2,3,\n4,5,6,\n7,8,9,\nHow does one get rid of the comma at the end? Check out an earlier PPA to get the logic for this."
+  },
+  {
+    "objectID": "ppa/week-4/PPA-8.html#solution",
+    "href": "ppa/week-4/PPA-8.html#solution",
+    "title": "PPA-8",
+    "section": "Solution",
+    "text": "Solution\nn = int(input())\nI = [ ]\nfor i in range(n):\n    row = [ ]\n    for j in range(n):\n        if i == j:\n            row.append(1)\n        else:\n            row.append(0)\n    I.append(row)\n    \nfor i in range(n):\n    for j in range(n):\n        if j != n - 1:\n            print(I[i][j], end = ',')\n        else:\n            print(I[i][j])"
+  },
+  {
+    "objectID": "ppa/week-4/PPA-6.html",
+    "href": "ppa/week-4/PPA-6.html",
+    "title": "PPA-6",
+    "section": "",
+    "text": "Accept a sequence of comma-separated words as input. Reverse the sequence and print it as output."
+  },
+  {
+    "objectID": "ppa/week-4/PPA-6.html#question",
+    "href": "ppa/week-4/PPA-6.html#question",
+    "title": "PPA-6",
+    "section": "",
+    "text": "Accept a sequence of comma-separated words as input. Reverse the sequence and print it as output."
+  },
+  {
+    "objectID": "ppa/week-4/PPA-6.html#hint",
+    "href": "ppa/week-4/PPA-6.html#hint",
+    "title": "PPA-6",
+    "section": "Hint",
+    "text": "Hint\nApproach-1\nConsider the following sequence of operations on a list L = [1, 2, 3, 4, 5]. Think about this list as a train having five compartments. Reversing is the process of rearranging the compartments by moving the last compartment of the current train to the end of a new train. To begin with, this new train will have no compartments.\nStep-0\n[1, 2, 3, 4, 5]\n\n[ ]\nStep-1\n[1, 2, 3, 4]\n\n[5]\nStep-2\n[1, 2, 3]\n\n[5, 4]\nStep-3\n[1, 2]\n\n[5, 4, 3]\nStep-4\n[1]\n\n[5, 4, 3, 2]\nStep-5\n[ ]\n\n[5, 4, 3, 2, 1]\nYou don’t necessarily have to remove the elements from the first list. But let us continue with the approach of removing an element from the first list and adding it to the second list. How will you remove an element from a list? This is a challenge for you to think about.\nApproach-2\nConsider the two lists:\nP = [1, 2, 3, 4, 5]\nQ = [5, 4, 3, 2, 1]\nWe note the following:\n\n\n\nx\nIndex of x in P\nIndex of x in Q\n\n\n\n\n1\n0\n4\n\n\n2\n1\n3\n\n\n3\n2\n2\n\n\n4\n3\n1\n\n\n5\n4\n0\n\n\n\nDo you see any pattern in the index of the element x in P and Q? Is there a way you can use this pattern to reverse the list?"
+  },
+  {
+    "objectID": "ppa/week-4/PPA-6.html#solutions",
+    "href": "ppa/week-4/PPA-6.html#solutions",
     "title": "PPA-6",
     "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nregno = input()\ncode = regno[0:2]\nprint(code)\n\n\nregno = input()\ncode = regno[:2]\nprint(code)"
+    "text": "Solutions\n\nSolution-1Solution-2Solution-3Solution-4\n\n\nL = input().split(',')\n\nout = [ ]\nfor x in L:\n    out = [x] + out\n\nn = len(out)\nfor i in range(n - 1):\n    print(out[i], end = ',')\nprint(out[-1])\n\n\nWhy do we have line-4 where we initialize out to L.copy()? What happens if we just set out = L? Try this and see what happens.\nL = input().split(',')\n\nn = len(L)\nout = L.copy()\nfor i in range(n):\n    out[i] = L[n - 1 - i]\n    \nfor i in range(n - 1):\n    print(out[i], end = ',')\nprint(out[-1])\n\n\nTake a look at line-5. We are swapping the first and last element, then the second and the penultimate element, and so on. Also take a look at the end-point of the range function.\nL = input().split(',')\n\nn = len(L)\nfor i in range(n // 2):\n    L[i], L[-i - 1] = L[-i - 1], L[i]\n\nfor i in range(n - 1):\n    print(L[i], end = ',')\nprint(L[-1])\n\n\nHere we are reversing the range. We start from \\(n - 1\\) and go all the way till \\(0\\).\nL = input().split(',')\nn = len(L)\nout = [ ]\nfor i in range(n - 1, -1, -1):\n    out.append(L[i])\n\nfor i in range(n - 1):\n    print(out[i], end = ',')\nprint(out[-1])"
   },
   {
-    "objectID": "ppa/week-1/PPA-4.html",
-    "href": "ppa/week-1/PPA-4.html",
+    "objectID": "ppa/week-4/PPA-4.html",
+    "href": "ppa/week-4/PPA-4.html",
     "title": "PPA-4",
     "section": "",
-    "text": "Accept two integers as input and print their sum as output."
+    "text": "A list L of words is already given to you. Print the longest word in the list. If there are multiple words with the same maximum length, print the one which appears at the rightmost end of the list."
   },
   {
-    "objectID": "ppa/week-1/PPA-4.html#question",
-    "href": "ppa/week-1/PPA-4.html#question",
+    "objectID": "ppa/week-4/PPA-4.html#question",
+    "href": "ppa/week-4/PPA-4.html#question",
     "title": "PPA-4",
     "section": "",
-    "text": "Accept two integers as input and print their sum as output."
+    "text": "A list L of words is already given to you. Print the longest word in the list. If there are multiple words with the same maximum length, print the one which appears at the rightmost end of the list."
   },
   {
-    "objectID": "ppa/week-1/PPA-4.html#hint",
-    "href": "ppa/week-1/PPA-4.html#hint",
+    "objectID": "ppa/week-4/PPA-4.html#hint",
+    "href": "ppa/week-4/PPA-4.html#hint",
     "title": "PPA-4",
     "section": "Hint",
-    "text": "Hint\nWe can accept multiple inputs on the same line:\nx, y = int(input()), int(input())"
+    "text": "Hint\nConsider the following snippet of code.\nlong_word, long_len = '', 0\nfor word in L:\n    if len(word) &gt; long_len:\n        long_len = len(word)\n        long_word = word\nAt the end of execution of this code, do you think long_word is the longest word in the list L?\nKey-point\nWhile iterating through a list of strings, make it a point to avoid the use of indices as much as possible. That is, try to avoid the following:\nfor i in range(len(L)):\n    ## do something with L[i] ##\nRather, use the following template:\nfor word in L:\n    ## do something with word ##\nThough both of them end up doing the same thing, the second template is more readable and Pythonic. That said, there would be problems (check next one) where you would require both the string and its index in the list. What can be done in such situations? Python provides a facility called enumerate for this.\nenumerate\nL = ['zero', 'one', 'two', 'three']\nfor index, word in enumerate(L):\n    print(index, word)\nThis gives the following output:\n0 zero\n1 one\n2 two\n3 three\nInstead of a single loop variable, note that we have two loop variables — index and word in line-2 of the code. Don’t worry about why this works. The rationale behind this will become clear when we discuss tuples in week-6. The point to keep in mind is that Python provides a way to iterate through a list in a clean way without having to use the unwieldy range(len(L)) construct."
   },
   {
-    "objectID": "ppa/week-1/PPA-4.html#solutions",
-    "href": "ppa/week-1/PPA-4.html#solutions",
+    "objectID": "ppa/week-4/PPA-4.html#solution",
+    "href": "ppa/week-4/PPA-4.html#solution",
     "title": "PPA-4",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nx = int(input())\ny = int(input())\nprint(x + y)\n\n\nx, y = int(input()), int(input())\nprint(x + y)"
-  },
-  {
-    "objectID": "ppa/week-1/PPA-1.html",
-    "href": "ppa/week-1/PPA-1.html",
-    "title": "PPA-1",
-    "section": "",
-    "text": "Print the first \\(5\\) positive integers in ascending order with one number in each line."
-  },
-  {
-    "objectID": "ppa/week-1/PPA-1.html#question",
-    "href": "ppa/week-1/PPA-1.html#question",
-    "title": "PPA-1",
-    "section": "",
-    "text": "Print the first \\(5\\) positive integers in ascending order with one number in each line."
-  },
-  {
-    "objectID": "ppa/week-1/PPA-1.html#hint",
-    "href": "ppa/week-1/PPA-1.html#hint",
-    "title": "PPA-1",
-    "section": "Hint",
-    "text": "Hint\nExecute the following lines and study the output.\nprint(1)\nprint(2)"
-  },
-  {
-    "objectID": "ppa/week-1/PPA-1.html#solution",
-    "href": "ppa/week-1/PPA-1.html#solution",
-    "title": "PPA-1",
     "section": "Solution",
-    "text": "Solution\nprint(1)\nprint(2)\nprint(3)\nprint(4)\nprint(5)"
+    "text": "Solution\nmax_word, max_len = '', 0\nfor word in L:\n    if len(word) &gt;= max_len:\n        max_len = len(word)\n        max_word = word\nprint(max_word)"
   },
   {
-    "objectID": "ppa/week-1/PPA-5.html",
-    "href": "ppa/week-1/PPA-5.html",
-    "title": "PPA-5",
-    "section": "",
-    "text": "Accept two words as input and print the two words after adding a space between them."
-  },
-  {
-    "objectID": "ppa/week-1/PPA-5.html#question",
-    "href": "ppa/week-1/PPA-5.html#question",
-    "title": "PPA-5",
-    "section": "",
-    "text": "Accept two words as input and print the two words after adding a space between them."
-  },
-  {
-    "objectID": "ppa/week-1/PPA-5.html#hint",
-    "href": "ppa/week-1/PPA-5.html#hint",
-    "title": "PPA-5",
-    "section": "Hint",
-    "text": "Hint\nString concatenation is a good place to start:\nfirst = 'one'\nsecond = 'two'\nprint(first + second)\nThe output is:\nonetwo\nHow do you modify the code so that there is a space between one and two? This is something for you to think about."
-  },
-  {
-    "objectID": "ppa/week-1/PPA-5.html#solutions",
-    "href": "ppa/week-1/PPA-5.html#solutions",
-    "title": "PPA-5",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2Solution-3\n\n\nfirst = input()\nsecond = input()\nspace = ' ' # there is one space between the quotes\nout = first + space + second\nprint(out)\n\n\nThe print function adds space as a default separator when multiple arguments are passed to it.\nfirst = input()\nsecond = input()\nprint(first, second)\n\n\nHere, we are explicitly specifying the separator to be space.\nfirst = input()\nsecond = input()\nprint(first, second, sep = ' ') # one space between the quotes"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-10.html",
-    "href": "ppa/week-3/PPA-10.html",
-    "title": "PPA-10",
-    "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print the sum of all prime numbers in the range \\([1, n]\\), endpoints inclusive. If there are no prime numbers in the given range, then print 0."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-10.html#question",
-    "href": "ppa/week-3/PPA-10.html#question",
-    "title": "PPA-10",
-    "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print the sum of all prime numbers in the range \\([1, n]\\), endpoints inclusive. If there are no prime numbers in the given range, then print 0."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-10.html#hint",
-    "href": "ppa/week-3/PPA-10.html#hint",
-    "title": "PPA-10",
-    "section": "Hint",
-    "text": "Hint\nYou already know how to find if a number is prime or not. This was discussed in the tutorials and you must have solved an earlier PPA related to this same subject. Now, all that you need is a nested loop, where you go over all numbers in the given range, check if each one is a prime or not, and just add those numbers that are primes."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-10.html#solution",
-    "href": "ppa/week-3/PPA-10.html#solution",
-    "title": "PPA-10",
-    "section": "Solution",
-    "text": "Solution\nn = int(input())\ntotal = 0\n\nfor i in range(2, n + 1):\n    is_prime = True\n    for j in range(2, i):\n        if (i % j == 0):\n            is_prime = False\n            break\n    if is_prime:\n        total = total + i\n    \nprint(total)"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-2.html",
-    "href": "ppa/week-3/PPA-2.html",
-    "title": "PPA-2",
-    "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print all the factors of \\(n\\), one number on each line."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-2.html#question",
-    "href": "ppa/week-3/PPA-2.html#question",
-    "title": "PPA-2",
-    "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print all the factors of \\(n\\), one number on each line."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-2.html#hint",
-    "href": "ppa/week-3/PPA-2.html#hint",
-    "title": "PPA-2",
-    "section": "Hint",
-    "text": "Hint\nGiven a number \\(n\\), a number \\(f\\) is its factor if \\(n\\) is divisible by \\(f\\). We know that \\(n\\) is divisible by \\(f\\) if the remainder when \\(n\\) is divided by \\(f\\) is \\(0\\). In Python, we have the \\(\\%\\) operator for getting the remainder:\nif n % f == 0:\n    print('a factor')\nelse:\n    print('not a factor')\nThe above snippet is of course just checking if a number \\(f\\) is a factor of \\(n\\) or not. Use the key idea in this snippet to come up with a complete solution to this problem. What is the range of values that you will have to check for \\(f\\), the loop-variable in this case?\nAn important point concerning the choice of variable names. i or j as the name for a loop variable is too generic for most problems. Reserve i and j for indices of strings and lists (we will study this next week). For this problem, f is a good choice because we need to find the factors of a number. The loop variable could also have more descriptive names, two of which are given below:\n\nfact\nfactor\n\nAt the same time, avoid excessively long names. For example, factor_of_n is unnecessarily elaborate. Note that any valid variable name would do and would give the same output, but in the interest of writing readable code, we strongly urge you to be a little more mindful in picking “good” names."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-2.html#solution",
-    "href": "ppa/week-3/PPA-2.html#solution",
-    "title": "PPA-2",
-    "section": "Solution",
-    "text": "Solution\nn = int(input())\nfor f in range(1, n + 1):\n    if n % f == 0:\n        print(f)"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-12.html",
-    "href": "ppa/week-3/PPA-12.html",
-    "title": "PPA-12",
-    "section": "",
-    "text": "Accept two strings as input and form a new string by removing all characters from the second string which are present in the first string. Print this new string as output. You can assume that all input strings will be in lower case."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-12.html#question",
-    "href": "ppa/week-3/PPA-12.html#question",
-    "title": "PPA-12",
-    "section": "",
-    "text": "Accept two strings as input and form a new string by removing all characters from the second string which are present in the first string. Print this new string as output. You can assume that all input strings will be in lower case."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-12.html#hint",
-    "href": "ppa/week-3/PPA-12.html#hint",
-    "title": "PPA-12",
-    "section": "Hint",
-    "text": "Hint\nIterating over strings can be done in two ways:\nword = 'abcdef'\nfor char in word:\n    print(char)\nThis is the recommended way of iterating over a string. Here, we directly get hold of each character in the string without resorting to the use of string-indices. The other way uses string-indices:\nword = 'abcdef'\nfor i in range(len(word)):\n    print(word[i])\nThough this is not a wrong approach, this is not appropriate for this problem. The index-based approach should be used only if we need to know the character along with its index. In this problem, we are not interested in the index at all, we only need to know the characters present in the string.\nTo check if a character is present in a string or not, we can simply use the in operator. For example:\nif 'a' in 'abcde':\n    print(True)\nelse:\n    print(False)\nWith all this information, you have enough to construct a solution."
-  },
-  {
-    "objectID": "ppa/week-3/PPA-12.html#solution",
-    "href": "ppa/week-3/PPA-12.html#solution",
-    "title": "PPA-12",
-    "section": "Solution",
-    "text": "Solution\nThis solution iterates over string_2 once. It adds characters to out if they are not present in string_1.\nstring_1 = input()\nstring_2 = input()\n\nout = '' # empty string\nfor char in string_2:\n    if char not in string_1:\n        out = out + char\n\nprint(out)"
-  },
-  {
-    "objectID": "ppa/week-3/PPA-1.html",
-    "href": "ppa/week-3/PPA-1.html",
+    "objectID": "ppa/week-4/PPA-1.html",
+    "href": "ppa/week-4/PPA-1.html",
     "title": "PPA-1",
     "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print the first \\(n\\) positive integers, one number on each line."
+    "text": "Accept a positive integer \\(n\\) as input and print the list of first \\(n\\) positive integers as output."
   },
   {
-    "objectID": "ppa/week-3/PPA-1.html#question",
-    "href": "ppa/week-3/PPA-1.html#question",
+    "objectID": "ppa/week-4/PPA-1.html#question",
+    "href": "ppa/week-4/PPA-1.html#question",
     "title": "PPA-1",
     "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print the first \\(n\\) positive integers, one number on each line."
+    "text": "Accept a positive integer \\(n\\) as input and print the list of first \\(n\\) positive integers as output."
   },
   {
-    "objectID": "ppa/week-3/PPA-1.html#hint",
-    "href": "ppa/week-3/PPA-1.html#hint",
+    "objectID": "ppa/week-4/PPA-1.html#hint",
+    "href": "ppa/week-4/PPA-1.html#hint",
     "title": "PPA-1",
     "section": "Hint",
-    "text": "Hint\nWhich loop should we use here, while or for?\nIf we go with a for loop, is the following solution correct?\nn = int(input())\nfor x in range(n):\n    print(x)\nIf it is not correct, then what is the mistake?"
+    "text": "Hint\nThere are two ways of growing a list:\n\nappend method\nlist concatenation\n\nL = [ ]\nL.append(1)\nL = L + [2]\nprint(L)\nIf you want a list of the first \\(n\\) positive integers, then you need to use a loop."
   },
   {
-    "objectID": "ppa/week-3/PPA-1.html#solutions",
-    "href": "ppa/week-3/PPA-1.html#solutions",
+    "objectID": "ppa/week-4/PPA-1.html#solutions",
+    "href": "ppa/week-4/PPA-1.html#solutions",
     "title": "PPA-1",
     "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nn = int(input())\nk = 1\nwhile k &lt;= n:\n    print(k)\n    i += 1\n\n\nn = int(input())\nfor x in range(1, n + 1):\n    print(x)"
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nn = int(input())\nL = [ ]\nfor i in range(1, n + 1):\n    L.append(i)\nprint(L)\n\n\nn = int(input())\nL = [ ]\nfor i in range(1, n + 1):\n    L = L + [i]\nprint(L)"
   },
   {
-    "objectID": "ppa/week-3/PPA-9.html",
-    "href": "ppa/week-3/PPA-9.html",
+    "objectID": "ppa/week-4/PPA-9.html",
+    "href": "ppa/week-4/PPA-9.html",
     "title": "PPA-9",
     "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print a triangle of zeros for \\(n\\) lines. The \\(i^{th}\\) line should have \\(i\\) zeros. There shouldn’t be any spaces between consecutive zeros. Do not print a space at the end of a line."
+    "text": "Accept a square matrix \\(A\\) and an integer \\(s\\) as input and print the matrix \\(s \\cdot A\\) as output. Multiplying a matrix by an integer \\(s\\) is equivalent to multiplying each element of the matrix by \\(s\\). For example: \\[\n2 \\cdot \\begin{bmatrix}\n1 & 2\\\\\n3 & 4\n\\end{bmatrix} = \\begin{bmatrix}\n2 & 4\\\\\n6 & 8\n\\end{bmatrix}\n\\]\n\nThe first line of input is a positive integer, \\(n\\), that denotes the dimension of the matrix \\(A\\). Each of the next \\(n\\) lines contains a sequence of space-separated integers. The last line of the input contains the integer \\(s\\).\nPrint the matrix \\(s \\cdot A\\) as output. Each row of the matrix must be printed as a sequence of space separated integers, one row on each line. There should not be any space after the last number on each line. If the expected output looks exactly like the actual output and still you are getting a wrong answer, it is because of the space at the end."
   },
   {
-    "objectID": "ppa/week-3/PPA-9.html#question",
-    "href": "ppa/week-3/PPA-9.html#question",
+    "objectID": "ppa/week-4/PPA-9.html#question",
+    "href": "ppa/week-4/PPA-9.html#question",
     "title": "PPA-9",
     "section": "",
-    "text": "Accept a positive integer \\(n\\) as input and print a triangle of zeros for \\(n\\) lines. The \\(i^{th}\\) line should have \\(i\\) zeros. There shouldn’t be any spaces between consecutive zeros. Do not print a space at the end of a line."
+    "text": "Accept a square matrix \\(A\\) and an integer \\(s\\) as input and print the matrix \\(s \\cdot A\\) as output. Multiplying a matrix by an integer \\(s\\) is equivalent to multiplying each element of the matrix by \\(s\\). For example: \\[\n2 \\cdot \\begin{bmatrix}\n1 & 2\\\\\n3 & 4\n\\end{bmatrix} = \\begin{bmatrix}\n2 & 4\\\\\n6 & 8\n\\end{bmatrix}\n\\]\n\nThe first line of input is a positive integer, \\(n\\), that denotes the dimension of the matrix \\(A\\). Each of the next \\(n\\) lines contains a sequence of space-separated integers. The last line of the input contains the integer \\(s\\).\nPrint the matrix \\(s \\cdot A\\) as output. Each row of the matrix must be printed as a sequence of space separated integers, one row on each line. There should not be any space after the last number on each line. If the expected output looks exactly like the actual output and still you are getting a wrong answer, it is because of the space at the end."
   },
   {
-    "objectID": "ppa/week-3/PPA-9.html#hint",
-    "href": "ppa/week-3/PPA-9.html#hint",
+    "objectID": "ppa/week-4/PPA-9.html#hint",
+    "href": "ppa/week-4/PPA-9.html#hint",
     "title": "PPA-9",
     "section": "Hint",
-    "text": "Hint\nNested loops are one way to solve the problem. What should be the ranges for the outer and inner for loops? How many rows are we printing? In each row, how many zeros are we printing? To move to the next row, just use print().\nBut there is also a way to solve the problem using a single loop. A hint is given below:\n\nstring\ninteger\nmultiplication\n\nHow can you use a combination of the three terms mentioned here to construct a solution?"
+    "text": "Hint\nOne way to do it is to accept the matrix \\(A\\) as input and then create a new matrix \\(B\\), such that: \\[\nB[i][j] = s \\cdot A[i][j]\n\\]\nB = [ ]\nn = len(A)\nfor i in range(n):\n    row = [ ]\n    for j in range(n):\n        row.append(s * A[i][j])\n    B.append(row)\nThough this forms a part of a valid solution, is there another way of solving this problem?"
   },
   {
-    "objectID": "ppa/week-3/PPA-9.html#solution",
-    "href": "ppa/week-3/PPA-9.html#solution",
+    "objectID": "ppa/week-4/PPA-9.html#solution",
+    "href": "ppa/week-4/PPA-9.html#solution",
     "title": "PPA-9",
     "section": "Solution",
-    "text": "Solution\nn = int(input())\nfor i in range(1, n + 1):\n    for j in range(1, i + 1):\n        print('0', end = '')\n    print()"
+    "text": "Solution\nn = int(input())\nmatrix = [ ]\nfor i in range(n):\n    row = [ ]\n    for x in input().split(' '):\n        row.append(int(x))\n    matrix.append(row)\ns = int(input())\n\nfor row in range(n):\n    for col in range(n):\n        matrix[row][col] *= s\n\nfor row in range(n):\n    for col in range(n):\n        if col != n - 1:\n            print(matrix[row][col], end = ' ')\n        else:\n            print(matrix[row][col])"
   },
   {
-    "objectID": "ppa/week-3/PPA-5.html",
-    "href": "ppa/week-3/PPA-5.html",
+    "objectID": "ppa/week-4/PPA-5.html",
+    "href": "ppa/week-4/PPA-5.html",
     "title": "PPA-5",
     "section": "",
-    "text": "Accept a sequence of positive integers as input and print the the maximum number in the sequence. The input will have \\(n + 1\\) lines, where \\(n\\) denotes the number of terms in the sequence. The \\(i^{th}\\) line in the input will contain the \\(i^{th}\\) term in the sequence for \\(1 \\leq i \\leq n\\). The last line of the input will always be the number 0. Each test case will have at least one term in the sequence."
+    "text": "Accept a space-separated sequence of positive real numbers as input. Convert each element of the sequence into the greatest integer less than or equal to it. Print this sequence of integers as output, with a comma between consecutive integers."
   },
   {
-    "objectID": "ppa/week-3/PPA-5.html#question",
-    "href": "ppa/week-3/PPA-5.html#question",
+    "objectID": "ppa/week-4/PPA-5.html#question",
+    "href": "ppa/week-4/PPA-5.html#question",
     "title": "PPA-5",
     "section": "",
-    "text": "Accept a sequence of positive integers as input and print the the maximum number in the sequence. The input will have \\(n + 1\\) lines, where \\(n\\) denotes the number of terms in the sequence. The \\(i^{th}\\) line in the input will contain the \\(i^{th}\\) term in the sequence for \\(1 \\leq i \\leq n\\). The last line of the input will always be the number 0. Each test case will have at least one term in the sequence."
+    "text": "Accept a space-separated sequence of positive real numbers as input. Convert each element of the sequence into the greatest integer less than or equal to it. Print this sequence of integers as output, with a comma between consecutive integers."
   },
   {
-    "objectID": "ppa/week-3/PPA-5.html#hint",
-    "href": "ppa/week-3/PPA-5.html#hint",
+    "objectID": "ppa/week-4/PPA-5.html#hint",
+    "href": "ppa/week-4/PPA-5.html#hint",
     "title": "PPA-5",
     "section": "Hint",
-    "text": "Hint\nYou have to keep accepting input from the console until it is zero. Since the number of iterations is not known a priori, a while loop is the better choice. The next step is to accept the first input outside the while loop and store it in a variable named t. Now, keep accepting inputs inside the while loop. The termination condition for the loop is t == 0. So, keep running the loop as long as t != 0.\nt = int(input())\nwhile t != 0:\n    t = int(input())\nWith this information, can you now insert the piece of code for finding the maximum number in the sequence? You have seen it so many times in the CT course."
+    "text": "Hint\nA very important task that will keep repeating throughout the course is to print a sequence of items separated by a specific delimiter, say a comma or a space. For example, given a list L = [1, 2, 3, 4, 5], how does one print the sequence 1,2,3,4,5?\nThe first idea is to just add a comma after every element:\nL = [1, 2, 3, 4, 5]\nfor x in L:\n    print(str(x) + ',')\nIs str(x) needed here? Can’t it be just x?\nWhen this code is executed, it displays the output on five separate lines. By default, print adds a new line at the end after whatever item it is supposed to print. This default behaviour can be suppressed using the end argument:\nL = [1, 2, 3, 4, 5]\nfor x in L:\n    print(str(x) + ',', end = '')   # there is no space between the quotes\nThis prints 1,2,3,4,5,. While this is an improvement from the previous case, there is a problem with the comma right at the end. Before addressing that issue, this code can be simplified in the following manner:\nL = [1, 2, 3, 4, 5]\nfor x in L:\n    print(x, end = ',')\nThis also gives the same output as before: 1,2,3,4,5,. Now, it is time to get rid of the last comma. There are two ways to do it:\n\nMethod-1Method-2\n\n\nL = [1, 2, 3, 4, 5]\nfor num in L[: -1]:\n    print(num, end = ',')\nprint(L[-1])\n\n\nL = [1, 2, 3, 4, 5]\nfor index, num in enumerate(L):\n    if index == len(L) - 1:\n        print(num)\n    else:\n        print(num, end = ',')\n\n\n\n\nMethod-1 iterates over the first len(L) - 1 elements of the list and adds a comma after every element. It then gets out of the loop and just prints the last element without a comma.\nMethod-2 iterates over all the elements. If index corresponds to len(L) - 1, it just prints that element. If not, it prints the element and adds a comma at the end.\n\nBoth are valid methods."
   },
   {
-    "objectID": "ppa/week-3/PPA-5.html#solution",
-    "href": "ppa/week-3/PPA-5.html#solution",
+    "objectID": "ppa/week-4/PPA-5.html#solution",
+    "href": "ppa/week-4/PPA-5.html#solution",
     "title": "PPA-5",
     "section": "Solution",
-    "text": "Solution\nt = int(input())\nmax_t = t\nwhile t != 0:\n    if t &gt; max_t:\n        max_t = t\n    t = int(input())\nprint(max_t)"
+    "text": "Solution\nWhy can’t we directly do L[i] = int(L[i])? Why do we need line-4 to happen before line-5? Try deleting line-4 and see what happens.\nL = input().split(' ')\n\nfor i in range(len(L)):\n    L[i] = float(L[i])\n    L[i] = int(L[i])\n\nfor i in range(len(L)):\n    if i != len(L) - 1:\n        print(L[i], end = ',')\n    else:\n        print(L[i])"
   },
   {
-    "objectID": "ppa/week-2/PPA-10.html",
-    "href": "ppa/week-2/PPA-10.html",
-    "title": "PPA-10",
+    "objectID": "howto/howto-9.html",
+    "href": "howto/howto-9.html",
+    "title": "Create a list of numbers",
     "section": "",
-    "text": "Accept a real number \\(x\\) as input and print the greatest integer less than or equal to \\(x\\) on the first line, followed by the smallest integer greater than or equal to \\(x\\) on the second line."
+    "text": "L = [1, 2, 3]"
   },
   {
-    "objectID": "ppa/week-2/PPA-10.html#question",
-    "href": "ppa/week-2/PPA-10.html#question",
-    "title": "PPA-10",
+    "objectID": "howto/howto-17.html",
+    "href": "howto/howto-17.html",
+    "title": "Find the first element in a list",
     "section": "",
-    "text": "Accept a real number \\(x\\) as input and print the greatest integer less than or equal to \\(x\\) on the first line, followed by the smallest integer greater than or equal to \\(x\\) on the second line."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-10.html#hint",
-    "href": "ppa/week-2/PPA-10.html#hint",
-    "title": "PPA-10",
-    "section": "Hint",
-    "text": "Hint\nThe crux of this problem is to look at three cases, two of which are given below:\n\nWhat happens when \\(x\\) is positive?\nWhat happens when \\(x\\) is negative?\n\nHere is another hint:\nf = int(3.3)\nprint(f)\nint(3.3) retains the integer part while truncating whatever comes after the decimal, and also the decimal. Try out the following:\nf = int(-3.3)\nprint(f)\nCan you now go ahead and construct a solution for this problem? These are the floor and ceiling functions that we study in mathematics. Why do you think these functions have been named in this manner?"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-10.html#solution",
-    "href": "ppa/week-2/PPA-10.html#solution",
-    "title": "PPA-10",
-    "section": "Solution",
-    "text": "Solution\nx = float(input())\n\nif x == int(x):\n    floor = ceil = int(x)\nelif x &gt; 0:\n    floor = int(x)\n    ceil = floor + 1\nelif x &lt; 0:\n    ceil = int(x)\n    floor = ceil - 1\n\nprint(floor)\nprint(ceil)"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-2.html",
-    "href": "ppa/week-2/PPA-2.html",
-    "title": "PPA-2",
-    "section": "",
-    "text": "Consider the piece-wise function given below.\n\\[\nf(x) = \\left\\{\n        \\begin{array}{ll}\n            x + 2 & \\quad 0 &lt; x &lt; 10 \\\\\n            x^2 + 2 & \\quad 10 \\leq x \\\\\n            0 & \\quad \\text{otherwise}\n        \\end{array}\n    \\right.\n\\]\nAccept the value of \\(x\\) as input and print the value of \\(f(x)\\) as output. Note that both the input and output are real numbers. Your code should reflect this aspect. That is, both \\(x\\) and \\(f(x)\\) should be float values."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-2.html#question",
-    "href": "ppa/week-2/PPA-2.html#question",
-    "title": "PPA-2",
-    "section": "",
-    "text": "Consider the piece-wise function given below.\n\\[\nf(x) = \\left\\{\n        \\begin{array}{ll}\n            x + 2 & \\quad 0 &lt; x &lt; 10 \\\\\n            x^2 + 2 & \\quad 10 \\leq x \\\\\n            0 & \\quad \\text{otherwise}\n        \\end{array}\n    \\right.\n\\]\nAccept the value of \\(x\\) as input and print the value of \\(f(x)\\) as output. Note that both the input and output are real numbers. Your code should reflect this aspect. That is, both \\(x\\) and \\(f(x)\\) should be float values."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-2.html#hint",
-    "href": "ppa/week-2/PPA-2.html#hint",
-    "title": "PPA-2",
-    "section": "Hint",
-    "text": "Hint\nReal numbers are represented as float values. So, you would have to accept the input as follows:\nx = float(input())\nThe output in this case is the value of \\(f(x)\\), which is again to be treated as a float value according to the question. Here is an incomplete code snippet that you can use to complete the solution:\nif 0 &lt; x &lt; 10:\n    print(x + 2)\nNotice the usage 0 &lt; x &lt; 10. This is called operator chaining. This actually corresponds to 0 &lt; x and x &lt; 10. We have chained two operations into a single one. This chaining enables us to smoothly translate from the mathematical expression \\(0 &lt; x &lt; 10\\) to the Python expression 0 &lt; x &lt; 10.\nFew more things to consider:\n\nIf you use print statements within the conditional blocks, like the way it is shown here, how many of them would you require to solve this problem?\nIs there a way to solve this problem that requires just one print statement? Can you come up with that solution if it exists?"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-2.html#solutions",
-    "href": "ppa/week-2/PPA-2.html#solutions",
-    "title": "PPA-2",
-    "section": "Solutions",
-    "text": "Solutions\nYou have to be careful about printing the value \\(0\\). The expected value is \\(0.0\\), the float value, and not \\(0\\), the integer value.\n\nSolution-1Solution-2Solution-3Solution-4\n\n\nx = float(input())\nif 0 &lt; x &lt; 10:\n    print(x + 2)\nelif 10 &lt;= x:\n    print(x ** 2 + 2)\nelse:\n    print(0.0)\n\n\nx = float(input())\nif 0 &lt; x &lt; 10:\n    y = x + 2\nelif 10 &lt;= x:\n    y = x ** 2 + 2\nelse:\n    y = 0.0\nprint(y)\n\n\nHere is a slight variation of solution-2. Can you see what has changed?\nx = float(input())\ny = 0.0\nif 0 &lt; x &lt; 10:\n    y = x + 2\nelif 10 &lt;= x:\n    y = x ** 2 + 2\nprint(y)\n\n\nThis is different from all three solutions before. Instead of using operator chaining, this uses the and operator:\nx = float(input())\ny = 0.0\nif 0 &lt; x and x &lt; 10:\n    y = x + 2\nelif 10 &lt;= x:\n    y = x ** 2 + 2\nprint(y)"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-7.html",
-    "href": "ppa/week-2/PPA-7.html",
-    "title": "PPA-7",
-    "section": "",
-    "text": "A sequence of five words is called magical if the \\(i^{th}\\) word is a substring of the \\((i + 1)^{th}\\) word for every \\(i\\) in the range \\(1 \\leq i &lt; 5\\). Accept a sequence of five words as input, one word on each line. Print magical if the sequence is magical and non-magical otherwise.\nNote that str_1 is a substring of str_2 if and only if str_1 is present as a sequence of consecutive characters in str_2."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-7.html#question",
-    "href": "ppa/week-2/PPA-7.html#question",
-    "title": "PPA-7",
-    "section": "",
-    "text": "A sequence of five words is called magical if the \\(i^{th}\\) word is a substring of the \\((i + 1)^{th}\\) word for every \\(i\\) in the range \\(1 \\leq i &lt; 5\\). Accept a sequence of five words as input, one word on each line. Print magical if the sequence is magical and non-magical otherwise.\nNote that str_1 is a substring of str_2 if and only if str_1 is present as a sequence of consecutive characters in str_2."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-7.html#hint",
-    "href": "ppa/week-2/PPA-7.html#hint",
-    "title": "PPA-7",
-    "section": "Hint",
-    "text": "Hint\nThe in keyword is a powerful tool. For example, to see if a string word1 is a substring of another string word2, you just need to type:\nword1 in word2\nIf word1 is a substring of word2 then this expression evaluates to True. If not, it evaluates to False. Now, it is just a question of repeatedly applying this condition across the sequence."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-7.html#solutions",
-    "href": "ppa/week-2/PPA-7.html#solutions",
-    "title": "PPA-7",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nword_1 = input()\nword_2 = input()\nword_3 = input()\nword_4 = input()\nword_5 = input()\n\nif ((word_1 in word_2) and\n    (word_2 in word_3) and\n    (word_3 in word_4) and\n    (word_4 in word_5)):\n    print('magical')\nelse:\n    print('non-magical')\n\n\nword_1 = input()\nword_2 = input()\nword_3 = input()\nword_4 = input()\nword_5 = input()\n\npresent = False\nif word_1 in word_2:\n    if word_2 in word_3:\n        if word_3 in word_4:\n            if word_4 in word_5:\n                present = True\nif present:\n    print('magical')\nelse:\n    print('non-magical')"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-3.html",
-    "href": "ppa/week-2/PPA-3.html",
-    "title": "PPA-3",
-    "section": "",
-    "text": "Accept an integer as input and print the time of the day. Use the following table for reference.\n\n\n\nInput\nOutput\n\n\n\n\n\\(T &lt; 0\\)\nINVALID\n\n\n\\(0 \\leq T \\leq 5\\)\nNIGHT\n\n\n\\(6 \\leq T \\leq 11\\)\nMORNING\n\n\n\\(12 \\leq T \\leq 17\\)\nAFTERNOON\n\n\n\\(18 \\leq T \\leq 23\\)\nEVENING\n\n\n\\(T \\geq 24\\)\nINVALID\n\n\n\nThe input will be a single line containing an integer. The output should be one of these strings: NIGHT, MORNING, AFTERNOON, EVENING, INVALID."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-3.html#question",
-    "href": "ppa/week-2/PPA-3.html#question",
-    "title": "PPA-3",
-    "section": "",
-    "text": "Accept an integer as input and print the time of the day. Use the following table for reference.\n\n\n\nInput\nOutput\n\n\n\n\n\\(T &lt; 0\\)\nINVALID\n\n\n\\(0 \\leq T \\leq 5\\)\nNIGHT\n\n\n\\(6 \\leq T \\leq 11\\)\nMORNING\n\n\n\\(12 \\leq T \\leq 17\\)\nAFTERNOON\n\n\n\\(18 \\leq T \\leq 23\\)\nEVENING\n\n\n\\(T \\geq 24\\)\nINVALID\n\n\n\nThe input will be a single line containing an integer. The output should be one of these strings: NIGHT, MORNING, AFTERNOON, EVENING, INVALID."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-3.html#hint",
-    "href": "ppa/week-2/PPA-3.html#hint",
-    "title": "PPA-3",
-    "section": "Hint",
-    "text": "Hint\nHow is this problem related to the previous problem? Do they have the same structure?\nThink about the following code snippets:\n\nSnippet-1Snippet-2\n\n\nif T &lt; 0:\n    print('INVALID')\nelif 0 &lt;= T &lt;= 5:\n    print('NIGHT')\n\n\nif T &lt; 0:\n    print('INVALID')\nif 0 &lt;= T &lt;= 5:\n    print('NIGHT')\n\n\n\nCome up with two different solutions to the problem, one that develops snippet-1 and the other which develops snippet-2. What is the difference between these two solutions that you arrive at? Which one is better?"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-3.html#solutions",
-    "href": "ppa/week-2/PPA-3.html#solutions",
-    "title": "PPA-3",
-    "section": "Solutions",
-    "text": "Solutions\n\nSolution-1Solution-2\n\n\nt = int(input())\nif 0 &lt;= t &lt;= 5:\n    print('NIGHT')\nelif 6 &lt;= t &lt;= 11:\n    print('MORNING')\nelif 12 &lt;= t &lt;= 17:\n    print('AFTERNOON')\nelif 18 &lt;= t &lt;= 23:\n    print('EVENING')\nelse:\n    print('INVALID')\n\n\nt = int(input())\nif t &lt; 0:\n    print('INVALID')\nif 0 &lt;= t &lt;= 5:\n    print('NIGHT')\nif 6 &lt;= t &lt;= 11:\n    print('MORNING')\nif 12 &lt;= t &lt;= 17:\n    print('AFTERNOON')\nif 18 &lt;= t &lt;= 23:\n    print('EVENING')\nif t &gt;= 24:\n    print('INVALID')"
-  },
-  {
-    "objectID": "ppa/week-2/PPA-5.html",
-    "href": "ppa/week-2/PPA-5.html",
-    "title": "PPA-5",
-    "section": "",
-    "text": "Write a program to realize the equation of a line given 2 points \\((x_1,y_1)\\) and \\((x_2,y_2)\\) in 2D space. The input is in 5 lines where, the first, second, third, and fourth lines represent \\(x_1\\), \\(y_1\\), \\(x_2\\), and \\(y_2\\) respectively. The fifth line corresponds to \\(x_3\\). Determine \\(y_3\\) using the equation of a straight line as given below:\n\\[\n\\frac{x-x_1}{x_2-x_1} = \\frac{y-y_1}{y_2-y_1}\n\\]\nThe output should be “Vertical Line” if the line is vertical. In other cases, the output should be 2 lined, where the first line is the value of \\(y_3\\) and the second line indicates whether the slope of the line is positive, negative or zero. Print “Positive Slope”, “Negative Slope” or “Horizontal Line” accordingly.\nNote that all inputs are to be processed as real numbers."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-5.html#question",
-    "href": "ppa/week-2/PPA-5.html#question",
-    "title": "PPA-5",
-    "section": "",
-    "text": "Write a program to realize the equation of a line given 2 points \\((x_1,y_1)\\) and \\((x_2,y_2)\\) in 2D space. The input is in 5 lines where, the first, second, third, and fourth lines represent \\(x_1\\), \\(y_1\\), \\(x_2\\), and \\(y_2\\) respectively. The fifth line corresponds to \\(x_3\\). Determine \\(y_3\\) using the equation of a straight line as given below:\n\\[\n\\frac{x-x_1}{x_2-x_1} = \\frac{y-y_1}{y_2-y_1}\n\\]\nThe output should be “Vertical Line” if the line is vertical. In other cases, the output should be 2 lined, where the first line is the value of \\(y_3\\) and the second line indicates whether the slope of the line is positive, negative or zero. Print “Positive Slope”, “Negative Slope” or “Horizontal Line” accordingly.\nNote that all inputs are to be processed as real numbers."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-5.html#hint",
-    "href": "ppa/week-2/PPA-5.html#hint",
-    "title": "PPA-5",
-    "section": "Hint",
-    "text": "Hint\nThere are two aspects to this problem. One is mathematical, the other is computational. First, try to figure out the mathematical part. The questions you have to ask yourself are the following:\n\nFor what collection of points does the line joining them become a vertical line?\nIf a line is not vertical, then how does one compute the slope?\nWhat is the slope of a horizontal line?\n\nOnce you have answered these questions, you have all the ingredients necessary to solve the problem computationally. Some of the steps in the computational process:\n\nAccept inputs as real numbers. You know how to do this from PPA-2.\nCalculate the slope.\nFind the y-coordinate of the point.\n\nThere are important details that have been deliberately missed out. These are for you to fill in."
-  },
-  {
-    "objectID": "ppa/week-2/PPA-5.html#solution",
-    "href": "ppa/week-2/PPA-5.html#solution",
-    "title": "PPA-5",
-    "section": "Solution",
-    "text": "Solution\nx1, y1 = float(input()), float(input())\nx2, y2 = float(input()), float(input())\nx3 = float(input())\n\nif x1 != x2:\n    m = (y2 - y1) / (x2 - x1)   # m is the slope\n    y3 = y1 + m * (x3 - x1)\n    print(y3)\n\n    if m == 0:\n        print('Horizontal Line')\n    elif m &gt; 0:\n        print('Positive Slope')\n    else:\n        print('Negative Slope')\nelse:\n    print('Vertical Line')"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-10.html",
-    "href": "ppa/week-4/PPA-10.html",
-    "title": "PPA-10",
-    "section": "",
-    "text": "Accept two square matrices \\(A\\) and \\(B\\) of dimensions \\(n \\times n\\) as input and compute their sum \\(A + B\\).\n\nThe first line will contain the integer \\(n\\). This is followed by \\(2n\\) lines. Each of the first \\(n\\) lines is a sequence of comma-separated integers that denotes one row of the matrix \\(A\\). Each of the last \\(n\\) lines is a sequence of comma-separated integers that denotes one row of the matrix \\(B\\). Your output should again be a sequence of \\(n\\) lines, where each line is a sequence of comma-separated integer that denotes a row of the matrix \\(A + B\\)."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-10.html#question",
-    "href": "ppa/week-4/PPA-10.html#question",
-    "title": "PPA-10",
-    "section": "",
-    "text": "Accept two square matrices \\(A\\) and \\(B\\) of dimensions \\(n \\times n\\) as input and compute their sum \\(A + B\\).\n\nThe first line will contain the integer \\(n\\). This is followed by \\(2n\\) lines. Each of the first \\(n\\) lines is a sequence of comma-separated integers that denotes one row of the matrix \\(A\\). Each of the last \\(n\\) lines is a sequence of comma-separated integers that denotes one row of the matrix \\(B\\). Your output should again be a sequence of \\(n\\) lines, where each line is a sequence of comma-separated integer that denotes a row of the matrix \\(A + B\\)."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-10.html#hint",
-    "href": "ppa/week-4/PPA-10.html#hint",
-    "title": "PPA-10",
-    "section": "Hint",
-    "text": "Hint\nThis may be one of the longest snippets that you would have to write. While writing this code, note the redundancy involved. You have to accept two matrices as input, so you would have two sets of nested loops, both of which are almost identical in appearance. How can we avoid this redundancy? We will learn functions in week-5 which will solve this problem.\nThat said, once you have two matrices \\(A\\) and \\(B\\) in place, we need a new matrix \\(C\\) such that: \\[\nC[i][j] = A[i][j] + B[i][j]\n\\]"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-10.html#solution",
-    "href": "ppa/week-4/PPA-10.html#solution",
-    "title": "PPA-10",
-    "section": "Solution",
-    "text": "Solution\nn = int(input())\n\nA = [ ]\nfor i in range(n):\n    row = [ ]\n    for x in input().split(','):\n        row.append(int(x))\n    A.append(row)\n    \nB = [ ]\nfor i in range(n):\n    row = [ ]\n    for x in input().split(','):\n        row.append(int(x))\n    B.append(row)\n    \nC = [ ]\nfor i in range(n):\n    row = [ ]\n    for j in range(n):\n        row.append(0)\n    C.append(row)\n    \nfor i in range(n):\n    for j in range(n):\n        C[i][j] = A[i][j] + B[i][j]\n        if j != n - 1:\n            print(C[i][j], end = ',')\n        else:\n            print(C[i][j])"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-2.html",
-    "href": "ppa/week-4/PPA-2.html",
-    "title": "PPA-2",
-    "section": "",
-    "text": "Accept a sequence of words as input, append all these words to a list in the order in which they are entered, and print this list as output. The first line in the input is a positive integer \\(n\\) that denotes the number of words in the sequence. The next \\(n\\) lines will have one word on each line."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-2.html#question",
-    "href": "ppa/week-4/PPA-2.html#question",
-    "title": "PPA-2",
-    "section": "",
-    "text": "Accept a sequence of words as input, append all these words to a list in the order in which they are entered, and print this list as output. The first line in the input is a positive integer \\(n\\) that denotes the number of words in the sequence. The next \\(n\\) lines will have one word on each line."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-2.html#hint",
-    "href": "ppa/week-4/PPA-2.html#hint",
-    "title": "PPA-2",
-    "section": "Hint",
-    "text": "Hint\nThere are two steps here:\n\naccept a string during each iteration of the loop\nappend this string to a list\n\nThe easiest thing would be a for loop as the number of iterations is known to us (first line of the input). But what if we go for a while loop?\nwhile n &gt; 0:\n    ### accept string as input ###\n    ### append string to list ###\n    n -= 1\nDo you think the above code works?"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-2.html#solution",
-    "href": "ppa/week-4/PPA-2.html#solution",
-    "title": "PPA-2",
-    "section": "Solution",
-    "text": "Solution\nn = int(input())\nL = [ ]\nfor i in range(n):\n    word = input()\n    L.append(word)\nprint(L)"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-7.html",
-    "href": "ppa/week-4/PPA-7.html",
-    "title": "PPA-7",
-    "section": "",
-    "text": "Accept a square matrix as input and store it in a variable named matrix. The first line of input will be, \\(n\\), the number of rows in the matrix. Each of the next \\(n\\) lines will have a sequence of \\(n\\) space-separated integers."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-7.html#question",
-    "href": "ppa/week-4/PPA-7.html#question",
-    "title": "PPA-7",
-    "section": "",
-    "text": "Accept a square matrix as input and store it in a variable named matrix. The first line of input will be, \\(n\\), the number of rows in the matrix. Each of the next \\(n\\) lines will have a sequence of \\(n\\) space-separated integers."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-7.html#hint",
-    "href": "ppa/week-4/PPA-7.html#hint",
-    "title": "PPA-7",
-    "section": "Hint",
-    "text": "Hint\nHow does one accept a row of a matrix?\nA row of input is usually provided as a sequence of numbers:\n1 2 3 4 5\nPPAs 1 to 6 should give you the idea here.\nnums = input().split(' ')   # split by space\nrow = [ ]                   # represents one row of a matrix\nfor num in nums:\n    row.append(int(num))    # convert str to int\nNow, you just need to append this row to another list matrix:\nmatrix = [ ]\nmatrix.append(row)\nprint(matrix)\nYour matrix currently has only one row in it and would look like this:\n[[1, 2, 3, 4, 5]]\nNow it is just a question of using a loop to append all rows of a matrix to the outer list matrix one by one. For the first test case, this is what happens:\nmatrix = [ ]\n# Row-1: 1 2\nrow = [1, 2]\nmatrix.append(row)\n# Matrix becomes [[1, 2]]\n# Row-2: 3 4\nrow = [3, 4]\nmatrix.append(row)\n# Matrix becomes [[1, 2], [3, 4]]\nNow, loopify!"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-7.html#solution",
-    "href": "ppa/week-4/PPA-7.html#solution",
-    "title": "PPA-7",
-    "section": "Solution",
-    "text": "Solution\nn = int(input())\n\nmatrix = [ ]\nfor i in range(n):\n    row = [ ]\n    for num in input().split(' '):\n        row.append(int(num))\n    matrix.append(row)"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-3.html",
-    "href": "ppa/week-4/PPA-3.html",
-    "title": "PPA-3",
-    "section": "",
-    "text": "Accept a sequence of comma-separated integers as input and print the maximum value in the sequence as output."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-3.html#question",
-    "href": "ppa/week-4/PPA-3.html#question",
-    "title": "PPA-3",
-    "section": "",
-    "text": "Accept a sequence of comma-separated integers as input and print the maximum value in the sequence as output."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-3.html#hint",
-    "href": "ppa/week-4/PPA-3.html#hint",
-    "title": "PPA-3",
-    "section": "Hint",
-    "text": "Hint\nConsider the following piece of code.\nnum = '1,2,3,4,5'\nL = num.split(',')\nprint(L)\nWhen this code is executed, it gives the following output:\n['1', '2', '3', '4', '5']\nThe method split is a string method. It can be used with any string variable. The string that is passed as an argument to the split method, in this case it is a comma, is called a delimiter. Sometimes you may have to split using a space. For example:\nnum = '1 2 3 4 5'\nL = num.split(' ') # there is a single space between the quotes\nprint(['1', '2', '3', '4', '5'])\nThe value returned by num.split(' ') is a list of strings. The next step is to convert each element of the string into an integer. This could be done in two ways.\n\nMethod-1Method-2\n\n\nL = ['1', '2', '3', '4', '5']\nfor i in range(len(L)):\n    L[i] = int(L[i])\n\n\nL = ['1', '2', '3', '4', '5']\nL_ints = [ ]\nfor x in L:\n    x_int = int(x)\n    L_ints.append(x_int)\n\n\n\nMethod-1 modifies the list in-place. Method-2 creates a new list. Both methods are valid. From here, it is all about finding the maximum element, something that you should be quite familiar with by now."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-3.html#solution",
-    "href": "ppa/week-4/PPA-3.html#solution",
-    "title": "PPA-3",
-    "section": "Solution",
-    "text": "Solution\nnums = input()\nnums = nums.split(',')\n\nmax_num = int(nums[0])\nfor num in nums:\n    num = int(num)\n    if num &gt; max_num:\n        max_num = num\n        \nprint(max_num)"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-11.html",
-    "href": "ppa/week-4/PPA-11.html",
-    "title": "PPA-11",
-    "section": "",
-    "text": "L is a list of real numbers that is already given to you. You have to sort this list in descending order and store the sorted list in a variable called sorted_L."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-11.html#question",
-    "href": "ppa/week-4/PPA-11.html#question",
-    "title": "PPA-11",
-    "section": "",
-    "text": "L is a list of real numbers that is already given to you. You have to sort this list in descending order and store the sorted list in a variable called sorted_L."
-  },
-  {
-    "objectID": "ppa/week-4/PPA-11.html#hint",
-    "href": "ppa/week-4/PPA-11.html#hint",
-    "title": "PPA-11",
-    "section": "Hint",
-    "text": "Hint\nLet us go with the “obvious sort” approach that was covered in the lecture. We have to keep removing the largest element from the list:\nStep-0\n[1, 4, 3, 2, 5]\n\n[ ]\nStep-1\n[1, 4, 3, 2]\n\n[5]\nStep-2\n[1, 3, 2]\n\n[5, 4]\nStep-3\n[1, 2]\n\n[5, 4, 3]\nStep-4\n[1]\n\n[5, 4, 3, 2]\nStep-5\n[ ]\n\n[5, 4, 3, 2, 1]\nThe logic is quite clear. How can we implement this? First, note that we can use L.remove(x) to remove the element x from the list L. What is this element x that we are interested in during each step? It is the maximum element in the list. So, each step has three sub-steps:\n\nFind the maximum element (loop)\nRemove this from the original list (single line statement)\nAppend this to a new list (single line statement)\n\nClearly, the whole thing has to be within a loop. How many times should this outer loop run? Should this outer loop be a for or a while loop? Which do you think is better?"
-  },
-  {
-    "objectID": "ppa/week-4/PPA-11.html#solution",
-    "href": "ppa/week-4/PPA-11.html#solution",
-    "title": "PPA-11",
-    "section": "Solution",
-    "text": "Solution\nsorted_L = [ ]\nwhile L != [ ]:\n    max_elem = L[0]\n    for elem in L:\n        if elem &gt; max_elem:\n            max_elem = elem\n    L.remove(max_elem)\n    sorted_L.append(max_elem)"
-  },
-  {
-    "objectID": "howto/howto-6.html",
-    "href": "howto/howto-6.html",
-    "title": "Accept a string as input",
-    "section": "",
-    "text": "string = input()"
-  },
-  {
-    "objectID": "howto/howto-8.html",
-    "href": "howto/howto-8.html",
-    "title": "Create an empty list",
-    "section": "",
-    "text": "L = [ ]\nOR\nL = list()"
+    "text": "L = [10, 20, 30, 40]\nfirst = L[0]"
   },
   {
     "objectID": "howto/howto-2.html",
@@ -1687,25 +1736,60 @@
     "text": "name = 'Krishna'\nage = 40\nprint(name, 'is', age, 'years old')\nFor more details refer to this video."
   },
   {
-    "objectID": "howto/howto-12.html",
-    "href": "howto/howto-12.html",
-    "title": "Find number of elements in a list",
+    "objectID": "howto/howto-1.html",
+    "href": "howto/howto-1.html",
+    "title": "Print “Hello World!”",
     "section": "",
-    "text": "L = [1, 2, 3, 4]\nn = len(L)\nprint(n)"
+    "text": "Method-1Method-2\n\n\nprint('Hello World!')\n\n\nprint(\"Hello World!\")\n\n\n\nFor more details refer to this video."
+  },
+  {
+    "objectID": "howto/howto-11.html",
+    "href": "howto/howto-11.html",
+    "title": "Append an element to a list",
+    "section": "",
+    "text": "Method-1Method-2\n\n\nL = [1, 2, 3]\nL.append(4)\n\n\nL = [1, 2, 3]\nL = L + [4]"
+  },
+  {
+    "objectID": "howto/howto-21.html",
+    "href": "howto/howto-21.html",
+    "title": "Extract the second half of a list of even length",
+    "section": "",
+    "text": "L = [1, 2, 3, 4, 5, 6, 7, 8]\nn = len(L)\nsecond_half = L[n // 2:]\nprint(second_half)"
+  },
+  {
+    "objectID": "howto/howto-15.html",
+    "href": "howto/howto-15.html",
+    "title": "Print all elements in a list on the same line separated by a space",
+    "section": "",
+    "text": "L = ['this', 'is', 'a', 'sentence']\nfor word in L:\n    print(word, end = ' ') # a space is passed to the argument end\nThis will add a space after every word. As a result, there will be a space after the last word. This trailing space won’t be perceptible by just viewing the screen. To get rid of it we can use this snippet:\nL = ['this', 'is', 'a', 'sentence']\nfor word in L[:-1]:\n    print(word, end = ' ')\nprint(L[-1])\nThis iterates through the first \\(n - 1\\) entries in the list of length \\(n\\). The last element is printed outside the loop. The code is agnostic to the type of the values inside the list. That is, this snippet would work for a list of integers or a list of float values as well.\nIf we are dealing with a list of strings, there is a smarter way of doing this:\nL = ['this', 'is', 'a', 'sentence']\nsentence = ' '.join(L)\nprint(sentence)\njoin is a string method that accepts a list of strings as argument and joins the elements in the list by using space (the string on which the method is called) as the separator. If join is called using a different string, say a comma, then the separator would be different."
   },
   {
     "objectID": "howto/howto-5.html",
     "href": "howto/howto-5.html",
     "title": "Determine the type of a variable",
     "section": "",
-    "text": "x = 5\ny = 3.5\nword = 'abc'\noutcome = True\n\nprint(type(x))\nprint(type(y))\nprint(type(word))\nprint(type(outcome))\nFor more details refer to this video. It has a different set of examples."
+    "text": "name = 'Krishna'\nprint(type(name))\n\nage = 40\nprint(type(age))\n\nsalary = 5.5\nprint(type(salary))\nFor more details refer to this video."
   },
   {
-    "objectID": "howto/howto-7.html",
-    "href": "howto/howto-7.html",
-    "title": "Accept an integer as input",
+    "objectID": "howto/howto-20.html",
+    "href": "howto/howto-20.html",
+    "title": "Extract the first half of a list of even length",
     "section": "",
-    "text": "x = int(input())"
+    "text": "L = [1, 2, 3, 4, 5, 6, 7, 8]\nn = len(L)\nfirst_half = L[:n // 2]\nprint(first_half)"
+  },
+  {
+    "objectID": "howto/howto-19.html",
+    "href": "howto/howto-19.html",
+    "title": "Check if a variable is of type int",
+    "section": "",
+    "text": "x = 3\nresult = isinstance(x, int)\nif result:\n    print(x, 'is an int')\nelse:\n    print(x, 'is not an int')"
+  },
+  {
+    "objectID": "howto/howto-24.html",
+    "href": "howto/howto-24.html",
+    "title": "Sort a list of numbers in ascending order",
+    "section": "",
+    "text": "Method-1Method-2Method-3\n\n\nThis is the simplest method. sort is a method of the list object. It sorts the list “in-place”. That is, it doesn’t create a new list in the process of sorting, but sorts the existing list itself. This method is to be avoided if you don’t want to disturb the original list.\nL = [10, -4, 40, 30, 14, 5, -1, -4]\nL.sort()\nprint(L)\n\n\nThis method sorts the list but creates a new list in the process. The original list is not distrubed.\nL = [10, -4, 40, 30, 14, 5, -1, -4]\nsorted_L = sorted(L)\nprint(sorted_L)\n\n\nThis uses the algorithm mentioned in the course.\nL = [10, -4, 40, 30, 14, 5, -1, -4]\nsorted_L = [ ]\nwhile L != [ ]:\n    smallest = min(L)\n    L.remove(smallest)\n    sorted_L.append(smallest)\nprint(sorted_L)"
   },
   {
     "objectID": "howto.html",
@@ -1726,14 +1810,14 @@
     "href": "howto.html#lists",
     "title": "How to",
     "section": "Lists",
-    "text": "Lists\n\n\n\nHow to\n\n\n\n\nCreate an empty list\n\n\nCreate a list of numbers\n\n\nAppend an element to a list\n\n\nFind the number of elements in a list\n\n\nIterate through the elements in a list"
+    "text": "Lists\n\n\n\nHow to\n\n\n\n\nCreate an empty list\n\n\nCreate a list of numbers\n\n\nAppend an element to a list\n\n\nFind the number of elements in a list\n\n\nIterate through the elements in a list\n\n\nFind the first element in a list\n\n\nFind the last element in a list\n\n\nExtract the first half of a list of even length\n\n\nExtract the second half of a list of even length\n\n\nExtract the sublist that does not contain the first and last elements\n\n\nFind the maximum element in a list\n\n\nPrint all elements in a list, one on each line\n\n\nPrint all elements in a list on the same line separated by a space\n\n\nPrint all elements in a list on the same line separated by a comma\n\n\nSort a list of numbers in ascending order"
   },
   {
     "objectID": "howto.html#misc",
     "href": "howto.html#misc",
     "title": "How to",
     "section": "Misc",
-    "text": "Misc\n\n\n\nHow to\n\n\n\n\nDetermine the type of a variable"
+    "text": "Misc\n\n\n\nHow to\n\n\n\n\nDetermine the type of a variable\n\n\nCheck if a variable is of type int"
   },
   {
     "objectID": "notes/chapter-2/lesson-2.4.html",
