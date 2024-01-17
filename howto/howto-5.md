@@ -5,15 +5,14 @@ sidebar: false
 ---
 
 ```python
-x = 5
-y = 3.5
-word = 'abc'
-outcome = True
+name = 'Krishna'
+print(type(name))
 
-print(type(x))
-print(type(y))
-print(type(word))
-print(type(outcome))
+age = 40
+print(type(age))
+
+salary = 5.5
+print(type(salary))
 ```
 
-For more details refer to this [video](https://youtu.be/EjniRUc5CAs?feature=shared){target=_blank}. It has a different set of examples.
+For more details refer to this [video](https://youtu.be/EjniRUc5CAs?feature=shared){target=_blank}.

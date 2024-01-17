@@ -13,6 +13,8 @@ website:
         file: ppa.md
       - text: "How to"
         file: howto.md
+      - text: "Student Corner"
+        file: students.md
       - text: "About"
         file: about.md
       - text: "Feedback"

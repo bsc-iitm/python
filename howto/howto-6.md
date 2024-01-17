@@ -8,5 +8,5 @@ sidebar: false
 string = input()
 ```
 
-
+For more details refer to this [video](https://youtu.be/NdscTKucHG0?feature=shared){target=_blank}.
 

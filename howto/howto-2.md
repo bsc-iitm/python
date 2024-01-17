@@ -1,6 +1,6 @@
 ---
 title: Create a variable and print its value
-pagetitle: How-to-2
+pagetitle: How-to
 sidebar: false
 ---
 

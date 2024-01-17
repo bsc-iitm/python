@@ -8,3 +8,4 @@ sidebar: false
 x = int(input())
 ```
 
+For more details refer to this [video](https://youtu.be/or3gGW-7OEE?feature=shared){target=_blank}.

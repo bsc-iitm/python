@@ -1,5 +1,5 @@
 ---
-title: Append an element to a list
+title: Find the last element in a list
 pagetitle: How-to
 sidebar: false
 ---
@@ -9,15 +9,16 @@ sidebar: false
 ## Method-1
 
 ```python
-L = [1, 2, 3]
-L.append(4)
+L = [10, 20, 30, 40]
+last = L[-1]
 ```
 
 ## Method-2
 
 ```python
-L = [1, 2, 3]
-L = L + [4]
+L = [10, 20, 30, 40]
+n = len(L)
+last = L[n - 1]
 ```
 
 :::

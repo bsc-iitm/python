@@ -1,6 +1,6 @@
 ---
 title: Print multiple values on the same line
-pagetitle: How-to-4
+pagetitle: How-to
 sidebar: false
 ---
 

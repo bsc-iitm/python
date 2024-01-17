@@ -1,10 +1,8 @@
 ---
 title: Iterate through the elements in a list
-pagetitle: How to
+pagetitle: How-to
 sidebar: false
 ---
-
-There are two methods, both of which are correct:
 
 :::{.panel-tabset}
 

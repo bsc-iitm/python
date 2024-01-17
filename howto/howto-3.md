@@ -1,6 +1,6 @@
 ---
 title: Print the values of two variables on the same line
-pagetitle: How-to-3
+pagetitle: How-to
 sidebar: false
 ---
 
