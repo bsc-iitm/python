@@ -2104,35 +2104,7 @@
     "href": "howto.html",
     "title": "How to",
     "section": "",
-    "text": "This contains a collection of short snippets of code that explain how to do something in Python. Some of them have a video to accompany them. These how-tos are organized topic wise:"
-  },
-  {
-    "objectID": "howto.html#input-output",
-    "href": "howto.html#input-output",
-    "title": "How to",
-    "section": "Input-Output",
-    "text": "Input-Output\n\n\n\nHow to\n\n\n\n\nPrint “Hello World!”\n\n\nCreate a variable and print its value\n\n\nPrint the values of two variables on the same line\n\n\nPrint multiple values on the same line\n\n\nAccept a string as input\n\n\nAccept an integer as input\n\n\nAccept a float value as input"
-  },
-  {
-    "objectID": "howto.html#operators",
-    "href": "howto.html#operators",
-    "title": "How to",
-    "section": "Operators",
-    "text": "Operators\n\n\n\nHow to\n\n\n\n\nDetermine if a number is a factor of another number\n\n\nGet the integer part of a decimal number"
-  },
-  {
-    "objectID": "howto.html#lists",
-    "href": "howto.html#lists",
-    "title": "How to",
-    "section": "Lists",
-    "text": "Lists\n\n\n\nHow to\n\n\n\n\nCreate an empty list\n\n\nCreate a list of numbers\n\n\nAppend an element to a list\n\n\nFind the number of elements in a list\n\n\nIterate through the elements in a list\n\n\nFind the first element in a list\n\n\nFind the last element in a list\n\n\nExtract the first half of a list of even length\n\n\nExtract the second half of a list of even length\n\n\nExtract the sublist that does not contain the first and last elements\n\n\nFind the maximum element in a list\n\n\nPrint all elements in a list, one on each line\n\n\nPrint all elements in a list on the same line separated by a space\n\n\nPrint all elements in a list on the same line separated by a comma\n\n\nSort a list of numbers in ascending order\n\n\nReverse a list of numbers"
-  },
-  {
-    "objectID": "howto.html#misc",
-    "href": "howto.html#misc",
-    "title": "How to",
-    "section": "Misc",
-    "text": "Misc\n\n\n\nHow to\n\n\n\n\nDetermine the type of a variable\n\n\nCheck if a variable is of type int"
+    "text": "This contains a collection of short snippets of code that explain how to do something in Python. A very small number of how-tos have a video to accompany them. These how-tos are organized topic wise. Look for the categories on the right panel. The ideal way to go through these how-tos is to pick a topic and go through each how-to from top to bottom, left to right. Alternatively, you could try to search for a particular how-to by entering some keywords in the filter box given below.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\nCreate an empty list\n\n\n\n\n\n\n\n\n\n\nPrint “Hello World!”\n\n\n\n\n\n\n\n\n\n\nDetermine the type of a variable\n\n\n\n\n\n\n\n\n\n\nDetermine if a number is a factor of another number\n\n\n\n\n\n\n\n\n\n\nCreate a list of numbers\n\n\n\n\n\n\n\n\n\n\nCreate a variable and print its value\n\n\n\n\n\n\n\n\n\n\nCheck if a variable is of type int\n\n\n\n\n\n\n\n\n\n\nGet the integer part of a decimal number\n\n\n\n\n\n\n\n\n\n\nPrint the values of two variables on the same line\n\n\n\n\n\n\n\n\n\n\nAppend an element to a list\n\n\n\n\n\n\n\n\n\n\nPrint multiple values on the same line\n\n\n\n\n\n\n\n\n\n\nFind number of elements in a list\n\n\n\n\n\n\n\n\n\n\nAccept a string as input\n\n\n\n\n\n\n\n\n\n\nIterate through the elements in a list\n\n\n\n\n\n\n\n\n\n\nPrint all elements in a list, one on each line\n\n\n\n\n\n\n\n\n\n\nAccept an integer as input\n\n\n\n\n\n\n\n\n\n\nFind the first element in a list\n\n\n\n\n\n\n\n\n\n\nAccept a float value as input\n\n\n\n\n\n\n\n\n\n\nFind the last element in a list\n\n\n\n\n\n\n\n\n\n\nExtract the first half of a list of even length\n\n\n\n\n\n\n\n\n\n\nExtract the second half of a list of even length\n\n\n\n\n\n\n\n\n\n\nExtract the sublist that does not contain the first and last elements\n\n\n\n\n\n\n\n\n\n\nFind the maximum element in a list\n\n\n\n\n\n\n\n\n\n\nSort a list of numbers in ascending order\n\n\n\n\n\n\n\n\n\n\nReverse a list of numbers\n\n\n\n\n\n\n\n\n\n\nPrint all elements in a list on the same line separated by a space\n\n\n\n\n\n\n\n\n\n\nPrint all elements in a list on the same line separated by a comma\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/chapter-2/lesson-2.4.html",
