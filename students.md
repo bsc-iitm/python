@@ -13,4 +13,6 @@ This page contains contributions from students of the BS program.
 | -------------------------------------------------------- | ------------- | ------ |
 | [Problem-1](https://youtu.be/9gkAwtqSkQs){target=_blank} | File handling | Janani |
 | [Problem-2](https://youtu.be/ZzsdPmM2_kI){target=_blank} | Strings       | Janani |
+| [Problem-3](https://youtu.be/0PWewMHy4bA){target=_blank} | Recursion     | Pranav |
+| [Problem-4](https://youtu.be/_jBHUWz11aM){target=_blank} | Recursion     | Janani |
 

@@ -66,7 +66,7 @@ This approach is an extremely powerful template and can be applied to a wide ran
 
 ```python
 n = int(input())
-
+count = 0
 for f in range(1, n + 1):
     if n % f == 0:
         count += 1
@@ -75,8 +75,6 @@ if count == 2:
 else:
     print('NOTPRIME')
 ```
-
-
 
 ## Solution-2
 
@@ -95,10 +93,6 @@ if is_prime:
 else:
     print('NOTPRIME')
 ```
-
-
-
-
 
 ## Solution-3
 

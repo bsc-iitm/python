@@ -47,6 +47,7 @@ This contains a collection of short snippets of code that explain how to do some
 | [Print all elements in a list on the same line separated by a space](/howto/howto-15.md) |
 | [Print all elements in a list on the same line separated by a comma](/howto/howto-16.md) |
 | [Sort a list of numbers in ascending order](/howto/howto-24.md) |
+| [Reverse a list of numbers](/howto/howto-27.md)              |
 
 ## Misc
 

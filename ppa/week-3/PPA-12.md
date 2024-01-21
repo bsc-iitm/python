@@ -44,7 +44,7 @@ You have enough information to construct a solution.
 
 ## Solution
 
-This solution iterates over `string_2` once. It adds characters to `out` if they are not present in `string_1`.
+This solution iterates over `string_2`. It adds characters to `out` if they are not present in `string_1`.
 
 ```python
 string_1 = input()

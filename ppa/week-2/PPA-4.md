@@ -98,7 +98,7 @@ elif x < 0 and y < 0:
     print('third')
 elif x > 0 and y < 0:
     print('fourth')
-elif x != 0 and y = 0:
+elif x != 0 and y == 0:
     print('x-axis')
 elif x == 0 and y != 0:
     print('y-axis')
