@@ -2,6 +2,9 @@
 title: Determine the type of a variable
 pagetitle: How-to
 sidebar: false
+order: 1
+categories:
+  - Misc
 ---
 
 ```python

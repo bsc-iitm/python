@@ -2,6 +2,9 @@
 title: Print the values of two variables on the same line
 pagetitle: How-to
 sidebar: false
+order: 3
+categories:
+  - Input-Output
 ---
 
 ```python

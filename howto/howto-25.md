@@ -2,7 +2,9 @@
 title: Determine if a number is a factor of another number
 pagetitle: How-to
 sidebar: false
-
+order: 1
+categories:
+  - Operators
 ---
 
 ::: {.panel-tabset}

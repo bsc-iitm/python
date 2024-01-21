@@ -2,6 +2,9 @@
 title: Find number of elements in a list
 pagetitle: How-to
 sidebar: false
+order: 4
+categories:
+  - List
 ---
 
 ```python

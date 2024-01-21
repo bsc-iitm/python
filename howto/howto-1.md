@@ -2,7 +2,9 @@
 title: Print "Hello World!"
 pagetitle: How-to
 sidebar: false
-
+order: 1
+categories:
+  - Input-Output
 ---
 
 ::: {.panel-tabset}

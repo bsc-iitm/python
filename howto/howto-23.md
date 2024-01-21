@@ -2,6 +2,9 @@
 title: Find the maximum element in a list
 pagetitle: How-to
 sidebar: false
+order: 12
+categories:
+  - List
 ---
 
 ::: {.panel-tabset}

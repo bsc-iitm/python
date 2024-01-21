@@ -2,6 +2,9 @@
 title: Iterate through the elements in a list
 pagetitle: How-to
 sidebar: false
+order: 5
+categories:
+  - List
 ---
 
 :::{.panel-tabset}

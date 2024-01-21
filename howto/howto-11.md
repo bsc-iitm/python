@@ -2,6 +2,9 @@
 title: Append an element to a list
 pagetitle: How-to
 sidebar: false
+order: 3
+categories:
+  - List
 ---
 
 ::: {.panel-tabset}

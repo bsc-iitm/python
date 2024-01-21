@@ -2,6 +2,9 @@
 title: Get the integer part of a decimal number
 pagetitle: How-to
 sidebar: false
+order: 2
+categories:
+  - Operators
 ---
 
 ```python

@@ -2,6 +2,9 @@
 title: Print all elements in a list, one on each line
 pagetitle: How-to
 sidebar: false
+order: 6
+categories:
+  - List
 ---
 
 ```python

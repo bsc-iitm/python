@@ -2,6 +2,9 @@
 title: Accept an integer as input
 pagetitle: How-to
 sidebar: false
+order: 6
+categories:
+  - Input-Output
 ---
 
 ```python

@@ -2,6 +2,9 @@
 title: Accept a string as input
 pagetitle: How-to
 sidebar: false
+order: 5
+categories:
+  - Input-Output
 ---
 
 ```python

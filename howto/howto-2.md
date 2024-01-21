@@ -2,6 +2,9 @@
 title: Create a variable and print its value
 pagetitle: How-to
 sidebar: false
+order: 2
+categories:
+  - Input-Output
 ---
 
 ```python

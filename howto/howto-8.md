@@ -2,7 +2,9 @@
 title: Create an empty list
 pagetitle: How-to
 sidebar: false
-
+order: 1
+categories:
+  - List
 ---
 
 ::: {.panel-tabset}

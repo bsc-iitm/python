@@ -2,6 +2,9 @@
 title: Extract the first half of a list of even length
 pagetitle: How-to
 sidebar: false
+order: 9
+categories:
+  - List
 ---
 
 ```python

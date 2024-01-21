@@ -2,6 +2,9 @@
 title: Sort a list of numbers in ascending order
 pagetitle: How-to
 sidebar: false
+order: 13
+categories:
+  - List
 ---
 
 ::: {.panel-tabset}

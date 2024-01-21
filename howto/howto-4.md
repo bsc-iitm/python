@@ -2,6 +2,9 @@
 title: Print multiple values on the same line
 pagetitle: How-to
 sidebar: false
+order: 4
+categories:
+  - Input-Output
 ---
 
 ```python

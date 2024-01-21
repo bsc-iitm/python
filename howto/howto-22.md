@@ -2,7 +2,9 @@
 title: Extract the sublist that does not contain the first and last elements
 pagetitle: How-to
 sidebar: false
-
+order: 11
+categories:
+  - List
 ---
 
 ::: {.panel-tabset}

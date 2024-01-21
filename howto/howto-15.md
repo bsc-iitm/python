@@ -2,6 +2,9 @@
 title: Print all elements in a list on the same line separated by a space
 pagetitle: How-to
 sidebar: false
+order: 15
+categories:
+  - List
 ---
 
 ```python

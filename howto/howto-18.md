@@ -2,6 +2,9 @@
 title: Find the last element in a list
 pagetitle: How-to
 sidebar: false
+order: 8
+categories:
+  - List
 ---
 
 ::: {.panel-tabset}

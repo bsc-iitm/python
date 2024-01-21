@@ -2,6 +2,9 @@
 title: Check if a variable is of type int
 pagetitle: How-to
 sidebar: false
+order: 2
+categories:
+  - Misc
 ---
 
 ```python
