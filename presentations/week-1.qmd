@@ -1,0 +1,278 @@
+---
+title: "Week-1"
+pagetitle: "Week-1"
+subtitle: "Solutions to PPAs"
+author: "Karthik Thiagarajan"
+institute: "IIT Madras"
+highlight-style: github
+format: 
+  revealjs:
+    theme: custom.scss
+    css: reveal.css
+    history: false
+    slide-number: true
+    show-slide-number: all
+    incremental: true
+    fontsize: 35px
+    margin: 0.1
+    width: 1600
+    height: 800
+    navigation-mode: vertical
+---
+
+# PPA-1
+
+## Question
+
+Print the first $5$ positive integers in ascending order with one number in each line.	
+
+## Approach
+
+- Use the `print` statement five times.
+- One on each line.
+
+## Solution
+
+```python
+print(1)
+print(2)
+print(3)
+print(4)
+print(5)
+```
+
+
+
+# PPA-2
+
+## Question-2
+
+Print the following pattern.
+
+```default
+*
+**
+***
+****
+*****
+```
+
+There are no spaces between consecutive stars. There are no spaces at the end of each line.
+
+
+
+## Approach-1
+
+- Use five `print` statements
+- One on each line.
+
+## Solution-1
+
+```python
+print('*')
+print('**')
+print('***')
+print('****')
+print('*****')
+```
+
+
+
+## Approach-2
+
+- Strings can be replicated using the `*` operator.
+- For example
+  - `'*' * 2 == '**'`
+  - `'*' * 3 == '***'`
+
+
+
+## Solution-2
+
+```python
+print('*')
+print('*' * 2)
+print('*' * 3)
+print('*' * 4)
+print('*' * 5)
+```
+
+
+
+# PPA-3
+
+## Question
+
+Accept an integer as input and print its square as output.
+
+## Approach
+
+- `input()` function always returns a string.
+- To accept an integer, first accept a string and then convert it into an integer.
+- `*` is the multiplication operator
+- `**` is the exponentiation operator
+
+## Solution
+
+```python
+x = int(input())
+print(x ** 2)
+```
+
+
+
+# PPA-4
+
+## Question
+
+Accept two integers as input and print their sum as output.
+
+## Approach
+
+- Inputs can be accepted on the same line.
+- `x, y = 2, 3`
+  - `x` is assigned the value `2`
+  - `y` is assigned the value `3`
+
+## Solution
+
+::: {.panel-tabset}
+
+## Solution-1
+
+```python
+x = int(input())
+y = int(input())
+print(x + y)
+```
+
+## Solution-2
+
+```python
+x, y = int(input()), int(input())
+print(x + y)
+```
+
+:::
+
+
+
+# PPA-5
+
+## Question
+
+Accept two words as input and print the two words after adding a space between them.
+
+## Approach
+
+- String concatenation
+  - `'one' + 'two' == 'onetwo'`
+  - `'one' + ' ' + 'two' == 'one two'`
+
+## Solution
+
+```python
+first = input()
+second = input()
+space = ' ' # there is one space between the quotes
+out = first + space + second
+print(out)
+```
+
+# PPA-6
+
+## Question
+
+Accept the registration number of a vehicle as input and print its state-code as output. Sample registration numbers:
+
+- `TN-10-AB-2010`
+- `HR-15-XZ-1999`
+
+The template for registration numbers will be the same.
+
+## Approach
+
+- String slicing
+  - `word = 'ABCD'`
+  - `word[0:2] == 'AB'`
+  - `word[:2] == 'AB'`
+
+## Solutions
+
+::: {.panel-tabset}
+
+## Solution-1
+
+```python
+regno = input()
+code = regno[0:2]
+print(code)
+```
+
+## Solution-2
+
+```python
+regno = input()
+code = regno[:2]
+print(code)
+```
+
+:::
+
+# PPA-7
+
+## Question
+
+Accept a five digit number as input and print the sum of its digits as output.
+
+## Approach-1
+
+- Retain input as a string.
+- Convert each character of the string into an integer.
+  - If `num = '12345'`
+    - `int(num[0]) == 1`
+    - `int(num[1]) == 2`
+    - …
+- Finally, add all these digits.
+
+## Solution-1
+
+```python
+x = input()
+first = int(x[0])
+second = int(x[1])
+third = int(x[2])
+fourth = int(x[3])
+fifth = int(x[4])
+print(first + second + third + fourth + fifth)
+```
+
+## Approach-2
+
+- Step-1
+  - Extract the last digit of the number by taking remainder when it is divided by $10$.
+    - If `x = 12345`, then `x % 10 == 5`.
+- Step-2
+  - Divide the number by $10$ and retain the quotient.
+    - If `x = 12345`, then `x // 10 == 1234`.
+- Repeat steps 1 and 2 five times
+- Finally, sum all the digits.
+
+
+
+## Solution-2
+
+```python
+x = int(input())
+fifth = x % 10
+x = x // 10
+fourth = x % 10
+x = x // 10
+third = x % 10
+x = x // 10
+second = x % 10
+x = x // 10
+first = x % 10
+print(first + second + third + fourth + fifth)
+```
+

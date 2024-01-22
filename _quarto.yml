@@ -14,6 +14,8 @@ website:
         file: ppa.md
       - text: "How to"
         file: howto.md
+      - text: "Presentations"
+        file: presentations.md
       - text: "Student Corner"
         file: students.md
       - text: "About"
@@ -89,6 +91,15 @@ website:
           - ppa/week-5/PPA-8.md
           - ppa/week-5/PPA-9.md
           - ppa/week-5/PPA-10.md
+
+    - title: "Presentations"
+      collapse-level: 1
+      border: true
+      foreground: "primary"
+      contents:
+        - presentations.md
+        - presentations/week-1.qmd
+
 
 format:
   html:
