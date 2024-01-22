@@ -1211,11 +1211,18 @@
     "text": "All the function-templates that we provide the solution area in the portal have what is called a doc-string associated with them. The doc-string is a description of what the function is supposed to do. In our course, the doc string has three elements:\n\none line description of the function\narguments accepted by the function\nreturn value of the function\n\nFor example:\ndef factorial(n):\n    \"\"\"\n    computes the factorial of an integer\n    \n    Argument:\n        n: integer\n    Return:\n        result: integer\n    \"\"\"\n    # start writing code from here\nWe have seen students start populating the function before the doc-string. This is not a good practice. In the above example, the doc-string ends at line-9. The body of the function should start from line-10 and not prior to that. Also, the doc-string is not mandatory. You can go ahead and delete it. The function would still work."
   },
   {
+    "objectID": "ppa.html",
+    "href": "ppa.html",
+    "title": "PPAs",
+    "section": "",
+    "text": "This section contains the practice programming problems (PPAs) used in the course organized week-wise. Each PPA has a separate page dedicated to it. There are three components to each PPA:\n\nQuestion\nHint\nSolution\n\n\n\n\n\n\n\nWarning\n\n\n\nWe earnestly request you to first attempt a question for about \\(15\\) minutes without looking at any external resource. If you are not able to make any headway, look at the hint. Spend another \\(15\\) minutes and see if you can solve the problem with the hint. If you are still not able to figure out the solution, you can refer to the one provided by us.\nIf you directly head to the solution, you are cheating yourself and you will learn NOTHING in the process. Take this as a friendly suggestion from our side, and we hope you will make the best use of this resource. Test cases will not be provided. You have to head to the portal to verify the correctness of your solution. Finally, if you are able to solve the problem yourself, congratulations. You can compare your solution with the one provided by us and learn different ways of approaching the same problem."
+  },
+  {
     "objectID": "students.html",
     "href": "students.html",
     "title": "Student Corner",
     "section": "",
-    "text": "This page contains contributions from students of the BS program.\n\n\n\nVideo\nConcept\nAuthor\n\n\n\n\nProblem-1\nFile handling\nJanani\n\n\nProblem-2\nStrings\nJanani\n\n\nProblem-3\nRecursion\nPranav\n\n\nProblem-4\nRecursion\nJanani"
+    "text": "This page contains contributions from students of the BS program.\n\n\n\nVideo\nConcept\nAuthor\n\n\n\n\nProblem-1\nFile handling\nJanani\n\n\nProblem-2\nStrings\nJanani\n\n\nProblem-3\nRecursion\nPranav\n\n\nProblem-4\nRecursion\nJanani\n\n\nProblem-5\nMap\nPranav\n\n\nProblem-6\nDictionary and String\nJanani\n\n\nProblem-7\nList Comprehension\nPranav"
   },
   {
     "objectID": "about.html",
@@ -1295,11 +1302,186 @@
     "text": "Chapter-8: Object Oriented Programming\nLesson-8.1\n\nObjects and Classes\nOOP in Python: an example\n\nLesson-8.2\n\nClasses and Objects\nself\nClass Attributes vs Object Attributes\n\nLesson-8.3\n\nInheritance\nConcrete Example\nParent-child relationship\nMethod Overriding\n\nLesson-8.4\n\nVector: Mathematical Preliminaries\nVector: Specification\nVector: Definition\nCollection of Vectors"
   },
   {
-    "objectID": "ppa.html",
-    "href": "ppa.html",
-    "title": "PPAs",
+    "objectID": "presentations/week-1.html#question",
+    "href": "presentations/week-1.html#question",
+    "title": "Week-1",
+    "section": "Question",
+    "text": "Question\nPrint the first \\(5\\) positive integers in ascending order with one number in each line."
+  },
+  {
+    "objectID": "presentations/week-1.html#approach",
+    "href": "presentations/week-1.html#approach",
+    "title": "Week-1",
+    "section": "Approach",
+    "text": "Approach\n\nUse the print statement five times.\nOne on each line."
+  },
+  {
+    "objectID": "presentations/week-1.html#solution",
+    "href": "presentations/week-1.html#solution",
+    "title": "Week-1",
+    "section": "Solution",
+    "text": "Solution\nprint(1)\nprint(2)\nprint(3)\nprint(4)\nprint(5)"
+  },
+  {
+    "objectID": "presentations/week-1.html#question-2",
+    "href": "presentations/week-1.html#question-2",
+    "title": "Week-1",
+    "section": "Question-2",
+    "text": "Question-2\nPrint the following pattern.\n*\n**\n***\n****\n*****\nThere are no spaces between consecutive stars. There are no spaces at the end of each line."
+  },
+  {
+    "objectID": "presentations/week-1.html#approach-1",
+    "href": "presentations/week-1.html#approach-1",
+    "title": "Week-1",
+    "section": "Approach-1",
+    "text": "Approach-1\n\nUse five print statements\nOne on each line."
+  },
+  {
+    "objectID": "presentations/week-1.html#solution-1",
+    "href": "presentations/week-1.html#solution-1",
+    "title": "Week-1",
+    "section": "Solution-1",
+    "text": "Solution-1\nprint('*')\nprint('**')\nprint('***')\nprint('****')\nprint('*****')"
+  },
+  {
+    "objectID": "presentations/week-1.html#approach-2",
+    "href": "presentations/week-1.html#approach-2",
+    "title": "Week-1",
+    "section": "Approach-2",
+    "text": "Approach-2\n\nStrings can be replicated using the * operator.\nFor example\n\n'*' * 2 == '**'\n'*' * 3 == '***'"
+  },
+  {
+    "objectID": "presentations/week-1.html#solution-2",
+    "href": "presentations/week-1.html#solution-2",
+    "title": "Week-1",
+    "section": "Solution-2",
+    "text": "Solution-2\nprint('*')\nprint('*' * 2)\nprint('*' * 3)\nprint('*' * 4)\nprint('*' * 5)"
+  },
+  {
+    "objectID": "presentations/week-1.html#question-1",
+    "href": "presentations/week-1.html#question-1",
+    "title": "Week-1",
+    "section": "Question",
+    "text": "Question\nAccept an integer as input and print its square as output."
+  },
+  {
+    "objectID": "presentations/week-1.html#approach-3",
+    "href": "presentations/week-1.html#approach-3",
+    "title": "Week-1",
+    "section": "Approach",
+    "text": "Approach\n\ninput() function always returns a string.\nTo accept an integer, first accept a string and then convert it into an integer.\n* is the multiplication operator\n** is the exponentiation operator"
+  },
+  {
+    "objectID": "presentations/week-1.html#solution-3",
+    "href": "presentations/week-1.html#solution-3",
+    "title": "Week-1",
+    "section": "Solution",
+    "text": "Solution\nx = int(input())\nprint(x ** 2)"
+  },
+  {
+    "objectID": "presentations/week-1.html#question-3",
+    "href": "presentations/week-1.html#question-3",
+    "title": "Week-1",
+    "section": "Question",
+    "text": "Question\nAccept two integers as input and print their sum as output."
+  },
+  {
+    "objectID": "presentations/week-1.html#approach-4",
+    "href": "presentations/week-1.html#approach-4",
+    "title": "Week-1",
+    "section": "Approach",
+    "text": "Approach\n\nInputs can be accepted on the same line.\nx, y = 2, 3\n\nx is assigned the value 2\ny is assigned the value 3"
+  },
+  {
+    "objectID": "presentations/week-1.html#solution-4",
+    "href": "presentations/week-1.html#solution-4",
+    "title": "Week-1",
+    "section": "Solution",
+    "text": "Solution\n\nSolution-1Solution-2\n\n\nx = int(input())\ny = int(input())\nprint(x + y)\n\n\nx, y = int(input()), int(input())\nprint(x + y)"
+  },
+  {
+    "objectID": "presentations/week-1.html#question-4",
+    "href": "presentations/week-1.html#question-4",
+    "title": "Week-1",
+    "section": "Question",
+    "text": "Question\nAccept two words as input and print the two words after adding a space between them."
+  },
+  {
+    "objectID": "presentations/week-1.html#approach-5",
+    "href": "presentations/week-1.html#approach-5",
+    "title": "Week-1",
+    "section": "Approach",
+    "text": "Approach\n\nString concatenation\n\n'one' + 'two' == 'onetwo'\n'one' + ' ' + 'two' == 'one two'"
+  },
+  {
+    "objectID": "presentations/week-1.html#solution-5",
+    "href": "presentations/week-1.html#solution-5",
+    "title": "Week-1",
+    "section": "Solution",
+    "text": "Solution\nfirst = input()\nsecond = input()\nspace = ' ' # there is one space between the quotes\nout = first + space + second\nprint(out)"
+  },
+  {
+    "objectID": "presentations/week-1.html#question-5",
+    "href": "presentations/week-1.html#question-5",
+    "title": "Week-1",
+    "section": "Question",
+    "text": "Question\nAccept the registration number of a vehicle as input and print its state-code as output. Sample registration numbers:\n\nTN-10-AB-2010\nHR-15-XZ-1999\n\nThe template for registration numbers will be the same."
+  },
+  {
+    "objectID": "presentations/week-1.html#approach-6",
+    "href": "presentations/week-1.html#approach-6",
+    "title": "Week-1",
+    "section": "Approach",
+    "text": "Approach\n\nString slicing\n\nword = 'ABCD'\nword[0:2] == 'AB'\nword[:2] == 'AB'"
+  },
+  {
+    "objectID": "presentations/week-1.html#solutions",
+    "href": "presentations/week-1.html#solutions",
+    "title": "Week-1",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\nregno = input()\ncode = regno[0:2]\nprint(code)\n\n\nregno = input()\ncode = regno[:2]\nprint(code)"
+  },
+  {
+    "objectID": "presentations/week-1.html#question-6",
+    "href": "presentations/week-1.html#question-6",
+    "title": "Week-1",
+    "section": "Question",
+    "text": "Question\nAccept a five digit number as input and print the sum of its digits as output."
+  },
+  {
+    "objectID": "presentations/week-1.html#approach-1-1",
+    "href": "presentations/week-1.html#approach-1-1",
+    "title": "Week-1",
+    "section": "Approach-1",
+    "text": "Approach-1\n\nRetain input as a string.\nConvert each character of the string into an integer.\n\nIf num = '12345'\n\nint(num[0]) == 1\nint(num[1]) == 2\n…\n\n\nFinally, add all these digits."
+  },
+  {
+    "objectID": "presentations/week-1.html#solution-1-3",
+    "href": "presentations/week-1.html#solution-1-3",
+    "title": "Week-1",
+    "section": "Solution-1",
+    "text": "Solution-1\nx = input()\nfirst = int(x[0])\nsecond = int(x[1])\nthird = int(x[2])\nfourth = int(x[3])\nfifth = int(x[4])\nprint(first + second + third + fourth + fifth)"
+  },
+  {
+    "objectID": "presentations/week-1.html#approach-2-1",
+    "href": "presentations/week-1.html#approach-2-1",
+    "title": "Week-1",
+    "section": "Approach-2",
+    "text": "Approach-2\n\nStep-1\n\nExtract the last digit of the number by taking remainder when it is divided by \\(10\\).\n\nIf x = 12345, then x % 10 == 5.\n\n\nStep-2\n\nDivide the number by \\(10\\) and retain the quotient.\n\nIf x = 12345, then x // 10 == 1234.\n\n\nRepeat steps 1 and 2 five times\nFinally, sum all the digits."
+  },
+  {
+    "objectID": "presentations/week-1.html#solution-2-3",
+    "href": "presentations/week-1.html#solution-2-3",
+    "title": "Week-1",
+    "section": "Solution-2",
+    "text": "Solution-2\nx = int(input())\nfifth = x % 10\nx = x // 10\nfourth = x % 10\nx = x // 10\nthird = x % 10\nx = x // 10\nsecond = x % 10\nx = x // 10\nfirst = x % 10\nprint(first + second + third + fourth + fifth)"
+  },
+  {
+    "objectID": "presentations.html",
+    "href": "presentations.html",
+    "title": "Presentations",
     "section": "",
-    "text": "This section contains the practice programming problems (PPAs) used in the course organized week-wise. Each PPA has a separate page dedicated to it. There are three components to each PPA:\n\nQuestion\nHint\nSolution\n\n\n\n\n\n\n\nWarning\n\n\n\nWe earnestly request you to first attempt a question for about \\(15\\) minutes without looking at any external resource. If you are not able to make any headway, look at the hint. Spend another \\(15\\) minutes and see if you can solve the problem with the hint. If you are still not able to figure out the solution, you can refer to the one provided by us.\nIf you directly head to the solution, you are cheating yourself and you will learn NOTHING in the process. Take this as a friendly suggestion from our side, and we hope you will make the best use of this resource. Test cases will not be provided. You have to head to the portal to verify the correctness of your solution. Finally, if you are able to solve the problem yourself, congratulations. You can compare your solution with the one provided by us and learn different ways of approaching the same problem."
+    "text": "This is a collection of presentations."
   },
   {
     "objectID": "ppa/week-5/PPA-8.html",
