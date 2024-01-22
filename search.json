@@ -1222,14 +1222,7 @@
     "href": "students.html",
     "title": "Student Corner",
     "section": "",
-    "text": "This page contains contributions from students of the BS program.\n\n\n\nVideo\nConcept\nAuthor\n\n\n\n\nProblem-1\nFile handling\nJanani\n\n\nProblem-2\nStrings\nJanani\n\n\nProblem-3\nRecursion\nPranav\n\n\nProblem-4\nRecursion\nJanani\n\n\nProblem-5\nMap\nPranav\n\n\nProblem-6\nDictionary and String\nJanani\n\n\nProblem-7\nList Comprehension\nPranav"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This website is maintained by Karthik Thiagarajan, instructor, IIT Madras."
+    "text": "This page contains contributions from students of the BS program. In each video, a problem is taken up, the algorithm for it is explained and then implemented in Python. All these videos are maintained in this playlist. The videos that you see here are created and edited by:\n\nJanani D\nPranav V\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nProblem-1\n\n\n\nfile handling\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-2\n\n\n\nstring\n\n\nmath\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-3\n\n\n\nrecursion\n\n\ndictionary\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-4\n\n\n\nlist\n\n\nrecursion\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-5\n\n\n\nfunctional programming\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-6\n\n\n\ndictionary\n\n\nstring\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-7\n\n\n\nfunctional programming\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes.html",
@@ -1300,6 +1293,13 @@
     "title": "Notes",
     "section": "Chapter-8: Object Oriented Programming",
     "text": "Chapter-8: Object Oriented Programming\nLesson-8.1\n\nObjects and Classes\nOOP in Python: an example\n\nLesson-8.2\n\nClasses and Objects\nself\nClass Attributes vs Object Attributes\n\nLesson-8.3\n\nInheritance\nConcrete Example\nParent-child relationship\nMethod Overriding\n\nLesson-8.4\n\nVector: Mathematical Preliminaries\nVector: Specification\nVector: Definition\nCollection of Vectors"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This website is maintained by Karthik Thiagarajan, instructor, IIT Madras."
   },
   {
     "objectID": "presentations/week-1.html#question",

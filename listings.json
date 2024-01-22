@@ -1,5 +1,17 @@
 [
   {
+    "listing": "/students.html",
+    "items": [
+      "/studentcorner/problem-1.html",
+      "/studentcorner/problem-2.html",
+      "/studentcorner/problem-3.html",
+      "/studentcorner/problem-4.html",
+      "/studentcorner/problem-5.html",
+      "/studentcorner/problem-6.html",
+      "/studentcorner/problem-7.html"
+    ]
+  },
+  {
     "listing": "/howto.html",
     "items": [
       "/howto/howto-8.html",
