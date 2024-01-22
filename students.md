@@ -2,20 +2,15 @@
 title: Student Corner
 pagetitle: Student Corner
 sidebar: false
-format:
-  html:
-    page-layour: full
+listing:
+  contents: studentcorner
+  type: grid
+  fields: [title, author, image, categories]
+  filter-ui: [title, author]
+  categories: true
 ---
 
-This page contains contributions from students of the BS program.
+This page contains contributions from students of the BS program. In each video, a problem is taken up, the algorithm for it is explained and then implemented in Python. All these videos are maintained in this [playlist](https://youtube.com/playlist?list=PLqH76jDxIXR26N5xcVZXsXpcpUNV_zYY9&feature=shared){target=_blank}. The videos that you see here are created and edited by:
 
-| Video                                                        | Concept               | Author |
-| ------------------------------------------------------------ | --------------------- | ------ |
-| [Problem-1](https://youtu.be/9gkAwtqSkQs){target=_blank}     | File handling         | Janani |
-| [Problem-2](https://youtu.be/ZzsdPmM2_kI){target=_blank}     | Strings               | Janani |
-| [Problem-3](https://youtu.be/0PWewMHy4bA){target=_blank}     | Recursion             | Pranav |
-| [Problem-4](https://youtu.be/_jBHUWz11aM){target=_blank}     | Recursion             | Janani |
-| [Problem-5](https://youtu.be/q381UsBoXcI?feature=shared){target=_blank} | Map                   | Pranav |
-| [Problem-6](https://youtu.be/hnKWlxQxHOQ?feature=shared){target=_blank} | Dictionary and String | Janani |
-| [Problem-7](https://youtu.be/3Fu6Lq5paLs){target=_blank}     | List Comprehension    | Pranav |
-
+- Janani D
+- Pranav V
