@@ -11,13 +11,13 @@ categories:
 
 ## Method-1
 
-```python
+```{python}
 print('Hello World!')
 ```
 
 ## Method-2
 
-```python
+```{python}
 print("Hello World!")
 ```
 

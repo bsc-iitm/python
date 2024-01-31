@@ -1,0 +1,152 @@
+---
+title: Input-Output
+pagetitle: Input-Output
+order: 1
+execute: 
+  cache: true
+jupyter: python3
+---
+
+## Print `'Hello World!'`
+
+::: {.panel-tabset}
+
+## Method-1
+
+This uses single quotes.
+
+```{python}
+print('Hello World!')
+```
+
+## Method-2
+
+This uses double quotes.
+
+```{python}
+print("Hello World!")
+```
+
+:::
+
+
+
+## Accept string as input
+
+```python
+word = input()
+```
+
+`input` always returns a string, no matter what input is entered.
+
+| Input  | `word`   |
+| ------ | -------- |
+| `good` | `'good'` |
+| `123`  | `'123'`  |
+| `12.3` | `'12.3'` |
+
+
+
+## Accept integer as input
+
+```python
+x = int(input())
+```
+
+First accept a string as input and convert it into an integer. This conversion is often called type-casting, since we are changing the type of a variable. Here, it goes from `str` to `int`.
+
+
+
+## Accept float as input
+
+```python
+x = float(input())
+```
+
+Similar to the previous how-to.
+
+
+
+## Print multiple variables
+
+Notice the space that gets added by default between consecutive variables when they are printed. Also note that all get printed on the same line.
+
+::: {.panel-tabset}
+
+## Example-1
+
+```{python}
+x = 10
+y = 20
+z = 30
+print(x, y, z)
+```
+
+## Example-2
+
+This example demonstrates that the type of objects being printed need not be the same.
+
+```{python}
+name = 'Krishna'
+age = 40
+salary = 1.5
+print(name, 'is', age, 'years old and earns', salary, 'lpa')
+```
+
+:::
+
+## Print multiple objects separated by comma
+
+```{python}
+x = 10
+y = 20
+z = 30
+print(x, y, z, sep = ',')
+```
+
+`sep` is an parameter of the function `print` and stands for separator. The separator is a string that is added between consecutive objects before printing them. The separator defaults to a space, `' '`. In order to separate objects with a comma, `sep` has to be set to `','`.
+
+## Print multiple objects without separation
+
+```{python}
+year = '22'
+term = 'f3'
+roll = '001023'
+domain = '@ds.study.iitm.ac.in'
+print(year, term, roll, domain, sep = '')
+```
+
+Note that the argument passed to `sep` is the empty string, `''`. This is often called the null string.
+
+## Print multiple sentences using a single string
+
+::: {.panel-tabset}
+
+## Method-1
+
+Using triple quotes is a way to store multi-line strings.
+
+```{python}
+sentences = '''this is sentence 1
+this is sentence 2
+this is sentence 3'''
+print(sentences)
+```
+
+## Method-2
+
+This uses the `'\n'` or the newline character that introduces a new line.
+
+```{python}
+sentences = 'this is sentence 1\nthis is sentence 2\nthis is sentence 3'
+print(sentences)
+```
+
+`'\n'` is a single character. To see this:
+
+```{python}
+char = '\n'
+print(len(char))
+```
+
+:::

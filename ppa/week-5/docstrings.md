@@ -1,6 +1,7 @@
 ---
 title: Docstrings
 pagetitle: Docstrings
+order: 0
 ---
 
 All the function-templates that we provide the solution area in the portal have what is called a doc-string associated with them. The doc-string is a description of what the function is supposed to do. In our course, the doc string has three elements:

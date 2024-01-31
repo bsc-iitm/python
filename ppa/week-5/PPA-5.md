@@ -1,9 +1,7 @@
 ---
 title: PPA-5
 pagetitle: Week-5, PPA-5
-categories:
-  - math
-  - list
+order: 5
 ---
 
 ## Question

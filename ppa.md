@@ -1,6 +1,7 @@
 ---
 title: PPAs
 pagetitle: PPAs
+sidebar: true
 ---
 
 This section contains the practice programming problems (PPAs) used in the course organized week-wise. Each PPA has a separate page dedicated to it. There are three components to each PPA:

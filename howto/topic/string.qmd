@@ -1,0 +1,295 @@
+---
+title: Strings
+pagetitle: Strings
+order: 2
+execute: 
+  cache: true
+jupyter: python3
+---
+
+## Extract first character in string
+
+Python follows zero-indexing. Indices start from $0$.
+
+```{python}
+word = 'good'
+first = word[0]
+print(first)
+```
+
+## Find length of string
+
+```{python}
+word = 'good'
+size = len(word)
+print(size)
+```
+
+## Extract last character in string
+
+::: {.panel-tabset}
+
+## Method-1
+
+Python allows negative indexing. An index of $-1$ corresponds to the last character in a string, the index $-2$ corresponds to the penultimate character, and so on.
+
+```{python}
+word = 'good'
+last = word[-1]
+print(last)
+```
+
+## Method-2
+
+```{python}
+word = 'good'
+size = len(word)
+last = word[size - 1]
+```
+
+Since Python follows negative indexing, the last index is `len(word) - 1` and not `len(word)`.
+
+:::
+
+## Extract first five letters from string
+
+::: {.panel-tabset}
+
+## Method-1
+
+```{python}
+word = 'extracting'
+first_five = word[0:5]
+print(first_five)
+```
+
+## Method-2
+
+The start-index defaults to $0$ when it is left unspecified.
+
+```{python}
+word = 'extracting'
+first_five = word[:5]
+print(first_five)
+```
+
+:::
+
+## Extract last three letters from string
+
+End-index defaults to `len(string)` when it is left unspecified, 
+
+::: {.panel-tabset}
+
+## Method-1
+
+```{python}
+word = 'extracting'
+last_three = word[-3:]
+print(last_three)
+```
+
+## Method-2
+
+```{python}
+word = 'extracting'
+last_three = word[len(word) - 3:]
+print(last_three)
+```
+
+:::
+
+## Exclude first and last letter from string
+
+```{python}
+word = 'bores'
+out = word[1:-1]
+print(out)
+```
+
+## Determine if a string is a substring of another
+
+```{python}
+str_1 = 'fume'
+str_2 = 'perfumes'
+outcome = str_1 in str_2
+print(outcome)
+```
+
+## String together multiple strings
+
+`roll_number` in the code-below is an f-string or a formatted string. The values of the variables enclosed within `{}` will get substituted.
+
+```{python}
+year = 22
+term = 'f2'
+roll = '001023'
+domain = 'ds.study.iitm.ac.in'
+roll_number = f'{year}{term}{roll}@{domain}'
+print(roll_number)
+```
+
+## Replicate string $n$ times
+
+```{python}
+word = 'abc'
+n = 5
+word_repeat = word * n
+print(word_repeat)
+```
+
+## Reverse string
+
+The third argument after colon is the step-size. Here, the step size is $-1$.
+
+```{python}
+word = '123456789'
+rev = word[::-1]
+print(rev)
+```
+
+## Convert string to lower case
+
+```{python}
+word = 'GREAT'
+word = word.lower()
+print(word)
+```
+
+Note that strings are immutable. This means that the string `'GREAT'` cannot be changed. When `'GREAT'.lower()` is called, the string `'great'` is returned. This new string is reassigned to `word`. To understand this better, consider the following snippet:
+
+```{python}
+word = 'GREAT'
+word_lower = word.lower()
+print(word, word_lower)
+```
+
+## Convert string to upper case
+
+```{python}
+word = 'great'
+word = word.upper()
+print(word)
+```
+
+## Count frequency of character in string
+
+```{python}
+word = 'babble'
+char = 'b'
+freq = word.count(char)
+print(freq)
+```
+
+## Replace character in string
+
+```{python}
+word = 'ph0t0'
+char = '0'
+to = 'o'
+word = word.replace(char, to)
+print(word)
+```
+
+## Capitalize string
+
+```{python}
+name = 'krishna'
+name = name.capitalize()
+print(name)
+```
+
+## Check if string is in upper case
+
+```{python}
+word_1 = 'GREAT'
+word_2 = 'great'
+print(word_1.isupper())
+print(word_2.isupper())
+```
+
+## Check if string is in lower case
+
+```{python}
+word_1 = 'GREAT'
+word_2 = 'great'
+print(word_1.islower())
+print(word_2.islower())
+```
+
+## Check if string has only letters
+
+```{python}
+word_1 = 'abcd'
+word_2 = 'abcd1234'
+print(word_1.isalpha())
+print(word_2.isalpha())
+```
+
+## Check if string has only numbers
+
+```{python}
+word_1 = '1234'
+word_2 = 'abcd1234'
+print(word_1.isdigit())
+print(word_2.isdigit())
+```
+
+## Check if string has only letters and numbers
+
+```{python}
+word_1 = 'abcd1234'
+word_2 = 'abcd1234!@#$'
+print(word_1.isalnum())
+print(word_2.isalnum())
+```
+
+## Find index of character that is present in string
+
+```{python}
+word = 'abcde'
+char = 'c'
+index = word.index(char)
+print(index)
+```
+
+`index` will return the index if the character is present. It will throw an error if the character is not present. For an error-free way of handling this, check the next how-to.
+
+## Find index of character that may not be present in string
+
+```{python}
+word = 'abcde'
+char = 'f'
+index = word.find(char)
+print(index)
+```
+
+`find` will return the index if the character is present. It will return $-1$ if the character is not present.
+
+## Remove whitespaces from beginning and end of string
+
+```{python}
+string = '\n  white \n'
+print(string)
+string = string.strip()
+print(string)
+```
+
+'`\n'`, `'\t'` and `' '` are whitespaces. `'\n`' is the newline character, `'\t'` is the tab character.
+
+## Check if string ends with another string
+
+```{python}
+word = 'extracting'
+end = 'ing'
+print(word.endswith(end))
+```
+
+## Check if word-1 comes before word-2 in a dictionary
+
+```{python}
+word_1 = 'erase'
+word_2 = 'ease'
+print(word_1 < word_2)
+```
+
