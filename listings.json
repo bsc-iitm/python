@@ -1,5 +1,38 @@
 [
   {
+    "listing": "/howto/unsorted/index.html",
+    "items": [
+      "/howto/unsorted/howto-1.html",
+      "/howto/unsorted/howto-8.html",
+      "/howto/unsorted/howto-5.html",
+      "/howto/unsorted/howto-25.html",
+      "/howto/unsorted/howto-9.html",
+      "/howto/unsorted/howto-2.html",
+      "/howto/unsorted/howto-19.html",
+      "/howto/unsorted/howto-26.html",
+      "/howto/unsorted/howto-3.html",
+      "/howto/unsorted/howto-11.html",
+      "/howto/unsorted/howto-4.html",
+      "/howto/unsorted/howto-12.html",
+      "/howto/unsorted/howto-6.html",
+      "/howto/unsorted/howto-13.html",
+      "/howto/unsorted/howto-14.html",
+      "/howto/unsorted/howto-7.html",
+      "/howto/unsorted/howto-17.html",
+      "/howto/unsorted/howto-10.html",
+      "/howto/unsorted/howto-18.html",
+      "/howto/unsorted/howto-28.html",
+      "/howto/unsorted/howto-20.html",
+      "/howto/unsorted/howto-21.html",
+      "/howto/unsorted/howto-22.html",
+      "/howto/unsorted/howto-23.html",
+      "/howto/unsorted/howto-24.html",
+      "/howto/unsorted/howto-27.html",
+      "/howto/unsorted/howto-15.html",
+      "/howto/unsorted/howto-16.html"
+    ]
+  },
+  {
     "listing": "/students.html",
     "items": [
       "/studentcorner/problem-1.html",
@@ -8,39 +41,9 @@
       "/studentcorner/problem-4.html",
       "/studentcorner/problem-5.html",
       "/studentcorner/problem-6.html",
-      "/studentcorner/problem-7.html"
-    ]
-  },
-  {
-    "listing": "/howto.html",
-    "items": [
-      "/howto/howto-8.html",
-      "/howto/howto-1.html",
-      "/howto/howto-5.html",
-      "/howto/howto-25.html",
-      "/howto/howto-9.html",
-      "/howto/howto-2.html",
-      "/howto/howto-19.html",
-      "/howto/howto-26.html",
-      "/howto/howto-3.html",
-      "/howto/howto-11.html",
-      "/howto/howto-4.html",
-      "/howto/howto-12.html",
-      "/howto/howto-6.html",
-      "/howto/howto-13.html",
-      "/howto/howto-14.html",
-      "/howto/howto-7.html",
-      "/howto/howto-17.html",
-      "/howto/howto-10.html",
-      "/howto/howto-18.html",
-      "/howto/howto-20.html",
-      "/howto/howto-21.html",
-      "/howto/howto-22.html",
-      "/howto/howto-23.html",
-      "/howto/howto-24.html",
-      "/howto/howto-27.html",
-      "/howto/howto-15.html",
-      "/howto/howto-16.html"
+      "/studentcorner/problem-7.html",
+      "/studentcorner/problem-8.html",
+      "/studentcorner/problem-9.html"
     ]
   }
 ]
