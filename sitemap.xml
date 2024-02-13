@@ -97,16 +97,16 @@
     <lastmod>2024-01-12T14:33:48.950Z</lastmod>
   </url>
   <url>
-    <loc>https://bsc-iitm.github.io/python/howto/topic/loop.html</loc>
-    <lastmod>2024-01-30T13:02:51.985Z</lastmod>
+    <loc>https://bsc-iitm.github.io/python/howto/topic/dictionary.html</loc>
+    <lastmod>2024-01-30T13:03:41.486Z</lastmod>
   </url>
   <url>
-    <loc>https://bsc-iitm.github.io/python/howto/topic/tuples_sets.html</loc>
-    <lastmod>2024-01-30T13:04:09.138Z</lastmod>
+    <loc>https://bsc-iitm.github.io/python/howto/topic/list.html</loc>
+    <lastmod>2024-01-30T13:03:26.417Z</lastmod>
   </url>
   <url>
-    <loc>https://bsc-iitm.github.io/python/howto/topic/string.html</loc>
-    <lastmod>2024-01-31T07:36:28.585Z</lastmod>
+    <loc>https://bsc-iitm.github.io/python/howto/topic/input-output.html</loc>
+    <lastmod>2024-01-30T15:01:11.473Z</lastmod>
   </url>
   <url>
     <loc>https://bsc-iitm.github.io/python/howto/unsorted/howto-26.html</loc>
@@ -277,6 +277,10 @@
     <lastmod>2024-01-22T10:52:46.688Z</lastmod>
   </url>
   <url>
+    <loc>https://bsc-iitm.github.io/python/studentcorner/problem-10.html</loc>
+    <lastmod>2024-02-13T06:55:34.474Z</lastmod>
+  </url>
+  <url>
     <loc>https://bsc-iitm.github.io/python/studentcorner/problem-2.html</loc>
     <lastmod>2024-01-22T14:55:06.726Z</lastmod>
   </url>
@@ -321,8 +325,12 @@
     <lastmod>2024-01-22T14:54:53.154Z</lastmod>
   </url>
   <url>
+    <loc>https://bsc-iitm.github.io/python/studentcorner/problem-11.html</loc>
+    <lastmod>2024-02-13T06:56:51.726Z</lastmod>
+  </url>
+  <url>
     <loc>https://bsc-iitm.github.io/python/students.html</loc>
-    <lastmod>2024-01-22T14:52:53.270Z</lastmod>
+    <lastmod>2024-02-13T07:00:10.806Z</lastmod>
   </url>
   <url>
     <loc>https://bsc-iitm.github.io/python/ppa.html</loc>
@@ -374,7 +382,7 @@
   </url>
   <url>
     <loc>https://bsc-iitm.github.io/python/ppa/week-3/PPA-4.html</loc>
-    <lastmod>2024-01-30T12:45:51.110Z</lastmod>
+    <lastmod>2024-02-12T10:34:38.768Z</lastmod>
   </url>
   <url>
     <loc>https://bsc-iitm.github.io/python/ppa/week-3/PPA-7.html</loc>
@@ -489,16 +497,16 @@
     <lastmod>2024-01-21T16:35:26.970Z</lastmod>
   </url>
   <url>
-    <loc>https://bsc-iitm.github.io/python/howto/topic/input-output.html</loc>
-    <lastmod>2024-01-30T15:01:11.473Z</lastmod>
+    <loc>https://bsc-iitm.github.io/python/howto/topic/loop.html</loc>
+    <lastmod>2024-02-13T06:47:26.811Z</lastmod>
   </url>
   <url>
-    <loc>https://bsc-iitm.github.io/python/howto/topic/list.html</loc>
-    <lastmod>2024-01-30T13:03:26.417Z</lastmod>
+    <loc>https://bsc-iitm.github.io/python/howto/topic/string.html</loc>
+    <lastmod>2024-01-31T07:36:28.585Z</lastmod>
   </url>
   <url>
-    <loc>https://bsc-iitm.github.io/python/howto/topic/dictionary.html</loc>
-    <lastmod>2024-01-30T13:03:41.486Z</lastmod>
+    <loc>https://bsc-iitm.github.io/python/howto/topic/tuples_sets.html</loc>
+    <lastmod>2024-01-30T13:04:09.138Z</lastmod>
   </url>
   <url>
     <loc>https://bsc-iitm.github.io/python/howto/topic/exceptions.html</loc>
@@ -506,7 +514,7 @@
   </url>
   <url>
     <loc>https://bsc-iitm.github.io/python/howto.html</loc>
-    <lastmod>2024-01-30T12:56:05.739Z</lastmod>
+    <lastmod>2024-02-13T06:53:05.278Z</lastmod>
   </url>
   <url>
     <loc>https://bsc-iitm.github.io/python/notes/chapter-2/lesson-2.4.html</loc>

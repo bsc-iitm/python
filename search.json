@@ -413,289 +413,102 @@
     "text": "This is a companion resource for the course “Programming in Python” offered at the foundational level of the BS program in data science and applications. Check out the navigation bar at the top to get an idea of the different resources that can be found here."
   },
   {
-    "objectID": "howto/topic/string.html",
-    "href": "howto/topic/string.html",
-    "title": "Strings",
+    "objectID": "howto/topic/input-output.html",
+    "href": "howto/topic/input-output.html",
+    "title": "Input-Output",
     "section": "",
-    "text": "Python follows zero-indexing. Indices start from \\(0\\).\n\nword = 'good'\nfirst = word[0]\nprint(first)\n\ng",
+    "text": "Method-1Method-2\n\n\nThis uses single quotes.\n\nprint('Hello World!')\n\nHello World!\n\n\n\n\nThis uses double quotes.\n\nprint(\"Hello World!\")\n\nHello World!",
     "crumbs": [
       "How to",
-      "Strings"
+      "Input-Output"
     ]
   },
   {
-    "objectID": "howto/topic/string.html#extract-first-character-in-string",
-    "href": "howto/topic/string.html#extract-first-character-in-string",
-    "title": "Strings",
+    "objectID": "howto/topic/input-output.html#print-hello-world",
+    "href": "howto/topic/input-output.html#print-hello-world",
+    "title": "Input-Output",
     "section": "",
-    "text": "Python follows zero-indexing. Indices start from \\(0\\).\n\nword = 'good'\nfirst = word[0]\nprint(first)\n\ng",
+    "text": "Method-1Method-2\n\n\nThis uses single quotes.\n\nprint('Hello World!')\n\nHello World!\n\n\n\n\nThis uses double quotes.\n\nprint(\"Hello World!\")\n\nHello World!",
     "crumbs": [
       "How to",
-      "Strings"
+      "Input-Output"
     ]
   },
   {
-    "objectID": "howto/topic/string.html#find-length-of-string",
-    "href": "howto/topic/string.html#find-length-of-string",
-    "title": "Strings",
-    "section": "Find length of string",
-    "text": "Find length of string\n\nword = 'good'\nsize = len(word)\nprint(size)\n\n4",
+    "objectID": "howto/topic/input-output.html#accept-string-as-input",
+    "href": "howto/topic/input-output.html#accept-string-as-input",
+    "title": "Input-Output",
+    "section": "Accept string as input",
+    "text": "Accept string as input\nword = input()\ninput always returns a string, no matter what input is entered.\n\n\n\nInput\nword\n\n\n\n\ngood\n'good'\n\n\n123\n'123'\n\n\n12.3\n'12.3'",
     "crumbs": [
       "How to",
-      "Strings"
+      "Input-Output"
     ]
   },
   {
-    "objectID": "howto/topic/string.html#extract-last-character-in-string",
-    "href": "howto/topic/string.html#extract-last-character-in-string",
-    "title": "Strings",
-    "section": "Extract last character in string",
-    "text": "Extract last character in string\n\nMethod-1Method-2\n\n\nPython allows negative indexing. An index of \\(-1\\) corresponds to the last character in a string, the index \\(-2\\) corresponds to the penultimate character, and so on.\n\nword = 'good'\nlast = word[-1]\nprint(last)\n\nd\n\n\n\n\n\nword = 'good'\nsize = len(word)\nlast = word[size - 1]\n\nSince Python follows negative indexing, the last index is len(word) - 1 and not len(word).",
+    "objectID": "howto/topic/input-output.html#accept-integer-as-input",
+    "href": "howto/topic/input-output.html#accept-integer-as-input",
+    "title": "Input-Output",
+    "section": "Accept integer as input",
+    "text": "Accept integer as input\nx = int(input())\nFirst accept a string as input and convert it into an integer. This conversion is often called type-casting, since we are changing the type of a variable. Here, it goes from str to int.",
     "crumbs": [
       "How to",
-      "Strings"
+      "Input-Output"
     ]
   },
   {
-    "objectID": "howto/topic/string.html#extract-first-five-letters-from-string",
-    "href": "howto/topic/string.html#extract-first-five-letters-from-string",
-    "title": "Strings",
-    "section": "Extract first five letters from string",
-    "text": "Extract first five letters from string\n\nMethod-1Method-2\n\n\n\nword = 'extracting'\nfirst_five = word[0:5]\nprint(first_five)\n\nextra\n\n\n\n\nThe start-index defaults to \\(0\\) when it is left unspecified.\n\nword = 'extracting'\nfirst_five = word[:5]\nprint(first_five)\n\nextra",
+    "objectID": "howto/topic/input-output.html#accept-float-as-input",
+    "href": "howto/topic/input-output.html#accept-float-as-input",
+    "title": "Input-Output",
+    "section": "Accept float as input",
+    "text": "Accept float as input\nx = float(input())\nSimilar to the previous how-to.",
     "crumbs": [
       "How to",
-      "Strings"
+      "Input-Output"
     ]
   },
   {
-    "objectID": "howto/topic/string.html#extract-last-three-letters-from-string",
-    "href": "howto/topic/string.html#extract-last-three-letters-from-string",
-    "title": "Strings",
-    "section": "Extract last three letters from string",
-    "text": "Extract last three letters from string\nEnd-index defaults to len(string) when it is left unspecified,\n\nMethod-1Method-2\n\n\n\nword = 'extracting'\nlast_three = word[-3:]\nprint(last_three)\n\ning\n\n\n\n\n\nword = 'extracting'\nlast_three = word[len(word) - 3:]\nprint(last_three)\n\ning",
+    "objectID": "howto/topic/input-output.html#print-multiple-variables",
+    "href": "howto/topic/input-output.html#print-multiple-variables",
+    "title": "Input-Output",
+    "section": "Print multiple variables",
+    "text": "Print multiple variables\nNotice the space that gets added by default between consecutive variables when they are printed. Also note that all get printed on the same line.\n\nExample-1Example-2\n\n\n\nx = 10\ny = 20\nz = 30\nprint(x, y, z)\n\n10 20 30\n\n\n\n\nThis example demonstrates that the type of objects being printed need not be the same.\n\nname = 'Krishna'\nage = 40\nsalary = 1.5\nprint(name, 'is', age, 'years old and earns', salary, 'lpa')\n\nKrishna is 40 years old and earns 1.5 lpa",
     "crumbs": [
       "How to",
-      "Strings"
+      "Input-Output"
     ]
   },
   {
-    "objectID": "howto/topic/string.html#exclude-first-and-last-letter-from-string",
-    "href": "howto/topic/string.html#exclude-first-and-last-letter-from-string",
-    "title": "Strings",
-    "section": "Exclude first and last letter from string",
-    "text": "Exclude first and last letter from string\n\nword = 'bores'\nout = word[1:-1]\nprint(out)\n\nore",
+    "objectID": "howto/topic/input-output.html#print-multiple-objects-separated-by-comma",
+    "href": "howto/topic/input-output.html#print-multiple-objects-separated-by-comma",
+    "title": "Input-Output",
+    "section": "Print multiple objects separated by comma",
+    "text": "Print multiple objects separated by comma\n\nx = 10\ny = 20\nz = 30\nprint(x, y, z, sep = ',')\n\n10,20,30\n\n\nsep is an parameter of the function print and stands for separator. The separator is a string that is added between consecutive objects before printing them. The separator defaults to a space, ' '. In order to separate objects with a comma, sep has to be set to ','.",
     "crumbs": [
       "How to",
-      "Strings"
+      "Input-Output"
     ]
   },
   {
-    "objectID": "howto/topic/string.html#determine-if-a-string-is-a-substring-of-another",
-    "href": "howto/topic/string.html#determine-if-a-string-is-a-substring-of-another",
-    "title": "Strings",
-    "section": "Determine if a string is a substring of another",
-    "text": "Determine if a string is a substring of another\n\nstr_1 = 'fume'\nstr_2 = 'perfumes'\noutcome = str_1 in str_2\nprint(outcome)\n\nTrue",
+    "objectID": "howto/topic/input-output.html#print-multiple-objects-without-separation",
+    "href": "howto/topic/input-output.html#print-multiple-objects-without-separation",
+    "title": "Input-Output",
+    "section": "Print multiple objects without separation",
+    "text": "Print multiple objects without separation\n\nyear = '22'\nterm = 'f3'\nroll = '001023'\ndomain = '@ds.study.iitm.ac.in'\nprint(year, term, roll, domain, sep = '')\n\n22f3001023@ds.study.iitm.ac.in\n\n\nNote that the argument passed to sep is the empty string, ''. This is often called the null string.",
     "crumbs": [
       "How to",
-      "Strings"
+      "Input-Output"
     ]
   },
   {
-    "objectID": "howto/topic/string.html#string-together-multiple-strings",
-    "href": "howto/topic/string.html#string-together-multiple-strings",
-    "title": "Strings",
-    "section": "String together multiple strings",
-    "text": "String together multiple strings\nroll_number in the code-below is an f-string or a formatted string. The values of the variables enclosed within {} will get substituted.\n\nyear = 22\nterm = 'f2'\nroll = '001023'\ndomain = 'ds.study.iitm.ac.in'\nroll_number = f'{year}{term}{roll}@{domain}'\nprint(roll_number)\n\n22f2001023@ds.study.iitm.ac.in",
+    "objectID": "howto/topic/input-output.html#print-multiple-sentences-using-a-single-string",
+    "href": "howto/topic/input-output.html#print-multiple-sentences-using-a-single-string",
+    "title": "Input-Output",
+    "section": "Print multiple sentences using a single string",
+    "text": "Print multiple sentences using a single string\n\nMethod-1Method-2\n\n\nUsing triple quotes is a way to store multi-line strings.\n\nsentences = '''this is sentence 1\nthis is sentence 2\nthis is sentence 3'''\nprint(sentences)\n\nthis is sentence 1\nthis is sentence 2\nthis is sentence 3\n\n\n\n\nThis uses the '\\n' or the newline character that introduces a new line.\n\nsentences = 'this is sentence 1\\nthis is sentence 2\\nthis is sentence 3'\nprint(sentences)\n\nthis is sentence 1\nthis is sentence 2\nthis is sentence 3\n\n\n'\\n' is a single character. To see this:\n\nchar = '\\n'\nprint(len(char))\n\n1",
     "crumbs": [
       "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#replicate-string-n-times",
-    "href": "howto/topic/string.html#replicate-string-n-times",
-    "title": "Strings",
-    "section": "Replicate string \\(n\\) times",
-    "text": "Replicate string \\(n\\) times\n\nword = 'abc'\nn = 5\nword_repeat = word * n\nprint(word_repeat)\n\nabcabcabcabcabc",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#reverse-string",
-    "href": "howto/topic/string.html#reverse-string",
-    "title": "Strings",
-    "section": "Reverse string",
-    "text": "Reverse string\nThe third argument after colon is the step-size. Here, the step size is \\(-1\\).\n\nword = '123456789'\nrev = word[::-1]\nprint(rev)\n\n987654321",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#convert-string-to-lower-case",
-    "href": "howto/topic/string.html#convert-string-to-lower-case",
-    "title": "Strings",
-    "section": "Convert string to lower case",
-    "text": "Convert string to lower case\n\nword = 'GREAT'\nword = word.lower()\nprint(word)\n\ngreat\n\n\nNote that strings are immutable. This means that the string 'GREAT' cannot be changed. When 'GREAT'.lower() is called, the string 'great' is returned. This new string is reassigned to word. To understand this better, consider the following snippet:\n\nword = 'GREAT'\nword_lower = word.lower()\nprint(word, word_lower)\n\nGREAT great",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#convert-string-to-upper-case",
-    "href": "howto/topic/string.html#convert-string-to-upper-case",
-    "title": "Strings",
-    "section": "Convert string to upper case",
-    "text": "Convert string to upper case\n\nword = 'great'\nword = word.upper()\nprint(word)\n\nGREAT",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#count-frequency-of-character-in-string",
-    "href": "howto/topic/string.html#count-frequency-of-character-in-string",
-    "title": "Strings",
-    "section": "Count frequency of character in string",
-    "text": "Count frequency of character in string\n\nword = 'babble'\nchar = 'b'\nfreq = word.count(char)\nprint(freq)\n\n3",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#replace-character-in-string",
-    "href": "howto/topic/string.html#replace-character-in-string",
-    "title": "Strings",
-    "section": "Replace character in string",
-    "text": "Replace character in string\n\nword = 'ph0t0'\nchar = '0'\nto = 'o'\nword = word.replace(char, to)\nprint(word)\n\nphoto",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#capitalize-string",
-    "href": "howto/topic/string.html#capitalize-string",
-    "title": "Strings",
-    "section": "Capitalize string",
-    "text": "Capitalize string\n\nname = 'krishna'\nname = name.capitalize()\nprint(name)\n\nKrishna",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#check-if-string-is-in-upper-case",
-    "href": "howto/topic/string.html#check-if-string-is-in-upper-case",
-    "title": "Strings",
-    "section": "Check if string is in upper case",
-    "text": "Check if string is in upper case\n\nword_1 = 'GREAT'\nword_2 = 'great'\nprint(word_1.isupper())\nprint(word_2.isupper())\n\nTrue\nFalse",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#check-if-string-is-in-lower-case",
-    "href": "howto/topic/string.html#check-if-string-is-in-lower-case",
-    "title": "Strings",
-    "section": "Check if string is in lower case",
-    "text": "Check if string is in lower case\n\nword_1 = 'GREAT'\nword_2 = 'great'\nprint(word_1.islower())\nprint(word_2.islower())\n\nFalse\nTrue",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#check-if-string-has-only-letters",
-    "href": "howto/topic/string.html#check-if-string-has-only-letters",
-    "title": "Strings",
-    "section": "Check if string has only letters",
-    "text": "Check if string has only letters\n\nword_1 = 'abcd'\nword_2 = 'abcd1234'\nprint(word_1.isalpha())\nprint(word_2.isalpha())\n\nTrue\nFalse",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#check-if-string-has-only-numbers",
-    "href": "howto/topic/string.html#check-if-string-has-only-numbers",
-    "title": "Strings",
-    "section": "Check if string has only numbers",
-    "text": "Check if string has only numbers\n\nword_1 = '1234'\nword_2 = 'abcd1234'\nprint(word_1.isdigit())\nprint(word_2.isdigit())\n\nTrue\nFalse",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#check-if-string-has-only-letters-and-numbers",
-    "href": "howto/topic/string.html#check-if-string-has-only-letters-and-numbers",
-    "title": "Strings",
-    "section": "Check if string has only letters and numbers",
-    "text": "Check if string has only letters and numbers\n\nword_1 = 'abcd1234'\nword_2 = 'abcd1234!@#$'\nprint(word_1.isalnum())\nprint(word_2.isalnum())\n\nTrue\nFalse",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#find-index-of-character-that-is-present-in-string",
-    "href": "howto/topic/string.html#find-index-of-character-that-is-present-in-string",
-    "title": "Strings",
-    "section": "Find index of character that is present in string",
-    "text": "Find index of character that is present in string\n\nword = 'abcde'\nchar = 'c'\nindex = word.index(char)\nprint(index)\n\n2\n\n\nindex will return the index if the character is present. It will throw an error if the character is not present. For an error-free way of handling this, check the next how-to.",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#find-index-of-character-that-may-not-be-present-in-string",
-    "href": "howto/topic/string.html#find-index-of-character-that-may-not-be-present-in-string",
-    "title": "Strings",
-    "section": "Find index of character that may not be present in string",
-    "text": "Find index of character that may not be present in string\n\nword = 'abcde'\nchar = 'f'\nindex = word.find(char)\nprint(index)\n\n-1\n\n\nfind will return the index if the character is present. It will return \\(-1\\) if the character is not present.",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#remove-whitespaces-from-beginning-and-end-of-string",
-    "href": "howto/topic/string.html#remove-whitespaces-from-beginning-and-end-of-string",
-    "title": "Strings",
-    "section": "Remove whitespaces from beginning and end of string",
-    "text": "Remove whitespaces from beginning and end of string\n\nstring = '\\n  white \\n'\nprint(string)\nstring = string.strip()\nprint(string)\n\n\n  white \n\nwhite\n\n\n‘\\n', '\\t' and ' ' are whitespaces. '\\n’ is the newline character, '\\t' is the tab character.",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#check-if-string-ends-with-another-string",
-    "href": "howto/topic/string.html#check-if-string-ends-with-another-string",
-    "title": "Strings",
-    "section": "Check if string ends with another string",
-    "text": "Check if string ends with another string\n\nword = 'extracting'\nend = 'ing'\nprint(word.endswith(end))\n\nTrue",
-    "crumbs": [
-      "How to",
-      "Strings"
-    ]
-  },
-  {
-    "objectID": "howto/topic/string.html#check-if-word-1-comes-before-word-2-in-a-dictionary",
-    "href": "howto/topic/string.html#check-if-word-1-comes-before-word-2-in-a-dictionary",
-    "title": "Strings",
-    "section": "Check if word-1 comes before word-2 in a dictionary",
-    "text": "Check if word-1 comes before word-2 in a dictionary\n\nword_1 = 'erase'\nword_2 = 'ease'\nprint(word_1 &lt; word_2)\n\nFalse",
-    "crumbs": [
-      "How to",
-      "Strings"
+      "Input-Output"
     ]
   },
   {
@@ -2370,7 +2183,7 @@
     "href": "students.html",
     "title": "Student Corner",
     "section": "",
-    "text": "This page contains contributions from students of the BS program. In each video, a problem is taken up, the algorithm for it is explained and then implemented in Python. All these videos are maintained in this playlist. The videos that you see here are created and edited by:\n\nJanani D\nPranav V\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nProblem-1\n\n\n\nfile handling\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-2\n\n\n\nstring\n\n\nmath\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-3\n\n\n\nrecursion\n\n\ndictionary\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-4\n\n\n\nlist\n\n\nrecursion\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-5\n\n\n\nfunctional programming\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-6\n\n\n\ndictionary\n\n\nstring\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-7\n\n\n\nfunctional programming\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-8\n\n\n\nlist\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-9\n\n\n\nlist\n\n\nmath\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "This page contains contributions from students of the BS program. In each video, a problem is taken up, the algorithm for it is explained and then implemented in Python. All these videos are maintained in this playlist. The videos that you see here are created by:\n\nJanani D\nPranav V\n\nThanks to Janani for the artistic thumbnails that you see here!\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nProblem-1\n\n\n\nfile handling\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-2\n\n\n\nstring\n\n\nmath\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-3\n\n\n\nrecursion\n\n\ndictionary\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-4\n\n\n\nlist\n\n\nrecursion\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-5\n\n\n\nfunctional programming\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-6\n\n\n\ndictionary\n\n\nstring\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-7\n\n\n\nfunctional programming\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-8\n\n\n\nlist\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-9\n\n\n\nlist\n\n\nmath\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-10\n\n\n\nrecursion\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-11\n\n\n\nstring\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "ppa.html",
@@ -3686,102 +3499,530 @@
     "text": "Method-1Method-2Method-3\n\n\nThis is the simplest method. sort is a method of the list object. It sorts the list “in-place”. That is, it doesn’t create a new list in the process of sorting, but sorts the existing list itself. This method is to be avoided if you don’t want to disturb the original list.\nL = [10, -4, 40, 30, 14, 5, -1, -4]\nL.sort()\nprint(L)\n\n\nThis method sorts the list but creates a new list in the process. The original list is not distrubed.\nL = [10, -4, 40, 30, 14, 5, -1, -4]\nsorted_L = sorted(L)\nprint(sorted_L)\n\n\nThis uses the algorithm mentioned in the course.\nL = [10, -4, 40, 30, 14, 5, -1, -4]\nsorted_L = [ ]\nwhile L != [ ]:\n    smallest = min(L)\n    L.remove(smallest)\n    sorted_L.append(smallest)\nprint(sorted_L)"
   },
   {
-    "objectID": "howto/topic/input-output.html",
-    "href": "howto/topic/input-output.html",
-    "title": "Input-Output",
+    "objectID": "howto/topic/loop.html",
+    "href": "howto/topic/loop.html",
+    "title": "Loops",
     "section": "",
-    "text": "Method-1Method-2\n\n\nThis uses single quotes.\n\nprint('Hello World!')\n\nHello World!\n\n\n\n\nThis uses double quotes.\n\nprint(\"Hello World!\")\n\nHello World!",
+    "text": "forwhile\n\n\n\nn = 5\nfor x in range(1, n + 1):\n    print(x)\n\n1\n2\n3\n4\n5\n\n\n\n\n\nn = 5\nx = 1\nwhile x &lt;= n:\n    print(x)\n    x += 1\n\n1\n2\n3\n4\n5",
     "crumbs": [
       "How to",
-      "Input-Output"
+      "Loops"
     ]
   },
   {
-    "objectID": "howto/topic/input-output.html#print-hello-world",
-    "href": "howto/topic/input-output.html#print-hello-world",
-    "title": "Input-Output",
+    "objectID": "howto/topic/loop.html#print-the-first-n-positive-integers-one-number-on-each-line",
+    "href": "howto/topic/loop.html#print-the-first-n-positive-integers-one-number-on-each-line",
+    "title": "Loops",
     "section": "",
-    "text": "Method-1Method-2\n\n\nThis uses single quotes.\n\nprint('Hello World!')\n\nHello World!\n\n\n\n\nThis uses double quotes.\n\nprint(\"Hello World!\")\n\nHello World!",
+    "text": "forwhile\n\n\n\nn = 5\nfor x in range(1, n + 1):\n    print(x)\n\n1\n2\n3\n4\n5\n\n\n\n\n\nn = 5\nx = 1\nwhile x &lt;= n:\n    print(x)\n    x += 1\n\n1\n2\n3\n4\n5",
     "crumbs": [
       "How to",
-      "Input-Output"
+      "Loops"
     ]
   },
   {
-    "objectID": "howto/topic/input-output.html#accept-string-as-input",
-    "href": "howto/topic/input-output.html#accept-string-as-input",
-    "title": "Input-Output",
-    "section": "Accept string as input",
-    "text": "Accept string as input\nword = input()\ninput always returns a string, no matter what input is entered.\n\n\n\nInput\nword\n\n\n\n\ngood\n'good'\n\n\n123\n'123'\n\n\n12.3\n'12.3'",
+    "objectID": "howto/topic/loop.html#print-the-even-integers-less-than-or-equal-n-one-number-on-each-line",
+    "href": "howto/topic/loop.html#print-the-even-integers-less-than-or-equal-n-one-number-on-each-line",
+    "title": "Loops",
+    "section": "Print the even integers less than or equal \\(n\\)​​, one number on each line",
+    "text": "Print the even integers less than or equal \\(n\\)​​, one number on each line\nWe assume that \\(n\\) is even in this code snippet.\n\nfor, Method-1for, Method-2while\n\n\n\nn = 6\nfor x in range(1, n + 1):\n    if x % 2 == 0:\n        print(x)\n\n2\n4\n6\n\n\n\n\n\nn = 6\nfor x in range(2, n + 1, 2):\n    print(x)\n\n2\n4\n6\n\n\n\n\n\nn = 6\nx = 2\nwhile x &lt;= n:\n    print(x)\n    x += 2\n\n2\n4\n6",
     "crumbs": [
       "How to",
-      "Input-Output"
+      "Loops"
     ]
   },
   {
-    "objectID": "howto/topic/input-output.html#accept-integer-as-input",
-    "href": "howto/topic/input-output.html#accept-integer-as-input",
-    "title": "Input-Output",
-    "section": "Accept integer as input",
-    "text": "Accept integer as input\nx = int(input())\nFirst accept a string as input and convert it into an integer. This conversion is often called type-casting, since we are changing the type of a variable. Here, it goes from str to int.",
+    "objectID": "howto/topic/loop.html#print-all-odd-integers-in-descending-order-starting-from-n-one-number-on-each-line",
+    "href": "howto/topic/loop.html#print-all-odd-integers-in-descending-order-starting-from-n-one-number-on-each-line",
+    "title": "Loops",
+    "section": "Print all odd integers in descending order starting from \\(n\\)​, one number on each line",
+    "text": "Print all odd integers in descending order starting from \\(n\\)​, one number on each line\nWe assume that \\(n\\)​ is odd in this code snippet.\n\nforwhile\n\n\n\nn = 5\nfor x in range(n, 0, -2):\n    print(x)\n\n5\n3\n1\n\n\n\n\n\nn = 5\nwhile n &gt;= 1:\n    print(n)\n    n -= 2\n\n5\n3\n1",
     "crumbs": [
       "How to",
-      "Input-Output"
+      "Loops"
     ]
   },
   {
-    "objectID": "howto/topic/input-output.html#accept-float-as-input",
-    "href": "howto/topic/input-output.html#accept-float-as-input",
-    "title": "Input-Output",
-    "section": "Accept float as input",
-    "text": "Accept float as input\nx = float(input())\nSimilar to the previous how-to.",
+    "objectID": "howto/topic/loop.html#print-first-n-positive-integers-on-same-line-separated-by-space",
+    "href": "howto/topic/loop.html#print-first-n-positive-integers-on-same-line-separated-by-space",
+    "title": "Loops",
+    "section": "Print first \\(n\\) positive integers on same line, separated by space",
+    "text": "Print first \\(n\\) positive integers on same line, separated by space\n\nfor, Method-1for, Method-2while\n\n\n\nn = 5\nfor x in range(1, n):\n    print(x, end = ' ')\nprint(n)\n\n1 2 3 4 5\n\n\n\n\n\nn = 5\nfor x in range(1, n + 1):\n    if x != n:\n        print(x, end = ' ')\n    else:\n        print(x)\n\n1 2 3 4 5\n\n\n\n\n\nn = 5\nx = 1\nwhile x &lt; n:\n    print(x, end = ' ')\n    x += 1\nprint(n)\n\n1 2 3 4 5",
     "crumbs": [
       "How to",
-      "Input-Output"
+      "Loops"
     ]
   },
   {
-    "objectID": "howto/topic/input-output.html#print-multiple-variables",
-    "href": "howto/topic/input-output.html#print-multiple-variables",
-    "title": "Input-Output",
-    "section": "Print multiple variables",
-    "text": "Print multiple variables\nNotice the space that gets added by default between consecutive variables when they are printed. Also note that all get printed on the same line.\n\nExample-1Example-2\n\n\n\nx = 10\ny = 20\nz = 30\nprint(x, y, z)\n\n10 20 30\n\n\n\n\nThis example demonstrates that the type of objects being printed need not be the same.\n\nname = 'Krishna'\nage = 40\nsalary = 1.5\nprint(name, 'is', age, 'years old and earns', salary, 'lpa')\n\nKrishna is 40 years old and earns 1.5 lpa",
+    "objectID": "howto/topic/loop.html#print-first-n-positive-integers-on-same-line-separated-by-comma",
+    "href": "howto/topic/loop.html#print-first-n-positive-integers-on-same-line-separated-by-comma",
+    "title": "Loops",
+    "section": "Print first \\(n\\) positive integers on same line, separated by comma",
+    "text": "Print first \\(n\\) positive integers on same line, separated by comma\n\nfor, Method-1for, Method-2while\n\n\n\nn = 5\nfor x in range(1, n):\n    print(x, end = ',')\nprint(n)\n\n1,2,3,4,5\n\n\n\n\n\nn = 5\nfor x in range(1, n + 1):\n    if x != n:\n        print(x, end = ',')\n    else:\n        print(x)\n\n1,2,3,4,5\n\n\n\n\n\nn = 5\nx = 1\nwhile x &lt; n:\n    print(x, end = ',')\n    x += 1\nprint(n)\n\n1,2,3,4,5",
     "crumbs": [
       "How to",
-      "Input-Output"
+      "Loops"
     ]
   },
   {
-    "objectID": "howto/topic/input-output.html#print-multiple-objects-separated-by-comma",
-    "href": "howto/topic/input-output.html#print-multiple-objects-separated-by-comma",
-    "title": "Input-Output",
-    "section": "Print multiple objects separated by comma",
-    "text": "Print multiple objects separated by comma\n\nx = 10\ny = 20\nz = 30\nprint(x, y, z, sep = ',')\n\n10,20,30\n\n\nsep is an parameter of the function print and stands for separator. The separator is a string that is added between consecutive objects before printing them. The separator defaults to a space, ' '. In order to separate objects with a comma, sep has to be set to ','.",
+    "objectID": "howto/topic/loop.html#print-the-characters-of-a-string-one-on-each-line",
+    "href": "howto/topic/loop.html#print-the-characters-of-a-string-one-on-each-line",
+    "title": "Loops",
+    "section": "Print the characters of a string, one on each line",
+    "text": "Print the characters of a string, one on each line\n\nfor, Method-1for, Method-2while\n\n\nThis is the recommended method. This is more Pythonic.\n\nword = 'good'\nfor char in word:\n    print(char)\n\ng\no\no\nd\n\n\n\n\nThis method is not recommended. This seems un-Pythonic.\n\nword = 'good'\nfor i in range(len(word)):\n    print(word[i])\n\ng\no\no\nd\n\n\n\n\n\nword = 'easy'\nindex = 0\nwhile index &lt; len(word):\n    char = word[index]\n    index += 1\n    print(char)\n\ne\na\ns\ny",
     "crumbs": [
       "How to",
-      "Input-Output"
+      "Loops"
     ]
   },
   {
-    "objectID": "howto/topic/input-output.html#print-multiple-objects-without-separation",
-    "href": "howto/topic/input-output.html#print-multiple-objects-without-separation",
-    "title": "Input-Output",
-    "section": "Print multiple objects without separation",
-    "text": "Print multiple objects without separation\n\nyear = '22'\nterm = 'f3'\nroll = '001023'\ndomain = '@ds.study.iitm.ac.in'\nprint(year, term, roll, domain, sep = '')\n\n22f3001023@ds.study.iitm.ac.in\n\n\nNote that the argument passed to sep is the empty string, ''. This is often called the null string.",
+    "objectID": "howto/topic/loop.html#print-characters-of-a-string-on-a-line-separated-by-a-comma",
+    "href": "howto/topic/loop.html#print-characters-of-a-string-on-a-line-separated-by-a-comma",
+    "title": "Loops",
+    "section": "Print characters of a string on a line separated by a comma",
+    "text": "Print characters of a string on a line separated by a comma\n\nfor, Method-1for, Method-2while\n\n\n\nword = 'great'\nfor char in word[:-1]:\n    print(char, end = ',')\nprint(word[-1])\n\ng,r,e,a,t\n\n\n\n\nenumerate is a function that may be new to you. It is used in situations where you need both the character and the index of a string that you are iterating over.\n\nword = 'great'\nfor index, char in enumerate(word):\n    if index != len(word) - 1:\n        print(char, end = ',')\n    else:\n        print(char)\n\ng,r,e,a,t\n\n\n\n\n\nword = 'great'\nindex = 0\nwhile index &lt; len(word) - 1:\n    print(word[index], end = ',')\n    index += 1\nprint(word[-1])\n\ng,r,e,a,t",
     "crumbs": [
       "How to",
-      "Input-Output"
+      "Loops"
     ]
   },
   {
-    "objectID": "howto/topic/input-output.html#print-multiple-sentences-using-a-single-string",
-    "href": "howto/topic/input-output.html#print-multiple-sentences-using-a-single-string",
-    "title": "Input-Output",
-    "section": "Print multiple sentences using a single string",
-    "text": "Print multiple sentences using a single string\n\nMethod-1Method-2\n\n\nUsing triple quotes is a way to store multi-line strings.\n\nsentences = '''this is sentence 1\nthis is sentence 2\nthis is sentence 3'''\nprint(sentences)\n\nthis is sentence 1\nthis is sentence 2\nthis is sentence 3\n\n\n\n\nThis uses the '\\n' or the newline character that introduces a new line.\n\nsentences = 'this is sentence 1\\nthis is sentence 2\\nthis is sentence 3'\nprint(sentences)\n\nthis is sentence 1\nthis is sentence 2\nthis is sentence 3\n\n\n'\\n' is a single character. To see this:\n\nchar = '\\n'\nprint(len(char))\n\n1",
+    "objectID": "howto/topic/loop.html#find-number-of-characters-in-a-string-the-hard-way",
+    "href": "howto/topic/loop.html#find-number-of-characters-in-a-string-the-hard-way",
+    "title": "Loops",
+    "section": "Find number of characters in a string, the hard way",
+    "text": "Find number of characters in a string, the hard way\n\nword = 'sound'\nlength = 0\nfor char in word:\n    length += 1\nprint(length)\n\n5",
     "crumbs": [
       "How to",
-      "Input-Output"
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#find-if-a-character-is-present-in-a-string-the-hard-way",
+    "href": "howto/topic/loop.html#find-if-a-character-is-present-in-a-string-the-hard-way",
+    "title": "Loops",
+    "section": "Find if a character is present in a string, the hard way",
+    "text": "Find if a character is present in a string, the hard way\n\nforwhile\n\n\n\nword = 'easy'\nch = 'b'\nis_present = False\nfor char in word:\n    if char == ch:\n        is_present = True\n        break\nprint(is_present)\n\nFalse\n\n\n\n\n\nword = 'easy'\nch = 'e'\nindex = 0\nis_present = False\nwhile index &lt; len(word):\n    char = word[index]\n    if char == ch:\n        is_present = True\n        break\n    index += 1\nprint(is_present)\n\nTrue",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#keep-accepting-input-from-user-until-0-is-entered",
+    "href": "howto/topic/loop.html#keep-accepting-input-from-user-until-0-is-entered",
+    "title": "Loops",
+    "section": "Keep accepting input from user until \\(0\\)​ is entered",
+    "text": "Keep accepting input from user until \\(0\\)​ is entered\nWhen the number of iterations is not known a priori, a while loop is the preferred approach.\nx = int(input())\nwhile x != 0:\n    x = int(input())",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#print-the-following-pattern",
+    "href": "howto/topic/loop.html#print-the-following-pattern",
+    "title": "Loops",
+    "section": "Print the following pattern",
+    "text": "Print the following pattern\n#\n##\n###\n####\n#####\n\nfor, Method-1for, Method-2while\n\n\n\nn = 5\nfor x in range(1, n + 1):\n    print(x * '#')\n\n#\n##\n###\n####\n#####\n\n\n\n\n\nn = 5\nfor x in range(1, n + 1):\n    for y in range(x):\n        print('#', end = '') \n        # empty string is passed as argument\n    print()\n\n#\n##\n###\n####\n#####\n\n\n\n\n\nn = 5\nx = 1\nwhile x &lt;= n:\n    y = 1\n    while y &lt;= x:\n        print('#', end = '') \n        # empty string is passed as argument\n        y += 1\n    print()\n    x += 1\n\n#\n##\n###\n####\n#####",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#find-the-sum-the-of-digits-in-an-integer",
+    "href": "howto/topic/loop.html#find-the-sum-the-of-digits-in-an-integer",
+    "title": "Loops",
+    "section": "Find the sum the of digits in an integer",
+    "text": "Find the sum the of digits in an integer\n\nwhilefor\n\n\n\nn = 12345\ndsum = 0\nwhile n != 0:\n    dsum += (n % 10)\n    n = n // 10\nprint(dsum)\n\n15\n\n\n\n\n\nn = 12345\ndsum = 0\nfor char in str(n):\n    dsum += int(char)\nprint(dsum)\n\n15",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#reverse-a-string-the-hard-way",
+    "href": "howto/topic/loop.html#reverse-a-string-the-hard-way",
+    "title": "Loops",
+    "section": "Reverse a string, the hard way",
+    "text": "Reverse a string, the hard way\n\nfor, Method-1for, Method-2for, Method-3for, Method-4for, Method-5while\n\n\n\nword = 'rest'\nout = '' # empty string\nfor char in word:\n    out = char + out\nprint(out)\n\ntser\n\n\n\n\n\nword = 'rest'\nout = '' # empty string\nfor char in reversed(word):\n    out = out + char\nprint(out)\n\ntser\n\n\n\n\n\nword = 'rest'\nout = '' # empty string\nn = len(word)\nfor i in range(n):\n    out = out + word[n - 1 - i]\nprint(out)\n\ntser\n\n\n\n\nThis differs from the previous method in its use of negative indexing.\n\nword = 'rest'\nout = '' # empty string\nn = len(word)\nfor i in range(n):\n    out = out + word[-i - 1]\nprint(out)\n\ntser\n\n\n\n\n\nword = 'rest'\nn = len(word)\nout = '' # empty string\nfor i in range(n - 1, -1, -1):\n    out = out + word[i]\nprint(out)\n\ntser\n\n\n\n\n\nword = 'rest'\nout = '' # empty string\nindex = len(word) - 1\nwhile index &gt;= 0:\n    out = out + word[index]\n    index -= 1\nprint(out)\n\ntser",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#remove-all-commas-from-a-sentence-the-hard-way",
+    "href": "howto/topic/loop.html#remove-all-commas-from-a-sentence-the-hard-way",
+    "title": "Loops",
+    "section": "Remove all commas from a sentence, the hard way",
+    "text": "Remove all commas from a sentence, the hard way\n\nfor, Method-1for, Method-2while\n\n\n\nsentence = 'this, is, not, formatted, properly'\nout = '' # empty string\nfor char in sentence:\n    if char != ',':    \n        out = out + char\nprint(out)\n\nthis is not formatted properly\n\n\n\n\n\nsentence = 'this, is, not, formatted, properly'\nout = '' # empty string\nfor char in sentence:\n    if char == ',':\n        continue\n    out = out + char\nprint(out)\n\nthis is not formatted properly\n\n\n\n\n\nsentence = 'this, is, not, formatted, properly'\nout = '' # empty string\nindex = 0\nwhile index &lt; len(sentence):\n    char = sentence[index]\n    if char != ',':\n        out = out + char\n    index += 1\nprint(out)\n\nthis is not formatted properly",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#count-the-number-of-factors-of-an-integer",
+    "href": "howto/topic/loop.html#count-the-number-of-factors-of-an-integer",
+    "title": "Loops",
+    "section": "Count the number of factors of an integer",
+    "text": "Count the number of factors of an integer\n\nforwhile\n\n\n\nn = 10\ncount = 0\nfor f in range(1, n + 1):\n    if n % f == 0:\n        count += 1\nprint(count)\n\n4\n\n\n\n\n\nn = 10\ncount = 0\nf = 1\nwhile f &lt;= n:\n    if n % f == 0:\n        count += 1\n    f += 1\nprint(count)\n\n4",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#determine-if-a-number-is-perfect",
+    "href": "howto/topic/loop.html#determine-if-a-number-is-perfect",
+    "title": "Loops",
+    "section": "Determine if a number is perfect",
+    "text": "Determine if a number is perfect\nA positive integer \\(n\\) is termed perfect if the sum of all its factors excluding the number itself is equal to \\(n\\). For example, \\(6\\) is a perfect number because \\(1 + 2 + 3 = 6\\). Likewise, \\(28\\) is a perfect number because \\(1 + 2 + 4 + 7 + 14 = 28\\).\n\nforwhile\n\n\n\nn = 28\nfsum = 0\nfor f in range(1, n):\n    if n % f == 0:\n        fsum += f\nif fsum == n:\n    print(f'{n} is a perfect number')\nelse:\n    print(f'{n} is not a perfect number')\n\n28 is a perfect number\n\n\n\n\n\nn = 28\nfsum = 0\nf = 1\nwhile f &lt; n:\n    if n % f == 0:\n        fsum += f\n    f += 1\nif fsum == n:\n    print(f'{n} is a perfect number')\nelse:\n    print(f'{n} is not a perfect number')\n\n28 is a perfect number",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#find-all-perfect-numbers-less-than-or-equal-to-1000",
+    "href": "howto/topic/loop.html#find-all-perfect-numbers-less-than-or-equal-to-1000",
+    "title": "Loops",
+    "section": "Find all perfect numbers less than or equal to \\(1,000\\)",
+    "text": "Find all perfect numbers less than or equal to \\(1,000\\)\n\nMethod-1Method-2\n\n\n\nfor n in range(1, 1_001):\n    fsum = 0\n    for f in range(1, n):\n        if n % f == 0:\n            fsum += f\n    if fsum == n:\n        print(n)\n\n6\n28\n496\n\n\n\n\n\nn = 1\nwhile n &lt;= 1_001:\n    f, fsum = 1, 0\n    while f &lt; n:\n        if n % f == 0:\n            fsum += f\n        f += 1\n    if fsum == n:\n        print(n)\n    n += 1\n\n6\n28\n496",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#determine-if-n-is-prime",
+    "href": "howto/topic/loop.html#determine-if-n-is-prime",
+    "title": "Loops",
+    "section": "Determine if \\(n\\) is prime",
+    "text": "Determine if \\(n\\) is prime\nWe assume that \\(n &gt; 1\\) in all snippets of code given here.\n\nMethod-1Method-2Method-3\n\n\nn = int(input())\ncount = 0\nfor f in range(1, n + 1):\n    if n % f == 0:\n        count += 1\nif count == 2:\n    print('PRIME')\nelse:\n    print('NOTPRIME')\n\n\nn = int(input())\n# optimistic start\nis_prime = True\n\nfor f in range(1, n + 1):\n    if (n % f == 0) and (f != 1) and (f != n):\n        is_prime = False\n        break\n\nif is_prime:\n    print('PRIME')\nelse:\n    print('NOTPRIME')\n\n\nThough the following code will not work for \\(n = 1\\), the question states that \\(n &gt; 1\\). We have made use of this fact. This code is a slight improvement over method-2.\nn = int(input())\n# optimistic start\nis_prime = True\n\nfor f in range(2, n):\n    if n % f == 0:\n        is_prime = False\n        break\n\nif is_prime:\n    print('PRIME')\nelse:\n    print('NOTPRIME')",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#print-all-pairs-of-ordered-positive-integers-that-sum-to-s",
+    "href": "howto/topic/loop.html#print-all-pairs-of-ordered-positive-integers-that-sum-to-s",
+    "title": "Loops",
+    "section": "Print all pairs of ordered positive integers that sum to \\(s\\)​",
+    "text": "Print all pairs of ordered positive integers that sum to \\(s\\)​\nIn this question, we assume that the order of elements in the pair matters. For example, if \\(s = 100\\), then \\((10, 90)\\) and \\((90, 10)\\) are treated as two different pairs.\n\nMethod-1Method-2\n\n\nWe loop from \\(1\\) to \\(s - 1\\). \\(s\\) is excluded as we are only interested in positive integers that sum to \\(s\\).\ns = int(input())\nfor x in range(1, s):\n    for y in range(1, s):\n        if x + y == s:\n            print(x, y)\nprint(s)\n\n\nAny pair that sums to \\(s\\) can be represented as \\((x, s - x)\\). Using this idea, we can dispense with the second loop. This method is therefore an improvement over method-1.\ns = int(input())\nfor x in range(1, s):\n    print(x, s - x)\nThese two methods illustrate a common observation in problem solving. The first solution is mostly going to be raw and inefficient. The art of programming is to refine this solution so as to make it more efficient.",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/loop.html#find-all-pythagorean-triplets-x-y-z-with-x-y-z-n",
+    "href": "howto/topic/loop.html#find-all-pythagorean-triplets-x-y-z-with-x-y-z-n",
+    "title": "Loops",
+    "section": "Find all Pythagorean triplets \\((x, y, z)\\) with \\(x < y < z < n\\)",
+    "text": "Find all Pythagorean triplets \\((x, y, z)\\) with \\(x &lt; y &lt; z &lt; n\\)\nThe purpose of this how-to is to introduce you to triply nested loops.\n\nMethod-1Method-2Method-3\n\n\nn = int(input())\n\nfor x in range(1, n):\n    for y in range(1, n):\n        for z in range(1, n):\n            if x &lt; y &lt; z:\n                if (x ** 2 + y ** 2 == z ** 2):\n                    print(x, y, z)\n\n\nSince \\(x &lt; y &lt; z\\), it is sufficient if we have the following ranges for the three loops:\n\n\\(1 \\leqslant x &lt; n\\)\n\\(x &lt; y &lt; n\\)\n\\(y &lt; z &lt; n\\)\n\nThis considerably reduces the number of iterations overall.\nn = int(input())\n\nfor x in range(1, n):\n    for y in range(x + 1, n):\n        for z in range(y + 1, n):\n            if (x ** 2 + y ** 2 == z ** 2):\n                print(x, y, z)\n\n\nThere is some more wasteful computation happening. Once we know that \\(x^{2} + y^{2} \\geqslant n^2\\), there is no point in looking for \\(z\\). Therefore, we have the following code:\nn = int(input())\n\nfor x in range(1, n):\n    for y in range(x + 1, n):\n        lhs = x ** 2 + y ** 2\n        if (lhs &gt;= n ** 2):\n            break\n        for z in range(y + 1, n):\n            if lhs == z ** 2:\n                print(x, y, z)   \nSome parts of this code may look awkward. In line-5, we are computing the lhs once for each value of \\(y\\). This is to avoid computing \\(x^{2} + y^{2}\\) each time in the innermost loop.",
+    "crumbs": [
+      "How to",
+      "Loops"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html",
+    "href": "howto/topic/string.html",
+    "title": "Strings",
+    "section": "",
+    "text": "Python follows zero-indexing. Indices start from \\(0\\).\n\nword = 'good'\nfirst = word[0]\nprint(first)\n\ng",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#extract-first-character-in-string",
+    "href": "howto/topic/string.html#extract-first-character-in-string",
+    "title": "Strings",
+    "section": "",
+    "text": "Python follows zero-indexing. Indices start from \\(0\\).\n\nword = 'good'\nfirst = word[0]\nprint(first)\n\ng",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#find-length-of-string",
+    "href": "howto/topic/string.html#find-length-of-string",
+    "title": "Strings",
+    "section": "Find length of string",
+    "text": "Find length of string\n\nword = 'good'\nsize = len(word)\nprint(size)\n\n4",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#extract-last-character-in-string",
+    "href": "howto/topic/string.html#extract-last-character-in-string",
+    "title": "Strings",
+    "section": "Extract last character in string",
+    "text": "Extract last character in string\n\nMethod-1Method-2\n\n\nPython allows negative indexing. An index of \\(-1\\) corresponds to the last character in a string, the index \\(-2\\) corresponds to the penultimate character, and so on.\n\nword = 'good'\nlast = word[-1]\nprint(last)\n\nd\n\n\n\n\n\nword = 'good'\nsize = len(word)\nlast = word[size - 1]\n\nSince Python follows negative indexing, the last index is len(word) - 1 and not len(word).",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#extract-first-five-letters-from-string",
+    "href": "howto/topic/string.html#extract-first-five-letters-from-string",
+    "title": "Strings",
+    "section": "Extract first five letters from string",
+    "text": "Extract first five letters from string\n\nMethod-1Method-2\n\n\n\nword = 'extracting'\nfirst_five = word[0:5]\nprint(first_five)\n\nextra\n\n\n\n\nThe start-index defaults to \\(0\\) when it is left unspecified.\n\nword = 'extracting'\nfirst_five = word[:5]\nprint(first_five)\n\nextra",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#extract-last-three-letters-from-string",
+    "href": "howto/topic/string.html#extract-last-three-letters-from-string",
+    "title": "Strings",
+    "section": "Extract last three letters from string",
+    "text": "Extract last three letters from string\nEnd-index defaults to len(string) when it is left unspecified,\n\nMethod-1Method-2\n\n\n\nword = 'extracting'\nlast_three = word[-3:]\nprint(last_three)\n\ning\n\n\n\n\n\nword = 'extracting'\nlast_three = word[len(word) - 3:]\nprint(last_three)\n\ning",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#exclude-first-and-last-letter-from-string",
+    "href": "howto/topic/string.html#exclude-first-and-last-letter-from-string",
+    "title": "Strings",
+    "section": "Exclude first and last letter from string",
+    "text": "Exclude first and last letter from string\n\nword = 'bores'\nout = word[1:-1]\nprint(out)\n\nore",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#determine-if-a-string-is-a-substring-of-another",
+    "href": "howto/topic/string.html#determine-if-a-string-is-a-substring-of-another",
+    "title": "Strings",
+    "section": "Determine if a string is a substring of another",
+    "text": "Determine if a string is a substring of another\n\nstr_1 = 'fume'\nstr_2 = 'perfumes'\noutcome = str_1 in str_2\nprint(outcome)\n\nTrue",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#string-together-multiple-strings",
+    "href": "howto/topic/string.html#string-together-multiple-strings",
+    "title": "Strings",
+    "section": "String together multiple strings",
+    "text": "String together multiple strings\nroll_number in the code-below is an f-string or a formatted string. The values of the variables enclosed within {} will get substituted.\n\nyear = 22\nterm = 'f2'\nroll = '001023'\ndomain = 'ds.study.iitm.ac.in'\nroll_number = f'{year}{term}{roll}@{domain}'\nprint(roll_number)\n\n22f2001023@ds.study.iitm.ac.in",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#replicate-string-n-times",
+    "href": "howto/topic/string.html#replicate-string-n-times",
+    "title": "Strings",
+    "section": "Replicate string \\(n\\) times",
+    "text": "Replicate string \\(n\\) times\n\nword = 'abc'\nn = 5\nword_repeat = word * n\nprint(word_repeat)\n\nabcabcabcabcabc",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#reverse-string",
+    "href": "howto/topic/string.html#reverse-string",
+    "title": "Strings",
+    "section": "Reverse string",
+    "text": "Reverse string\nThe third argument after colon is the step-size. Here, the step size is \\(-1\\).\n\nword = '123456789'\nrev = word[::-1]\nprint(rev)\n\n987654321",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#convert-string-to-lower-case",
+    "href": "howto/topic/string.html#convert-string-to-lower-case",
+    "title": "Strings",
+    "section": "Convert string to lower case",
+    "text": "Convert string to lower case\n\nword = 'GREAT'\nword = word.lower()\nprint(word)\n\ngreat\n\n\nNote that strings are immutable. This means that the string 'GREAT' cannot be changed. When 'GREAT'.lower() is called, the string 'great' is returned. This new string is reassigned to word. To understand this better, consider the following snippet:\n\nword = 'GREAT'\nword_lower = word.lower()\nprint(word, word_lower)\n\nGREAT great",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#convert-string-to-upper-case",
+    "href": "howto/topic/string.html#convert-string-to-upper-case",
+    "title": "Strings",
+    "section": "Convert string to upper case",
+    "text": "Convert string to upper case\n\nword = 'great'\nword = word.upper()\nprint(word)\n\nGREAT",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#count-frequency-of-character-in-string",
+    "href": "howto/topic/string.html#count-frequency-of-character-in-string",
+    "title": "Strings",
+    "section": "Count frequency of character in string",
+    "text": "Count frequency of character in string\n\nword = 'babble'\nchar = 'b'\nfreq = word.count(char)\nprint(freq)\n\n3",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#replace-character-in-string",
+    "href": "howto/topic/string.html#replace-character-in-string",
+    "title": "Strings",
+    "section": "Replace character in string",
+    "text": "Replace character in string\n\nword = 'ph0t0'\nchar = '0'\nto = 'o'\nword = word.replace(char, to)\nprint(word)\n\nphoto",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#capitalize-string",
+    "href": "howto/topic/string.html#capitalize-string",
+    "title": "Strings",
+    "section": "Capitalize string",
+    "text": "Capitalize string\n\nname = 'krishna'\nname = name.capitalize()\nprint(name)\n\nKrishna",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#check-if-string-is-in-upper-case",
+    "href": "howto/topic/string.html#check-if-string-is-in-upper-case",
+    "title": "Strings",
+    "section": "Check if string is in upper case",
+    "text": "Check if string is in upper case\n\nword_1 = 'GREAT'\nword_2 = 'great'\nprint(word_1.isupper())\nprint(word_2.isupper())\n\nTrue\nFalse",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#check-if-string-is-in-lower-case",
+    "href": "howto/topic/string.html#check-if-string-is-in-lower-case",
+    "title": "Strings",
+    "section": "Check if string is in lower case",
+    "text": "Check if string is in lower case\n\nword_1 = 'GREAT'\nword_2 = 'great'\nprint(word_1.islower())\nprint(word_2.islower())\n\nFalse\nTrue",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#check-if-string-has-only-letters",
+    "href": "howto/topic/string.html#check-if-string-has-only-letters",
+    "title": "Strings",
+    "section": "Check if string has only letters",
+    "text": "Check if string has only letters\n\nword_1 = 'abcd'\nword_2 = 'abcd1234'\nprint(word_1.isalpha())\nprint(word_2.isalpha())\n\nTrue\nFalse",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#check-if-string-has-only-numbers",
+    "href": "howto/topic/string.html#check-if-string-has-only-numbers",
+    "title": "Strings",
+    "section": "Check if string has only numbers",
+    "text": "Check if string has only numbers\n\nword_1 = '1234'\nword_2 = 'abcd1234'\nprint(word_1.isdigit())\nprint(word_2.isdigit())\n\nTrue\nFalse",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#check-if-string-has-only-letters-and-numbers",
+    "href": "howto/topic/string.html#check-if-string-has-only-letters-and-numbers",
+    "title": "Strings",
+    "section": "Check if string has only letters and numbers",
+    "text": "Check if string has only letters and numbers\n\nword_1 = 'abcd1234'\nword_2 = 'abcd1234!@#$'\nprint(word_1.isalnum())\nprint(word_2.isalnum())\n\nTrue\nFalse",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#find-index-of-character-that-is-present-in-string",
+    "href": "howto/topic/string.html#find-index-of-character-that-is-present-in-string",
+    "title": "Strings",
+    "section": "Find index of character that is present in string",
+    "text": "Find index of character that is present in string\n\nword = 'abcde'\nchar = 'c'\nindex = word.index(char)\nprint(index)\n\n2\n\n\nindex will return the index if the character is present. It will throw an error if the character is not present. For an error-free way of handling this, check the next how-to.",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#find-index-of-character-that-may-not-be-present-in-string",
+    "href": "howto/topic/string.html#find-index-of-character-that-may-not-be-present-in-string",
+    "title": "Strings",
+    "section": "Find index of character that may not be present in string",
+    "text": "Find index of character that may not be present in string\n\nword = 'abcde'\nchar = 'f'\nindex = word.find(char)\nprint(index)\n\n-1\n\n\nfind will return the index if the character is present. It will return \\(-1\\) if the character is not present.",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#remove-whitespaces-from-beginning-and-end-of-string",
+    "href": "howto/topic/string.html#remove-whitespaces-from-beginning-and-end-of-string",
+    "title": "Strings",
+    "section": "Remove whitespaces from beginning and end of string",
+    "text": "Remove whitespaces from beginning and end of string\n\nstring = '\\n  white \\n'\nprint(string)\nstring = string.strip()\nprint(string)\n\n\n  white \n\nwhite\n\n\n‘\\n', '\\t' and ' ' are whitespaces. '\\n’ is the newline character, '\\t' is the tab character.",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#check-if-string-ends-with-another-string",
+    "href": "howto/topic/string.html#check-if-string-ends-with-another-string",
+    "title": "Strings",
+    "section": "Check if string ends with another string",
+    "text": "Check if string ends with another string\n\nword = 'extracting'\nend = 'ing'\nprint(word.endswith(end))\n\nTrue",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto/topic/string.html#check-if-word-1-comes-before-word-2-in-a-dictionary",
+    "href": "howto/topic/string.html#check-if-word-1-comes-before-word-2-in-a-dictionary",
+    "title": "Strings",
+    "section": "Check if word-1 comes before word-2 in a dictionary",
+    "text": "Check if word-1 comes before word-2 in a dictionary\n\nword_1 = 'erase'\nword_2 = 'ease'\nprint(word_1 &lt; word_2)\n\nFalse",
+    "crumbs": [
+      "How to",
+      "Strings"
+    ]
+  },
+  {
+    "objectID": "howto.html",
+    "href": "howto.html",
+    "title": "How to",
+    "section": "",
+    "text": "A collection of how-tos organized topic wise. The topics are themselves arranged in the following sequence:\n\nInput-output\nStrings\nLoops\nLists\nDictionaries\nTuples and Sets\nFile handling\nExceptions\n\nThese are best read sequentially. However, if you are familiar with a particular topic and want a quick revision, directly jump into it.",
+    "crumbs": [
+      "How to"
     ]
   },
   {
