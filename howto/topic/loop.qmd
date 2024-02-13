@@ -1,0 +1,742 @@
+---
+title: Loops
+pagetitle: Loops
+order: 3
+execute: 
+  cache: true
+jupyter: python3
+---
+
+## Print the first $n$​ positive integers, one number on each line
+
+::: {.panel-tabset}
+
+## for
+
+```{python}
+n = 5
+for x in range(1, n + 1):
+    print(x)
+```
+
+## while
+
+```{python}
+n = 5
+x = 1
+while x <= n:
+    print(x)
+    x += 1
+```
+
+:::
+
+## Print the even integers less than or equal $n$​​, one number on each line
+
+We assume that $n$ is even in this code snippet.
+
+::: {.panel-tabset}
+
+## for, Method-1
+
+```{python}
+n = 6
+for x in range(1, n + 1):
+    if x % 2 == 0:
+        print(x)
+```
+
+## for, Method-2
+
+```{python}
+n = 6
+for x in range(2, n + 1, 2):
+    print(x)
+```
+
+## while
+
+```{python}
+n = 6
+x = 2
+while x <= n:
+    print(x)
+    x += 2
+```
+
+:::
+
+## Print all odd integers in descending order starting from $n$​, one number on each line
+
+We assume that $n$​ is odd in this code snippet.
+
+::: {.panel-tabset}
+
+## for
+
+```{python}
+n = 5
+for x in range(n, 0, -2):
+    print(x)
+```
+
+## while
+
+```{python}
+n = 5
+while n >= 1:
+    print(n)
+    n -= 2
+```
+
+:::
+
+## Print first $n$ positive integers on same line, separated by space
+
+::: {.panel-tabset}
+
+## for, Method-1
+
+```{python}
+n = 5
+for x in range(1, n):
+    print(x, end = ' ')
+print(n)
+```
+
+## for, Method-2
+
+```{python}
+n = 5
+for x in range(1, n + 1):
+    if x != n:
+        print(x, end = ' ')
+    else:
+        print(x)
+```
+
+## while
+
+```{python}
+n = 5
+x = 1
+while x < n:
+    print(x, end = ' ')
+    x += 1
+print(n)
+```
+
+:::
+
+## Print first $n$ positive integers on same line, separated by comma
+
+::: {.panel-tabset}
+
+## `for`,  Method-1
+
+```{python}
+n = 5
+for x in range(1, n):
+    print(x, end = ',')
+print(n)
+```
+
+## `for`, Method-2
+
+```{python}
+n = 5
+for x in range(1, n + 1):
+    if x != n:
+        print(x, end = ',')
+    else:
+        print(x)
+```
+
+## while
+
+```{python}
+n = 5
+x = 1
+while x < n:
+    print(x, end = ',')
+    x += 1
+print(n)
+```
+
+:::
+
+## Print the characters of a string, one on each line
+
+::: {.panel-tabset}
+
+## for, Method-1
+
+This is the recommended method. This is more Pythonic.
+
+```{python}
+word = 'good'
+for char in word:
+    print(char)
+```
+
+## for, Method-2
+
+This method is not recommended. This seems un-Pythonic.
+
+```{python}
+word = 'good'
+for i in range(len(word)):
+    print(word[i])
+```
+
+## while
+
+```{python}
+word = 'easy'
+index = 0
+while index < len(word):
+    char = word[index]
+    index += 1
+    print(char)
+```
+
+:::
+
+## Print characters of a string on a line separated by a comma
+
+::: {.panel-tabset}
+
+## for, Method-1
+
+```{python}
+word = 'great'
+for char in word[:-1]:
+    print(char, end = ',')
+print(word[-1])
+```
+
+## for, Method-2
+
+`enumerate` is a function that may be new to you. It is used in situations where you need both the character and the index of a string that you are iterating over.
+
+```{python}
+word = 'great'
+for index, char in enumerate(word):
+    if index != len(word) - 1:
+        print(char, end = ',')
+    else:
+        print(char)
+```
+
+## while
+
+```{python}
+word = 'great'
+index = 0
+while index < len(word) - 1:
+    print(word[index], end = ',')
+    index += 1
+print(word[-1])
+```
+
+:::
+
+## Find number of characters in a string, the hard way
+
+```{python}
+word = 'sound'
+length = 0
+for char in word:
+    length += 1
+print(length)
+```
+
+## Find if a character is present in a string, the hard way
+
+::: {.panel-tabset}
+
+## for
+
+```{python}
+word = 'easy'
+ch = 'b'
+is_present = False
+for char in word:
+    if char == ch:
+        is_present = True
+        break
+print(is_present)
+```
+
+## while
+
+```{python}
+word = 'easy'
+ch = 'e'
+index = 0
+is_present = False
+while index < len(word):
+    char = word[index]
+    if char == ch:
+        is_present = True
+        break
+    index += 1
+print(is_present)
+```
+
+:::
+
+## Keep accepting input from user until $0$​ is entered
+
+When the number of iterations is not known a priori, a `while` loop is the preferred approach.
+
+```python
+x = int(input())
+while x != 0:
+    x = int(input())
+```
+
+## Print the following pattern
+
+```
+#
+##
+###
+####
+#####
+```
+
+::: {.panel-tabset}
+
+## for, Method-1
+
+```{python}
+n = 5
+for x in range(1, n + 1):
+    print(x * '#')
+```
+
+## for, Method-2
+
+```{python}
+n = 5
+for x in range(1, n + 1):
+    for y in range(x):
+        print('#', end = '') 
+        # empty string is passed as argument
+    print()
+```
+
+## while
+
+```{python}
+n = 5
+x = 1
+while x <= n:
+    y = 1
+    while y <= x:
+        print('#', end = '') 
+        # empty string is passed as argument
+        y += 1
+    print()
+    x += 1
+```
+
+:::
+
+## Find the sum the of digits in an integer
+
+::: {.panel-tabset}
+
+## while
+
+```{python}
+n = 12345
+dsum = 0
+while n != 0:
+    dsum += (n % 10)
+    n = n // 10
+print(dsum)
+```
+
+## for
+
+```{python}
+n = 12345
+dsum = 0
+for char in str(n):
+    dsum += int(char)
+print(dsum)
+```
+
+:::
+
+## Reverse a string, the hard way
+
+::: {.panel-tabset}
+
+## for, Method-1
+
+```{python}
+word = 'rest'
+out = '' # empty string
+for char in word:
+    out = char + out
+print(out)
+```
+
+## for, Method-2
+
+```{python}
+word = 'rest'
+out = '' # empty string
+for char in reversed(word):
+    out = out + char
+print(out)
+```
+
+## for, Method-3
+
+```{python}
+word = 'rest'
+out = '' # empty string
+n = len(word)
+for i in range(n):
+    out = out + word[n - 1 - i]
+print(out)
+```
+
+## for, Method-4
+
+This differs from the previous method in its use of negative indexing.
+
+```{python}
+word = 'rest'
+out = '' # empty string
+n = len(word)
+for i in range(n):
+    out = out + word[-i - 1]
+print(out)
+```
+
+## for, Method-5
+
+```{python}
+word = 'rest'
+n = len(word)
+out = '' # empty string
+for i in range(n - 1, -1, -1):
+    out = out + word[i]
+print(out)
+```
+
+## while
+
+```{python}
+word = 'rest'
+out = '' # empty string
+index = len(word) - 1
+while index >= 0:
+    out = out + word[index]
+    index -= 1
+print(out)
+```
+
+:::
+
+## Remove all commas from a sentence, the hard way
+
+::: {.panel-tabset}
+
+## for, Method-1
+
+```{python}
+sentence = 'this, is, not, formatted, properly'
+out = '' # empty string
+for char in sentence:
+    if char != ',':    
+	    out = out + char
+print(out)
+```
+
+## for, Method-2
+
+```{python}
+sentence = 'this, is, not, formatted, properly'
+out = '' # empty string
+for char in sentence:
+    if char == ',':
+        continue
+    out = out + char
+print(out)
+```
+
+## while
+
+```{python}
+sentence = 'this, is, not, formatted, properly'
+out = '' # empty string
+index = 0
+while index < len(sentence):
+    char = sentence[index]
+    if char != ',':
+        out = out + char
+    index += 1
+print(out)
+```
+
+:::
+
+## Count the number of factors of an integer
+
+::: {.panel-tabset}
+
+## for
+
+```{python}
+n = 10
+count = 0
+for f in range(1, n + 1):
+    if n % f == 0:
+        count += 1
+print(count)
+```
+
+## while
+
+```{python}
+n = 10
+count = 0
+f = 1
+while f <= n:
+    if n % f == 0:
+        count += 1
+    f += 1
+print(count)
+```
+
+:::
+
+## Determine if a number is perfect
+
+A positive integer $n$ is termed perfect if the sum of all its factors excluding the number itself is equal to $n$. For example, $6$ is a perfect number because $1 + 2 + 3 = 6$. Likewise, $28$ is a perfect number because $1 + 2 + 4 + 7 + 14 = 28$.
+
+::: {.panel-tabset}
+
+## for
+
+```{python}
+n = 28
+fsum = 0
+for f in range(1, n):
+    if n % f == 0:
+        fsum += f
+if fsum == n:
+    print(f'{n} is a perfect number')
+else:
+    print(f'{n} is not a perfect number')
+```
+
+## while
+
+```{python}
+n = 28
+fsum = 0
+f = 1
+while f < n:
+    if n % f == 0:
+        fsum += f
+    f += 1
+if fsum == n:
+    print(f'{n} is a perfect number')
+else:
+    print(f'{n} is not a perfect number')
+```
+
+:::
+
+## Find all perfect numbers less than or equal to $1,000$
+
+::: {.panel-tabset}
+
+## Method-1
+
+```{python}
+for n in range(1, 1_001):
+    fsum = 0
+    for f in range(1, n):
+        if n % f == 0:
+            fsum += f
+    if fsum == n:
+        print(n)
+```
+
+## Method-2
+
+```{python}
+n = 1
+while n <= 1_001:
+    f, fsum = 1, 0
+    while f < n:
+        if n % f == 0:
+            fsum += f
+        f += 1
+    if fsum == n:
+        print(n)
+    n += 1
+```
+
+:::
+
+## Determine if $n$ is prime
+
+We assume that $n > 1$ in all snippets of code given here.
+
+::: {.panel-tabset}
+
+## Method-1
+
+```python
+n = int(input())
+count = 0
+for f in range(1, n + 1):
+    if n % f == 0:
+        count += 1
+if count == 2:
+    print('PRIME')
+else:
+    print('NOTPRIME')
+```
+
+## Method-2
+
+```python
+n = int(input())
+# optimistic start
+is_prime = True
+
+for f in range(1, n + 1):
+    if (n % f == 0) and (f != 1) and (f != n):
+        is_prime = False
+        break
+
+if is_prime:
+    print('PRIME')
+else:
+    print('NOTPRIME')
+```
+
+## Method-3
+
+Though the following code will not work for $n = 1$, the question states that $n > 1$. We have made use of this fact. This code is a slight improvement over method-2.
+
+```python
+n = int(input())
+# optimistic start
+is_prime = True
+
+for f in range(2, n):
+    if n % f == 0:
+        is_prime = False
+        break
+
+if is_prime:
+    print('PRIME')
+else:
+    print('NOTPRIME')
+```
+
+:::
+
+## Print all pairs of ordered positive integers that sum to $s$​
+
+In this question, we assume that the order of elements in the pair matters. For example, if $s = 100$, then $(10, 90)$ and $(90, 10)$ are treated as two different pairs.
+
+::: {.panel-tabset}
+
+## Method-1
+
+We loop from $1$ to $s - 1$. $s$ is excluded as we are only interested in positive integers that sum to $s$.
+
+```python
+s = int(input())
+for x in range(1, s):
+    for y in range(1, s):
+        if x + y == s:
+            print(x, y)
+print(s)
+```
+
+## Method-2
+
+Any pair that sums to $s$ can be represented as $(x, s - x)$. Using this idea, we can dispense with the second loop. This method is therefore an improvement over method-1. 
+
+```python
+s = int(input())
+for x in range(1, s):
+    print(x, s - x)
+```
+
+These two methods illustrate a common observation in problem solving. The first solution is mostly going to be raw and inefficient. The art of programming is to refine this solution so as to make it more efficient.
+
+:::
+
+## Find all Pythagorean triplets $(x, y, z)$ with $x < y < z < n$
+
+The purpose of this how-to is to introduce you to triply nested loops.
+
+::: {.panel-tabset}
+
+## Method-1
+
+```python
+n = int(input())
+
+for x in range(1, n):
+    for y in range(1, n):
+        for z in range(1, n):
+            if x < y < z:
+                if (x ** 2 + y ** 2 == z ** 2):
+                    print(x, y, z)
+```
+
+## Method-2
+
+Since $x < y < z$, it is sufficient if we have the following ranges for the three loops:
+
+- $1 \leqslant x < n$
+- $x < y < n$
+- $y < z < n$
+
+This considerably reduces the number of iterations overall.
+
+```python
+n = int(input())
+
+for x in range(1, n):
+    for y in range(x + 1, n):
+        for z in range(y + 1, n):
+            if (x ** 2 + y ** 2 == z ** 2):
+                print(x, y, z)
+```
+
+## Method-3
+
+There is some more wasteful computation happening. Once we know that $x^{2} + y^{2} \geqslant n^2$, there is no point in looking for $z$. Therefore, we have the following code:
+
+```python
+n = int(input())
+
+for x in range(1, n):
+    for y in range(x + 1, n):
+        lhs = x ** 2 + y ** 2
+        if (lhs >= n ** 2):
+            break
+        for z in range(y + 1, n):
+            if lhs == z ** 2:
+                print(x, y, z)   
+```
+
+Some parts of this code may look awkward. In line-5, we are computing the lhs once for each value of $y$. This is to avoid computing $x^{2} + y^{2}$ each time in the innermost loop.
+
+:::
