@@ -905,6 +905,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-2/PPA-5.html#video-solution",
+    "href": "ppa/week-2/PPA-5.html#video-solution",
+    "title": "PPA-5",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 2",
+      "PPA-5"
+    ]
+  },
+  {
     "objectID": "ppa/week-2/PPA-3.html",
     "href": "ppa/week-2/PPA-3.html",
     "title": "PPA-3",
@@ -946,6 +958,18 @@
     "title": "PPA-3",
     "section": "Solutions",
     "text": "Solutions\n\nSolution-1Solution-2\n\n\nt = int(input())\nif 0 &lt;= t &lt;= 5:\n    print('NIGHT')\nelif 6 &lt;= t &lt;= 11:\n    print('MORNING')\nelif 12 &lt;= t &lt;= 17:\n    print('AFTERNOON')\nelif 18 &lt;= t &lt;= 23:\n    print('EVENING')\nelse:\n    print('INVALID')\n\n\nIt is better to stick to if-elif-else ladders wherever possible and avoid a sequence of if conditions. The if-elif-else ladder is more efficient. As soon as one of the conditions is satisfied, the control will exit from the ladder. An if-if-if ladder on the other hand will end up checking every one of the if conditions for every possible input.\nt = int(input())\nif t &lt; 0:\n    print('INVALID')\nif 0 &lt;= t &lt;= 5:\n    print('NIGHT')\nif 6 &lt;= t &lt;= 11:\n    print('MORNING')\nif 12 &lt;= t &lt;= 17:\n    print('AFTERNOON')\nif 18 &lt;= t &lt;= 23:\n    print('EVENING')\nif t &gt;= 24:\n    print('INVALID')",
+    "crumbs": [
+      "PPAs",
+      "Week 2",
+      "PPA-3"
+    ]
+  },
+  {
+    "objectID": "ppa/week-2/PPA-3.html#video-solution",
+    "href": "ppa/week-2/PPA-3.html#video-solution",
+    "title": "PPA-3",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 2",
@@ -1049,6 +1073,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-2/PPA-2.html#video-solution",
+    "href": "ppa/week-2/PPA-2.html#video-solution",
+    "title": "PPA-2",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 2",
+      "PPA-2"
+    ]
+  },
+  {
     "objectID": "ppa/week-2/PPA-10.html",
     "href": "ppa/week-2/PPA-10.html",
     "title": "PPA-10",
@@ -1138,6 +1174,18 @@
     "title": "PPA-5",
     "section": "Solution",
     "text": "Solution\nt = int(input())\nmax_t = t\nwhile t != 0:\n    if t &gt; max_t:\n        max_t = t\n    t = int(input())\nprint(max_t)",
+    "crumbs": [
+      "PPAs",
+      "Week 3",
+      "PPA-5"
+    ]
+  },
+  {
+    "objectID": "ppa/week-3/PPA-5.html#video-solution",
+    "href": "ppa/week-3/PPA-5.html#video-solution",
+    "title": "PPA-5",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 3",
@@ -1241,6 +1289,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-3/PPA-1.html#video-solution",
+    "href": "ppa/week-3/PPA-1.html#video-solution",
+    "title": "PPA-1",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 3",
+      "PPA-1"
+    ]
+  },
+  {
     "objectID": "ppa/week-3/PPA-12.html",
     "href": "ppa/week-3/PPA-12.html",
     "title": "PPA-12",
@@ -1330,6 +1390,18 @@
     "title": "PPA-2",
     "section": "Solution",
     "text": "Solution\nn = int(input())\nfor f in range(1, n + 1):\n    if n % f == 0:\n        print(f)",
+    "crumbs": [
+      "PPAs",
+      "Week 3",
+      "PPA-2"
+    ]
+  },
+  {
+    "objectID": "ppa/week-3/PPA-2.html#video-solution",
+    "href": "ppa/week-3/PPA-2.html#video-solution",
+    "title": "PPA-2",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 3",
@@ -2736,6 +2808,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-3/PPA-4.html#video-solution",
+    "href": "ppa/week-3/PPA-4.html#video-solution",
+    "title": "PPA-4",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 3",
+      "PPA-4"
+    ]
+  },
+  {
     "objectID": "ppa/week-3/PPA-7.html",
     "href": "ppa/week-3/PPA-7.html",
     "title": "PPA-7",
@@ -2825,6 +2909,18 @@
     "title": "PPA-3",
     "section": "Solution",
     "text": "Solution\na = int(input())\nb = int(input())\n\ntotal = 0\nfor f in range(1000, 2001):\n    if (f % a == 0) and (f % b == 0):\n        total += f\n\nprint(total)",
+    "crumbs": [
+      "PPAs",
+      "Week 3",
+      "PPA-3"
+    ]
+  },
+  {
+    "objectID": "ppa/week-3/PPA-3.html#video-solution",
+    "href": "ppa/week-3/PPA-3.html#video-solution",
+    "title": "PPA-3",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 3",
@@ -3024,6 +3120,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-2/PPA-4.html#video-solution",
+    "href": "ppa/week-2/PPA-4.html#video-solution",
+    "title": "PPA-4",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 2",
+      "PPA-4"
+    ]
+  },
+  {
     "objectID": "ppa/week-2/PPA-1.html",
     "href": "ppa/week-2/PPA-1.html",
     "title": "PPA-1",
@@ -3065,6 +3173,18 @@
     "title": "PPA-1",
     "section": "Solution",
     "text": "Solution\nSince the problem statement assures us that the input will be non-zero, the following solution will work.\nx = int(input())\nif x &gt; 0:\n    print('positive')\nelse:\n    print('negative')\nIf the input could be zero, then we need to modify the code as follows:\nx = int(input())\nif x &gt; 0:\n    print('positive')\nelif x &lt; 0:\n    print('negative')\nThis snippet will not print anything when \\(0\\) is passed as input.",
+    "crumbs": [
+      "PPAs",
+      "Week 2",
+      "PPA-1"
+    ]
+  },
+  {
+    "objectID": "ppa/week-2/PPA-1.html#video-solution",
+    "href": "ppa/week-2/PPA-1.html#video-solution",
+    "title": "PPA-1",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 2",
