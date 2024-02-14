@@ -42,3 +42,7 @@ elif x < 0:
 ```
 
 This snippet will not print anything when $0$ is passed as input.
+
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/54e4540965da468d9a95a39dc7246bac?sid=2525c80a-1cd3-4c12-8316-53ac39f82e13" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

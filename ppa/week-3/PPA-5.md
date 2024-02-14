@@ -34,3 +34,8 @@ while t != 0:
 print(max_t)
 ```
 
+
+
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/c80e8ebaf8844edfbacc08735d8c8dc6?sid=5d5d5c84-b0f0-479f-99ee-398281cfa401" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

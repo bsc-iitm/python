@@ -118,3 +118,7 @@ print(y)
 It is better to stick to `if-elif-else` ladders wherever possible and avoid a sequence of `if` conditions. The `if-elif-else` ladder is more efficient. As soon as one of the conditions is satisfied, the control will exit from the ladder. An `if-if-if` ladder on the other hand will end up checking every one of the `if` conditions for every possible input.
 
 :::
+
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/274c940c1fe6435eb7191851dfa36b90?sid=a31d8d8d-c4c1-4aaa-8bd5-e9b5b324f1a9" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
