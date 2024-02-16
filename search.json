@@ -713,6 +713,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-4/PPA-3.html#video-solution",
+    "href": "ppa/week-4/PPA-3.html#video-solution",
+    "title": "PPA-3",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 4",
+      "PPA-3"
+    ]
+  },
+  {
     "objectID": "ppa/week-4/PPA-7.html",
     "href": "ppa/week-4/PPA-7.html",
     "title": "PPA-7",
@@ -802,6 +814,18 @@
     "title": "PPA-2",
     "section": "Solution",
     "text": "Solution\n\nSolution-1Solution-2\n\n\nNotice that the loop variable i is not being used anywhere within the body of the loop. It just acts as a syntactic placeholder. Head to solution-2 to see what could be done in such cases.\nn = int(input())\nL = [ ]\nfor i in range(n):\n    word = input()\n    L.append(word)\nprint(L)\n\n\nWhen the loop variable is just a dummy placeholder, coders often use an _ instead of a variable name such as i or j. Check out this Stackoverflow answer for more details.\nn = int(input())\nL = [ ]\nfor _ in range(n):\n    word = input()\n    L.append(word)\nprint(L)",
+    "crumbs": [
+      "PPAs",
+      "Week 4",
+      "PPA-2"
+    ]
+  },
+  {
+    "objectID": "ppa/week-4/PPA-2.html#video-solution",
+    "href": "ppa/week-4/PPA-2.html#video-solution",
+    "title": "PPA-2",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 4",
@@ -3384,6 +3408,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-4/PPA-4.html#video-solution",
+    "href": "ppa/week-4/PPA-4.html#video-solution",
+    "title": "PPA-4",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 4",
+      "PPA-4"
+    ]
+  },
+  {
     "objectID": "ppa/week-4/PPA-1.html",
     "href": "ppa/week-4/PPA-1.html",
     "title": "PPA-1",
@@ -3425,6 +3461,18 @@
     "title": "PPA-1",
     "section": "Solutions",
     "text": "Solutions\nBe careful to initialize L as the empty list before you begin populating it.\n\nSolution-1Solution-2\n\n\nn = int(input())\nL = [ ]\nfor x in range(1, n + 1):\n    L.append(x)\nprint(L)\n\n\nn = int(input())\nL = [ ]\nfor x in range(1, n + 1):\n    L = L + [x]\nprint(L)",
+    "crumbs": [
+      "PPAs",
+      "Week 4",
+      "PPA-1"
+    ]
+  },
+  {
+    "objectID": "ppa/week-4/PPA-1.html#video-solution",
+    "href": "ppa/week-4/PPA-1.html#video-solution",
+    "title": "PPA-1",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 4",
@@ -3521,6 +3569,18 @@
     "title": "PPA-5",
     "section": "Solution",
     "text": "Solution\nWhy can’t we directly do L[i] = int(L[i])? Why do we need line-4 to happen before line-5? Try deleting line-4 and see what happens.\nL = input().split(' ')\n\nfor i in range(len(L)):\n    L[i] = float(L[i])\n    L[i] = int(L[i])\n\nfor i in range(len(L)):\n    if i != len(L) - 1:\n        print(L[i], end = ',')\n    else:\n        print(L[i])",
+    "crumbs": [
+      "PPAs",
+      "Week 4",
+      "PPA-5"
+    ]
+  },
+  {
+    "objectID": "ppa/week-4/PPA-5.html#video-solution",
+    "href": "ppa/week-4/PPA-5.html#video-solution",
+    "title": "PPA-5",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 4",
