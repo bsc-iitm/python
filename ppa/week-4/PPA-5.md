@@ -90,3 +90,6 @@ for i in range(len(L)):
         print(L[i])
 ```
 
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/3d61bab80caa4f3abd48b4cea18d0ab7?sid=fbcfbfa5-6fc8-4d31-b48e-66cd146619a1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

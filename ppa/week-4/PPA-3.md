@@ -75,3 +75,8 @@ for num in nums:
 print(max_num)
 ```
 
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/e44709ce3b704dd5b06f42670683f87e?sid=8bc5ab8a-4813-4c52-8af3-434ab0a1ad53" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/4912cb0dc0704cfb9817c501aa6eeff6?sid=ef24edec-7d57-47b4-bd17-5bb6d847bdf9" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

@@ -57,3 +57,7 @@ print(L)
 ```
 
 :::
+
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/7b4c49b6f12b4915a05e3b0c64b7cd32?sid=28223b3c-f169-46f4-aada-3c71eed70c8d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
