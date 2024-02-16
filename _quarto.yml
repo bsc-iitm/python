@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  page-footer: "Copyright 2024, Karthik Thiagarajan @ IIT Madras"
+  page-footer: "Copyright 2024 @ IIT Madras"
   page-navigation: true
   navbar: 
     pinned: true
