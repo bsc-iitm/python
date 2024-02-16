@@ -773,6 +773,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-4/PPA-7.html#video-solution",
+    "href": "ppa/week-4/PPA-7.html#video-solution",
+    "title": "PPA-7",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 4",
+      "PPA-7"
+    ]
+  },
+  {
     "objectID": "ppa/week-4/PPA-2.html",
     "href": "ppa/week-4/PPA-2.html",
     "title": "PPA-2",
@@ -3305,6 +3317,18 @@
     "title": "PPA-8",
     "section": "Solution",
     "text": "Solution\nn = int(input())\nI = [ ]\nfor i in range(n):\n    row = [ ]\n    for j in range(n):\n        if i == j:\n            row.append(1)\n        else:\n            row.append(0)\n    I.append(row)\n    \nfor i in range(n):\n    for j in range(n):\n        if j != n - 1:\n            print(I[i][j], end = ',')\n        else:\n            print(I[i][j])",
+    "crumbs": [
+      "PPAs",
+      "Week 4",
+      "PPA-8"
+    ]
+  },
+  {
+    "objectID": "ppa/week-4/PPA-8.html#video-solution",
+    "href": "ppa/week-4/PPA-8.html#video-solution",
+    "title": "PPA-8",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 4",
