@@ -67,3 +67,6 @@ for i in range(n):
             print(I[i][j])
 ```
 
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/3d37ca67c029487db741398d4c1228f4?sid=7acc133e-9efb-43fd-917f-869f1d68f9dc" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
