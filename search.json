@@ -413,6 +413,215 @@
     "text": "This is a companion resource for the course “Programming in Python” offered at the foundational level of the BS program in data science and applications. Check out the navigation bar at the top to get an idea of the different resources that can be found here."
   },
   {
+    "objectID": "howto/topic/list.html",
+    "href": "howto/topic/list.html",
+    "title": "Lists",
+    "section": "",
+    "text": "Method-1Method-2\n\n\n\nL = [ ]\nprint(L)\n\n[]\n\n\n\n\n\nL = list()\nprint(L)\n\n[]",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#create-an-empty-list",
+    "href": "howto/topic/list.html#create-an-empty-list",
+    "title": "Lists",
+    "section": "",
+    "text": "Method-1Method-2\n\n\n\nL = [ ]\nprint(L)\n\n[]\n\n\n\n\n\nL = list()\nprint(L)\n\n[]",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#create-a-list-with-certain-elements",
+    "href": "howto/topic/list.html#create-a-list-with-certain-elements",
+    "title": "Lists",
+    "section": "Create a list with certain elements",
+    "text": "Create a list with certain elements\n\nL = [1, 2, 3]\nprint(L)\nwords = ['good', 'better', 'best']\nprint(words)\n\n[1, 2, 3]\n['good', 'better', 'best']",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#append-an-element-to-a-list",
+    "href": "howto/topic/list.html#append-an-element-to-a-list",
+    "title": "Lists",
+    "section": "Append an element to a list",
+    "text": "Append an element to a list\n\nMethod-1Method-2\n\n\nThis modifies the list in-place using a list method called append.\n\nL = [1, 2, 3]\nL.append(4)\nprint(L)\n\n[1, 2, 3, 4]\n\n\n\n\nThis creates a new list object using list concatenation and puts it back in L\n\nL = [1, 2, 3]\nL = L + [4]\nprint(L)\n\n[1, 2, 3, 4]",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#insert-an-element-at-the-beginning-of-a-list",
+    "href": "howto/topic/list.html#insert-an-element-at-the-beginning-of-a-list",
+    "title": "Lists",
+    "section": "Insert an element at the beginning of a list",
+    "text": "Insert an element at the beginning of a list\n\nMethod-1Method-2\n\n\nThis modifies the list in-place using the insert method.\n\nL = ['better', 'best']\nL.insert(0, 'good')\nprint(L)\n\n['good', 'better', 'best']\n\n\n\n\nThis creates a new list using list concatenation and puts it back in L.\n\nL = ['better', 'best']\nL = ['good'] + L\nprint(L)\n\n['good', 'better', 'best']",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#iterate-through-a-list",
+    "href": "howto/topic/list.html#iterate-through-a-list",
+    "title": "Lists",
+    "section": "Iterate through a list",
+    "text": "Iterate through a list\n\nMethod-1Method-2\n\n\nThis is the recommended method.\n\nL = [1, 2, 3, 4]\nfor x in L:\n    print(x)\n\n1\n2\n3\n4\n\n\n\n\nThis is to be avoided whenever possible.\n\nL = [1, 2, 3, 4]\nfor i in range(len(L)):\n    print(L[i])\n\n1\n2\n3\n4",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#iterate-through-a-list-with-access-to-both-index-and-element",
+    "href": "howto/topic/list.html#iterate-through-a-list-with-access-to-both-index-and-element",
+    "title": "Lists",
+    "section": "Iterate through a list with access to both index and element",
+    "text": "Iterate through a list with access to both index and element\n\nMethod-1Method-2\n\n\nThis is recommended.\n\nL = [10, 20, 30, 40]\nfor index, x in enumerate(L):\n    print(index, x)\n\n0 10\n1 20\n2 30\n3 40\n\n\n\n\n\nL = [10, 20, 30, 40]\nfor i in range(len(L)):\n    print(i, L[i])\n\n0 10\n1 20\n2 30\n3 40",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#print-elements-of-list-on-a-line",
+    "href": "howto/topic/list.html#print-elements-of-list-on-a-line",
+    "title": "Lists",
+    "section": "Print elements of list on a line",
+    "text": "Print elements of list on a line\n\nMethod-1Method-2\n\n\n\nwords = ['a', 'an', 'the', 'are', 'articles']\nfor word in words[:-1]:\n    print(word, end = ',')\nprint(words[-1])\n\na,an,the,are,articles\n\n\n\n\n\nwords = ['a', 'an', 'the', 'are', 'articles']\nfor i in range(len(words)):\n    if i != len(words) - 1:\n        print(words[i], end = ',')\n    else:\n        print(words[i])\n\na,an,the,are,articles",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#find-length-of-a-list",
+    "href": "howto/topic/list.html#find-length-of-a-list",
+    "title": "Lists",
+    "section": "Find length of a list",
+    "text": "Find length of a list\n\nL = [1.0, 3.5, 10.9, 5.3, -10.3]\nprint(len(L))\n\n5",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#determine-presence-of-element-in-a-list",
+    "href": "howto/topic/list.html#determine-presence-of-element-in-a-list",
+    "title": "Lists",
+    "section": "Determine presence of element in a list",
+    "text": "Determine presence of element in a list\n\nL = ['good', 'random', 'better', 'best']\nvalue = 'random'\nprint(value in L)\n\nTrue",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#remove-an-element-from-a-list",
+    "href": "howto/topic/list.html#remove-an-element-from-a-list",
+    "title": "Lists",
+    "section": "Remove an element from a list",
+    "text": "Remove an element from a list\nL.remove(value) removes the leftmost occurrence of value from the list L if it exists. This operation is in-place. It throws an error if value is not present in L. Here is a graceful way of removing an element.\n\nL = ['good', 'random', 'better', 'best']\nvalue = 'random'\nif value in L:\n    L.remove(value)\nprint(L)\n\n['good', 'better', 'best']",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#remove-all-occurrences-of-element-from-a-list",
+    "href": "howto/topic/list.html#remove-all-occurrences-of-element-from-a-list",
+    "title": "Lists",
+    "section": "Remove all occurrences of element from a list",
+    "text": "Remove all occurrences of element from a list\n\nMethod-1Method-2\n\n\n\nL = [10, 5, 3, 4, 10, 6, 9, 10]\nvalue = 10\nwhile value in L:\n    L.remove(value)\nprint(L)\n\n[5, 3, 4, 6, 9]\n\n\n\n\n\nL = [10, 5, 3, 4, 10, 6, 9, 10]\nvalue = 10\nfor x in L:\n    if x == value:\n        L.remove(value)\nprint(L)\n\n[5, 3, 4, 6, 9]",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#find-index-of-an-element-in-a-list",
+    "href": "howto/topic/list.html#find-index-of-an-element-in-a-list",
+    "title": "Lists",
+    "section": "Find index of an element in a list",
+    "text": "Find index of an element in a list\nL.index(value) returns the index of the leftmost occurrence of value if it is present in the list. It will throw an error if value is not present in L. Here is a graceful way to express this:\n\nL = [10, 20, 30, 40, 50]\nvalue = 30\nif value in L:\n    index = L.index(value)\n    print(index)\n\n2",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#sort-a-list",
+    "href": "howto/topic/list.html#sort-a-list",
+    "title": "Lists",
+    "section": "Sort a list",
+    "text": "Sort a list\n\nMethod-1Method-2\n\n\nL.sort() sorts the list L in place. If you do not want to modify L, refer to method-2.\n\nL = [3, 5, 1, 2, 5, 4, 6, 7, 8, 9]\nL.sort()\nprint(L)\n\n[1, 2, 3, 4, 5, 5, 6, 7, 8, 9]\n\n\n\n\n\nL = [3, 5, 1, 2, 5, 4, 6, 7, 8, 9]\nout = sorted(L)\nprint(out)\n\n[1, 2, 3, 4, 5, 5, 6, 7, 8, 9]",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#iterate-through-the-list-in-reverse-direction",
+    "href": "howto/topic/list.html#iterate-through-the-list-in-reverse-direction",
+    "title": "Lists",
+    "section": "Iterate through the list in reverse direction",
+    "text": "Iterate through the list in reverse direction\n\nMethod-1Method-2\n\n\nThis is recommended.\n\nL = [1, 2, 3, 4, 5]\nfor x in reversed(L):\n    print(x)\n\n5\n4\n3\n2\n1\n\n\n\n\n\nL = [1, 2, 3, 4, 5]\nfor i in range(len(L) - 1, -1, -1):\n    print(L[i])\n\n5\n4\n3\n2\n1",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#copy-a-list",
+    "href": "howto/topic/list.html#copy-a-list",
+    "title": "Lists",
+    "section": "Copy a list",
+    "text": "Copy a list\nFirst, we will look at the wrong way of doing this:\n\nP = [1, 2, 3, 4]\nQ = P\nP[-1] = 5\nprint(P)\nprint(Q)\n\n[1, 2, 3, 5]\n[1, 2, 3, 5]\n\n\nRefer to this FAQ to understand why this happens. Now, the correct way.\n\nP = [1, 2, 3, 4]\nQ = P.copy()\nP[-1] = 5\nprint(P)\nprint(Q)\n\n[1, 2, 3, 5]\n[1, 2, 3, 4]",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#find-dimension-of-a-matrix",
+    "href": "howto/topic/list.html#find-dimension-of-a-matrix",
+    "title": "Lists",
+    "section": "Find dimension of a matrix",
+    "text": "Find dimension of a matrix\n\nM = [[1, 2, 3, 4],\n     [5, 6, 7, 8],\n     [9, 10, 11, 12]]\nm, n = len(M), len(M[0])\nprint(m, n)\n\n3 4",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#create-a-zero-matrix",
+    "href": "howto/topic/list.html#create-a-zero-matrix",
+    "title": "Lists",
+    "section": "Create a zero matrix",
+    "text": "Create a zero matrix\nThis snippet creates a \\(3 \\times 5\\) zero matrix.\n\nm, n = 3, 5\nM = [ ]\nfor i in range(m):\n    row = [ ]\n    for j in range(n):\n        row.append(0)\n    M.append(row)\nprint(M)\n\n[[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "howto/topic/list.html#print-a-matrix",
+    "href": "howto/topic/list.html#print-a-matrix",
+    "title": "Lists",
+    "section": "Print a matrix",
+    "text": "Print a matrix\n\nMethod-1Method-2\n\n\nThis is recommended.\n\nM = [[1, 2, 3, 4],\n     [5, 6, 7, 8],\n     [3, 1, 4, 2]]\nfor row in M:\n    for elem in row[:-1]:\n        print(elem, end = ',')\n    print(row[-1])\n\n1,2,3,4\n5,6,7,8\n3,1,4,2\n\n\n\n\n\nM = [[1, 2, 3, 4],\n     [5, 6, 7, 8],\n     [3, 1, 4, 2]]\nm, n = len(M), len(M[0])\nfor i in range(m):\n    for j in range(n):\n        if j != n - 1:\n            print(M[i][j], end = ',')\n        else:\n            print(M[i][j])\n\n1,2,3,4\n5,6,7,8\n3,1,4,2",
+    "crumbs": [
+      "How to",
+      "Lists"
+    ]
+  },
+  {
     "objectID": "howto/topic/input-output.html",
     "href": "howto/topic/input-output.html",
     "title": "Input-Output",
@@ -1781,6 +1990,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-5/PPA-1.html#video-solution",
+    "href": "ppa/week-5/PPA-1.html#video-solution",
+    "title": "PPA-1",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 5",
+      "PPA-1"
+    ]
+  },
+  {
     "objectID": "ppa/week-5/PPA-4.html",
     "href": "ppa/week-5/PPA-4.html",
     "title": "PPA-4",
@@ -1822,6 +2043,18 @@
     "title": "PPA-4",
     "section": "Solution",
     "text": "Solution\n\nSolution-1Solution-2Solution-3\n\n\ndef dim_equal(A, B):\n    m_A, n_A = len(A), len(A[0])\n    m_B, n_B = len(B), len(B[0])\n    if (m_A == m_B) and (n_A == n_B):\n        return True\n    return False\n\n\ndef dim_equal(A, B):\n    if ((len(A) == len(B)) and \n        (len(A[0]) == len(B[0]))):\n        return True\n    return False\n\n\ndef dim_equal(A, B):\n    return ((len(A) == len(B)) and\n            (len(A[0]) == len(B[0])))",
+    "crumbs": [
+      "PPAs",
+      "Week 5",
+      "PPA-4"
+    ]
+  },
+  {
+    "objectID": "ppa/week-5/PPA-4.html#video-solution",
+    "href": "ppa/week-5/PPA-4.html#video-solution",
+    "title": "PPA-4",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 5",
@@ -1941,7 +2174,6 @@
     "section": "Question",
     "text": "Question\nPrint the first \\(5\\) positive integers in ascending order with one number in each line.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -1952,7 +2184,6 @@
     "section": "Approach",
     "text": "Approach\n\nUse the print statement five times.\nOne on each line.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -1963,7 +2194,6 @@
     "section": "Solution",
     "text": "Solution\nprint(1)\nprint(2)\nprint(3)\nprint(4)\nprint(5)",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -1974,7 +2204,6 @@
     "section": "Question-2",
     "text": "Question-2\nPrint the following pattern.\n*\n**\n***\n****\n*****\nThere are no spaces between consecutive stars. There are no spaces at the end of each line.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -1985,7 +2214,6 @@
     "section": "Approach-1",
     "text": "Approach-1\n\nUse five print statements\nOne on each line.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -1996,7 +2224,6 @@
     "section": "Solution-1",
     "text": "Solution-1\nprint('*')\nprint('**')\nprint('***')\nprint('****')\nprint('*****')",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2007,7 +2234,6 @@
     "section": "Approach-2",
     "text": "Approach-2\n\nStrings can be replicated using the * operator.\nFor example\n\n'*' * 2 == '**'\n'*' * 3 == '***'",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2018,7 +2244,6 @@
     "section": "Solution-2",
     "text": "Solution-2\nprint('*')\nprint('*' * 2)\nprint('*' * 3)\nprint('*' * 4)\nprint('*' * 5)",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2029,7 +2254,6 @@
     "section": "Question",
     "text": "Question\nAccept an integer as input and print its square as output.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2040,7 +2264,6 @@
     "section": "Approach",
     "text": "Approach\n\ninput() function always returns a string.\nTo accept an integer, first accept a string and then convert it into an integer.\n* is the multiplication operator\n** is the exponentiation operator",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2051,7 +2274,6 @@
     "section": "Solution",
     "text": "Solution\nx = int(input())\nprint(x ** 2)",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2062,7 +2284,6 @@
     "section": "Question",
     "text": "Question\nAccept two integers as input and print their sum as output.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2073,7 +2294,6 @@
     "section": "Approach",
     "text": "Approach\n\nInputs can be accepted on the same line.\nx, y = 2, 3\n\nx is assigned the value 2\ny is assigned the value 3",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2084,7 +2304,6 @@
     "section": "Solution",
     "text": "Solution\n\nSolution-1Solution-2\n\n\nx = int(input())\ny = int(input())\nprint(x + y)\n\n\nx, y = int(input()), int(input())\nprint(x + y)",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2095,7 +2314,6 @@
     "section": "Question",
     "text": "Question\nAccept two words as input and print the two words after adding a space between them.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2106,7 +2324,6 @@
     "section": "Approach",
     "text": "Approach\n\nString concatenation\n\n'one' + 'two' == 'onetwo'\n'one' + ' ' + 'two' == 'one two'",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2117,7 +2334,6 @@
     "section": "Solution",
     "text": "Solution\nfirst = input()\nsecond = input()\nspace = ' ' # there is one space between the quotes\nout = first + space + second\nprint(out)",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2128,7 +2344,6 @@
     "section": "Question",
     "text": "Question\nAccept the registration number of a vehicle as input and print its state-code as output. Sample registration numbers:\n\nTN-10-AB-2010\nHR-15-XZ-1999\n\nThe template for registration numbers will be the same.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2139,7 +2354,6 @@
     "section": "Approach",
     "text": "Approach\n\nString slicing\n\nword = 'ABCD'\nword[0:2] == 'AB'\nword[:2] == 'AB'",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2150,7 +2364,6 @@
     "section": "Solutions",
     "text": "Solutions\n\nSolution-1Solution-2\n\n\nregno = input()\ncode = regno[0:2]\nprint(code)\n\n\nregno = input()\ncode = regno[:2]\nprint(code)",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2161,7 +2374,6 @@
     "section": "Question",
     "text": "Question\nAccept a five digit number as input and print the sum of its digits as output.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2172,7 +2384,6 @@
     "section": "Approach-1",
     "text": "Approach-1\n\nRetain input as a string.\nConvert each character of the string into an integer.\n\nIf num = '12345'\n\nint(num[0]) == 1\nint(num[1]) == 2\n…\n\n\nFinally, add all these digits.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2183,7 +2394,6 @@
     "section": "Solution-1",
     "text": "Solution-1\nx = input()\nfirst = int(x[0])\nsecond = int(x[1])\nthird = int(x[2])\nfourth = int(x[3])\nfifth = int(x[4])\nprint(first + second + third + fourth + fifth)",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2194,7 +2404,6 @@
     "section": "Approach-2",
     "text": "Approach-2\n\nStep-1\n\nExtract the last digit of the number by taking remainder when it is divided by \\(10\\).\n\nIf x = 12345, then x % 10 == 5.\n\n\nStep-2\n\nDivide the number by \\(10\\) and retain the quotient.\n\nIf x = 12345, then x // 10 == 1234.\n\n\nRepeat steps 1 and 2 five times\nFinally, sum all the digits.",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
   },
@@ -2205,16 +2414,8 @@
     "section": "Solution-2",
     "text": "Solution-2\nx = int(input())\nfifth = x % 10\nx = x // 10\nfourth = x % 10\nx = x // 10\nthird = x % 10\nx = x // 10\nsecond = x % 10\nx = x // 10\nfirst = x % 10\nprint(first + second + third + fourth + fifth)",
     "crumbs": [
-      "Presentations",
       "Week-1"
     ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This website is maintained by Karthik Thiagarajan, instructor, IIT Madras. The content for this course has been prepared by a number of instructors and professors over the years. Mentioning some of the names here:\nProfessors\n\nProfessor Sudarshan Iyengar\nProfessor Satyadev Nandakumar\n\nInstructors\n\nOmkar Joshi\nKarthik Thiagarajan\nSanthana Krishnan\nKumar Ramanand\nDevineni Ramanjaneyulu\nAtul Pratap Singh\nLivin Nector\nKubra Kadeejathil"
   },
   {
     "objectID": "notes.html",
@@ -2287,11 +2488,39 @@
     "text": "Chapter-8: Object Oriented Programming\nLesson-8.1\n\nObjects and Classes\nOOP in Python: an example\n\nLesson-8.2\n\nClasses and Objects\nself\nClass Attributes vs Object Attributes\n\nLesson-8.3\n\nInheritance\nConcrete Example\nParent-child relationship\nMethod Overriding\n\nLesson-8.4\n\nVector: Mathematical Preliminaries\nVector: Specification\nVector: Definition\nCollection of Vectors"
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This website is maintained by Karthik Thiagarajan, instructor, IIT Madras. The content for this course has been prepared by a number of instructors and professors over the years. Mentioning some of the names here:\nProfessors\n\nProfessor Sudarshan Iyengar\nProfessor Satyadev Nandakumar\n\nInstructors\n\nOmkar Joshi\nKarthik Thiagarajan\nSanthana Krishnan\nKumar Ramanand\nDevineni Ramanjaneyulu\nAtul Pratap Singh\nLivin Nector\nKubra Kadeejathil"
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "FAQs",
+    "section": "",
+    "text": "We recommend that you take a look at the following FAQs to get a good grasp of some of the key aspects of Python. These are a part of the FAQs listed on the official Python website. Since there are many FAQs, we have selected a small number of them that are relevant to our course."
+  },
+  {
+    "objectID": "faq.html#important-faqs",
+    "href": "faq.html#important-faqs",
+    "title": "FAQs",
+    "section": "Important FAQs",
+    "text": "Important FAQs\n\nWhat is the difference between arguments and parameters?\nWhy did changing list ‘y’ also change list ‘x’?\nHow do I write a function with output parameters?\nHow do I copy an object in Python?\nHow do I convert a string to a number?\nHow do I convert a number to a string?\nWhat is the most efficient way to concatenate many strings together?\nHow do I convert between tuples and lists?\nWhat’s a negative index?\nHow do I iterate over a sequence in reversed order?\nHow do you remove duplicates from a list?\nHow do you remove multiple items from a list?\nHow do I create a multidimensional list?\nHow do I apply a method or function to a sequence of objects?\nWhy does a_tuple[i] += [‘item’] raise an exception when the addition works?"
+  },
+  {
+    "objectID": "faq.html#advanced-faqs",
+    "href": "faq.html#advanced-faqs",
+    "title": "FAQs",
+    "section": "Advanced FAQs",
+    "text": "Advanced FAQs\nThese are for those interested in getting a better understanding of some aspects of the language.\n\nWhy am I getting an UnboundLocalError when the variable has a value?\nWhat are the rules for local and global variables in Python?\nWhy are default values shared between objects?"
+  },
+  {
     "objectID": "students.html",
     "href": "students.html",
     "title": "Student Corner",
     "section": "",
-    "text": "This page contains contributions from students of the BS program. In each video, a problem is taken up, the algorithm for it is explained and then implemented in Python. All these videos are maintained in this playlist. The videos that you see here are created by:\n\nJanani D\nPranav V\n\nThanks to Janani for the artistic thumbnails that you see here!\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nProblem-1\n\n\n\nfile handling\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-2\n\n\n\nstring\n\n\nmath\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-3\n\n\n\nrecursion\n\n\ndictionary\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-4\n\n\n\nlist\n\n\nrecursion\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-5\n\n\n\nfunctional programming\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-6\n\n\n\ndictionary\n\n\nstring\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-7\n\n\n\nfunctional programming\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-8\n\n\n\nlist\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-9\n\n\n\nlist\n\n\nmath\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-10\n\n\n\nrecursion\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-11\n\n\n\nstring\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "This page contains contributions from students of the BS program. In each video, a problem is taken up, the algorithm for it is explained and then implemented in Python. All these videos are maintained in this playlist. The videos that you see here are created by:\n\nJanani D\nPranav V\n\nThanks to Janani for the artistic thumbnails that you see here!\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nProblem-1\n\n\n\nfile handling\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-2\n\n\n\nstring\n\n\nmath\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-3\n\n\n\nrecursion\n\n\ndictionary\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-4\n\n\n\nlist\n\n\nrecursion\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-5\n\n\n\nfunctional programming\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-6\n\n\n\ndictionary\n\n\nstring\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-7\n\n\n\nfunctional programming\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-8\n\n\n\nlist\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-9\n\n\n\nlist\n\n\nmath\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-10\n\n\n\nrecursion\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-11\n\n\n\nstring\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-12\n\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-13\n\n\n\nlist\n\n\n\n\nJanani\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem-14\n\n\n\nlist\n\n\n\n\nPranav\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "ppa.html",
@@ -2400,11 +2629,23 @@
     ]
   },
   {
-    "objectID": "ppa/week-5/PPA-2.html#solution",
-    "href": "ppa/week-5/PPA-2.html#solution",
+    "objectID": "ppa/week-5/PPA-2.html#solutions",
+    "href": "ppa/week-5/PPA-2.html#solutions",
     "title": "PPA-2",
-    "section": "Solution",
-    "text": "Solution\ndef check_leap_year(year):\n    leap = False\n    if year % 100 == 0:\n        if year % 400 == 0:\n            leap = True\n    else:\n        if year % 4 == 0:\n            leap = True\n    return leap",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2Solution-3Solution-4\n\n\ndef check_leap_year(year):\n    if year % 100 == 0:\n        if year % 400 == 0:\n            return True\n        return False\n    else:\n        if year % 4 == 0:\n            return True\n        return False\n\n\ndef check_leap_year(year):\n    if (year % 100 == 0) and (year % 400 == 0):\n        return True\n    elif (year % 100 != 0) and (year % 4 == 0):\n        return True\n    return False\n\n\ndef check_leap_year(year):\n    if year % 100 == 0:\n        return year % 400 == 0\n    else:\n        return year % 4 == 0\n\n\nThis uses just one return statement at the end of the function.\ndef check_leap_year(year):\n    leap = False\n    if year % 100 == 0:\n        if year % 400 == 0:\n            leap = True\n    else:\n        if year % 4 == 0:\n            leap = True\n    return leap",
+    "crumbs": [
+      "PPAs",
+      "Week 5",
+      "PPA-2"
+    ]
+  },
+  {
+    "objectID": "ppa/week-5/PPA-2.html#video-solution",
+    "href": "ppa/week-5/PPA-2.html#video-solution",
+    "title": "PPA-2",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 5",
@@ -2508,6 +2749,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-5/PPA-3.html#video-solution",
+    "href": "ppa/week-5/PPA-3.html#video-solution",
+    "title": "PPA-3",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 5",
+      "PPA-3"
+    ]
+  },
+  {
     "objectID": "ppa/week-5/PPA-5.html",
     "href": "ppa/week-5/PPA-5.html",
     "title": "PPA-5",
@@ -2536,7 +2789,7 @@
     "href": "ppa/week-5/PPA-5.html#hint",
     "title": "PPA-5",
     "section": "Hint",
-    "text": "Hint\nThis function returns three different values at the same time. Let us first take up a simpler example that involves two return values\ndef floor_ceil(x):\n    '''x is a positive real number'''\n    if x == int(x):\n        floor = ceil = int(x)\n    else:\n        floor = int(x)\n        ceil = floor + 1\n    return floor, ceil\nLet us call the function with some value, say floor(4.3) and see what happens:\na = floor_ceil(4.3)\nprint(a)\nIt prints the output (4, 5). This is called a tuple (refer to week-6). A tuple is very much like a list. So, when multiple values are simultaneously returned in a single return statement, what is being returned is a tuple. But, let us not worry too much about that. What is more useful is the following:\na, b = floor_ceil(4.3)\nprint(a)\nprint(b)\nSince the function returns two values, we have two variables — a, b — on the LHS of the assignment statement in line-1.\nCheck out the code below that finds out the first two maximums. Try to extend it to three maximums.\ndef first_two(L):\n    fmax, smax = L[0], L[1]\n    \n    for x in L:\n        if x &gt; fmax:\n            smax = fmax\n            fmax = x\n        elif x &gt; smax and x &lt; fmax:\n            smax = x\n    \n    return fmax, smax",
+    "text": "Hint\nThis function returns three different values at the same time. Let us first take up a simpler example that involves two return values\ndef floor_ceil(x):\n    '''x is a positive real number'''\n    if x == int(x):\n        floor = ceil = int(x)\n    else:\n        floor = int(x)\n        ceil = floor + 1\n    return floor, ceil\nLet us call the function with some value, say floor(4.3) and see what happens:\na = floor_ceil(4.3)\nprint(a)\nIt prints the output (4, 5). This is called a tuple (refer to week-6). A tuple is very much like a list. So, when multiple values are simultaneously returned in a single return statement, what is being returned is a tuple. But, let us not worry too much about that. What is more useful is the following:\na, b = floor_ceil(4.3)\nprint(a)\nprint(b)\nSince the function returns two values, we have two variables — a, b — on the LHS of the assignment statement in line-1.\nComing back to this problem, consider the following snippet of code and see if you can extend it into a solution:\nfmax = max(L)\nL.remove(fmax)",
     "crumbs": [
       "PPAs",
       "Week 5",
@@ -2548,7 +2801,19 @@
     "href": "ppa/week-5/PPA-5.html#solutions",
     "title": "PPA-5",
     "section": "Solutions",
-    "text": "Solutions\nWe have used the fact that the elements of the list are distinct in the solution. Can you identify where it is being used? Even before that, why do you think this restriction has been imposed?\n\nSolution-1Solution-2\n\n\ndef first_three(L):\n    fmax, smax, tmax = L[0], L[1], L[2]\n    for x in L:\n        if x &gt; fmax:\n            tmax = smax\n            smax = fmax\n            fmax = x\n        elif x &gt; smax and x &lt; fmax:\n            tmax = smax\n            smax = x\n        elif x &gt; tmax and x &lt; smax:\n            tmax = x\n    return fmax, smax, tmax\n\n\ndef first_three(L):\n    fmax, smax, tmax = L[0], L[1], L[2]\n    for x in L:\n        if x &gt; fmax:\n            tmax = smax\n            smax = fmax\n            fmax = x\n        elif smax &lt; x &lt; fmax:\n            tmax = smax\n            smax = x\n        elif tmax &lt; x &lt; smax:\n            tmax = x\n    return fmax, smax, tmax",
+    "text": "Solutions\nRefer to this FAQ to understand some of the finer points regarding lists and functions in the context of this problem. Read this FAQ and then look at solutions (1) and (2).\n\nSolution-1Solution-2\n\n\ndef first_three(L):\n    fmax = max(L)\n    L.remove(fmax)\n    smax = max(L)\n    L.remove(smax)\n    tmax = max(L)\n    return fmax, smax, tmax\nIn this solution we are modifying the list. For example if this code snippet is run:\nP = [6, 7, 1, 5, 4, 3, 2]\nprint(first_three(P))\nprint(P)\nthe output will be:\n(7, 6, 5)\n[1, 5, 4, 3, 2]\nNotice that the list P has been modified in this process. If this is to be avoided, refer to solution-2.\n\n\ndef first_three(L):\n    L_local = L.copy()\n    fmax = max(L_local)\n    L_local.remove(fmax)\n    smax = max(L_local)\n    L_local.remove(smax)\n    tmax = max(L_local)\n    return fmax, smax, tmax\nNow, if we run this snippet:\nP = [6, 7, 1, 5, 4, 3, 2]\nprint(first_three(P))\nprint(P)\nwe get the output:\n(7, 6, 5)\n[6, 7, 1, 5, 4, 3, 2]\nNote that P has not been disturbed. We achieved this by making sure that a copy of L was created in line-2.",
+    "crumbs": [
+      "PPAs",
+      "Week 5",
+      "PPA-5"
+    ]
+  },
+  {
+    "objectID": "ppa/week-5/PPA-5.html#video-solution",
+    "href": "ppa/week-5/PPA-5.html#video-solution",
+    "title": "PPA-5",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 5",

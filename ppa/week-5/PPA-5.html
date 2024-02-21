@@ -136,8 +136,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">How to</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../presentations.html"> 
-<span class="menu-text">Presentations</span></a>
+    <a class="nav-link" href="../../faq.html"> 
+<span class="menu-text">FAQs</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../students.html"> 
@@ -554,6 +554,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question" id="toc-question" class="nav-link active" data-scroll-target="#question">Question</a></li>
   <li><a href="#hint" id="toc-hint" class="nav-link" data-scroll-target="#hint">Hint</a></li>
   <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a></li>
+  <li><a href="#video-solution" id="toc-video-solution" class="nav-link" data-scroll-target="#video-solution">Video Solution</a></li>
   </ul>
 </nav>
     </div>
@@ -604,56 +605,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2"></a><span class="bu">print</span>(a)</span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="bu">print</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Since the function returns two values, we have two variables — <code>a, b</code> — on the LHS of the assignment statement in line-1.</p>
-<p>Check out the code below that finds out the first two maximums. Try to extend it to three maximums.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> first_two(L):</span>
-<span id="cb4-2"><a href="#cb4-2"></a>    fmax, smax <span class="op">=</span> L[<span class="dv">0</span>], L[<span class="dv">1</span>]</span>
-<span id="cb4-3"><a href="#cb4-3"></a>    </span>
-<span id="cb4-4"><a href="#cb4-4"></a>    <span class="cf">for</span> x <span class="kw">in</span> L:</span>
-<span id="cb4-5"><a href="#cb4-5"></a>        <span class="cf">if</span> x <span class="op">&gt;</span> fmax:</span>
-<span id="cb4-6"><a href="#cb4-6"></a>            smax <span class="op">=</span> fmax</span>
-<span id="cb4-7"><a href="#cb4-7"></a>            fmax <span class="op">=</span> x</span>
-<span id="cb4-8"><a href="#cb4-8"></a>        <span class="cf">elif</span> x <span class="op">&gt;</span> smax <span class="kw">and</span> x <span class="op">&lt;</span> fmax:</span>
-<span id="cb4-9"><a href="#cb4-9"></a>            smax <span class="op">=</span> x</span>
-<span id="cb4-10"><a href="#cb4-10"></a>    </span>
-<span id="cb4-11"><a href="#cb4-11"></a>    <span class="cf">return</span> fmax, smax</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Coming back to this problem, consider the following snippet of code and see if you can extend it into a solution:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>fmax <span class="op">=</span> <span class="bu">max</span>(L)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>L.remove(fmax)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="solutions" class="level2">
 <h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
-<p>We have used the fact that the elements of the list are distinct in the solution. Can you identify where it is being used? Even before that, why do you think this restriction has been imposed?</p>
+<p>Refer to this <a href="https://docs.python.org/3/faq/programming.html#why-did-changing-list-y-also-change-list-x" target="_blank">FAQ</a> to understand some of the finer points regarding lists and functions in the context of this problem. Read this FAQ and then look at solutions (1) and (2).</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Solution-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Solution-2</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> first_three(L):</span>
-<span id="cb5-2"><a href="#cb5-2"></a>    fmax, smax, tmax <span class="op">=</span> L[<span class="dv">0</span>], L[<span class="dv">1</span>], L[<span class="dv">2</span>]</span>
-<span id="cb5-3"><a href="#cb5-3"></a>    <span class="cf">for</span> x <span class="kw">in</span> L:</span>
-<span id="cb5-4"><a href="#cb5-4"></a>        <span class="cf">if</span> x <span class="op">&gt;</span> fmax:</span>
-<span id="cb5-5"><a href="#cb5-5"></a>            tmax <span class="op">=</span> smax</span>
-<span id="cb5-6"><a href="#cb5-6"></a>            smax <span class="op">=</span> fmax</span>
-<span id="cb5-7"><a href="#cb5-7"></a>            fmax <span class="op">=</span> x</span>
-<span id="cb5-8"><a href="#cb5-8"></a>        <span class="cf">elif</span> x <span class="op">&gt;</span> smax <span class="kw">and</span> x <span class="op">&lt;</span> fmax:</span>
-<span id="cb5-9"><a href="#cb5-9"></a>            tmax <span class="op">=</span> smax</span>
-<span id="cb5-10"><a href="#cb5-10"></a>            smax <span class="op">=</span> x</span>
-<span id="cb5-11"><a href="#cb5-11"></a>        <span class="cf">elif</span> x <span class="op">&gt;</span> tmax <span class="kw">and</span> x <span class="op">&lt;</span> smax:</span>
-<span id="cb5-12"><a href="#cb5-12"></a>            tmax <span class="op">=</span> x</span>
-<span id="cb5-13"><a href="#cb5-13"></a>    <span class="cf">return</span> fmax, smax, tmax</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a href="#cb5-2"></a>    fmax <span class="op">=</span> <span class="bu">max</span>(L)</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    L.remove(fmax)</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    smax <span class="op">=</span> <span class="bu">max</span>(L)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    L.remove(smax)</span>
+<span id="cb5-6"><a href="#cb5-6"></a>    tmax <span class="op">=</span> <span class="bu">max</span>(L)</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    <span class="cf">return</span> fmax, smax, tmax</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this solution we are modifying the list. For example if this code snippet is run:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>P <span class="op">=</span> [<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>]</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="bu">print</span>(first_three(P))</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="bu">print</span>(P)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>the output will be:</p>
+<pre><code>(7, 6, 5)
+[1, 5, 4, 3, 2]</code></pre>
+<p>Notice that the list <code>P</code> has been modified in this process. If this is to be avoided, refer to solution-2.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> first_three(L):</span>
-<span id="cb6-2"><a href="#cb6-2"></a>    fmax, smax, tmax <span class="op">=</span> L[<span class="dv">0</span>], L[<span class="dv">1</span>], L[<span class="dv">2</span>]</span>
-<span id="cb6-3"><a href="#cb6-3"></a>    <span class="cf">for</span> x <span class="kw">in</span> L:</span>
-<span id="cb6-4"><a href="#cb6-4"></a>        <span class="cf">if</span> x <span class="op">&gt;</span> fmax:</span>
-<span id="cb6-5"><a href="#cb6-5"></a>            tmax <span class="op">=</span> smax</span>
-<span id="cb6-6"><a href="#cb6-6"></a>            smax <span class="op">=</span> fmax</span>
-<span id="cb6-7"><a href="#cb6-7"></a>            fmax <span class="op">=</span> x</span>
-<span id="cb6-8"><a href="#cb6-8"></a>        <span class="cf">elif</span> smax <span class="op">&lt;</span> x <span class="op">&lt;</span> fmax:</span>
-<span id="cb6-9"><a href="#cb6-9"></a>            tmax <span class="op">=</span> smax</span>
-<span id="cb6-10"><a href="#cb6-10"></a>            smax <span class="op">=</span> x</span>
-<span id="cb6-11"><a href="#cb6-11"></a>        <span class="cf">elif</span> tmax <span class="op">&lt;</span> x <span class="op">&lt;</span> smax:</span>
-<span id="cb6-12"><a href="#cb6-12"></a>            tmax <span class="op">=</span> x</span>
-<span id="cb6-13"><a href="#cb6-13"></a>    <span class="cf">return</span> fmax, smax, tmax</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> first_three(L):</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    L_local <span class="op">=</span> L.copy()</span>
+<span id="cb8-3"><a href="#cb8-3"></a>    fmax <span class="op">=</span> <span class="bu">max</span>(L_local)</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    L_local.remove(fmax)</span>
+<span id="cb8-5"><a href="#cb8-5"></a>    smax <span class="op">=</span> <span class="bu">max</span>(L_local)</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    L_local.remove(smax)</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    tmax <span class="op">=</span> <span class="bu">max</span>(L_local)</span>
+<span id="cb8-8"><a href="#cb8-8"></a>    <span class="cf">return</span> fmax, smax, tmax</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now, if we run this snippet:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>P <span class="op">=</span> [<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>]</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="bu">print</span>(first_three(P))</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="bu">print</span>(P)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>we get the output:</p>
+<pre><code>(7, 6, 5)
+[6, 7, 1, 5, 4, 3, 2]</code></pre>
+<p>Note that <code>P</code> has not been disturbed. We achieved this by making sure that a copy of <code>L</code> was created in line-2.</p>
 </div>
 </div>
+</div>
+</section>
+<section id="video-solution" class="level2">
+<h2 class="anchored" data-anchor-id="video-solution">Video Solution</h2>
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;">
+<iframe src="https://www.loom.com/embed/59d1ae5341664dd8a0014e3a1cd3053e?sid=26fcca95-10c7-4e7d-b05f-e456514cfa17" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+</iframe>
 </div>
 
 

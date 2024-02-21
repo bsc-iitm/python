@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -68,6 +102,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -102,8 +165,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">How to</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../presentations.html"> 
-<span class="menu-text">Presentations</span></a>
+    <a class="nav-link" href="../../faq.html"> 
+<span class="menu-text">FAQs</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../students.html"> 
@@ -194,7 +257,30 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#create-an-empty-list" id="toc-create-an-empty-list" class="nav-link active" data-scroll-target="#create-an-empty-list">Create an empty list</a></li>
+  <li><a href="#create-a-list-with-certain-elements" id="toc-create-a-list-with-certain-elements" class="nav-link" data-scroll-target="#create-a-list-with-certain-elements">Create a list with certain elements</a></li>
+  <li><a href="#append-an-element-to-a-list" id="toc-append-an-element-to-a-list" class="nav-link" data-scroll-target="#append-an-element-to-a-list">Append an element to a list</a></li>
+  <li><a href="#insert-an-element-at-the-beginning-of-a-list" id="toc-insert-an-element-at-the-beginning-of-a-list" class="nav-link" data-scroll-target="#insert-an-element-at-the-beginning-of-a-list">Insert an element at the beginning of a list</a></li>
+  <li><a href="#iterate-through-a-list" id="toc-iterate-through-a-list" class="nav-link" data-scroll-target="#iterate-through-a-list">Iterate through a list</a></li>
+  <li><a href="#iterate-through-a-list-with-access-to-both-index-and-element" id="toc-iterate-through-a-list-with-access-to-both-index-and-element" class="nav-link" data-scroll-target="#iterate-through-a-list-with-access-to-both-index-and-element">Iterate through a list with access to both index and element</a></li>
+  <li><a href="#print-elements-of-list-on-a-line" id="toc-print-elements-of-list-on-a-line" class="nav-link" data-scroll-target="#print-elements-of-list-on-a-line">Print elements of list on a line</a></li>
+  <li><a href="#find-length-of-a-list" id="toc-find-length-of-a-list" class="nav-link" data-scroll-target="#find-length-of-a-list">Find length of a list</a></li>
+  <li><a href="#determine-presence-of-element-in-a-list" id="toc-determine-presence-of-element-in-a-list" class="nav-link" data-scroll-target="#determine-presence-of-element-in-a-list">Determine presence of element in a list</a></li>
+  <li><a href="#remove-an-element-from-a-list" id="toc-remove-an-element-from-a-list" class="nav-link" data-scroll-target="#remove-an-element-from-a-list">Remove an element from a list</a></li>
+  <li><a href="#remove-all-occurrences-of-element-from-a-list" id="toc-remove-all-occurrences-of-element-from-a-list" class="nav-link" data-scroll-target="#remove-all-occurrences-of-element-from-a-list">Remove all occurrences of element from a list</a></li>
+  <li><a href="#find-index-of-an-element-in-a-list" id="toc-find-index-of-an-element-in-a-list" class="nav-link" data-scroll-target="#find-index-of-an-element-in-a-list">Find index of an element in a list</a></li>
+  <li><a href="#sort-a-list" id="toc-sort-a-list" class="nav-link" data-scroll-target="#sort-a-list">Sort a list</a></li>
+  <li><a href="#iterate-through-the-list-in-reverse-direction" id="toc-iterate-through-the-list-in-reverse-direction" class="nav-link" data-scroll-target="#iterate-through-the-list-in-reverse-direction">Iterate through the list in reverse direction</a></li>
+  <li><a href="#copy-a-list" id="toc-copy-a-list" class="nav-link" data-scroll-target="#copy-a-list">Copy a list</a></li>
+  <li><a href="#find-dimension-of-a-matrix" id="toc-find-dimension-of-a-matrix" class="nav-link" data-scroll-target="#find-dimension-of-a-matrix">Find dimension of a matrix</a></li>
+  <li><a href="#create-a-zero-matrix" id="toc-create-a-zero-matrix" class="nav-link" data-scroll-target="#create-a-zero-matrix">Create a zero matrix</a></li>
+  <li><a href="#print-a-matrix" id="toc-print-a-matrix" class="nav-link" data-scroll-target="#print-a-matrix">Print a matrix</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -218,8 +304,459 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="create-an-empty-list" class="level2">
+<h2 class="anchored" data-anchor-id="create-an-empty-list">Create an empty list</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Method-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Method-2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="cf15ca96" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>L <span class="op">=</span> [ ]</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">print</span>(L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[]</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="b6f42551" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>L <span class="op">=</span> <span class="bu">list</span>()</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="bu">print</span>(L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-a-list-with-certain-elements" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-list-with-certain-elements">Create a list with certain elements</h2>
+<div id="2ab8e241" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>L <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">print</span>(L)</span>
+<span id="cb5-3"><a href="#cb5-3"></a>words <span class="op">=</span> [<span class="st">'good'</span>, <span class="st">'better'</span>, <span class="st">'best'</span>]</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="bu">print</span>(words)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3]
+['good', 'better', 'best']</code></pre>
+</div>
+</div>
+</section>
+<section id="append-an-element-to-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="append-an-element-to-a-list">Append an element to a list</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Method-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Method-2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>This modifies the list in-place using a list method called <code>append</code>.</p>
+<div id="e73f1b8d" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>L <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb7-2"><a href="#cb7-2"></a>L.append(<span class="dv">4</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="bu">print</span>(L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, 4]</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>This creates a new list object using list concatenation and puts it back in <code>L</code></p>
+<div id="53103ad4" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>L <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb9-2"><a href="#cb9-2"></a>L <span class="op">=</span> L <span class="op">+</span> [<span class="dv">4</span>]</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="bu">print</span>(L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, 4]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="insert-an-element-at-the-beginning-of-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="insert-an-element-at-the-beginning-of-a-list">Insert an element at the beginning of a list</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Method-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Method-2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>This modifies the list in-place using the <code>insert</code> method.</p>
+<div id="1c1bfee8" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>L <span class="op">=</span> [<span class="st">'better'</span>, <span class="st">'best'</span>]</span>
+<span id="cb11-2"><a href="#cb11-2"></a>L.insert(<span class="dv">0</span>, <span class="st">'good'</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="bu">print</span>(L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['good', 'better', 'best']</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>This creates a new list using list concatenation and puts it back in <code>L</code>.</p>
+<div id="3b6a0302" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>L <span class="op">=</span> [<span class="st">'better'</span>, <span class="st">'best'</span>]</span>
+<span id="cb13-2"><a href="#cb13-2"></a>L <span class="op">=</span> [<span class="st">'good'</span>] <span class="op">+</span> L</span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="bu">print</span>(L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['good', 'better', 'best']</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="iterate-through-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="iterate-through-a-list">Iterate through a list</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Method-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Method-2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>This is the recommended method.</p>
+<div id="382d80cf" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>L <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="cf">for</span> x <span class="kw">in</span> L:</span>
+<span id="cb15-3"><a href="#cb15-3"></a>    <span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+2
+3
+4</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>This is to be avoided whenever possible.</p>
+<div id="6fa82f37" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>L <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(L)):</span>
+<span id="cb17-3"><a href="#cb17-3"></a>    <span class="bu">print</span>(L[i])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+2
+3
+4</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="iterate-through-a-list-with-access-to-both-index-and-element" class="level2">
+<h2 class="anchored" data-anchor-id="iterate-through-a-list-with-access-to-both-index-and-element">Iterate through a list with access to both index and element</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Method-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Method-2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p>This is recommended.</p>
+<div id="4184d17c" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>L <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="cf">for</span> index, x <span class="kw">in</span> <span class="bu">enumerate</span>(L):</span>
+<span id="cb19-3"><a href="#cb19-3"></a>    <span class="bu">print</span>(index, x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0 10
+1 20
+2 30
+3 40</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div id="5f942238" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>L <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(L)):</span>
+<span id="cb21-3"><a href="#cb21-3"></a>    <span class="bu">print</span>(i, L[i])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0 10
+1 20
+2 30
+3 40</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="print-elements-of-list-on-a-line" class="level2">
+<h2 class="anchored" data-anchor-id="print-elements-of-list-on-a-line">Print elements of list on a line</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Method-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">Method-2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<div id="337bafc9" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>words <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'an'</span>, <span class="st">'the'</span>, <span class="st">'are'</span>, <span class="st">'articles'</span>]</span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="cf">for</span> word <span class="kw">in</span> words[:<span class="op">-</span><span class="dv">1</span>]:</span>
+<span id="cb23-3"><a href="#cb23-3"></a>    <span class="bu">print</span>(word, end <span class="op">=</span> <span class="st">','</span>)</span>
+<span id="cb23-4"><a href="#cb23-4"></a><span class="bu">print</span>(words[<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>a,an,the,are,articles</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<div id="752c9216" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>words <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'an'</span>, <span class="st">'the'</span>, <span class="st">'are'</span>, <span class="st">'articles'</span>]</span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(words)):</span>
+<span id="cb25-3"><a href="#cb25-3"></a>    <span class="cf">if</span> i <span class="op">!=</span> <span class="bu">len</span>(words) <span class="op">-</span> <span class="dv">1</span>:</span>
+<span id="cb25-4"><a href="#cb25-4"></a>        <span class="bu">print</span>(words[i], end <span class="op">=</span> <span class="st">','</span>)</span>
+<span id="cb25-5"><a href="#cb25-5"></a>    <span class="cf">else</span>:</span>
+<span id="cb25-6"><a href="#cb25-6"></a>        <span class="bu">print</span>(words[i])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>a,an,the,are,articles</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="find-length-of-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="find-length-of-a-list">Find length of a list</h2>
+<div id="4a5909fc" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a>L <span class="op">=</span> [<span class="fl">1.0</span>, <span class="fl">3.5</span>, <span class="fl">10.9</span>, <span class="fl">5.3</span>, <span class="op">-</span><span class="fl">10.3</span>]</span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="bu">print</span>(<span class="bu">len</span>(L))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>5</code></pre>
+</div>
+</div>
+</section>
+<section id="determine-presence-of-element-in-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="determine-presence-of-element-in-a-list">Determine presence of element in a list</h2>
+<div id="ec5c3032" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a>L <span class="op">=</span> [<span class="st">'good'</span>, <span class="st">'random'</span>, <span class="st">'better'</span>, <span class="st">'best'</span>]</span>
+<span id="cb29-2"><a href="#cb29-2"></a>value <span class="op">=</span> <span class="st">'random'</span></span>
+<span id="cb29-3"><a href="#cb29-3"></a><span class="bu">print</span>(value <span class="kw">in</span> L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+</div>
+</section>
+<section id="remove-an-element-from-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="remove-an-element-from-a-list">Remove an element from a list</h2>
+<p><code>L.remove(value)</code> removes the leftmost occurrence of <code>value</code> from the list <code>L</code> if it exists. This operation is in-place. It throws an error if <code>value</code> is not present in <code>L</code>. Here is a graceful way of removing an element.</p>
+<div id="60cbc9cb" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a>L <span class="op">=</span> [<span class="st">'good'</span>, <span class="st">'random'</span>, <span class="st">'better'</span>, <span class="st">'best'</span>]</span>
+<span id="cb31-2"><a href="#cb31-2"></a>value <span class="op">=</span> <span class="st">'random'</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="cf">if</span> value <span class="kw">in</span> L:</span>
+<span id="cb31-4"><a href="#cb31-4"></a>    L.remove(value)</span>
+<span id="cb31-5"><a href="#cb31-5"></a><span class="bu">print</span>(L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['good', 'better', 'best']</code></pre>
+</div>
+</div>
+</section>
+<section id="remove-all-occurrences-of-element-from-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="remove-all-occurrences-of-element-from-a-list">Remove all occurrences of element from a list</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">Method-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Method-2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<div id="141830c6" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1"></a>L <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">10</span>, <span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb33-2"><a href="#cb33-2"></a>value <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb33-3"><a href="#cb33-3"></a><span class="cf">while</span> value <span class="kw">in</span> L:</span>
+<span id="cb33-4"><a href="#cb33-4"></a>    L.remove(value)</span>
+<span id="cb33-5"><a href="#cb33-5"></a><span class="bu">print</span>(L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[5, 3, 4, 6, 9]</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<div id="f8b98eb5" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1"></a>L <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">10</span>, <span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb35-2"><a href="#cb35-2"></a>value <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb35-3"><a href="#cb35-3"></a><span class="cf">for</span> x <span class="kw">in</span> L:</span>
+<span id="cb35-4"><a href="#cb35-4"></a>    <span class="cf">if</span> x <span class="op">==</span> value:</span>
+<span id="cb35-5"><a href="#cb35-5"></a>        L.remove(value)</span>
+<span id="cb35-6"><a href="#cb35-6"></a><span class="bu">print</span>(L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[5, 3, 4, 6, 9]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="find-index-of-an-element-in-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="find-index-of-an-element-in-a-list">Find index of an element in a list</h2>
+<p><code>L.index(value)</code> returns the index of the leftmost occurrence of <code>value</code> if it is present in the list. It will throw an error if <code>value</code> is not present in <code>L</code>. Here is a graceful way to express this:</p>
+<div id="2e46d357" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1"></a>L <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>]</span>
+<span id="cb37-2"><a href="#cb37-2"></a>value <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb37-3"><a href="#cb37-3"></a><span class="cf">if</span> value <span class="kw">in</span> L:</span>
+<span id="cb37-4"><a href="#cb37-4"></a>    index <span class="op">=</span> L.index(value)</span>
+<span id="cb37-5"><a href="#cb37-5"></a>    <span class="bu">print</span>(index)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2</code></pre>
+</div>
+</div>
+</section>
+<section id="sort-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="sort-a-list">Sort a list</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true">Method-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false">Method-2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<p><code>L.sort()</code> sorts the list <code>L</code> in place. If you do not want to modify <code>L</code>, refer to method-2.</p>
+<div id="8be1bbb8" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1"></a>L <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb39-2"><a href="#cb39-2"></a>L.sort()</span>
+<span id="cb39-3"><a href="#cb39-3"></a><span class="bu">print</span>(L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, 4, 5, 5, 6, 7, 8, 9]</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<div id="e590b8c5" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1"></a>L <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb41-2"><a href="#cb41-2"></a>out <span class="op">=</span> <span class="bu">sorted</span>(L)</span>
+<span id="cb41-3"><a href="#cb41-3"></a><span class="bu">print</span>(out)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, 4, 5, 5, 6, 7, 8, 9]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="iterate-through-the-list-in-reverse-direction" class="level2">
+<h2 class="anchored" data-anchor-id="iterate-through-the-list-in-reverse-direction">Iterate through the list in reverse direction</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true">Method-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false">Method-2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<p>This is recommended.</p>
+<div id="c53e5be0" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1"></a>L <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb43-2"><a href="#cb43-2"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">reversed</span>(L):</span>
+<span id="cb43-3"><a href="#cb43-3"></a>    <span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>5
+4
+3
+2
+1</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<div id="1e1542cb" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1"></a>L <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb45-2"><a href="#cb45-2"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(L) <span class="op">-</span> <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb45-3"><a href="#cb45-3"></a>    <span class="bu">print</span>(L[i])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>5
+4
+3
+2
+1</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="copy-a-list" class="level2">
+<h2 class="anchored" data-anchor-id="copy-a-list">Copy a list</h2>
+<p>First, we will look at the wrong way of doing this:</p>
+<div id="beaf6ea8" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1"></a>P <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb47-2"><a href="#cb47-2"></a>Q <span class="op">=</span> P</span>
+<span id="cb47-3"><a href="#cb47-3"></a>P[<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb47-4"><a href="#cb47-4"></a><span class="bu">print</span>(P)</span>
+<span id="cb47-5"><a href="#cb47-5"></a><span class="bu">print</span>(Q)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, 5]
+[1, 2, 3, 5]</code></pre>
+</div>
+</div>
+<p>Refer to this <a href="https://docs.python.org/3/faq/programming.html#why-did-changing-list-y-also-change-list-x" target="_blank">FAQ</a> to understand why this happens. Now, the correct way.</p>
+<div id="8105001b" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1"></a>P <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb49-2"><a href="#cb49-2"></a>Q <span class="op">=</span> P.copy()</span>
+<span id="cb49-3"><a href="#cb49-3"></a>P[<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb49-4"><a href="#cb49-4"></a><span class="bu">print</span>(P)</span>
+<span id="cb49-5"><a href="#cb49-5"></a><span class="bu">print</span>(Q)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, 5]
+[1, 2, 3, 4]</code></pre>
+</div>
+</div>
+</section>
+<section id="find-dimension-of-a-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="find-dimension-of-a-matrix">Find dimension of a matrix</h2>
+<div id="535d38ba" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1"></a>M <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb51-2"><a href="#cb51-2"></a>     [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>],</span>
+<span id="cb51-3"><a href="#cb51-3"></a>     [<span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]]</span>
+<span id="cb51-4"><a href="#cb51-4"></a>m, n <span class="op">=</span> <span class="bu">len</span>(M), <span class="bu">len</span>(M[<span class="dv">0</span>])</span>
+<span id="cb51-5"><a href="#cb51-5"></a><span class="bu">print</span>(m, n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3 4</code></pre>
+</div>
+</div>
+</section>
+<section id="create-a-zero-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-zero-matrix">Create a zero matrix</h2>
+<p>This snippet creates a <span class="math inline">\(3 \times 5\)</span> zero matrix.</p>
+<div id="a9889b64" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1"></a>m, n <span class="op">=</span> <span class="dv">3</span>, <span class="dv">5</span></span>
+<span id="cb53-2"><a href="#cb53-2"></a>M <span class="op">=</span> [ ]</span>
+<span id="cb53-3"><a href="#cb53-3"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(m):</span>
+<span id="cb53-4"><a href="#cb53-4"></a>    row <span class="op">=</span> [ ]</span>
+<span id="cb53-5"><a href="#cb53-5"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb53-6"><a href="#cb53-6"></a>        row.append(<span class="dv">0</span>)</span>
+<span id="cb53-7"><a href="#cb53-7"></a>    M.append(row)</span>
+<span id="cb53-8"><a href="#cb53-8"></a><span class="bu">print</span>(M)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]</code></pre>
+</div>
+</div>
+</section>
+<section id="print-a-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="print-a-matrix">Print a matrix</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true">Method-1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false">Method-2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-10-1-tab">
+<p>This is recommended.</p>
+<div id="bf932634" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1"></a>M <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb55-2"><a href="#cb55-2"></a>     [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>],</span>
+<span id="cb55-3"><a href="#cb55-3"></a>     [<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">2</span>]]</span>
+<span id="cb55-4"><a href="#cb55-4"></a><span class="cf">for</span> row <span class="kw">in</span> M:</span>
+<span id="cb55-5"><a href="#cb55-5"></a>    <span class="cf">for</span> elem <span class="kw">in</span> row[:<span class="op">-</span><span class="dv">1</span>]:</span>
+<span id="cb55-6"><a href="#cb55-6"></a>        <span class="bu">print</span>(elem, end <span class="op">=</span> <span class="st">','</span>)</span>
+<span id="cb55-7"><a href="#cb55-7"></a>    <span class="bu">print</span>(row[<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1,2,3,4
+5,6,7,8
+3,1,4,2</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-10-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-2-tab">
+<div id="7a8634a8" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1"></a>M <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb57-2"><a href="#cb57-2"></a>     [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>],</span>
+<span id="cb57-3"><a href="#cb57-3"></a>     [<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">2</span>]]</span>
+<span id="cb57-4"><a href="#cb57-4"></a>m, n <span class="op">=</span> <span class="bu">len</span>(M), <span class="bu">len</span>(M[<span class="dv">0</span>])</span>
+<span id="cb57-5"><a href="#cb57-5"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(m):</span>
+<span id="cb57-6"><a href="#cb57-6"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb57-7"><a href="#cb57-7"></a>        <span class="cf">if</span> j <span class="op">!=</span> n <span class="op">-</span> <span class="dv">1</span>:</span>
+<span id="cb57-8"><a href="#cb57-8"></a>            <span class="bu">print</span>(M[i][j], end <span class="op">=</span> <span class="st">','</span>)</span>
+<span id="cb57-9"><a href="#cb57-9"></a>        <span class="cf">else</span>:</span>
+<span id="cb57-10"><a href="#cb57-10"></a>            <span class="bu">print</span>(M[i][j])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1,2,3,4
+5,6,7,8
+3,1,4,2</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
