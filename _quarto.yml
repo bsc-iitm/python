@@ -14,8 +14,8 @@ website:
         file: ppa.md
       - text: "How to"
         file: howto.md
-      - text: "Presentations"
-        file: presentations.md
+      - text: "FAQs"
+        file: faq.md
       - text: "Student Corner"
         file: students.md
       - text: "About"

@@ -78,3 +78,7 @@ def maxval(a, b, c):
 ```
 
 :::
+
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/8dac2a8fd80546a18ca522f995ebe60c?sid=b8f79879-a000-4e77-897e-87867e7348c7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

@@ -27,7 +27,48 @@ Assume that the year is not a leap year to begin with. Now use a binary variable
 - $2024$
 - $2000$
 
-## Solution
+## Solutions
+
+::: {.panel-tabset}
+
+## Solution-1
+
+```python
+def check_leap_year(year):
+    if year % 100 == 0:
+        if year % 400 == 0:
+            return True
+        return False
+    else:
+        if year % 4 == 0:
+            return True
+       	return False
+```
+
+## Solution-2
+
+```python
+def check_leap_year(year):
+	if (year % 100 == 0) and (year % 400 == 0):
+        return True
+    elif (year % 100 != 0) and (year % 4 == 0):
+        return True
+    return False
+```
+
+## Solution-3
+
+```python
+def check_leap_year(year):
+    if year % 100 == 0:
+        return year % 400 == 0
+    else:
+        return year % 4 == 0
+```
+
+## Solution-4
+
+This uses just one return statement at the end of the function.
 
 ```python
 def check_leap_year(year):
@@ -41,3 +82,8 @@ def check_leap_year(year):
     return leap
 ```
 
+:::
+
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/ad6d9590769a44bfb28aa7603b0ac786?sid=0c768bd4-42cd-4141-9d39-f01929d9ad41" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

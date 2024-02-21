@@ -59,3 +59,7 @@ def dim_equal(A, B):
 ```
 
 :::
+
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/22248c9d5d1d45289b17af0b71982e10?sid=c9925368-3d4c-4c25-8c76-43145c88b393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

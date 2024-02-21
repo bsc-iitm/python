@@ -1,0 +1,365 @@
+---
+title: Lists
+pagetitle: Lists
+order: 4
+execute: 
+  cache: true
+jupyter: python3
+---
+
+## Create an empty list
+
+::: {.panel-tabset}
+
+## Method-1
+
+```{python}
+L = [ ]
+print(L)
+```
+
+## Method-2
+
+```{python}
+L = list()
+print(L)
+```
+
+:::
+
+## Create a list with certain elements
+
+```{python}
+L = [1, 2, 3]
+print(L)
+words = ['good', 'better', 'best']
+print(words)
+```
+
+## Append an element to a list
+
+::: {.panel-tabset}
+
+## Method-1
+
+This modifies the list in-place using a list method called `append`.
+
+```{python}
+L = [1, 2, 3]
+L.append(4)
+print(L)
+```
+
+## Method-2
+
+This creates a new list object using list concatenation and puts it back in `L`
+
+```{python}
+L = [1, 2, 3]
+L = L + [4]
+print(L)
+```
+
+:::
+
+## Insert an element at the beginning of a list
+
+::: {.panel-tabset}
+
+## Method-1
+
+This modifies the list in-place using the `insert` method.
+
+```{python}
+L = ['better', 'best']
+L.insert(0, 'good')
+print(L)
+```
+
+## Method-2
+
+This creates a new list using list concatenation and puts it back in `L`.
+
+```{python}
+L = ['better', 'best']
+L = ['good'] + L
+print(L)
+```
+
+:::
+
+## Iterate through a list
+
+::: {.panel-tabset}
+
+## Method-1
+
+This is the recommended method.
+
+```{python}
+L = [1, 2, 3, 4]
+for x in L:
+    print(x)
+```
+
+## Method-2
+
+This is to be avoided whenever possible.
+
+```{python}
+L = [1, 2, 3, 4]
+for i in range(len(L)):
+    print(L[i])
+```
+
+:::
+
+## Iterate through a list with access to both index and element
+
+::: {.panel-tabset}
+
+## Method-1
+
+This is recommended.
+
+```{python}
+L = [10, 20, 30, 40]
+for index, x in enumerate(L):
+    print(index, x)
+```
+
+## Method-2
+
+```{python}
+L = [10, 20, 30, 40]
+for i in range(len(L)):
+    print(i, L[i])
+```
+
+:::
+
+## Print elements of list on a line
+
+::: {.panel-tabset}
+
+## Method-1
+
+```{python}
+words = ['a', 'an', 'the', 'are', 'articles']
+for word in words[:-1]:
+    print(word, end = ',')
+print(words[-1])
+```
+
+## Method-2
+
+```{python}
+words = ['a', 'an', 'the', 'are', 'articles']
+for i in range(len(words)):
+    if i != len(words) - 1:
+        print(words[i], end = ',')
+    else:
+        print(words[i])
+```
+
+
+
+:::
+
+## Find length of a list
+
+```{python}
+L = [1.0, 3.5, 10.9, 5.3, -10.3]
+print(len(L))
+```
+
+## Determine presence of element in a list
+
+```{python}
+L = ['good', 'random', 'better', 'best']
+value = 'random'
+print(value in L)
+```
+
+## Remove an element from a list
+
+`L.remove(value)` removes the leftmost occurrence of `value` from the list `L` if it exists. This operation is in-place. It throws an error if `value` is not present in `L`. Here is a graceful way of removing an element.
+
+```{python}
+L = ['good', 'random', 'better', 'best']
+value = 'random'
+if value in L:
+    L.remove(value)
+print(L)
+```
+
+## Remove all occurrences of element from a list
+
+::: {.panel-tabset}
+
+## Method-1
+
+```{python}
+L = [10, 5, 3, 4, 10, 6, 9, 10]
+value = 10
+while value in L:
+    L.remove(value)
+print(L)
+```
+
+## Method-2
+
+```{python}
+L = [10, 5, 3, 4, 10, 6, 9, 10]
+value = 10
+for x in L:
+    if x == value:
+        L.remove(value)
+print(L)
+```
+
+:::
+
+## Find index of an element in a list
+
+`L.index(value)` returns the index of the leftmost occurrence of `value` if it is present in the list. It will throw an error if `value` is not present in `L`. Here is a graceful way to express this:
+
+```{python}
+L = [10, 20, 30, 40, 50]
+value = 30
+if value in L:
+    index = L.index(value)
+    print(index)
+```
+
+## Sort a list
+
+::: {.panel-tabset}
+
+## Method-1
+
+`L.sort()` sorts the list `L` in place. If you do not want to modify `L`, refer to method-2.
+
+```{python}
+L = [3, 5, 1, 2, 5, 4, 6, 7, 8, 9]
+L.sort()
+print(L)
+```
+
+## Method-2
+
+```{python}
+L = [3, 5, 1, 2, 5, 4, 6, 7, 8, 9]
+out = sorted(L)
+print(out)
+```
+
+:::
+
+
+
+## Iterate through the list in reverse direction
+
+::: {.panel-tabset}
+
+## Method-1
+
+This is recommended.
+
+```{python}
+L = [1, 2, 3, 4, 5]
+for x in reversed(L):
+    print(x)
+```
+
+## Method-2
+
+```{python}
+L = [1, 2, 3, 4, 5]
+for i in range(len(L) - 1, -1, -1):
+    print(L[i])
+```
+
+:::
+
+## Copy a list
+
+First, we will look at the wrong way of doing this:
+
+```{python}
+P = [1, 2, 3, 4]
+Q = P
+P[-1] = 5
+print(P)
+print(Q)
+```
+
+Refer to this [FAQ](https://docs.python.org/3/faq/programming.html#why-did-changing-list-y-also-change-list-x){target=_blank} to understand why this happens. Now, the correct way.
+
+```{python}
+P = [1, 2, 3, 4]
+Q = P.copy()
+P[-1] = 5
+print(P)
+print(Q)
+```
+
+## Find dimension of a matrix
+
+```{python}
+M = [[1, 2, 3, 4],
+     [5, 6, 7, 8],
+     [9, 10, 11, 12]]
+m, n = len(M), len(M[0])
+print(m, n)
+```
+
+## Create a zero matrix
+
+This snippet creates a $3 \times 5$ zero matrix.
+
+```{python}
+m, n = 3, 5
+M = [ ]
+for i in range(m):
+    row = [ ]
+    for j in range(n):
+        row.append(0)
+    M.append(row)
+print(M)
+```
+
+## Print a matrix
+
+::: {.panel-tabset}
+
+## Method-1
+
+This is recommended.
+
+```{python}
+M = [[1, 2, 3, 4],
+     [5, 6, 7, 8],
+     [3, 1, 4, 2]]
+for row in M:
+    for elem in row[:-1]:
+        print(elem, end = ',')
+    print(row[-1])
+```
+
+## Method-2
+
+```{python}
+M = [[1, 2, 3, 4],
+     [5, 6, 7, 8],
+     [3, 1, 4, 2]]
+m, n = len(M), len(M[0])
+for i in range(m):
+    for j in range(n):
+        if j != n - 1:
+        	print(M[i][j], end = ',')
+        else:
+            print(M[i][j])
+```
+
+:::

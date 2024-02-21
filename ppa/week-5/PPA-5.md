@@ -42,27 +42,18 @@ print(a)
 print(b)
 ```
 
-Since the function returns two values, we have two variables — `a, b` — on the LHS of the assignment statement in line-1.
+Since the function returns two values, we have two variables — `a, b` — on the LHS of the assignment statement in line-1. 
 
-Check out the code below that finds out the first two maximums. Try to extend it to three maximums.
+Coming back to this problem, consider the following snippet of code and see if you can extend it into a solution:
 
 ```python
-def first_two(L):
-    fmax, smax = L[0], L[1]
-    
-    for x in L:
-        if x > fmax:
-            smax = fmax
-            fmax = x
-        elif x > smax and x < fmax:
-            smax = x
-    
-    return fmax, smax
+fmax = max(L)
+L.remove(fmax)
 ```
 
 ## Solutions
 
-We have used the fact that the elements of the list are distinct in the solution. Can you identify where it is being used? Even before that, why do you think this restriction has been imposed? 
+Refer to this [FAQ](https://docs.python.org/3/faq/programming.html#why-did-changing-list-y-also-change-list-x){target=_blank} to understand some of the finer points regarding lists and functions in the context of this problem. Read this FAQ and then look at solutions (1) and (2).
 
 ::: {.panel-tabset}
 
@@ -70,36 +61,63 @@ We have used the fact that the elements of the list are distinct in the solution
 
 ```python
 def first_three(L):
-    fmax, smax, tmax = L[0], L[1], L[2]
-    for x in L:
-        if x > fmax:
-            tmax = smax
-            smax = fmax
-            fmax = x
-        elif x > smax and x < fmax:
-            tmax = smax
-            smax = x
-        elif x > tmax and x < smax:
-            tmax = x
+    fmax = max(L)
+    L.remove(fmax)
+    smax = max(L)
+    L.remove(smax)
+    tmax = max(L)
     return fmax, smax, tmax
 ```
+
+In this solution we are modifying the list. For example if this code snippet is run:
+
+```python
+P = [6, 7, 1, 5, 4, 3, 2]
+print(first_three(P))
+print(P)
+```
+
+the output will be:
+
+```
+(7, 6, 5)
+[1, 5, 4, 3, 2]
+```
+
+Notice that the list `P` has been modified in this process. If this is to be avoided, refer to solution-2.
 
 ## Solution-2
 
 ```python
 def first_three(L):
-    fmax, smax, tmax = L[0], L[1], L[2]
-    for x in L:
-        if x > fmax:
-            tmax = smax
-            smax = fmax
-            fmax = x
-        elif smax < x < fmax:
-            tmax = smax
-            smax = x
-        elif tmax < x < smax:
-            tmax = x
+    L_local = L.copy()
+    fmax = max(L_local)
+    L_local.remove(fmax)
+    smax = max(L_local)
+    L_local.remove(smax)
+    tmax = max(L_local)
     return fmax, smax, tmax
 ```
 
+Now, if we run this snippet:
+
+```python
+P = [6, 7, 1, 5, 4, 3, 2]
+print(first_three(P))
+print(P)
+```
+
+we get the output:
+
+```
+(7, 6, 5)
+[6, 7, 1, 5, 4, 3, 2]
+```
+
+Note that `P` has not been disturbed. We achieved this by making sure that a copy of `L` was created in line-2.
+
 :::
+
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/59d1ae5341664dd8a0014e3a1cd3053e?sid=26fcca95-10c7-4e7d-b05f-e456514cfa17" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
