@@ -538,7 +538,7 @@
     "href": "howto/topic/list.html#remove-all-occurrences-of-element-from-a-list",
     "title": "Lists",
     "section": "Remove all occurrences of element from a list",
-    "text": "Remove all occurrences of element from a list\n\nMethod-1Method-2\n\n\n\nL = [10, 5, 3, 4, 10, 6, 9, 10]\nvalue = 10\nwhile value in L:\n    L.remove(value)\nprint(L)\n\n[5, 3, 4, 6, 9]\n\n\n\n\n\nL = [10, 5, 3, 4, 10, 6, 9, 10]\nvalue = 10\nfor x in L:\n    if x == value:\n        L.remove(value)\nprint(L)\n\n[5, 3, 4, 6, 9]",
+    "text": "Remove all occurrences of element from a list\n\nMethod-1Method-2\n\n\n\nL = [10, 5, 3, 4, 10, 6, 9, 10]\nvalue = 10\nwhile value in L:\n    L.remove(value)\nprint(L)\n\n[5, 3, 4, 6, 9]\n\n\n\n\nThe reason we use L.copy() is to make sure that we don’t modify the list while we are iterating over it.\n\nL = [10, 5, 3, 4, 10, 6, 9, 10]\nvalue = 10\nfor x in L.copy():\n    if x == value:\n        L.remove(value)\nprint(L)\n\n[5, 3, 4, 6, 9]",
     "crumbs": [
       "How to",
       "Lists"
@@ -1099,6 +1099,102 @@
       "PPAs",
       "Week 4",
       "PPA-10"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-3.html",
+    "href": "ppa/week-6/PPA-3.html",
+    "title": "PPA-3",
+    "section": "",
+    "text": "Write the following functions:\n\nis_key: accept a dictionary D and a variable key as arguments. Return True if the variable key is a key of the dictionary D, and False otherwise.\nvalue: accept a dictionary D and a variable key as arguments. If the variable key is not a key of the dictionary D, return None, otherwise, return the value corresponding to this key.\n\n\nYou do not have to accept input from the user or print the output to the console. You just have to write the definition of both the functions.",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-3"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-3.html#question",
+    "href": "ppa/week-6/PPA-3.html#question",
+    "title": "PPA-3",
+    "section": "",
+    "text": "Write the following functions:\n\nis_key: accept a dictionary D and a variable key as arguments. Return True if the variable key is a key of the dictionary D, and False otherwise.\nvalue: accept a dictionary D and a variable key as arguments. If the variable key is not a key of the dictionary D, return None, otherwise, return the value corresponding to this key.\n\n\nYou do not have to accept input from the user or print the output to the console. You just have to write the definition of both the functions.",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-3"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-3.html#hint",
+    "href": "ppa/week-6/PPA-3.html#hint",
+    "title": "PPA-3",
+    "section": "Hint",
+    "text": "Hint\nkey in D evaluates to True if key is one of the keys and False otherwise.",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-3"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-3.html#solution",
+    "href": "ppa/week-6/PPA-3.html#solution",
+    "title": "PPA-3",
+    "section": "Solution",
+    "text": "Solution\ndef is_key(D, key):\n    return key in D\n\ndef value(D, key):\n    if key not in D:\n        return None\n    return D[key]",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-3"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-4.html",
+    "href": "ppa/week-6/PPA-4.html",
+    "title": "PPA-4",
+    "section": "",
+    "text": "Write a function named value_to_keys that accepts a dictionary D and a variable named value as arguments. It should return the list of all keys in the dictionary that have value equal to value. If the value is not present in the dictionary, the function should return the empty list.\n\n\nYou do not have to accept input from the user or print the output to the console. You just have to write the definition of the function.\nThe keys inside the list could be in any order.",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-4"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-4.html#question",
+    "href": "ppa/week-6/PPA-4.html#question",
+    "title": "PPA-4",
+    "section": "",
+    "text": "Write a function named value_to_keys that accepts a dictionary D and a variable named value as arguments. It should return the list of all keys in the dictionary that have value equal to value. If the value is not present in the dictionary, the function should return the empty list.\n\n\nYou do not have to accept input from the user or print the output to the console. You just have to write the definition of the function.\nThe keys inside the list could be in any order.",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-4"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-4.html#hint",
+    "href": "ppa/week-6/PPA-4.html#hint",
+    "title": "PPA-4",
+    "section": "Hint",
+    "text": "Hint\nApproach-1\nIterate over the keys:\nfor key in D:\n    pass\nApproach-2\nIterate over the key-value pairs\nfor key, value in D.items():\n    pass\nThis should be sufficient for you to complete the code.",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-4"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-4.html#solutions",
+    "href": "ppa/week-6/PPA-4.html#solutions",
+    "title": "PPA-4",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2\n\n\ndef value_to_keys(D, value):\n    keys = [ ]\n    for key in D:\n        if D[key] == value:\n            keys.append(key)\n    return keys\n\n\ndef value_to_keys(D, value):\n    keys = [ ]\n    for key, val in D.items():\n        if val == value:\n            keys.append(key)\n    return keys",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-4"
     ]
   },
   {
@@ -3538,6 +3634,102 @@
       "PPAs",
       "Week 2",
       "PPA-9"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-2.html",
+    "href": "ppa/week-6/PPA-2.html",
+    "title": "PPA-2",
+    "section": "",
+    "text": "Accept a positive integer as input and print the digits present in it from left to right. Each digit should be printed as a lower case word on a separate line. How would you use dictionaries to solve this problem?",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-2"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-2.html#question",
+    "href": "ppa/week-6/PPA-2.html#question",
+    "title": "PPA-2",
+    "section": "",
+    "text": "Accept a positive integer as input and print the digits present in it from left to right. Each digit should be printed as a lower case word on a separate line. How would you use dictionaries to solve this problem?",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-2"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-2.html#hint",
+    "href": "ppa/week-6/PPA-2.html#hint",
+    "title": "PPA-2",
+    "section": "Hint",
+    "text": "Hint\nIt is good to retain the input as a string. A dictionary can be used to map each number to its corresponding word. An incomplete table is given for your reference:\n\n\n\nKey\nValue\n\n\n\n\n0\nzero\n\n\n1\none\n\n\n2\ntwo\n\n\n\nCan you create the dictionary using this table and complete the code?",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-2"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-2.html#solution",
+    "href": "ppa/week-6/PPA-2.html#solution",
+    "title": "PPA-2",
+    "section": "Solution",
+    "text": "Solution\nWe just need to iterate through the characters in the input and use the dictionary appropriately. Note the way in which the dictionary has been formatted: each key is written on a separate line. This has been done to improve readability.\nmapper = {\n    '0': 'zero',\n    '1': 'one',\n    '2': 'two',\n    '3': 'three',\n    '4': 'four',\n    '5': 'five',\n    '6': 'six',\n    '7': 'seven',\n    '8': 'eight',\n    '9': 'nine'\n}\n\nnum = input()\n\nfor digit in num:\n    print(mapper[digit])",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-2"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-1.html",
+    "href": "ppa/week-6/PPA-1.html",
+    "title": "PPA-1",
+    "section": "",
+    "text": "Accept a sequence of words as input. Create a dictionary named freq whose keys are the distinct words in the sequence. The value corresponding to a key (word) should be the frequency of occurrence of the key (word) in the sequence.\n\n\nYou can assume that all words will be in lower case.\nYou do not have to print the output to the console. This will be the responsibility of the autograder.",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-1"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-1.html#question",
+    "href": "ppa/week-6/PPA-1.html#question",
+    "title": "PPA-1",
+    "section": "",
+    "text": "Accept a sequence of words as input. Create a dictionary named freq whose keys are the distinct words in the sequence. The value corresponding to a key (word) should be the frequency of occurrence of the key (word) in the sequence.\n\n\nYou can assume that all words will be in lower case.\nYou do not have to print the output to the console. This will be the responsibility of the autograder.",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-1"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-1.html#hint",
+    "href": "ppa/week-6/PPA-1.html#hint",
+    "title": "PPA-1",
+    "section": "Hint",
+    "text": "Hint\nSplit the input based on , and store the words in a list. Now consider the following approaches:\nApproach-1\nUse two loops. In the first loop, populate the keys of the dictionary with the value \\(0\\) for each key. In another loop, iterate through the words again and increment the value of a word every time it is found.\nApproach-2\nUse a single loop to do both these things:\n\nCreate a key-value pair for a word and\nUpdate a word’s value whenever it occurs.\n\nYou would have to use appropriate if statements to achieve this.\nApproach-3\nExplore the get method in dictionaries and figure out how that can be used to arrive at a solution.",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-1"
+    ]
+  },
+  {
+    "objectID": "ppa/week-6/PPA-1.html#solutions",
+    "href": "ppa/week-6/PPA-1.html#solutions",
+    "title": "PPA-1",
+    "section": "Solutions",
+    "text": "Solutions\n\nSolution-1Solution-2Solution-3Solution-3\n\n\nL = input().split(',')\n\nfreq = dict()\n\nfor word in L:\n    freq[word] = 0\n\nfor word in L:\n    freq[word] += 1\n\n\nThis approach requires a single pass through the list and is more efficient.\nL = input().split(',')\n\nfreq = dict()\n\nfor word in L:\n    if word in freq:\n        freq[word] += 1\n    else:\n        freq[word] = 1\n\n\nThis is a small variation compared to the previous solution.\nL = input().split(',')\n\nfreq = dict()\n\nfor word in L:\n    if word not in freq:\n        freq[word] = 0\n    freq[word] += 1\nThe increment operation in line-6 is outside the if-block and will be executed in every iteration of the loop. We will stick to this approach in all subsequent problems.\n\n\nThis is probably the shortest. It uses the get method of dictionaries. If word is a key, then freq.get(word, 0) will return the value corresponding to it. If not, it will return \\(0\\) (the second argument passed to get). Once we get the value, we can update it.\nL = input().split(',')\n\nfreq = dict()\n\nfor word in L:\n    freq[word] = freq.get(word, 0) + 1",
+    "crumbs": [
+      "PPAs",
+      "Week 6",
+      "PPA-1"
     ]
   },
   {
