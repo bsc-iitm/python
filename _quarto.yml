@@ -35,6 +35,7 @@ website:
         - auto: ppa/week-3
         - auto: ppa/week-4
         - auto: ppa/week-5
+        - auto: ppa/week-6
 
     - title: "How to"
       collapse-level: 1

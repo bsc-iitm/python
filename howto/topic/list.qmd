@@ -209,10 +209,12 @@ print(L)
 
 ## Method-2
 
+The reason we use `L.copy()` is to make sure that we don't modify the list while we are iterating over it.
+
 ```{python}
 L = [10, 5, 3, 4, 10, 6, 9, 10]
 value = 10
-for x in L:
+for x in L.copy():
     if x == value:
         L.remove(value)
 print(L)
