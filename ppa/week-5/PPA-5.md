@@ -121,3 +121,4 @@ Note that `P` has not been disturbed. We achieved this by making sure that a cop
 ## Video Solution
 
 <div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/59d1ae5341664dd8a0014e3a1cd3053e?sid=26fcca95-10c7-4e7d-b05f-e456514cfa17" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+

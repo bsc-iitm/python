@@ -4,6 +4,8 @@ pagetitle: Week-6, PPA-2
 order: 2
 ---
 
+
+
 ## Question
 
 Accept a positive integer as input and print the digits present in it from left to right. Each digit should be printed as a lower case word on a separate line. How would you use dictionaries to solve this problem?

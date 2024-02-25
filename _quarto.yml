@@ -70,3 +70,8 @@ format:
     code-block-border-left: "#D3D3D3"
     code-overflow: scroll
     css: styles.css
+    include-in-header:
+      - text: |
+          <!-- Appzi: Capture Insightful Feedback -->
+          <script async src="https://w.appzi.io/w.js?token=AHdPu"></script>
+          <!-- End Appzi -->
