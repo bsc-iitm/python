@@ -86,7 +86,7 @@ for word in L:
 
 The increment operation in line-6 is outside the if-block and will be executed in every iteration of the loop. We will stick to this approach in all subsequent problems.
 
-## Solution-3
+## Solution-4
 
 This is probably the shortest. It uses the `get` method of dictionaries. If `word` is a key, then `freq.get(word, 0)` will return the value corresponding to it. If not, it will return $0$ (the second argument passed to `get`). Once we get the value, we can update it.
 
@@ -100,3 +100,7 @@ for word in L:
 ```
 
 :::
+
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/6c5ed8e4a2a544929e5ff38f4f16b35a?sid=b38f2bae-fb5c-431a-9b26-2697a12cec63" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

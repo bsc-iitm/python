@@ -31,3 +31,6 @@ def value(D, key):
     return D[key]
 ```
 
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/1b9715d38f1440d1806ae05690103727?sid=c298eb56-acc2-4009-8e74-aeab96d3bb2d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>

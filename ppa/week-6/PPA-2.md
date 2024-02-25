@@ -43,3 +43,7 @@ num = input()
 for digit in num:
     print(mapper[digit])
 ```
+
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/c47148c8882447b2ae307188d816dec5?sid=d24963eb-f9fa-4d61-b824-9f0f19f13e89" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
