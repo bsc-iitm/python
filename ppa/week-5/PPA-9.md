@@ -61,3 +61,6 @@ def get_column(mat, col):
 
 :::
 
+## Video Solution
+
+<div style="position: relative; padding-bottom: 53.43750000000001%; height: 0;"><iframe src="https://www.loom.com/embed/d01c9da8df334853928479c3fb200dba?sid=3493f4b4-ee90-494f-bd8b-cc328e1433cd" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
