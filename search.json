@@ -410,7 +410,7 @@
     "href": "index.html",
     "title": "Python Companion",
     "section": "",
-    "text": "This is a companion resource for the course “Programming in Python” offered at the foundational level of the BS program in data science and applications. Check out the navigation bar at the top to get an idea of the different resources that can be found here."
+    "text": "This is a companion resource for the course “Programming in Python” offered at the foundational level of the BS program in data science and applications. Check out the navigation bar at the top to get an idea of the different resources that can be found here or watch the video below:"
   },
   {
     "objectID": "howto/topic/list.html",
@@ -1906,6 +1906,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-1/PPA-3.html#video-solution",
+    "href": "ppa/week-1/PPA-3.html#video-solution",
+    "title": "PPA-3",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 1",
+      "PPA-3"
+    ]
+  },
+  {
     "objectID": "ppa/week-1/PPA-7.html",
     "href": "ppa/week-1/PPA-7.html",
     "title": "PPA-7",
@@ -1995,6 +2007,18 @@
     "title": "PPA-2",
     "section": "Solutions",
     "text": "Solutions\n\nSolution-1Solution-2\n\n\nprint('*')\nprint('**')\nprint('***')\nprint('****')\nprint('*****')\n\n\nprint('*')\nprint('*' * 2)\nprint('*' * 3)\nprint('*' * 4)\nprint('*' * 5)",
+    "crumbs": [
+      "PPAs",
+      "Week 1",
+      "PPA-2"
+    ]
+  },
+  {
+    "objectID": "ppa/week-1/PPA-2.html#video-solution",
+    "href": "ppa/week-1/PPA-2.html#video-solution",
+    "title": "PPA-2",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 1",
@@ -2929,6 +2953,18 @@
     ]
   },
   {
+    "objectID": "ppa/week-5/PPA-9.html#video-solution",
+    "href": "ppa/week-5/PPA-9.html#video-solution",
+    "title": "PPA-9",
+    "section": "Video Solution",
+    "text": "Video Solution",
+    "crumbs": [
+      "PPAs",
+      "Week 5",
+      "PPA-9"
+    ]
+  },
+  {
     "objectID": "ppa/week-1/PPA-6.html",
     "href": "ppa/week-1/PPA-6.html",
     "title": "PPA-6",
@@ -3066,6 +3102,18 @@
     "title": "PPA-1",
     "section": "Solution",
     "text": "Solution\nprint(1)\nprint(2)\nprint(3)\nprint(4)\nprint(5)",
+    "crumbs": [
+      "PPAs",
+      "Week 1",
+      "PPA-1"
+    ]
+  },
+  {
+    "objectID": "ppa/week-1/PPA-1.html#video-solution",
+    "href": "ppa/week-1/PPA-1.html#video-solution",
+    "title": "PPA-1",
+    "section": "Video Solution",
+    "text": "Video Solution",
     "crumbs": [
       "PPAs",
       "Week 1",
