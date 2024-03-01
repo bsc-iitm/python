@@ -17,7 +17,7 @@ You do not have to print the output to the console.
 The way we populate the dictionary here is similar to the second approach adopted in PPA-1. The only difference here is that the value is a list. 
 
 - Every time a new letter is encountered, we make this a key of the dictionary whose value is an empty list.
-- Line-7 is outside the if-block and will be executed in every iteration of the loop.
+- Line-9 is outside the if-block and will be executed in every iteration of the loop.
 
 ```python
 L = input().split(',')
