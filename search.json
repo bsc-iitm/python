@@ -4073,7 +4073,7 @@
     "href": "ppa/week-6/PPA-9.html#solution",
     "title": "PPA-9",
     "section": "Solution",
-    "text": "Solution\nThe way we populate the dictionary here is similar to the second approach adopted in PPA-1. The only difference here is that the value is a list.\n\nEvery time a new letter is encountered, we make this a key of the dictionary whose value is an empty list.\nLine-7 is outside the if-block and will be executed in every iteration of the loop.\n\nL = input().split(',')\n\nreal_dict = dict()\n\nfor word in L:\n    first = word[0]\n    if first not in real_dict:\n        real_dict[first] = [ ]\n    real_dict[first].append(word)",
+    "text": "Solution\nThe way we populate the dictionary here is similar to the second approach adopted in PPA-1. The only difference here is that the value is a list.\n\nEvery time a new letter is encountered, we make this a key of the dictionary whose value is an empty list.\nLine-9 is outside the if-block and will be executed in every iteration of the loop.\n\nL = input().split(',')\n\nreal_dict = dict()\n\nfor word in L:\n    first = word[0]\n    if first not in real_dict:\n        real_dict[first] = [ ]\n    real_dict[first].append(word)",
     "crumbs": [
       "PPAs",
       "Week 6",
