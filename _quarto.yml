@@ -12,6 +12,8 @@ website:
         file: index.md
       - text: "PPAs"
         file: ppa.md
+      - text: "OPPE"
+        file: oppe.md
       - text: "How to"
         file: howto.md
       - text: "FAQs"
@@ -36,7 +38,10 @@ website:
         - auto: ppa/week-4
         - auto: ppa/week-5
         - auto: ppa/week-6
-
+    - title: "OPPE"
+      contents:
+        - oppe.md
+        - auto: oppe/*
     - title: "How to"
       collapse-level: 1
       border: true
